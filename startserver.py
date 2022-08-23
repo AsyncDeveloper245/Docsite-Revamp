@@ -2,13 +2,38 @@ import http.server
 import socketserver
 
 
-PORT = 8080
+
+# class Handler(http.server.SimpleHTTPRequestHandler):
+#     def __init__(self, *args, **kwargs):
+#         super().__init__(*args, directory=DIRECTORY, **kwargs)
+
+
+# with socketserver.TCPServer(("", PORT), Handler) as httpd:
+#     print("serving at port", PORT)
+#     print("Starting Server on Port", PORT)
+#     print("Note: You can change the port by changing the PORT variable in the script\nThis is a development server. Do not use it in production.\nUse CTRL+C to stop the Server")
+#     httpd.serve_forever()
+
 
 Handler = http.server.SimpleHTTPRequestHandler
+import argparse
 
-with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("serving at port", PORT)
-    httpd.serve_forever()
+my_parser = argparse.ArgumentParser(allow_abbrev=True)
+my_parser.add_argument('-port', action='store', type=str, required=False)
+
+if my_parser.parse_args().port:
+    PORT = int(my_parser.parse_args().port)
+    with socketserver.TCPServer(("", PORT), Handler) as httpd:
+        print("Starting Server on Port", PORT)
+        print("Note: You can change the port by changing the PORT variable in the script\nThis is a development server. Do not use it in production.\nUse CTRL+C to stop the Server")
+        httpd.serve_forever()
+
+else:
+    PORT = 8080
+    with socketserver.TCPServer(("", PORT), Handler) as httpd:
+        print("Starting Server on Port", PORT)
+        print("Note: You can change the port by changing the PORT variable in the script\nThis is a development server. Do not use it in production.\nUse CTRL+C to stop the Server")
+        httpd.serve_forever()
 
 
 

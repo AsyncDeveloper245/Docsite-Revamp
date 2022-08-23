@@ -1,25 +1,77 @@
-# GDC Documentation Site Rebuild Project (GSoC)
+![](https://gdc.cancer.gov/sites/all/themes/gdc_bootstrap/logo.png)
 
-The purpose of this project is to rebuild the documentation of the GDC website to be more responsive, and more manageable for future developers to maintain. This will be done by replacing the current mkdocs framework with a barebones python script used to build the static site. Due to the complexity of the current site, very little of the code is salvageable, and we will need to reverse engineer a lot of the css styling (much of this is already done). The remainder of this project is largely split up into three parts.
+# GDC Open Source code
 
-1. Markdown Section: Here we need to update the python file in this directory to follow the directory structure laid out in the `pages:` section.
+=======
+GDC is Open Source, Github Repositories containing source code of GDC Applications can be found on [GDC GitHub Organization page](https://github.com/NCI-GDC/).
 
-2. Rebuild the data dictionary: This will be extremely intensive in javascript programming and I expect it to take up the majority of time on this project.
+- GDC Data Portal: https://github.com/NCI-GDC/portal-ui
+- GDC Legacy Archive: https://github.com/NCI-GDC/portal-ui-legacy
+- GDC Data Transfer Tool: https://github.com/NCI-GDC/gdc-client
+- GDC Data Dictionary: https://github.com/NCI-GDC/gdcdictionary
+- GDC Data Model: https://github.com/NCI-GDC/gdcdatamodel
+- GDC Psqlgraph: https://github.com/NCI-GDC/psqlgraph
 
-3. Rebuild the encyclopedia. This is more front-end and css heavy with some javascript being required for functionality. This shouldn't be too bad.
+# Support
 
-Beyond this, we just need to make some basic front end changes to the code.
+Please direct technical questions to [GDC Support](https://gdc.cancer.gov/support).
 
-# Getting Started
+# GDC Documentation Site
 
-Start by navigating to this directory in your command line, and create a new virtual python environment to work in by typing:
-`python3 -m venv gdc-docs-env` (Note: Depending on your system you may need to replace "python3" with "python")
+### Technology
 
-And activate it with:
-`source gdc_env/bin/activate` (Note: This can be deactivated at any time by typing deactivate into the command line)
+- Python 3.6 and above
+- [jinja](http://www.jinja.palletsprojects.com/)
 
-From here install required dependencies:
-`pip install -r res.txt`
+### Install & Run
 
-And you are ready to run the python file. Currently it is just a proof of concept only working on one file, it takes as inputs, in order, the path of the template, the path of the markdown file, and the path of the output file. An example of running this looks as follows:
-`python3 setup.py -p 'Project_base_dir' -d 'the yaml configuration file' `
+(Optional) Set up virtualenv:
+
+- [Install virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+- `python -m virtualenv venv`
+- `source venv/bin/activate`
+- Run the installation commands below
+- To leave the virtual environment: `deactivate`
+
+Install GDC-docs:
+
+- `pip install -r reqs.txt`
+- `python startserver.py` (optionally set port `-port <PORT>`)
+
+### Build
+
+- `python3 setup.py -p 'Project_base_dir' -d 'the yaml configuration file'`
+
+### Repository Conventions
+
+- All Shared content in the "Commons" directory
+- One Directory per GDC product (API, Data_Portal, Data_Submission_Portal, Data_Transfer_Tool)
+- Each GDC product have a Users_Guide and Release_Notes directory
+
+### Linking
+
+To get a list of all page links available refer to the links.yml file.
+
+To another documentation page
+
+```
+[Authentication and Authorization](../../Commons/Authentication.md)
+```
+
+Inside another documentation page
+
+```
+[Authentication and Authorization](../../Commons/Authentication.md#internal-section)
+```
+
+### Adding icons and PDFs
+
+The convention for this, when updating docs.yml is the following:
+
+- <font-awesome-icon> <content> <url ending in .pdf>: 'index.md'
+  example:
+- fa-file-pdf-o Download PDF /API/PDF/API_UG.pdf: 'index.md'
+
+### Documentation Conventions
+
+A detailed list of all conventions is available on [GDC Website](https://gdc.cancer.gov/conventions-page)

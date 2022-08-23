@@ -11,8 +11,12 @@ if __name__ == '__main__':
     args = my_parser.parse_args()
 
     #create a new Pages object
-    pages = Pages(project_home_title=args.p,config_file= args.d)
-    #Write the pages
-    pages.write_pages()
+    try:
+        pages = Pages(project_home_title=args.p,config_file= args.d)
+        #Write the pages
+        pages.write_pages()
+    except Exception as e:
+        print(e)
+        sys.exit(1)
 
 

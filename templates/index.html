@@ -25,7 +25,9 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    {% for file in css %}
+    <link rel="stylesheet" type="text/css" href="{{ file }}" />
+    {% endfor %}
   </head>
   <body>
     <!---->
@@ -48,7 +50,7 @@
           <a class="navbar-brand float-start" href="/.">
             <img
               class="brand-image"
-              src="img/nih-header-logo-color.png"
+              src="{{ logo }}"
               alt="NIH National Cancer Institute GDC Documentation"
             />
             <span class="hidden"
@@ -256,116 +258,12 @@
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
+                    {% for page in nav_pages['API'] %} {% for key,value in
+                    page.items() %}
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-search-and-retrieval"
-                        >Search and Retrieval</a
-                      >
+                      <a class="dropdown-item" href="{{ value }}">{{ key }}</a>
                     </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-downloading-files"
-                        >Downloading Files</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-data-analysis"
-                        >Data Analysis</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-bam-slicing"
-                        >BAM Slicing</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-submission"
-                        >Submission</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-python-examples"
-                        >Python Examples</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-graphql-examples"
-                        >GraphQL Examples</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-system-information"
-                        >System Information</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-additional-examples"
-                        >Additional Examples</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-appendix-a-available-fields"
-                        >Appendix A: Available Fields</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-appendix-b-key-terms"
-                        >Appendix B: Key Terms</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-appendix-c-format-of-submission-requests-and-responses"
-                        >Appendix C: Format of Submission Queries and
-                        Responses</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/api-api-release-notes"
-                        >Release Notes</a
-                      >
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/api-index"
-                        >fa-file-text Download PDF /API/PDF/API_UG.pdf</a
-                      >
-                    </li>
+                    {% endfor%} {% endfor%}
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -384,62 +282,12 @@
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
+                    {% for page in nav_pages['Data Submission'] %} {% for
+                    key,value in page.items() %}
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-data-submission-overview"
-                        >Data Submission Overview</a
-                      >
+                      <a class="dropdown-item" href="{{ value }}">{{ key }}</a>
                     </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-data-submission-process"
-                        >Data Submission Portal</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-data-submission-walkthrough"
-                        >Data Upload Walkthrough</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-pre-release-qc"
-                        >Pre-Release Data Portal</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-best-practices"
-                        >Submission Best Practices</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-data-submission-portal-release-notes"
-                        >Release Notes</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-index"
-                        >fa-file-text Download PDF
-                        /Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf</a
-                      >
-                    </li>
+                    {% endfor%} {% endfor%}
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -458,62 +306,12 @@
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
+                    {% for page in nav_pages['Data Submission'] %} {% for
+                    key,value in page.items() %}
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-data-submission-overview"
-                        >Data Submission Overview</a
-                      >
+                      <a class="dropdown-item" href="{{ value }}">{{ key }}</a>
                     </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-data-submission-process"
-                        >Data Submission Portal</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-data-submission-walkthrough"
-                        >Data Upload Walkthrough</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-pre-release-qc"
-                        >Pre-Release Data Portal</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-best-practices"
-                        >Submission Best Practices</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-data-submission-portal-release-notes"
-                        >Release Notes</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-submission-portal-index"
-                        >fa-file-text Download PDF
-                        /Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf</a
-                      >
-                    </li>
+                    {% endfor %} {% endfor%}
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -532,29 +330,12 @@
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
+                    {% for page in nav_pages['Data Dictionary'] %} {% for
+                    key,value in page.items() %}
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-dictionary-index"
-                        >Viewer</a
-                      >
+                      <a class="dropdown-item" href="{{ value }}">{{ key }}</a>
                     </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-dictionary-gdcmvs"
-                        >Search</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-dictionary-data-dictionary-release-notes"
-                        >Release Notes</a
-                      >
-                    </li>
+                    {% endfor%} {% endfor%}
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -572,120 +353,23 @@
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
+                    {% for page in nav_pages['Data'] %} {% for key,value in
+                    page.items() %}
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-gdc-data-model"
-                        >GDC Data Model</a
-                      >
+                      <a class="dropdown-item" href="{{ value }}">{{ key }}</a>
                     </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-data-security"
-                        >Data Security</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-maf-format"
-                        >File Format: MAF</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-vcf-format"
-                        >File Format: VCF</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-dna-seq-variant-calling-pipeline"
-                        >Bioinformatics Pipeline: DNA-Seq Analysis</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-expression-mrna-pipeline"
-                        >Bioinformatics Pipeline: mRNA Analysis</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-mirna-pipeline"
-                        >Bioinformatics Pipeline: miRNA Analysis</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-cnv-pipeline"
-                        >Bioinformatics Pipeline: Copy Number Variation
-                        Analysis</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-methylation-pipeline"
-                        >Bioinformatics Pipeline: Methylation Liftover
-                        Pipeline</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-rppa-intro"
-                        >Bioinformatics Pipeline: Protein Expression</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-aligned-reads-summary-metrics"
-                        >Aligned Reads Summary Metrics</a
-                      >
-                    </li>
-
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/output/dist/data-data-release-notes"
-                        >Release Notes</a
-                      >
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/data-index"
-                        >fa-file-text Download PDF /Data/PDF/Data_UG.pdf</a
-                      >
-                    </li>
+                    {% endfor%} {% endfor%}
                   </ul>
                 </li>
                 <li class="nav-item">
                   <a
                     class="nav-link"
                     role="button"
-                    data-bs-toggle="dropdown"
                     aria-expanded="false"
                     href="/output/dist/encyclopedia/"
-                    >Encyclopedia</a
                   >
+                    Encyclopedia
+                  </a>
                 </li>
               </ul>
             </div>
@@ -704,15 +388,21 @@
             detailed information on GDC processes and tools.
           </h5>
         </div>
-        <div class="container-fluid hero-search-container">
-          <label class="hero-search-label">
-            <i class="fa fa-search hero-search-img"></i>
-          </label>
-          <input
-            type="text"
-            class="form-control hero-search-input"
-            placeholder="What are you looking for?"
-          />
+        <div display="block">
+          <div class="container-fluid hero-search-container">
+            <label class="hero-search-label">
+              <i class="fa fa-search hero-search-img"></i>
+            </label>
+            <input
+              id="searchInput"
+              type="text"
+              class="form-control hero-search-input"
+              placeholder="What are you looking for?"
+            />
+          </div>
+          <div class="dropdown-content2" id="resultsDropdown">
+            <ul id="resultsList"></ul>
+          </div>
         </div>
       </div>
     </section>
@@ -863,17 +553,20 @@
       </div>
     </footer>
 
+    {% for f in js %}
+    <script type="text/javascript" src="{{ f }}"></script>
+    {% endfor %}
+
     <script>
       /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-
-      // Close the dropdown if the user clicks outside of it
-
+        toggle between hiding and showing the dropdown content */
       var toggler = document.getElementById("myToggle");
       toggler.onclick = function () {
         var myDropdown = document.getElementById("myDropdown");
         myDropdown.classList.toggle("show");
       };
+
+      // Close the dropdown if the user clicks outside of it
       window.onclick = function (e) {
         if (!e.target.matches(".dropbtn")) {
           var myDropdown = document.getElementById("myDropdown");
@@ -882,6 +575,51 @@ toggle between hiding and showing the dropdown content */
           }
         }
       };
+
+      async function getResults() {
+        var li, a;
+        var text = document.getElementById("searchInput").value;
+        var resultsList = document.createElement("ul");
+        resultsList.innerHTML = "";
+        for (var i = 0; i < searchData.length; i++) {
+          if (searchData[i].name.toLowerCase().includes(text.toLowerCase())) {
+            a = document.createElement("a");
+            a.setAttribute("href", searchData[i].location);
+            li = document.createElement("li");
+            li.setAttribute("class", "result");
+            li.innerHTML = searchData[i].name;
+            a.appendChild(li);
+            resultsList.appendChild(a);
+          }
+        }
+        return resultsList;
+      }
+
+      var inputElement = document.getElementById("searchInput");
+      inputElement.addEventListener(
+        "keyup",
+        () => {
+          var input = inputElement.value;
+          var resultsDropdown = document.getElementById("resultsDropdown");
+
+          if (input == "") {
+            if (resultsDropdown.classList.contains("show-results")) {
+              resultsDropdown.classList.remove("show-results");
+            }
+          } else {
+            if (!resultsDropdown.classList.contains("show-results")) {
+              resultsDropdown.classList.add("show-results");
+            }
+
+            getResults().then(function (resultsList) {
+              var resultsDropdown = document.getElementById("resultsDropdown");
+              resultsDropdown.innerHTML = "";
+              resultsDropdown.appendChild(resultsList);
+            });
+          }
+        },
+        false
+      );
     </script>
 
     <!-- JavaScript Bundle with Popper -->

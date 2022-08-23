@@ -7,6 +7,9 @@ import sys
 from pathlib import Path
 import yaml
 from slugify import slugify
+from string import ascii_lowercase
+import json
+import logging
 #from playground import add_playground
 
 
@@ -30,8 +33,9 @@ def rmdir(dir):
 
 os.makedirs(os.path.join(ROOT_DIR,'encyclopedia/'), exist_ok=True)
 
-def write_encyclopedia(css,logo,pagename,encyclopedia_path,pedia_object,js,nav_pages):
-    os.makedirs(os.path.join(ROOT_DIR,'encyclopedia/'), exist_ok=True)
+#? Parse Given Template
+def parse_template(template_dir_path,css,logo,pagename,encyclopedia_path,pedia_object,js,nav_pages):
+    os.makedirs(os.path.join(ROOT_DIR,template_dir_path), exist_ok=True)
     with open(encyclopedia_path,'r') as f:
         template = f.read()
         template = Template(template)
@@ -40,18 +44,72 @@ def write_encyclopedia(css,logo,pagename,encyclopedia_path,pedia_object,js,nav_p
         f.write(output)
 
 
+#! Parse PDF Links
+def parse_pdf_links(pdf_link):
+  link_array = pdf_link.split()
+  download_name = " ".join(link_array[1:3])
+  download_link = link_array[3]
+  return (download_name,download_link)
+
+
+
+#Parse the Encyclopedia Template
+#! Remove this after implementing the parse_template function
+def write_encyclopedia(css,logo,pagename,encyclopedia_path,pedia_object,js,nav_pages,encyclopedia_object):
+    os.makedirs(os.path.join(ROOT_DIR,'encyclopedia/'), exist_ok=True)
+    with open(encyclopedia_path,'r') as f:
+        template = f.read()
+        template = Template(template)
+    output = template.render(css=css,logo=logo,pagename=pagename,encyclopedia_pages=pedia_object,js=js,nav_pages=nav_pages,encyclopedia_object=encyclopedia_object)
+    with open(os.path.join(ROOT_DIR,'encyclopedia' , "index.html"), 'w') as f:
+        f.write(output)
+
+
+def write_index(css,logo,pagename,js,nav_pages,index_path):
+    with open(index_path,'r') as f:
+        template = f.read()
+        template = Template(template)
+    output = template.render(css=css,logo=logo,pagename=pagename,js=js,nav_pages=nav_pages)
+    with open(os.path.join(ROOT_DIR, "index.html"), 'w') as f:
+        f.write(output)
+
+
 class Pages:
+    """
+    This is the base class for all pages. It is used to generate the HTML pages from the markdown files.
+    The class takes in the following parameters:
+
+    1. config_file␜: The path to the config.yml file
+    2. project_home_title📁: The title of the project home directory
+
+    The class has the following methods🔣:
+    1. read_yaml: This method reads the config.yml file and stores the data in the class variables
+    2. set_page_siblings: This method sets the siblings of each page. This is used to generate the links to the other pages in the same group
+    3. get_page_siblings: This method returns the siblings of the current page. This is used to generate the links to the other pages in the same group
+    4. get_nav_pages: This method returns the pages that are to be displayed in the navigation bar
+    5. get_page: This method returns the HTML page for the given group and page
+    6. get_page_title: This method returns the title of the page
+    7. get_page_content: This method returns the content of the page
+    8. get_page_links: This method returns the links of the page
+    9. write_links_to_yaml: This method writes the links of the pages to the links.yml file
+    10. build_encyclopedia: This method builds the encyclopedia page
+    11. write_to_template: This method writes the HTML page for the given group and page
+
+    """
     def __init__(self,config_file,project_home_title):
+        assert os.path.isfile(config_file), "Config file does not exist"
         self.config_file = config_file
         self.pages = {}
         self.css_files = []
         self.js_files = []
         self.links = []
         self.siblings = {}
-        self.link_data = {}
-        self.search_obj = {}
+        self.link_data: dict = {}
+        self.search_obj: list = []
         self.pedia_obj = {}
+        self.encyclopedia_object = {}
         self.base_dir = os.path.join(Path(__file__).resolve().parent.parent,project_home_title)
+        assert os.path.isdir(self.base_dir), "Project home directory does not exist"
         self.read_yaml()
         self.nav_pages = self.get_nav_pages()
         #self.build_encyclopedia()
@@ -69,6 +127,7 @@ class Pages:
         # Get Location of HTML Template
         self.template_path = os.path.join(self.home_directory,yml['template_path'])
         self.encyclopedia_path = os.path.join(self.home_directory,yml['encyclopedia_path'])
+        self.index_path = os.path.join(self.home_directory,yml['index_path'])
         
         # Get GDC Logo location
         self.logo = os.path.join(self.home_directory,yml['logo'])
@@ -119,7 +178,6 @@ class Pages:
     
     
     def write_pages(self):
-
         # Clear output directory if it exists
         try:
             rmdir("output")
@@ -147,11 +205,15 @@ class Pages:
                 os.makedirs(ROOT_DIR + slug,exist_ok=True)
                 
                 #print(self.pages.keys())
-                print(f"Writing Markdown🔄: {pagename} to {ROOT_DIR + slug + '/index.html'}")
+                logging.info(f"Writing Markdown🔄: {pagename} to {ROOT_DIR + slug + '/index.html'}")
+                try:
 
-                self.write_to_template("output/" + pageloc, ROOT_DIR + slug +'/index.html', group, pagename)
-                print(f"Done......\nMarkdown written to template✅")
-            if group == "EncyclopediaEntries":
+                    self.write_to_template("output/" + pageloc, ROOT_DIR + slug +'/index.html', group, pagename)
+                    logging.info(f"Done......\nMarkdown written to template✅")
+                except Exception as e:
+                    logging.error(f"Error writing markdown to template❌: {e}")
+                
+            if group == "EncyclopediaEntries":     
                 for page in self.pages["EncyclopediaEntries"]:
                     # Get name of current page, and it's location
                     pagename = list(page.keys())[0]
@@ -161,9 +223,19 @@ class Pages:
                     slug = slugify(pageloc.split('/')[0] +'/' + pageloc.split('/')[-1]).replace("-md","")
                     self.pedia_obj[pagename] = ROOT_DIR + slug
 
-            write_encyclopedia(css = self.css_files, logo = self.logo, pagename = pagename,encyclopedia_path = self.encyclopedia_path,pedia_object = self.pedia_obj,js=self.js_files,nav_pages = self.nav_pages)
+                    for c in ascii_lowercase:
+                        letter = str(c).capitalize()
+                        page_first_letter = pagename[0].capitalize()
+                        if letter == page_first_letter:
+                            #get pagename and links alphabetically
+                            self.encyclopedia_object[letter] = self.encyclopedia_object.get(letter,[]) + [(pagename,'/'+ROOT_DIR + slug)]
+                            self.encyclopedia_object[letter] = sorted(self.encyclopedia_object[letter])
 
-                
+
+            write_encyclopedia(css = self.css_files, logo = self.logo, pagename = pagename,encyclopedia_path = self.encyclopedia_path,pedia_object = self.pedia_obj,js=self.js_files,nav_pages = self.nav_pages,encyclopedia_object=self.encyclopedia_object)
+            write_index(css= self.css_files, logo = self.logo, pagename = pagename,js=self.js_files,nav_pages = self.nav_pages,index_path=self.index_path)
+        with open('js/search.js','w+') as f:
+            f.write(f"const searchData = {self.search_obj};")
         os.remove(os.path.join("output" , pageloc))
         #print(self.nav_pages)
         return
@@ -196,15 +268,28 @@ class Pages:
         nav_pages = {}
         for group in self.pages.keys():
             for page in self.pages[group]:
+                
                 pname = list(page.keys())[0]
-                ploc = page[pname].replace('md','html')
-                pageloc = page[pname]
-                slug = slugify(pageloc.split('/')[0] +'/' + pageloc.split('/')[-1]).replace("-md","")
-                # ?  This  Sub pages in navbar😎
-                if group in list(nav_pages.keys()):
-                        nav_pages[group].append({pname:f"{ROOT_DIR}{slug}"})               
+                if not 'PDF' in pname:
+                    
+                    ploc = page[pname].replace('md','html')
+                    pageloc = page[pname]
+                    slug = slugify(pageloc.split('/')[0] +'/' + pageloc.split('/')[-1]).replace("-md","")
+                    # ?  This  Sub pages in navbar😎
+                    if group in list(nav_pages.keys()):
+                            nav_pages[group].append({pname:f"{ '/' + ROOT_DIR + slug}"})               
+                    else:
+                        nav_pages[group] =[]
+
                 else:
-                    nav_pages[group] =[]
+                    print(pname)
+                    download_name,download_loc = parse_pdf_links(pname)
+                    if group in list(nav_pages.keys()):
+                            nav_pages[group].append({download_name:download_loc})               
+                    else:
+                        nav_pages[group] =[]
+
+
         # print(nav_pages)
         return nav_pages
         
@@ -230,9 +315,10 @@ class Pages:
         soup = BeautifulSoup(content, 'html.parser')
         
          #print(soup.pre.find_next())
-        headers = soup.find_all(['h1','h2','h3'])
+        headers = soup.find_all(['h1','h2'])
         for header in headers:
-            self.search_obj.update({header.string: output_path})
+            output_path_ = output_path.replace('/index.html','')
+            self.search_obj.append({"name":header.text, "location":'/' +output_path_})
 
         # Get Current page information for scroll-to section of sidebar
         soup = BeautifulSoup(content,'html.parser')
@@ -248,17 +334,30 @@ class Pages:
         sidebar = ""
         for page in self.pages[group]:
             pname = list(page.keys())[0]
-            ploc = page[pname].replace('md','html')
-            pageloc = page[pname]
-            slug = slugify(pageloc.split('/')[0] +'/' + pageloc.split('/')[-1]).replace("-md","")
-            if pname == pagename:
-                sidebar += f'<li class="main"><a href="/output/dist/{slug}">{pname}</a></li>'
-                
-                sidebar += "<ul>"
-                sidebar += sidebar_inner
-                sidebar += "</ul>"
+            if not 'PDF' in pname:
+                ploc = page[pname].replace('md','html')
+                pageloc = page[pname]
+                slug = slugify(pageloc.split('/')[0] +'/' + pageloc.split('/')[-1]).replace("-md","")
+                if pname == pagename:
+                    sidebar += f'<li class="main"><a href="/output/dist/{slug}">{pname}</a></li>'
+                    
+                    sidebar += "<ul>"
+                    sidebar += sidebar_inner
+                    sidebar += "</ul>"
+                else:
+                    sidebar += f'<li class="inactive"><a href="/output/dist/{slug}">{pname}</a></li>'
             else:
-                sidebar += f'<li class="inactive"><a href="/output/dist/{slug}">{pname}</a></li>'
+                download_name,download_loc = parse_pdf_links(pname)
+                if pname == pagename:
+                    sidebar += f'<li class="main"><a href="{download_loc}">{download_name}</a></li>'
+                    sidebar += "<ul>"
+                    sidebar += sidebar_inner
+                    sidebar += "</ul>"
+                else:
+                    sidebar += f'<li class="inactive"><a href="{download_loc}">{download_name}</a></li>'
+
+
+
         # for code_tag in soup.find_all('code',attrs={'class':'language-python'}):
         #     new_tag = soup.new_tag('py-repl')
         #     new_tag.string = code_tag.string
