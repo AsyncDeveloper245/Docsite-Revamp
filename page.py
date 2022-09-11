@@ -2,7 +2,7 @@ import os
 from yaml import safe_load
 from markdown import markdown
 from bs4 import BeautifulSoup
-from jinja2 import Template
+from jinja2 import Template, Environment, PackageLoader
 import sys
 from pathlib import Path
 import yaml
@@ -42,7 +42,10 @@ def parse_template(template_object : list,**kwargs):
                 os.makedirs(os.path.join(ROOT_DIR,template_name), exist_ok=True)
                 with open(template_path,'r') as f:
                     template = f.read()
-                    template = Template(template)
+                    #template = Template(template)
+                    env = Environment(loader=PackageLoader('page', 'templates'))
+                    template = env.get_template(template_path.split('/')[-1])
+                    
                 output = template.render(kwargs)
                 template_name.replace('.md','')
                 with open(os.path.join(ROOT_DIR,template_name , "index.html"), 'w') as f:
@@ -50,7 +53,10 @@ def parse_template(template_object : list,**kwargs):
             else:
                 with open(template_path,'r') as f:
                     template = f.read()
-                    template = Template(template)
+                    #template = Template(template)
+                    env = Environment(loader=PackageLoader('page', 'templates'))
+                    
+                    template = env.get_template(template_path.split('/')[-1])
                 output = template.render(kwargs)
                 
                 with open(os.path.join(ROOT_DIR, "index.html"), 'w') as f:
@@ -116,7 +122,8 @@ class Pages:
         self.template_objects: list = [
                 {'Encyclopedia': self.encyclopedia_path},
                 {'Data_Dictionary/Viewer': self.viewer_path},
-                {None: self.index_path}
+                {None: self.index_path},
+                
             ]
         #self.build_encyclopedia()
     
@@ -322,7 +329,11 @@ class Pages:
         # Get Jinja HTML Template
         with open(self.template_path,'r') as f:
             template = f.read()
-            template = Template(template)
+            
+        env = Environment(loader=PackageLoader('page', 'templates'))
+
+        template = env.get_template('template.html','navbar.html')
+            #template = Template(template)
 
         # Read markdown to string
         with open(markdown_path,'r') as f:
