@@ -234,11 +234,11 @@
               </div>
             </div>
           </div>
-          <div class="container-fluid">
+          <div class="container-fluid container-fluid-nav">
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav navbar-center me-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a class="nav-link active" id="navbarDropdownMenuLink" aria-current="page" href="#"
                     >Home</a
                   >
                 </li>
@@ -260,6 +260,30 @@
                   >
                     {% for page in nav_pages['API'] %} {% for key,value in
                     page.items() %}
+                    <li>
+                      <a class="dropdown-item" href="{{ value }}">{{ key }}</a>
+                    </li>
+                    {% endfor%} {% endfor%}
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Data Portal</a>
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    {% for page in nav_pages['Data Portal'] %} {% for key,value
+                    in page.items() %}
                     <li>
                       <a class="dropdown-item" href="{{ value }}">{{ key }}</a>
                     </li>
@@ -364,6 +388,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
+                    id="navbarDropdownMenuLink"
                     role="button"
                     aria-expanded="false"
                     href="/output/dist/encyclopedia/"
@@ -375,7 +400,8 @@
             </div>
           </div>
         </div>
-      </div>
+
+    </div>
     </nav>
 
     <section class="blue-section" id="hero">
@@ -415,7 +441,7 @@
               <h3 class="card-title">For Researchers</h3>
               <img
                 class="card-image"
-                src="img/hp-icons-researcher.png"
+                src="/img/hp-icons-researcher.png"
                 alt=""
               />
               <ul class="card-links">
@@ -447,7 +473,7 @@
               <h3 class="card-title">For Data Submitters</h3>
               <img
                 class="card-image"
-                src="img/hp-icons-researcher.png"
+                src="/img/hp-icons-researcher.png"
                 alt=""
               />
               <ul class="card-links">
@@ -481,7 +507,7 @@
               <h3 class="card-title">For Developers</h3>
               <img
                 class="card-image"
-                src="img/hp-icons-researcher.png"
+                src="/img/hp-icons-researcher.png"
                 alt=""
               />
               <ul class="card-links">

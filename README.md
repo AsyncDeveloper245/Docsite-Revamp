@@ -1,77 +1,64 @@
-![](https://gdc.cancer.gov/sites/all/themes/gdc_bootstrap/logo.png)
+# GENOMICS DATA COMMON DOCUMENTATION APP V2
 
-# GDC Open Source code
+## What is the GDC?
 
-=======
-GDC is Open Source, Github Repositories containing source code of GDC Applications can be found on [GDC GitHub Organization page](https://github.com/NCI-GDC/).
+A free, open-source system called the Genomic Data Commons (GDC) provides standardised cancer genomic data to researchers all around the world. The GDC documentation website now offers further background knowledge and user manuals.
 
-- GDC Data Portal: https://github.com/NCI-GDC/portal-ui
-- GDC Legacy Archive: https://github.com/NCI-GDC/portal-ui-legacy
-- GDC Data Transfer Tool: https://github.com/NCI-GDC/gdc-client
-- GDC Data Dictionary: https://github.com/NCI-GDC/gdcdictionary
-- GDC Data Model: https://github.com/NCI-GDC/gdcdatamodel
-- GDC Psqlgraph: https://github.com/NCI-GDC/psqlgraph
+## About The Project
 
-# Support
+The GDC docs Revamp project is based on an object oriented python script which uses the Jinja templating engine to write markdown file content to HTML templates, and build them to a static site directory.
+This workflow is used by the new site generator to create the documentation website:
 
-Please direct technical questions to [GDC Support](https://gdc.cancer.gov/support).
+![](docsParser.png)
 
-# GDC Documentation Site
+1. The user creates a yaml configuration file which contains the directory structure of the documentation site.
 
-### Technology
+   - The yaml configuration file contains the path to css files, js files, and the path to the markdown files.
+   - The yaml configuration file also contains path to any other file to be included in the documentation.
 
-- Python 3.6 and above
-- [jinja](http://www.jinja.palletsprojects.com/)
+2. The user runs the setup.py script which parses the yaml configuration file and creates the documentation site directory.
+3. The user runs the startserver.py script which starts a local server and serves the documentation site.
 
-### Install & Run
+## Use Case
 
-(Optional) Set up virtualenv:
+By integrating the above transformation process, one can convert the markdown files into HTML files that can be rendered by web servers, making it easier for non-technical people to work with.
 
-- [Install virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
-- `python -m virtualenv venv`
-- `source venv/bin/activate`
-- Run the installation commands below
-- To leave the virtual environment: `deactivate`
+## Pre-Coding
 
-Install GDC-docs:
+In addition to being acquainted with the project, I explored the Mkdocs, Jinja, and Markdown Packages, where I gained technical knowledge on how to develop a static site generator.
+I additionally looked at the features of various non-Python site builders.
+If you would like to know more about non python site generators , check [Here](https://www.fullstackpython.com/static-site-generator.html)
 
-- `pip install -r reqs.txt`
-- `python startserver.py` (optionally set port `-port <PORT>`)
+## The Journey
 
-### Build
+After the community bonding phase, I had learned a lot from my mentor, and it was time to get my hands dirty.
+During the first week, I attempted to create a simple framework that replicated the capabilities of the existing site generator (mkdocs).
+The URL to the practice project is available [Here](https://github.com/AsyncDeveloper245/gdc docs practice)
 
-- `python3 setup.py -p 'Project_base_dir' -d 'the yaml configuration file'`
+The second week was spent developing a new site generator capable of parsing markdown files and constructing the documentation site. Several issues arose this week that I needed to overcome before the site generator could function on the GDC Directory structure.
 
-### Repository Conventions
+### Challenge-1: Going Through Directories and Sub-Directories is there are any.
 
-- All Shared content in the "Commons" directory
-- One Directory per GDC product (API, Data_Portal, Data_Submission_Portal, Data_Transfer_Tool)
-- Each GDC product have a Users_Guide and Release_Notes directory
+### Challenge-2: Navigation Bar and Sidebar
 
-### Linking
+### Challenge-3: Site Linking
 
-To get a list of all page links available refer to the links.yml file.
+### Challenge-4: Adding Icons and PDFs
 
-To another documentation page
+## Results
 
-```
-[Authentication and Authorization](../../Commons/Authentication.md)
-```
+![](docs-img/home.png)
 
-Inside another documentation page
+![](docs-img/dictionary.png)
 
-```
-[Authentication and Authorization](../../Commons/Authentication.md#internal-section)
-```
+![](docs-img/encyclopedia.png)
 
-### Adding icons and PDFs
+## Current Standing
 
-The convention for this, when updating docs.yml is the following:
+Currently, the GDC Site Generator can do the following:
 
-- <font-awesome-icon> <content> <url ending in .pdf>: 'index.md'
-  example:
-- fa-file-pdf-o Download PDF /API/PDF/API_UG.pdf: 'index.md'
-
-### Documentation Conventions
-
-A detailed list of all conventions is available on [GDC Website](https://gdc.cancer.gov/conventions-page)
+1. Convert Markdown files to HTML files.
+2. Read the YAML configuration file and create the documentation site directory.
+3. Use the Jinja templating engine to pass context varies between different templates.
+4. Use the BautifulSoup to Create a navigation bar and sidebar.
+5. Integrate a third party API to create the GDC dictionary viewer.

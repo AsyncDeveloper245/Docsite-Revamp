@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -239,7 +236,7 @@
               </div>
             </div>
           </div>
-          <div class="container-fluid">
+          <div class="container-fluid container-fluid-nav">
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav navbar-center me-auto">
                 <li class="nav-item">
@@ -265,6 +262,30 @@
                   >
                     {% for page in nav_pages['API'] %} {% for key,value in
                     page.items() %}
+                    <li>
+                      <a class="dropdown-item" href="{{ value }}">{{ key }}</a>
+                    </li>
+                    {% endfor%} {% endfor%}
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Data Portal</a>
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    {% for page in nav_pages['Data Portal'] %} {% for key,value
+                    in page.items() %}
                     <li>
                       <a class="dropdown-item" href="{{ value }}">{{ key }}</a>
                     </li>
@@ -370,6 +391,7 @@
                   <a
                     class="nav-link"
                     role="button"
+                    id="navbarDropdownMenuLink"
                     aria-expanded="false"
                     href="/output/dist/encyclopedia/"
                   >
@@ -552,35 +574,35 @@ a topic you are unsure about, please suggest it below.
     </header>
     <div id="encyc-table-content">
         <span>
-            <a href="/Encyclopedia/pages/Controlled_Access/">Controlled access</a>
+            <a href="/output/dist/Encyclopedia/pages/Controlled_Access/">Controlled access</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/dbGaP/">dbGaP</a>
+            <a href="/output/dist/Encyclopedia/pages/dbGaP/">dbGaP</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/GDC_Data_Portal/">GDC Data Portal</a>
-        </span>
-    </div>
-    <div id="encyc-table-content">
-        <span>
-            <a href="/Encyclopedia/pages/GDC_Data_Transfer_Tool/">GDC Data Transfer Tool (DTT)</a>
-        </span>
-        <span>
-            <a href="/Encyclopedia/pages/Harmonized_Data/">Harmonized Data</a>
-        </span>
-        <span>
-            <a href="/Encyclopedia/pages/Manifest_File/">Manifest File</a>
+            <a href="/output/dist/Encyclopedia/pages/GDC_Data_Portal/">GDC Data Portal</a>
         </span>
     </div>
     <div id="encyc-table-content">
         <span>
-            <a href="/Encyclopedia/pages/Mutation_Annotation_Format/">Mutation Annotation Format (MAF)</a>
+            <a href="/output/dist/Encyclopedia/pages/GDC_Data_Transfer_Tool/">GDC Data Transfer Tool (DTT)</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/Variant_Type/">Variant Type</a>
+            <a href="/output/dist/Encyclopedia/pages/Harmonized_Data/">Harmonized Data</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/Variant_Call_Format/">Variant Call Format (VCF)</a>
+            <a href="/output/dist/Encyclopedia/pages/Manifest_File/">Manifest File</a>
+        </span>
+    </div>
+    <div id="encyc-table-content">
+        <span>
+            <a href="/output/dist/Encyclopedia/pages/Mutation_Annotation_Format/">Mutation Annotation Format (MAF)</a>
+        </span>
+        <span>
+            <a href="/output/dist/Encyclopedia/pages/Variant_Type/">Variant Type</a>
+        </span>
+        <span>
+            <a href="/output/dist/Encyclopedia/pages/Variant_Call_Format/">Variant Call Format (VCF)</a>
         </span>
     </div>
 </div>
@@ -590,35 +612,35 @@ a topic you are unsure about, please suggest it below.
     </header>
     <div id="encyc-table-content">
         <span>
-            <a href="/Encyclopedia/pages/Biospecimen_Data/">Biospecimen Data</a>
+            <a href="/output/dist/Encyclopedia/pages/Biospecimen_Data/">Biospecimen Data</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/Case/">Case</a>
+            <a href="/output/dist/Encyclopedia/pages/Case/">Case</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/Clinical_Data/">Clinical Data</a>
-        </span>
-    </div>
-    <div id="encyc-table-content">
-        <span>
-            <a href="/Encyclopedia/pages/Clinical_Supplement/">Clinical Supplement</a>
-        </span>
-        <span>
-            <a href="/Encyclopedia/pages/Data_Submitter/">Data Submitter</a>
-        </span>
-        <span>
-            <a href="/Encyclopedia/pages/dbGaP/">dbGaP</a>
+            <a href="/output/dist/Encyclopedia/pages/Clinical_Data/">Clinical Data</a>
         </span>
     </div>
     <div id="encyc-table-content">
         <span>
-            <a href="/Encyclopedia/pages/GDC_Data_Submission_Portal/">GDC Data Submission Portal</a>
+            <a href="/output/dist/Encyclopedia/pages/Clinical_Supplement/">Clinical Supplement</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/GDC_Data_Transfer_Tool/">GDC Data Transfer Tool (DTT)</a>
+            <a href="/output/dist/Encyclopedia/pages/Data_Submitter/">Data Submitter</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/Redaction/">Redaction</a>
+            <a href="/output/dist/Encyclopedia/pages/dbGaP/">dbGaP</a>
+        </span>
+    </div>
+    <div id="encyc-table-content">
+        <span>
+            <a href="/output/dist/Encyclopedia/pages/GDC_Data_Submission_Portal/">GDC Data Submission Portal</a>
+        </span>
+        <span>
+            <a href="/output/dist/Encyclopedia/pages/GDC_Data_Transfer_Tool/">GDC Data Transfer Tool (DTT)</a>
+        </span>
+        <span>
+            <a href="/output/dist/Encyclopedia/pages/Redaction/">Redaction</a>
         </span>
     </div>
 </div>
@@ -628,35 +650,35 @@ a topic you are unsure about, please suggest it below.
     </header>
     <div id="encyc-table-content">
         <span>
-            <a href="/Encyclopedia/pages/Entity/">Entity</a>
+            <a href="/output/dist/Encyclopedia/pages/Entity/">Entity</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/GDC_API/">GDC API</a>
+            <a href="/output/dist/Encyclopedia/pages/GDC_API/">GDC API</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/Latest_Data/">Latest Data</a>
-        </span>
-    </div>
-    <div id="encyc-table-content">
-        <span>
-            <a href="/Encyclopedia/pages/Manifest_File/">Manifest File</a>
-        </span>
-        <span>
-            <a href="/Encyclopedia/pages/Mutation_Annotation_Format/">Mutation Annotation Format (MAF)</a>
-        </span>
-        <span>
-            <a href="/Encyclopedia/pages/Release_Number/">Release Number</a>
+            <a href="/output/dist/Encyclopedia/pages/Latest_Data/">Latest Data</a>
         </span>
     </div>
     <div id="encyc-table-content">
         <span>
-            <a href="/Encyclopedia/pages/REST_API/">REST API</a>
+            <a href="/output/dist/Encyclopedia/pages/Manifest_File/">Manifest File</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/UUID/">Universally Unique Identifier (UUID)</a>
+            <a href="/output/dist/Encyclopedia/pages/Mutation_Annotation_Format/">Mutation Annotation Format (MAF)</a>
         </span>
         <span>
-            <a href="/Encyclopedia/pages/Variant_Call_Format/">Variant Call Format (VCF)</a>
+            <a href="/output/dist/Encyclopedia/pages/Release_Number/">Release Number</a>
+        </span>
+    </div>
+    <div id="encyc-table-content">
+        <span>
+            <a href="/output/dist/Encyclopedia/pages/REST_API/">REST API</a>
+        </span>
+        <span>
+            <a href="/output/dist/Encyclopedia/pages/UUID/">Universally Unique Identifier (UUID)</a>
+        </span>
+        <span>
+            <a href="/output/dist/Encyclopedia/pages/Variant_Call_Format/">Variant Call Format (VCF)</a>
         </span>
     </div>
 </div>
