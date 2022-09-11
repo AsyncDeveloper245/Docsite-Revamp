@@ -9,7 +9,7 @@ A free, open-source system called the Genomic Data Commons (GDC) provides standa
 The GDC docs Revamp project is based on an object oriented python script which uses the Jinja templating engine to write markdown file content to HTML templates, and build them to a static site directory.
 This workflow is used by the new site generator to create the documentation website:
 
-![](docsParser.png)
+![](docsParse.png)
 
 1. The user creates a yaml configuration file which contains the directory structure of the documentation site.
 
@@ -33,17 +33,22 @@ If you would like to know more about non python site generators , check [Here](h
 
 After the community bonding phase, I had learned a lot from my mentor, and it was time to get my hands dirty.
 During the first week, I attempted to create a simple framework that replicated the capabilities of the existing site generator (mkdocs).
-The URL to the practice project is available [Here](https://github.com/AsyncDeveloper245/gdc docs practice)
+The URL to the practice project is available [Here](https://github.com/AsyncDeveloper245/gdc_docs_practice)
 
 The second week was spent developing a new site generator capable of parsing markdown files and constructing the documentation site. Several issues arose this week that I needed to overcome before the site generator could function on the GDC Directory structure.
 
-### Challenge-1: Going Through Directories and Sub-Directories is there are any.
+### Challenge-1: Navigation Bar and Sidebar
 
-### Challenge-2: Navigation Bar and Sidebar
+When it came time to developing the sidebar and navigation bar after working on some other project components, I ran into a bottleneck since I believed there was no way I could leverage the parsed directory structure to construct a sidebar and navigation bar.
+The issue is that in order to generate the sidebar and navigation bar, the Sidebar has to use the directory structure that was given and take into account any related pages and anchor references on each page.
 
-### Challenge-3: Site Linking
+**Solution:** To make the sidebar function, I added a function that creates sibling pages and also modifies the html files while adding the sidebar using the Python BeautifulSoup module.
 
-### Challenge-4: Adding Icons and PDFs
+### Challenge-2: Adding Icons and PDFs
+
+The format of pdf files is "fa-file-pdf-o Download PDF /API/PDF/API UG.pdf." As a result, the python script simply creates the entire directory and names the pdf directory "fa-file-pdf-o Download PDF /API/PDF/API UG." It also uses the output from the above command in place of the Download PDF button in nav bars.
+
+**Solution:** To solve this issue, I changed the Python script to recognize pdf files and process them differently from markdown files.
 
 ## Results
 
@@ -62,3 +67,18 @@ Currently, the GDC Site Generator can do the following:
 3. Use the Jinja templating engine to pass context varies between different templates.
 4. Use the BautifulSoup to Create a navigation bar and sidebar.
 5. Integrate a third party API to create the GDC dictionary viewer.
+
+## Future Goals
+
+The site generator appears to have a promising future. There are still a few parts that need some further development. Among them are:
+
+- Create parsers for various input kinds by modifying the Python script to parse input based on file type.
+- Make code chunks available for testing by users on documentation pages.
+- Alter script to properly parse static (image) files
+- Instead of relying on the pre-existing files in the templates directory, let users use their own basic templates.
+
+## My Experience
+
+I enjoyed my experience with GSoC. This summer, working on the project allowed me to gain a lot of knowledge. From someone who didn't know much about static site generators (and didn't use them much) to someone who has developed a site generator and understands the technical aspects of how they operate. I want to thank Bill, my mentor, as well as Jacob for assisting me anytime I ran into problems or was unsure on how to approach a subject. Additionally, I would want to thank the Center for Translational Data Science, Chicago community for giving me the chance to collaborate with them and for assisting me in better understanding the ecosystem and how it functions.
+
+In the future, I'd like to help the GDC Documentation Project by enhancing the services they provide, either by coding or by offering suggestions. As I transfer the torch to the successors, I will also assist those who want to contribute to the GDC Documentation Project by explaining things and the environment. In the end, GSoC is only the start.
