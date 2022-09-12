@@ -126,3 +126,4 @@ css_files:
 js_files:
   - js/encyclopedia.js
   - js/search.js
+  - js/viewer.js

@@ -6,7 +6,6 @@
 GDC is Open Source, Github Repositories containing source code of GDC Applications can be found on [GDC GitHub Organization page](https://github.com/NCI-GDC/).
 
 - GDC Data Portal: https://github.com/NCI-GDC/portal-ui
-- GDC Legacy Archive: https://github.com/NCI-GDC/portal-ui-legacy
 - GDC Data Transfer Tool: https://github.com/NCI-GDC/gdc-client
 - GDC Data Dictionary: https://github.com/NCI-GDC/gdcdictionary
 - GDC Data Model: https://github.com/NCI-GDC/gdcdatamodel
@@ -56,6 +55,7 @@ To another documentation page
 
 ```
 [Authentication and Authorization](../../Commons/Authentication)
+
 ```
 
 Inside another documentation page
