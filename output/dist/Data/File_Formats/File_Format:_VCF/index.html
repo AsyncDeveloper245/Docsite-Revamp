@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Format: VCF</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/Data/Introduction">Introduction</a></li><li class="inactive"><a href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a></li><li class="inactive"><a href="/output/dist/Data/Data_Security/Data_Security">Data Security</a></li><li class="inactive"><a href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a></li><li class="main"><a href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a></li><ul><li><a href='#Introduction'>Introduction</a></li><li><a href='#VCF file structure'>VCF file structure</a></li><li><a href='#GDC INFO fields'>GDC INFO fields</a></li></ul><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a></li><li class="inactive"><a href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/Data/PDF/Data_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   GDC VCF Format</h1><hr/>
+<h2 id="Introduction">Introduction</h2>
+<p>The GDC DNA-Seq somatic variant-calling pipeline compares a set of matched tumor/normal alignments and produces a VCF file. VCF files report the somatic variants that were detected by each of the four variant callers. Four raw VCFs (Data Type: Raw Simple Somatic Mutation) are produced for each tumor/normal pair of BAMs. Four additional annotated VCFs (Data Type: Annotated Somatic Mutation) are produced by adding biologically relevant information about each variant.  </p>
+<p>The GDC VCF file format follows standards of the <a href="https://samtools.github.io/hts-specs/VCFv4.1.pdf">Variant Call Format (VCF) Version 4.1 Specification</a>. Raw Simple Somatic Mutation VCF files are unannotated, whereas Annotated Somatic Mutation VCF files include extensive, consistent, and pipeline-agnostic annotation of somatic variants.</p>
+<h2 id="VCF file structure">VCF file structure</h2>
+<h3>Metadata header</h3>
+<p>A VCF file starts with lines of metadata that begin with <code>##</code>. Some key components of this section include:</p>
+<ul>
+<li><strong>gdcWorkflow:</strong> Information on the pipelines that were used by the GDC to generate the VCF file. Annotated VCF files contain two <em>gdcWorkflow</em> lines, one that reports the variant calling process and one that reports the variant annotation process.</li>
+<li><strong>INDIVIDUAL:</strong> information about the study participant (<code>case</code>), including:<ul>
+<li><em>NAME:</em> Submitter ID (barcode) associated with the participant</li>
+<li><em>ID:</em> GDC case UUID</li>
+</ul>
+</li>
+<li><strong>SAMPLE:</strong> sample information, including:<ul>
+<li><em>ID:</em> NORMAL or TUMOR</li>
+<li><em>NAME:</em> Submitter ID (barcode) of the aliquot</li>
+<li><em>ALIQUOT_ID:</em> GDC aliquot UUID</li>
+<li><em>BAM_ID:</em> The UUID for the BAM file used to produce the VCF  </li>
+</ul>
+</li>
+<li><strong>INFO:</strong> Format of <em>additional information</em> fields<ul>
+<li>NOTE: GDC Annotated VCFs may contain multiple INFO lines. The last INFO line contains information about annotation fields generated by the <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=somatic_annotation_workflow">Somatic Annotation Workflow</a> (see <a href="#gdc-info-fields">GDC INFO Fields</a> below).</li>
+</ul>
+</li>
+<li><strong>FILTER:</strong> Description of filters that have been applied to the variants</li>
+<li><strong>FORMAT:</strong> Description of genotype fields</li>
+<li><strong>reference:</strong> The reference genome used to generate the VCF file (GRCh38.d1.vd1.fa)</li>
+<li><strong>contig:</strong> A list of IDs for the contiguous DNA sequences that appear in the reference genome used to produce VCF files<ul>
+<li>NOTE: Annotated VCFs include contig information for autosomes, sex chromosomes, and mitochondrial DNA. Unplaced, unlocalized, human decoy, and viral genome sequences are not included.</li>
+</ul>
+</li>
+<li><strong>VEP:</strong> the VEP command used by the <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=somatic_annotation_workflow">Somatic Annotation Workflow</a> to generate the annotated VCF file.</li>
+</ul>
+<h3>Column Header Line</h3>
+<p>Each variant is represented by a row in the VCF file. Below each of the columns are described:</p>
+<ol>
+<li><strong>CHROM:</strong> The chromosome on which the variant is located</li>
+<li><strong>POS:</strong> The position of the variant on the chromosome.  Refers to the first position if the variant includes more than one base</li>
+<li><strong>ID:</strong> A unique identifier for the variant; usually a dbSNP rs number if applicable</li>
+<li><strong>REF:</strong> The base(s) exhibited by the reference genome at the variant's position</li>
+<li><strong>ALT:</strong> The alternate allele(s), comma-separated if there are more than one</li>
+<li><strong>QUAL:</strong> Not populated</li>
+<li><strong>FILTER:</strong> The names of the filters that have flagged this variant. The types of filters used will depend on the variant caller used.</li>
+<li><strong>INFO:</strong> Additional information about the variant. This includes the annotation applied by the VEP.</li>
+<li><strong>FORMAT:</strong> The format of the sample genotype data in the next two columns. This includes descriptions of the colon-separated values.</li>
+<li><strong>NORMAL:</strong> Colon-separated values that describe the normal sample</li>
+<li><strong>TUMOR:</strong> Colon-separated values that describe the tumor sample</li>
+</ol>
+<p>See <a href="https://samtools.github.io/hts-specs/VCFv4.1.pdf">Variant Call Format (VCF) Version 4.1 Specification</a> for details.</p>
+<h2 id="GDC INFO fields">GDC INFO fields</h2>
+<p>The following variant annotation fields are currently included in Annotated Somatic Mutation VCF files.  Please refer to the <a href="../Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline.md">DNA-Seq Analysis Pipeline</a> documentation for details on how this information is generated. <a href="http://useast.ensembl.org/info/docs/tools/vep/vep_formats.html#output">VEP Documentation</a> provides additional information about some of these fields.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allele</td>
+<td>The variant allele used to calculate the consequence</td>
+</tr>
+<tr>
+<td>Consequence</td>
+<td>Consequence type of this variant</td>
+</tr>
+<tr>
+<td>IMPACT</td>
+<td>The impact modifier for the consequence type</td>
+</tr>
+<tr>
+<td>SYMBOL</td>
+<td>The HUGO gene symbol</td>
+</tr>
+<tr>
+<td>Gene</td>
+<td>Ensembl stable ID of the affected gene</td>
+</tr>
+<tr>
+<td>Feature_type</td>
+<td>Type of feature. Currently one of Transcript, RegulatoryFeature, MotifFeature.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Ensembl stable ID of the feature</td>
+</tr>
+<tr>
+<td>BIOTYPE</td>
+<td>The type of transcript or regulatory feature (e.g. protein_coding)</td>
+</tr>
+<tr>
+<td>EXON</td>
+<td>Exon number (out of total exons)</td>
+</tr>
+<tr>
+<td>INTRON</td>
+<td>Intron number (out of total introns)</td>
+</tr>
+<tr>
+<td>HGVSc</td>
+<td>The HGVS coding sequence name</td>
+</tr>
+<tr>
+<td>HGVSp</td>
+<td>The HGVS protein sequence name</td>
+</tr>
+<tr>
+<td>cDNA_position</td>
+<td>Relative position of base pair in cDNA sequence</td>
+</tr>
+<tr>
+<td>CDS_position</td>
+<td>Relative position of base pair in coding sequence</td>
+</tr>
+<tr>
+<td>Protein_position</td>
+<td>Relative position of the affected amino acid in protein</td>
+</tr>
+<tr>
+<td>Amino_acids</td>
+<td>Change in amino acids (only given if the variant affects the protein-coding sequence)</td>
+</tr>
+<tr>
+<td>Codon</td>
+<td>The affected codons with the variant base in upper case</td>
+</tr>
+<tr>
+<td>Existing_variation</td>
+<td>Known identifier of existing variant; usually a dbSNP rs number if applicable</td>
+</tr>
+<tr>
+<td>ALLELE_NUM</td>
+<td>Allele number from input; 0 is reference, 1 is first alternate, etc.</td>
+</tr>
+<tr>
+<td>DISTANCE</td>
+<td>Shortest distance from variant to transcript</td>
+</tr>
+<tr>
+<td>STRAND</td>
+<td>The DNA strand (1 or -1) on which the transcript/feature lies</td>
+</tr>
+<tr>
+<td>FLAGS</td>
+<td>Transcript quality flags</td>
+</tr>
+<tr>
+<td>VARIANT_CLASS</td>
+<td>Sequence Ontology variant class</td>
+</tr>
+<tr>
+<td>SYMBOL_SOURCE</td>
+<td>The source of the gene symbol</td>
+</tr>
+<tr>
+<td>HGNC_ID</td>
+<td>HGNC gene ID</td>
+</tr>
+<tr>
+<td>CANONICAL</td>
+<td>A flag indicating if the transcript is denoted as the canonical transcript for this gene</td>
+</tr>
+<tr>
+<td>TSL</td>
+<td>Transcript support level</td>
+</tr>
+<tr>
+<td>APPRIS</td>
+<td>APPRIS isoform annotation</td>
+</tr>
+<tr>
+<td>CCDS</td>
+<td>The CCDS identifer for this transcript, where applicable</td>
+</tr>
+<tr>
+<td>ENSP</td>
+<td>The Ensembl protein identifier of the affected transcript</td>
+</tr>
+<tr>
+<td>SWISSPROT</td>
+<td>UniProtKB/Swiss-Prot identifier of protein product</td>
+</tr>
+<tr>
+<td>TREMBL</td>
+<td>UniProtKB/TrEMBL identifier of protein product</td>
+</tr>
+<tr>
+<td>UNIPARC</td>
+<td>UniParc identifier of protein product</td>
+</tr>
+<tr>
+<td>RefSeq</td>
+<td>RefSeq gene ID</td>
+</tr>
+<tr>
+<td>GENE_PHENO</td>
+<td>Indicates if the gene is associated with a phenotype, disease or trait</td>
+</tr>
+<tr>
+<td>SIFT</td>
+<td>The SIFT prediction and/or score, with both given as prediction (score)</td>
+</tr>
+<tr>
+<td>PolyPhen</td>
+<td>The PolyPhen prediction and/or score</td>
+</tr>
+<tr>
+<td>DOMAINS</td>
+<td>The source and identifier of any overlapping protein domains</td>
+</tr>
+<tr>
+<td>HGVS_OFFSET</td>
+<td>Indicates by how many bases the HGVS notations for this variant have been shifted</td>
+</tr>
+<tr>
+<td>GMAF</td>
+<td>Non-reference allele and frequency of existing variant in 1000 Genomes</td>
+</tr>
+<tr>
+<td>AFR_MAF</td>
+<td>Non-reference allele and frequency of existing variant in 1000 Genomes combined African population</td>
+</tr>
+<tr>
+<td>AMR_MAF</td>
+<td>Non-reference allele and frequency of existing variant in 1000 Genomes combined American population</td>
+</tr>
+<tr>
+<td>EAS_MAF</td>
+<td>Non-reference allele and frequency of existing variant in 1000 Genomes combined East Asian population</td>
+</tr>
+<tr>
+<td>EUR_MAF</td>
+<td>Non-reference allele and frequency of existing variant in 1000 Genomes combined European population</td>
+</tr>
+<tr>
+<td>SAS_MAF</td>
+<td>Non-reference allele and frequency of existing variant in 1000 Genomes combined South Asian population</td>
+</tr>
+<tr>
+<td>AA_MAF</td>
+<td>Non-reference allele and frequency of existing variant in NHLBI-ESP African American population</td>
+</tr>
+<tr>
+<td>EA_MAF</td>
+<td>Non-reference allele and frequency of existing variant in NHLBI-ESP European American population</td>
+</tr>
+<tr>
+<td>ExAC_MAF</td>
+<td>Frequency of existing variant in ExAC combined population</td>
+</tr>
+<tr>
+<td>ExAC_Adj_MAF</td>
+<td>Adjusted frequency of existing variant in ExAC combined population</td>
+</tr>
+<tr>
+<td>ExAC_AFR_MAF</td>
+<td>Frequency of existing variant in ExAC African/American population</td>
+</tr>
+<tr>
+<td>ExAC_AMR_MAF</td>
+<td>Frequency of existing variant in ExAC American population</td>
+</tr>
+<tr>
+<td>ExAC_EAS_MAF</td>
+<td>Frequency of existing variant in ExAC East Asian population</td>
+</tr>
+<tr>
+<td>ExAC_FIN_MAF</td>
+<td>Frequency of existing variant in ExAC Finnish population</td>
+</tr>
+<tr>
+<td>ExAC_NFE_MAF</td>
+<td>Frequency of existing variant in ExAC Non-Finnish European population</td>
+</tr>
+<tr>
+<td>ExAC_OTH_MAF</td>
+<td>Frequency of existing variant in ExAC combined other combined populations</td>
+</tr>
+<tr>
+<td>ExAC_SAS_MAF</td>
+<td>Frequency of existing variant in ExAC South Asian population</td>
+</tr>
+<tr>
+<td>CLIN_SIG</td>
+<td>Clinical significance of variant from dbSNP</td>
+</tr>
+<tr>
+<td>SOMATIC</td>
+<td>Somatic status of existing variant(s)</td>
+</tr>
+<tr>
+<td>PHENO</td>
+<td>Indicates if existing variant is associated with a phenotype, disease or trait</td>
+</tr>
+<tr>
+<td>PUBMED</td>
+<td>Pubmed ID(s) of publications that cite existing variant</td>
+</tr>
+<tr>
+<td>MOTIF_NAME</td>
+<td>The source and identifier of a transcription factor binding profile aligned at this position</td>
+</tr>
+<tr>
+<td>MOTIF_POS</td>
+<td>The relative position of the variation in the aligned TFBP</td>
+</tr>
+<tr>
+<td>HIGH_INF_POS</td>
+<td>A flag indicating if the variant falls in a high information position of a transcription factor binding profile (TFBP)</td>
+</tr>
+<tr>
+<td>MOTIF_SCORE_CHANGE</td>
+<td>The difference in motif score of the reference and variant sequences for the TFBP</td>
+</tr>
+<tr>
+<td>ENTREZ</td>
+<td>Entrez ID</td>
+</tr>
+<tr>
+<td>EVIDENCE</td>
+<td>Evidence that the variant exists</td>
+</tr>
+</tbody>
+</table></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

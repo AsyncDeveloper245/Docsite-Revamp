@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="main"><a href="/output/dist/Data_Dictionary/About">About</a></li><ul><li><a href='#Introduction'>Introduction</a></li><li><a href='#Data Dictionary Viewer'>Data Dictionary Viewer</a></li><li><a href='#Search Tool'>Search Tool</a></li><li><a href='#Data Dictionary API'>Data Dictionary API</a></li></ul><li class="inactive"><a href="/output/dist/Data_Dictionary/Viewer">Viewer</a></li><li class="inactive"><a href="/output/dist/Data_Dictionary/Search">Search</a></li><li class="inactive"><a href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   GDC Data Dictionary</h1><hr/>
+<h2 id="Introduction">Introduction</h2>
+<p>The GDC Data Dictionary is a resource that describes the clinical, biospecimen, administrative, and genomic metadata that can be used in parallel with the genomic data generated by the GDC. The dictionary defines the structure of a database, the <a href="../Data/Data_Model/GDC_Data_Model.md">data model</a>, and the rules the data need to follow. In addition, the dictionary includes information about the relationships between entities within the data model.</p>
+<h3>Data Dictionary Components:</h3>
+<p>The GDC Data Dictionary consists of the following components:</p>
+<ul>
+<li>Comprehensive list of nodes, which represent entities in the data model and help to group metadata into categories.</li>
+<li>Comprehensive list of properties in the database and their schemas, which describe specific data elements that can be submitted to the GDC.</li>
+<li>Comprehensive list of unique keys and links between properties.</li>
+<li>Constraints and requirements defined on nodes and properties, including acceptable values and data types.</li>
+</ul>
+<h3>Standards and Conventions</h3>
+<p>All properties and values in the GDC Data Dictionary include references to external standards defined and maintained by the <a href="https://ncit.nci.nih.gov/ncitbrowser/">NCI Thesaurus</a> (NCIt) and the <a href="https://wiki.nci.nih.gov/display/caDSR/caDSR+Wiki">Cancer Data Standards Registry and Repository</a> (caDSR). Both of these standards are operated by groups at <a href="https://cbiit.cancer.gov/">NCI's Center for Bioinformatics and Information Technology</a> (CBIIT).</p>
+<p>Each property is assigned a <a href="https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search">Common Data Element</a> (CDE) created by the caDSR. The CDE provides detailed information about the property including links to the NCIt through assigned concept codes. NCIt concepts are also assigned at the permissible value level for enumerated properties. The images below are an example of a caDSR CDE and its related property-level NCIt concepts.</p>
+<p><a href="images/CDE_Data_Element_Details.png" title="Click to see the full image."><img alt="CDE Data Elements Details" src="images/CDE_Data_Element_Details.png"/></a>
+<a href="images/CDE_Details.png" title="Click to see the full image."><img alt="CDE Details" src="images/CDE_Details.png"/></a></p>
+<p>In addition to the caDSR and NCIt references, many of the properties are defined by additional standards including, but not limited to the following: <a href="https://www.who.int/health-topics/international-classification-of-diseases">International Classification of Diseases</a> (<a href="http://codes.iarc.fr/">ICD-O-3</a> and <a href="https://www.cdc.gov/nchs/icd/icd10cm.htm">ICD-10</a>), <a href="https://cancerstaging.org/Pages/default.aspx">American Joint Committee on Cancer</a> staging classifications, <a href="https://www.childrensoncologygroup.org/">Children's Oncology Group</a> (COG) categorizations, and the <a href="https://www.figo.org/">International Federation of Gynecology and Obstetrics</a> (FIGO) classifications. When these additional standards are used to describe a property, this is referenced in the description and the list of allowable values will reflect the criteria defined by the standard.</p>
+<p>Using external standards benefits both data contributors and data consumers at the GDC. For example, the curated lists of synonyms provided by NCIt allows for easy mapping of other study-specific clinical data standards to the GDC data dictionary. The available synonyms can be leveraged using the <a href="gdcmvs/">GDC Data Dictionary Search</a>.</p>
+<h2 id="Data Dictionary Viewer">Data Dictionary Viewer</h2>
+<p>The <a href="../viewer">GDC Data Dictionary Viewer</a> is a user-friendly interface for accessing the dictionary. It includes the following functionality:</p>
+<ul>
+<li><strong>Dictionary contents:</strong> Display of entities defined in the dictionary, including their descriptions, values or types, and links.</li>
+<li><strong>Links to semantic resources:</strong> Links to semantic data resources that define <a href="https://cde.nlm.nih.gov/home">Common Data Elements (CDEs)</a> used in the dictionary</li>
+<li><strong>Submission templates:</strong> JSON and TSV template generation for use in GDC data submission.</li>
+</ul>
+<h3>Components of the Data Dictionary Viewer</h3>
+<p>The sections below provide an example of the information available for each specific node in the GDC Data Dictionary.</p>
+<h4>Summary</h4>
+<p><a href="../images/GDC_DD_Title_and_Summary.png" title="Click to see the full image."><img alt="Title and Summary" src="images/GDC_DD_Title_and_Summary.png"/></a></p>
+<ul>
+<li><strong>Type:</strong> The name of the node.</li>
+<li><strong>Category:</strong> The type of metadata; some examples are Clinical, Biospecimen, Analysis and Submittable Data Files.</li>
+<li><strong>Description:</strong> This section contains a written explanation for the type of data that would be found in this node.</li>
+<li><strong>Unique Keys:</strong> The properties or list of properties that can be used to identify this node, and only this node, within the commons.</li>
+</ul>
+<p>This section also contains a "Download Template" link with a drop-down menu containing the two template file types: TSV and JSON. These files will contain all properties that are found in the node, but not all <a href="#properties">properties are required</a> to upload the node.</p>
+<h4>Links</h4>
+<p><a href="../images/GDC_DD_Links.png" title="Click to see the full image."><img alt="Links" src="images/GDC_DD_Links.png"/></a></p>
+<ul>
+<li><strong>Links to Entity:</strong> Other nodes that can be connected to the focal node.</li>
+<li><strong>Link Name:</strong> A simplified stand in for the node link structure (requirement, target type, multiplicity, label). Its declaration categorizes the relationship between nodes.</li>
+<li><strong>Relationship:</strong> The written description for the association between the focal node and the other connected node.</li>
+<li><strong>Required:</strong> Displays whether the link to the node is required for the existence of the focal node. To link the focal node to a parent node, use the <strong>&lt;Link Name&gt;.submitter_id</strong> with the value of that field set to the appropriate <code>submitter_id</code> in the parent node. For more information on creating links between nodes, please see the <a href="Data_Submission_Portal/Users_Guide/Data_Submission_Walkthrough">Data Submission Walkthrough</a>.</li>
+</ul>
+<h4>Properties</h4>
+<p><a href="../images/GDC_DD_Properties_Enumeration.png" title="Click to see the full image."><img alt="Properties Enumeration" src="images/GDC_DD_Properties_Enumeration.png"/></a>
+<a href="../images/GDC_DD_Properties_Integer.png" title="Click to see the full image."><img alt="Properties Integer" src="images/GDC_DD_Properties_Integer.png"/></a>
+<a href="../images/GDC_DD_Properties_Number.png" title="Click to see the full image."><img alt="Properties Number" src="images/GDC_DD_Properties_Number.png"/></a>
+<a href="../images/GDC_DD_Properties_String.png" title="Click to see the full image."><img alt="Properties String" src="images/GDC_DD_Properties_String.png"/></a>
+<a href="../images/GDC_DD_Properties_Boolean.png" title="Click to see the full image."><img alt="Properties Boolean" src="images/GDC_DD_Properties_Boolean.png"/></a></p>
+<ul>
+<li>
+<p><strong>Property:</strong> The name of the property.</p>
+</li>
+<li>
+<p><strong>Description:</strong> The written explanation for the expected type and characterization of data found in this property.</p>
+</li>
+<li>
+<p><strong>Acceptable Types or Values:</strong> The values that can be entered into the field based on the type category.</p>
+</li>
+<li>
+<p>Enumeration: A list of predetermined strings. The user must select the exact string from the list to be a valid entry. Case does matter. Many of these properties with enumerations have numerous values. To see all of the values, click the "More Values" link at the bottom of the property row under the <strong>Acceptable Types or Values</strong> column.</p>
+</li>
+<li>Integer: A field that only accepts whole numbers.</li>
+<li>Number: A field that can accept any number including numbers with decimal places.</li>
+<li>String: A field in which alphanumeric characters and <code>_</code>, <code>.</code>, <code>-</code>, up to a length of 32,767, can be entered. Do not use other characters as it will create submission errors. Some string fields contain regex restrictions to coerce data to a specific pattern.</li>
+<li>
+<p>Boolean: A field that only accepts <code>true</code> or <code>false</code> as acceptable values. If these values are not entered as lowercase, the dictionary will not recognize the value and an error will occur.</p>
+</li>
+<li>
+<p><strong>Required:</strong> This informs the user whether this field is necessary for the submission of the node. If information for a required field is unknown or not reported, there is often a value to reflect that missing information.</p>
+</li>
+<li>
+<p><strong>CDE:</strong> The caDSR CDE Public ID, with the direct link to its respective Data Element Details page.</p>
+</li>
+</ul>
+<h2 id="Search Tool">Search Tool</h2>
+<p>The Search Tool enables easier query of the GDC Data Dictionary for data submitters and recommends GDC properties and values based on synonyms. Created by the NCI CBIIT EVS Team, it leverages NCI vocabulary systems caDSR and NCIt. Below are some of the features included in the Search Tool:</p>
+<ul>
+<li>Users can complete partial or exact match searches.</li>
+<li>Searches can include terms that are synonymous to the GDC allowable values.</li>
+<li>Users can compare their list of values to the GDC allowable values.</li>
+<li>Dictionary paths are described so users can find the specific node where a property is located.</li>
+</ul>
+<h3>Components of the Search Tool</h3>
+<p>The sections below provide an example of the information available for each portion of the Search Tool.</p>
+<h4>Search Tool Modifiers</h4>
+<p>The Search Tool is equipped with the following modifiers to customize searches in the GDC Data Dictionary:</p>
+<p><a href="../images/GDC_search.png" title="Click to see the full image."><img alt="GDC search" src="images/GDC_search.png"/></a></p>
+<ul>
+<li><strong>Exact match:</strong> This will return matches for only the exact value entered into the search field.</li>
+</ul>
+<p><a href="../images/GDC_search_general_sample_type.png" title="Click to see the full image."><img alt="GDC search general sample type" src="images/GDC_search_general_sample_type.png"/></a>
+<a href="../images/GDC_search_exact_match_sample_type.png" title="Click to see the full image."><img alt="GDC search exact match sample type" src="images/GDC_search_exact_match_sample_type.png"/></a></p>
+<ul>
+<li><strong>Property description:</strong> This will return matches for the value found not only in the property, but also searches within the description of the property.</li>
+</ul>
+<p><a href="../images/GDC_search_general_age.png" title="Click to see the full image."><img alt="GDC search general age" src="images/GDC_search_general_age.png"/></a>
+<a href="../images/GDC_search_property_description_age.png" title="Click to see the full image."><img alt="GDC search property description age" src="images/GDC_search_property_description_age.png"/></a></p>
+<ul>
+<li><strong>Synonyms:</strong> This will return matches that not only match the value entered, but other values that NCIt consider to be synonymous with the entered value.</li>
+</ul>
+<p><a href="../images/GDC_search_general_living.png" title="Click to see the full image."><img alt="GDC search general living" src="images/GDC_search_general_living.png"/></a>
+<a href="../images/GDC_search_synonym_living.png" title="Click to see the full image."><img alt="GDC search synonym living" src="images/GDC_search_synonym_living.png"/></a></p>
+<h4>Result Fields</h4>
+<p>The results from searches can be sorted into three different result fields:</p>
+<ul>
+<li><strong>Values:</strong> This result section will return three columns that displays matches to values that are found in the GDC Data Dictionary:
+  <a href="../images/GDC_search_general_squamous_values.png" title="Click to see the full image."><img alt="GDC search general squamous values" src="images/GDC_search_general_squamous_values.png"/></a></li>
+<li><strong>Category / Node / Property:</strong> This section displays the GDC Data Dictionary hierarchy that precedes the search term. This section can also contain information such as:<ul>
+<li><strong>See All Values:</strong> This window will display all GDC values for this property.
+  <a href="../images/GDC_search_general_squamous_see_all_values.png" title="Click to see the full image."><img alt="GDC search general squamous see all values" src="images/GDC_search_general_squamous_see_all_values.png"/></a></li>
+<li><strong>Compare with User List:</strong> This window allows the user to input a list of values to check against the acceptable values for that property.
+  <a href="../images/GDC_search_general_squamous_values_compare_list.png" title="Click to see the full image."><img alt="GDC search general squamous see all values" src="images/GDC_search_general_squamous_values_compare_list.png"/></a></li>
+<li><strong>See All Terms:</strong> This window will display the NCIt code assigned to the specific term and the synonymous NCIt terms associated.
+  <a href="../images/GDC_search_general_squamous_values_terms.png" title="Click to see the full image."><img alt="GDC search general squamous values terms" src="images/GDC_search_general_squamous_values_terms.png"/></a></li>
+<li><strong>caDSR: CDE , Values , Compare with GDC:</strong> This group of links can send the user to the CDE property page (CDE), opens a window that displays the caDSR values for that property (Values), or opens a window that compares the caDSR values with GDC values (Compare wth GDC).
+  <a href="../images/GDC_search_general_squamous_values_cadsr_values.png" title="Click to see the full image."><img alt="GDC search general squamous values cadsr values" src="images/GDC_search_general_squamous_values_cadsr_values.png"/></a></li>
+</ul>
+</li>
+<li><strong>Matched GDC Values:</strong> This column will display all GDC values that match the term with ICD-O-3 and NCIt values if they are available.
+    <a href="../images/GDC_search_general_squamous_matched.png" title="Click to see the full image."><img alt="GDC search general squamous matched" src="images/GDC_search_general_squamous_matched.png"/></a></li>
+<li><strong>CDE Permissible Values:</strong> This column displays GDC dictionary properties that have corresponding caDSR clinical data elements (CDE).</li>
+<li><strong>Properties:</strong> This result section will return five columns that displays matches to properites of the GDC Data Dictionary:
+  <a href="../images/GDC_search_general_age.png" title="Click to see the full image."><img alt="GDC search general age" src="images/GDC_search_general_age.png"/></a></li>
+<li><strong>Category / Node:</strong> This column displays the Category and Node hierarchy for the search value.</li>
+<li><strong>Property:</strong> This column displays the name of the Property for the search value.</li>
+<li><strong>Description:</strong> This column displays the description for the returned property.</li>
+<li><strong>GDC Property Values:</strong> This column displays the value type for the returned property. For more information see the Acceptable Types or Values section under <a href="#properties">Properties</a>.</li>
+<li><strong>caDSR CDE Reference:</strong> This column displays the CDE link for the returned property.</li>
+<li><strong>Dictionary:</strong> This result section will return two columns that display matches to values within the structure of the GDC Data Dictionary:
+  <a href="../images/GDC_search_general_squamous_dictionary.png" title="Click to see the full image."><img alt="GDC search general squamous dictionary" src="images/GDC_search_general_squamous_dictionary.png"/></a></li>
+<li><strong>Name:</strong> This column displays the name of the Category, Node, or Property with a returned value total for each level.</li>
+<li><strong>Description:</strong> This column displays the GDC Data Dictionary description for each level.</li>
+</ul>
+<h2 id="Data Dictionary API">Data Dictionary API</h2>
+<p>In technical terms, the dictionary is a set of YAML files that define JSON schemas for each entity in the dictionary. The files are available <a href="https://github.com/NCI-GDC/gdcdictionary/tree/develop/gdcdictionary/schemas">on GitHub</a>.</p>
+<p>The GDC API can generate entity JSON schemas in JSON format. The API also provides the template generation functionality accessible via the GDC Data Dictionary Viewer. See <a href="../API/Users_Guide/Submission/#gdc-data-dictionary-endpoints">API documentation</a> for details on how to access these functions programmatically.</p></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

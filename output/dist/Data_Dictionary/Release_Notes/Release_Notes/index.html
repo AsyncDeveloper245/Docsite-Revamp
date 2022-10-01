@@ -1,0 +1,2926 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Release Notes</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/Data_Dictionary/About">About</a></li><li class="inactive"><a href="/output/dist/Data_Dictionary/Viewer">Viewer</a></li><li class="inactive"><a href="/output/dist/Data_Dictionary/Search">Search</a></li><li class="main"><a href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a></li><ul><li><a href='#v2.4.1'>v2.4.1</a></li><li><a href='#v2.4.0'>v2.4.0</a></li><li><a href='#v2.3.0'>v2.3.0</a></li><li><a href='#v2.2.0'>v2.2.0</a></li><li><a href='#v2.1.0'>v2.1.0</a></li><li><a href='#None'>None</a></li><li><a href='#v.1.18.1'>v.1.18.1</a></li><li><a href='#v.1.18'>v.1.18</a></li><li><a href='#v.1.17'>v.1.17</a></li><li><a href='#v.1.16'>v.1.16</a></li><li><a href='#v.1.15'>v.1.15</a></li><li><a href='#v.1.14'>v.1.14</a></li><li><a href='#v.1.13'>v.1.13</a></li><li><a href='#v.1.12.1'>v.1.12.1</a></li><li><a href='#v.1.12'>v.1.12</a></li><li><a href='#v.1.11'>v.1.11</a></li><li><a href='#Release with API v1.10.0'>Release with API v1.10.0</a></li><li><a href='#Release with API v1.7.1'>Release with API v1.7.1</a></li><li><a href='#Release with API v1.3.1'>Release with API v1.3.1</a></li></ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   Data Dictionary Release Notes</h1><hr/>
+<table class="table">
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v241">v.2.4.1</a></td>
+<td>August 23, 2021</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v240">v.2.4.0</a></td>
+<td>June 21, 2021</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v230">v.2.3.0</a></td>
+<td>January 5, 2021</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v220">v.2.2.0</a></td>
+<td>July 2, 2020</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v210">v.2.1.0</a></td>
+<td>March 10, 2020</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v200">v.2.0.0</a></td>
+<td>January 30, 2020</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v1181">v.1.18.1</a></td>
+<td>November 6, 2019</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v118">v.1.18</a></td>
+<td>July 31, 2019</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v117">v.1.17</a></td>
+<td>June 5, 2019</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v116">v.1.16</a></td>
+<td>April 17, 2019</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v115">v.1.15</a></td>
+<td>December 18, 2018</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v114">v.1.14</a></td>
+<td>September 27, 2018</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v113">v1.13</a></td>
+<td>May 21, 2018</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v1121">v1.12.1</a></td>
+<td>April 26, 2018</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v112">v1.12</a></td>
+<td>April 23, 2018</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#v111">v1.11</a></td>
+<td>January 20, 2018</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#release-with-api-v1100">v1.10.0</a></td>
+<td>August 22, 2017</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#release-with-api-v171">v1.7.1</a></td>
+<td>March 16, 2017</td>
+</tr>
+<tr>
+<td><a href="Data_Dictionary_Release_Notes#release-with-api-v131">v1.3.1</a></td>
+<td>September 7, 2016</td>
+</tr>
+</tbody>
+</table>
+<h2 id="v2.4.1">v2.4.1</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: August 23, 2021</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Altered <code>pathology_detail</code> Entity</li>
+<li>Changes made to <code>additional_pathology_findings</code><ul>
+<li>New permissible value: <code>Adenomyosis</code></li>
+<li>New permissible value: <code>Atrophic endometrium</code></li>
+<li>New permissible value: <code>Atypical hyperplasia/Endometrial intraepithelial neoplasia (EIN)</code></li>
+<li>New permissible value: <code>Autoimmune atrophic chronic gastritis</code></li>
+<li>New permissible value: <code>Asbestos bodies</code></li>
+<li>New permissible value: <code>Benign endocervical polyp</code></li>
+<li>New permissible value: <code>Bilateral ovaries with endometriotic cyst and surface adhesions</code></li>
+<li>New permissible value: <code>Carcinoma in situ</code></li>
+<li>New permissible value: <code>Cirrhosis</code></li>
+<li>New permissible value: <code>Clostridioides difficile (c. diff)</code></li>
+<li>New permissible value: <code>Colonization; bacterial</code></li>
+<li>New permissible value: <code>Colonization; fungal</code></li>
+<li>New permissible value: <code>Cyst(s)</code></li>
+<li>New permissible value: <code>Diffuse and early nodular diabetic glomerulosclerosis</code></li>
+<li>New permissible value: <code>Dysplasia; high grade</code></li>
+<li>New permissible value: <code>Dysplasia; low grade</code></li>
+<li>New permissible value: <code>Endometrial polyp</code></li>
+<li>New permissible value: <code>Endometriosis</code></li>
+<li>New permissible value: <code>Endometroid carcinoma with local mucinous differentiation</code></li>
+<li>New permissible value: <code>Endosalpingiosis</code></li>
+<li>New permissible value: <code>Epithelial dysplasia</code></li>
+<li>New permissible value: <code>Epithelial hyperplasia</code></li>
+<li>New permissible value: <code>Gallbladder adenomyomatosis</code></li>
+<li>New permissible value: <code>Glomerular disease</code></li>
+<li>New permissible value: <code>Hyperkeratosis</code></li>
+<li>New permissible value: <code>Inflammation</code></li>
+<li>New permissible value: <code>Intestinal metaplasia</code></li>
+<li>New permissible value: <code>Keratinizing dysplasia; mild</code></li>
+<li>New permissible value: <code>Keratinizing dysplasia; moderate</code></li>
+<li>New permissible value: <code>Keratinizing dysplasia; severe (carcinoma in situ)</code></li>
+<li>New permissible value: <code>Leiomyoma</code></li>
+<li>New permissible value: <code>Leiomyomata w/ degenerative changes</code></li>
+<li>New permissible value: <code>Nonkeratinizing dysplasia; mild</code></li>
+<li>New permissible value: <code>Nonkeratinizing dysplasia; moderate</code></li>
+<li>New permissible value: <code>Nonkeratinizing dysplasia; severe (carcinoma in situ)</code></li>
+<li>New permissible value: <code>Other</code></li>
+<li>New permissible value: <code>PD-L1 CPS (223C LDT) - 20%</code></li>
+<li>New permissible value: <code>Platinum-resistant</code></li>
+<li>New permissible value: <code>Pleural plaque</code></li>
+<li>New permissible value: <code>Pulmonary interstitial fibrosis</code></li>
+<li>New permissible value: <code>Sialadenitis</code></li>
+<li>New permissible value: <code>Sinonasal papilloma</code></li>
+<li>New permissible value: <code>Squamous metaplasia</code></li>
+<li>New permissible value: <code>Squamous papilloma; solitary</code></li>
+<li>New permissible value: <code>Squamous papillomatosis</code></li>
+<li>New permissible value: <code>Tubular (papillary) adenoma(s)</code></li>
+<li>New permissible value: <code>Tumor-associated lymphoid proliferation</code></li>
+<li>New permissible value: <code>Tumor has rough spikey edges</code></li>
+<li>Removed permissible value: <code>Pleurodesis, Talc</code></li>
+<li>Removed permissible value: <code>Pleurodesis, NOS</code></li>
+</ul>
+</li>
+<li>Altered <code>diagnosis</code> Entity</li>
+<li><code>primary_disease</code> field changed to <code>diagnosis_is_primary_disease</code> for clarity.</li>
+<li>Altered <code>treatment</code> Entity</li>
+<li>Changes made to <code>treatment_type</code><ul>
+<li>New permissible value: <code>Pleurodesis, Talc</code></li>
+<li>New permissible value: <code>Pleurodesis, NOS</code></li>
+</ul>
+</li>
+<li>Altered <code>molecular_test</code> Entity</li>
+<li>Changes made to <code>test_units</code><ul>
+<li>New permissible value: <code>mm^2</code></li>
+<li>New permissible value: <code>ng/mL</code></li>
+<li>New permissible value: <code>percent</code></li>
+<li>New permissible value: <code>count x10^9/L</code></li>
+</ul>
+</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>The <code>mitotic_count</code> field in <code>diagnosis</code> is erroneously set as "deprecated" and does not appear in the dictionary viewer. This field can be uploaded successfully without issue and will appear in the dictionary viewer at a later release. <!--SV-1939--></li>
+</ul>
+<h2 id="v2.4.0">v2.4.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: June 21, 2021</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added mix-max limitations on property values in <code>demographic</code>, <code>portion</code>, <code>aliquot</code>, <code>family_history</code>, <code>slide</code>, <code>follow_up</code>, <code>read_group</code>, <code>sample</code>, <code>analyte</code>, <code>exposure</code>, <code>diagnosis</code>, <code>treatment</code>, <code>molecular_test</code></li>
+<li>Altered <code>submitted_unaligned_reads</code>, <code>submitted_aligned_reads</code>, <code>annotated_somatic_mutation</code>, <code>simple_somatic_mutation</code>, <code>masked_somatic_mutation</code>, <code>submitted_genomic_profile</code>, <code>aligned_reads</code>, <code>aggregated_somatic_mutation</code>, <code>simple_germline_variation</code> Entities</li>
+<li>Changes made to <code>experimental_strategy</code><ul>
+<li>Removed permissible value: <code>Low Pass WGS</code></li>
+</ul>
+</li>
+<li>Altered <code>follow_up</code> Entity</li>
+<li>New property: <code>eye_color</code></li>
+<li>New property: <code>history_of_tumor</code></li>
+<li>New property: <code>history_of_tumor_type</code></li>
+<li>New property: <code>undescended_testis_corrected</code></li>
+<li>New property: <code>undescended_testis_corrected_age</code></li>
+<li>New property: <code>undescended_testis_corrected_laterality</code></li>
+<li>New property: <code>undescended_testis_corrected_method</code></li>
+<li>New property: <code>undescended_testis_history</code></li>
+<li>New property: <code>undescended_testis_history_laterality</code></li>
+<li>Changes made to <code>comorbidity</code><ul>
+<li>New permissible value: <code>Dermatomyosis</code></li>
+<li>New permissible value: <code>Herpes Zoster</code></li>
+<li>New permissible value: <code>Varicella Zoster Virus</code></li>
+</ul>
+</li>
+<li>Changes made to <code>risk_factor</code><ul>
+<li>New permissible value: <code>Dermatomyosis</code></li>
+<li>New permissible value: <code>Herpes Zoster</code></li>
+<li>New permissible value: <code>Varicella Zoster Virus</code></li>
+</ul>
+</li>
+<li>Altered <code>read_group</code> Entity</li>
+<li>Changes made to <code>instrument_model</code><ul>
+<li>New permissible value: <code>Illumina NovaSeq 6000</code></li>
+</ul>
+</li>
+<li>Changes made to <code>single_cell_library</code><ul>
+<li>New permissible value: <code>Chromium scATAC v1 Library</code></li>
+</ul>
+</li>
+<li>Changes made to <code>target_capture_kit</code><ul>
+<li>New permissible value: <code>Twist Human Comprehensive Exome</code></li>
+</ul>
+</li>
+<li>Altered <code>somatic_aggregation_workflow</code> Entity</li>
+<li>Added link: <code>simple_somatic_mutations</code></li>
+<li>Changes made to <code>workflow_type</code><ul>
+<li>New permissible value: <code>CaVEMan Variant Aggregation and Masking</code></li>
+</ul>
+</li>
+<li>Altered <code>sample</code> Entity</li>
+<li>Changes made to <code>sample_type</code><ul>
+<li>New permissible value: <code>Next Generation Cancer Model Expanded Under Non-conforming Conditions</code></li>
+</ul>
+</li>
+<li>Changes made to <code>sample_type_id</code><ul>
+<li>New permissible value: <code>87</code></li>
+</ul>
+</li>
+<li>Altered <code>germline_mutation_calling_workflow</code> Entity</li>
+<li>New link: <code>submitted_genotyping_arrays</code></li>
+<li>Changes made to <code>workflow_type</code><ul>
+<li>New permissible value: <code>Birdseed</code></li>
+</ul>
+</li>
+<li>Altered <code>slide_image</code> Entity</li>
+<li>Changes made to <code>data_format</code><ul>
+<li>New permissible value: <code>JPEG 2000</code></li>
+</ul>
+</li>
+<li>Altered <code>exposure</code> Entity</li>
+<li>New property: <code>exposure_duration_years</code></li>
+<li>New property: <code>parent_with_radiation_exposure</code></li>
+<li>Changes made to <code>exposure_type</code><ul>
+<li>New permissible value: <code>Radiation</code></li>
+</ul>
+</li>
+<li>Altered <code>simple_germline_variation</code> Entity</li>
+<li>New property: <code>platform</code></li>
+<li>Changes made to <code>data_format</code><ul>
+<li>New permissible value: <code>TSV</code></li>
+</ul>
+</li>
+<li>Altered <code>pathology_detail</code> Entity</li>
+<li>New property: <code>consistent_pathology_review</code></li>
+<li>New property: <code>residual_tumor</code></li>
+<li>New property: <code>size_extraocular_nodule</code></li>
+<li>New property: <code>tumor_thickness</code></li>
+<li>Altered <code>diagnosis</code> Entity</li>
+<li>New property: <code>adrenal_hormone</code></li>
+<li>New property: <code>primary_disease</code></li>
+<li>Changes made to <code>ajcc_pathologic_stage</code><ul>
+<li>New permissible value: <code>Stage IIIA1</code></li>
+<li>New permissible value: <code>Stage IIIA2</code></li>
+</ul>
+</li>
+<li>Changes made to <code>metastasis_at_diagnosis_site</code><ul>
+<li>New permissible value: <code>Bladder</code></li>
+<li>New permissible value: <code>Bronchus</code></li>
+<li>New permissible value: <code>Head, Face or Neck, NOS</code></li>
+<li>New permissible value: <code>Lymph Node, Regional</code></li>
+<li>New permissible value: <code>Lymph Node, Subcarinal</code></li>
+</ul>
+</li>
+<li>Changes made to <code>method_of_diagnosis</code><ul>
+<li>New permissible value: <code>Exoresection</code></li>
+</ul>
+</li>
+<li>Changes made to <code>morphology</code><ul>
+<li>New permissible value: <code>8246/6</code></li>
+<li>New permissible value: <code>8380/6</code></li>
+<li>New permissible value: <code>8461/6</code></li>
+<li>New permissible value: <code>8522/6</code></li>
+</ul>
+</li>
+<li>Changes made to <code>sites_of_involvement</code><ul>
+<li>New permissible value: <code>Mesothelium</code></li>
+</ul>
+</li>
+<li>Altered <code>treatment</code> Entity</li>
+<li>New property: <code>route_of_administration</code></li>
+<li>Changes made to <code>treatment_arm</code><ul>
+<li>New permissible value: <code>A081801</code></li>
+</ul>
+</li>
+<li>Changes made to <code>therapeutic_agents</code><ul>
+<li>New permissible value: <code>Interferon Alfa-2B</code></li>
+<li>New permissible value: <code>Levoleucovorin Calcium</code></li>
+<li>New permissible value: <code>Mistletoe Extract</code></li>
+</ul>
+</li>
+<li>Altered <code>somatic_mutation_calling_workflow</code> Entity</li>
+<li>Changes made to <code>workflow_type</code><ul>
+<li>New permissible value: <code>Strelka2 RNA</code></li>
+</ul>
+</li>
+<li>Altered <code>molecular_test</code> Entity</li>
+<li>New property: <code>days_to_test</code></li>
+<li>New link: <code>diagnoses</code></li>
+<li>Changes made to <code>antigen</code><ul>
+<li>New permissible value: <code>FMC-7</code></li>
+<li>New permissible value: <code>Kappa, Surface</code></li>
+<li>New permissible value: <code>Lambda, Surface</code></li>
+</ul>
+</li>
+<li>Changes made to <code>gene_symbol</code><ul>
+<li>New permissible value: <code>AQP1</code></li>
+<li>New permissible value: <code>CALB2</code></li>
+<li>New permissible value: <code>DNTT</code></li>
+<li>New permissible value: <code>EPCAM</code></li>
+<li>New permissible value: <code>GCET1</code></li>
+<li>New permissible value: <code>PDPN</code></li>
+<li>New permissible value: <code>PTGS2</code></li>
+</ul>
+</li>
+<li>Changes made to <code>laboratory_test</code><ul>
+<li>New permissible value: <code>BG8</code></li>
+<li>New permissible value: <code>Circulating Endothelial Cells</code></li>
+<li>New permissible value: <code>Cytokeratin 5</code></li>
+<li>New permissible value: <code>Cytokeratin 6</code></li>
+<li>New permissible value: <code>Dopamine-Secreting</code></li>
+<li>New permissible value: <code>Epinephrine-Secreting</code></li>
+<li>New permissible value: <code>Metanephrine-Secreting</code></li>
+<li>New permissible value: <code>Methoxytyramine-Secreting</code></li>
+<li>New permissible value: <code>Microsatellite Instability</code></li>
+<li>New permissible value: <code>Norepinephrine-Secreting</code></li>
+<li>New permissible value: <code>Normetanephrine-Secreting</code></li>
+<li>New permissible value: <code>Serum Mesothelin</code></li>
+<li>New permissible value: <code>TAG-72</code></li>
+</ul>
+</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>The <code>mitotic_count</code> field in <code>diagnosis</code> is erroneously set as "deprecated" and does not appear in the dictionary viewer. This field can be uploaded successfully without issue and will appear in the dictionary viewer at a later release. <!--SV-1939--></li>
+</ul>
+<h2 id="v2.3.0">v2.3.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: January 5, 2021</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Altered <code>submitted_unaligned_reads</code> Entity</li>
+<li>Changes made to <code>experimental_strategy</code><ul>
+<li>New permissible value: <code>HiChIP</code></li>
+<li>New permissible value: <code>m6A RNA Methylation</code></li>
+<li>New permissible value: <code>scATAC-Seq</code></li>
+</ul>
+</li>
+<li>Changes made to <code>read_pair_number</code><ul>
+<li>New permissible value: <code>R3</code></li>
+</ul>
+</li>
+<li>Altered <code>submitted_aligned_reads</code> Entity</li>
+<li>Changes made to <code>experimental_strategy</code><ul>
+<li>New permissible value: <code>HiChIP</code></li>
+<li>New permissible value: <code>m6A RNA Methylation</code></li>
+<li>New permissible value: <code>scATAC-Seq</code></li>
+</ul>
+</li>
+<li>Altered <code>follow_up</code> Entity</li>
+<li>Changes made to <code>comorbidity</code><ul>
+<li>New permissible value: <code>Abnormal Glucose Level</code></li>
+<li>New permissible value: <code>Chronic Fatigue Syndrome</code></li>
+<li>New permissible value: <code>Clonal Hematopoiesis</code></li>
+<li>New permissible value: <code>Fibromyalgia</code></li>
+<li>New permissible value: <code>Gastritis</code></li>
+</ul>
+</li>
+<li>Changes made to <code>risk_factor</code><ul>
+<li>New permissible value: <code>Abnormal Glucose Level</code></li>
+<li>New permissible value: <code>Chronic Kidney Disease</code></li>
+<li>New permissible value: <code>Escherichia coli</code></li>
+<li>New permissible value: <code>Gastritis</code></li>
+<li>New permissible value: <code>Skin Rash</code></li>
+</ul>
+</li>
+<li>New Entity: <code>masked_methylation_array</code></li>
+<li>Altered <code>read_group</code> Entity</li>
+<li>New property: <code>chipseq_antibody</code></li>
+<li>New property: <code>fragmentation_enzyme</code></li>
+<li>Removed property: <code>RIN</code></li>
+<li>Changes made to <code>library_strategy</code><ul>
+<li>New permissible value: <code>HiChIP</code></li>
+<li>New permissible value: <code>m6A RNA Methylation</code></li>
+<li>New permissible value: <code>scATAC-Seq</code></li>
+</ul>
+</li>
+<li>Altered <code>sample</code> Entity</li>
+<li>New property: <code>sample_ordinal</code></li>
+<li>Changes made to <code>composition</code><ul>
+<li>New permissible value: <code>Mixed Adherent Suspension</code></li>
+</ul>
+</li>
+<li>Altered <code>analyte</code> Entity</li>
+<li>New property: <code>experimental_protocol_type</code></li>
+<li>New property: <code>rna_integrity_number</code></li>
+<li>Altered <code>pathology_detail</code> Entity</li>
+<li>New property: <code>additional_pathology_findings</code></li>
+<li>New property: <code>necrosis_percent</code></li>
+<li>New property: <code>necrosis_present</code></li>
+<li>New property: <code>rhabdoid_percent</code></li>
+<li>New property: <code>rhabdoid_present</code></li>
+<li>New property: <code>sarcomatoid_percent</code></li>
+<li>New property: <code>sarcomatoid_present</code></li>
+<li>Changes made to <code>dysplasia_degree</code><ul>
+<li>New permissible value: <code>Mild</code></li>
+<li>New permissible value: <code>Moderate</code></li>
+<li>New permissible value: <code>Severe</code></li>
+</ul>
+</li>
+<li>Changes made to <code>dysplasia_type</code><ul>
+<li>New permissible value: <code>Epithelial</code></li>
+<li>New permissible value: <code>Keratinizing</code></li>
+<li>New permissible value: <code>Nonkeratinizing</code></li>
+</ul>
+</li>
+<li>Changes made to <code>lymph_node_involvement</code></li>
+<li>Altered <code>diagnosis</code> Entity</li>
+<li>New property: <code>ann_arbor_b_symptoms_described</code></li>
+<li>Changes made to <code>ajcc_clinical_stage</code><ul>
+<li>New permissible value: <code>Stage IA3</code></li>
+</ul>
+</li>
+<li>Changes made to <code>ajcc_pathologic_m</code><ul>
+<li>New permissible value: <code>M1d</code></li>
+</ul>
+</li>
+<li>Changes made to <code>metastasis_at_diagnosis_site</code><ul>
+<li>New permissible value: <code>Gastrointestinal Tract</code></li>
+<li>New permissible value: <code>Heart</code></li>
+<li>New permissible value: <code>Neck</code></li>
+<li>New permissible value: <code>Retroperitoneum</code></li>
+<li>New permissible value: <code>Urethra</code></li>
+<li>New permissible value: <code>Uterine Adnexa</code></li>
+<li>New permissible value: <code>Vertebral Canal</code></li>
+<li>New permissible value: <code>Vulva, NOS</code></li>
+</ul>
+</li>
+<li>Changes made to <code>morphology</code><ul>
+<li>New permissible value: <code>8249/6</code></li>
+<li>New permissible value: <code>8800/6</code></li>
+</ul>
+</li>
+<li>Changes made to <code>supratentorial_localization</code><ul>
+<li>New permissible value: <code>Frontal lobe</code></li>
+<li>New permissible value: <code>Occipital lobe</code></li>
+<li>New permissible value: <code>Parietal lobe</code></li>
+<li>New permissible value: <code>Temporal lobe</code></li>
+</ul>
+</li>
+<li>Altered <code>treatment</code> Entity</li>
+<li>Changes made to <code>treatment_dose_units</code><ul>
+<li>New permissible value: <code>mg</code></li>
+</ul>
+</li>
+<li>Changes made to <code>treatment_type</code><ul>
+<li>New permissible value: <code>Radiation, Hypofractionated</code></li>
+<li>New permissible value: <code>Radiation, Mixed Photon Beam</code></li>
+<li>New permissible value: <code>Radiation, Photon Beam</code></li>
+</ul>
+</li>
+<li>Changes made to <code>therapeutic_agents</code><ul>
+<li>Updated enum list.</li>
+</ul>
+</li>
+<li>Altered <code>case</code> Entity</li>
+<li>Updated <code>disease_type</code> and <code>primary_site</code> enum values.</li>
+<li>Altered <code>rna_expression_workflow</code> Entity</li>
+<li>Changes made to <code>workflow_type</code><ul>
+<li>New permissible value: <code>STAR - Smart-Seq2 Raw Counts</code></li>
+<li>New permissible value: <code>STAR - Smart-Seq2 Filtered Counts</code></li>
+</ul>
+</li>
+<li>Altered <code>molecular_test</code> Entity</li>
+<li>New link: <code>slides</code></li>
+<li>Changes made to <code>antigen</code><ul>
+<li>New permissible value: <code>Ki67</code></li>
+</ul>
+</li>
+<li>Changes made to <code>gene_symbol</code><ul>
+<li>New permissible value: <code>CHGA</code></li>
+<li>New permissible value: <code>SYP</code></li>
+</ul>
+</li>
+<li>Changes made to <code>molecular_consequence</code><ul>
+<li>New permissible value: <code>Exon Variant</code></li>
+</ul>
+</li>
+<li>Changes made to <code>second_gene_symbol</code><ul>
+<li>New permissible value: <code>CHGA</code></li>
+<li>New permissible value: <code>SYP</code></li>
+</ul>
+</li>
+<li>Altered <code>aligned_reads</code> Entity</li>
+<li>Changes made to <code>experimental_strategy</code><ul>
+<li>New permissible value: <code>HiChIP</code></li>
+<li>New permissible value: <code>scATAC-Seq</code></li>
+</ul>
+</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="v2.2.0">v2.2.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: July 2, 2020</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added NCIt codes associated with enumeration values in <code>diagnosis</code> entity type</li>
+<li>Added <code>pathology_detail</code> entity <!--DICT-16--></li>
+<li>Modified <code>treatment</code> entity <!--DICT-1--></li>
+<li>Added new enumerations for <code>therapeutic_agents</code> property<ul>
+<li><code>Itraconazole</code></li>
+<li><code>Tipiracil</code></li>
+<li><code>Tipiracil Hydrochloride</code></li>
+<li><code>Zirconium Zr 89 Panitumumab</code></li>
+<li><code>Estradiol mustard</code></li>
+<li><code>Progestational IUD</code></li>
+<li><code>PD-1 Inhibitor</code></li>
+<li><code>IGF-1R Inhibitor</code></li>
+<li><code>CDK4/6 Inhibitor</code></li>
+<li><code>ALK Inhibitor</code></li>
+</ul>
+</li>
+<li>Modified <code>annotation</code> entity <!--DICT-2 --></li>
+<li>Added <code>many_to_many</code> link to <code>copy_number_estimate</code> entity</li>
+<li>Modified <code>diagnosis</code> entity <!--DICT-6--></li>
+<li>Added new properties:<ul>
+<li><code>eln_risk_classification</code></li>
+<li><code>satellite_nodule_present</code></li>
+<li><code>who_cns_grade</code></li>
+<li><code>who_nte_grade</code></li>
+<li><code>sites_of_involvement</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>ajcc_pathologic_stage</code> property<ul>
+<li><code>Stage IA3</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>classification_of_tumor</code> property<ul>
+<li><code>Progression</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>metastasis_at_diagnosis_site</code> property<ul>
+<li><code>Esophagus</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>morphology</code> property</li>
+<li>Removed properties as <code>required</code><ul>
+<li><code>days_to_last_follow_up</code></li>
+<li><code>tumor_grade</code></li>
+<li><code>progression_or_recurrence</code></li>
+<li><code>days_to_recurrence</code></li>
+<li><code>days_to_last_known_disease_status</code></li>
+<li><code>last_known_disease_status</code></li>
+</ul>
+</li>
+<li>Deprecated properties<ul>
+<li><code>mitotic_count</code></li>
+<li><code>papillary_renal_cell_type</code></li>
+<li><code>micropapillary_features</code></li>
+<li><code>non_nodal_regional_disease</code></li>
+<li><code>non_nodal_tumor_deposits</code></li>
+</ul>
+</li>
+<li>Modified <code>sample</code> entity <!--DICT-7--></li>
+<li>Changed description of properties<ul>
+<li><code>days_to_collection</code></li>
+<li><code>days_to_sample_procurement</code></li>
+</ul>
+</li>
+<li>Deprecated properties<ul>
+<li><code>is_ffpe</code></li>
+<li><code>oct_embedded</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>sample_type</code> property<ul>
+<li><code>Mixed Adherent Suspension Saliva</code></li>
+</ul>
+</li>
+<li>Modified <code>follow_up</code> entity <!--DICT-11--></li>
+<li>Added new properties<ul>
+<li><code>procedures_performed</code></li>
+<li><code>hormonal_contraceptive_type</code></li>
+<li><code>hormone_replacement_therapy_type</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>comorbidity</code> property</li>
+<li>Added new permissible values to <code>risk_factor</code> property</li>
+<li>Added new permissible values to <code>evidence_of_recurrence_type</code> property</li>
+<li>Added new permissible values to <code>aids_risk_factors</code> property</li>
+<li>Modified <code>exposure</code> entity <!--DICT-12--></li>
+<li>Added new properties<ul>
+<li><code>smokeless_tobacco_quit_age</code></li>
+<li><code>alcohol_type</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>exposure_type</code> property<ul>
+<li><code>Wood Dust</code></li>
+<li><code>Smoke</code></li>
+</ul>
+</li>
+<li>Added new permissible value to <code>type_of_smoke_exposure</code> property<ul>
+<li><code>Tobacco smoke, NOS</code></li>
+</ul>
+</li>
+<li>Modified <code>submitted_unaligned_reads</code> property <!--DICT-13--></li>
+<li>Removed permissible value from <code>read_pair_number</code> property<ul>
+<li><code>I1</code></li>
+</ul>
+</li>
+<li>Modified <code>aliquot</code> entity <!--DICT-14--></li>
+<li>Added new permissible value to <code>analyte_type</code> property<ul>
+<li><code>Nuclei RNA</code></li>
+</ul>
+</li>
+<li>Modified <code>rna_expression_workflow</code> entity <!--DICT-15--></li>
+<li>Removed permissible value from <code>workflow_type</code> property<ul>
+<li><code>STAR - Smart-Seq2 Counts</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>workflow_type</code> property<ul>
+<li><code>STAR - Smart-Seq2 Gene Counts</code></li>
+<li><code>STAR - Smart-Seq2 GeneFull Counts</code></li>
+</ul>
+</li>
+<li>Modified <code>molecular_test</code> entity <!--DICT-17--></li>
+<li>Added new properties<ul>
+<li><code>mitotic_count</code></li>
+<li><code>mitotic_total_area</code></li>
+<li><code>biospecimen_volume</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>gene_symbol</code> property</li>
+<li>Added new permissible values to <code>second_gene_symbol</code> property</li>
+<li>Added new permissible values to <code>antigen</code> property</li>
+<li>Added new permissible values to <code>laboratory_test</code> property</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="v2.1.0">v2.1.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: March 10, 2020</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added NCIt codes associated with enumeration values in <code>exposure</code>, <code>family_history</code>, and <code>demographic</code> entity types</li>
+<li>Restructured dictionary for consistency across types</li>
+<li><strong>read_group entity</strong></li>
+<li>Added 5 new target capture kits <!--DAT-2755--></li>
+<li><code>Custom Twist Broad PanCancer Panel - 396 Genes</code></li>
+<li><code>Nextera DNA Exome</code></li>
+<li><code>Custom Twist Broad Exome v1.0 - 35.0 Mb</code></li>
+<li><code>Custom SureSelect CGCI-HTMCP-CC KMT2D And Hotspot Panel - 37.0 Kb</code></li>
+<li><code>TruSeq RNA Exome</code></li>
+<li>Add one new enum to <code>library_strategy</code> <!--DAT-2793--></li>
+<li><code>scRNA-Seq</code></li>
+<li><strong>structural_variation entity</strong> <!--DAT-2703--></li>
+<li>Added <code>VCF</code> to <code>data_format</code> property</li>
+<li>Added links to <code>structural_variation</code> from <code>somatic_mutation_index</code> <!--DAT-2704--></li>
+<li>Added links to <code>aligned_reads</code> from <code>somatic_copy_number</code> workflow <!--DAT-2705--></li>
+<li><strong>copy_number_segment entity</strong></li>
+<li>Added new permissible values to <code>experimental_strategy</code> property <!--DAT-2706--></li>
+<li><code>WGS</code></li>
+<li><code>WXS</code></li>
+<li>Added new enum to <code>experimental_strategy</code> <!--DAT-2788--></li>
+<li><code>WGS</code></li>
+<li><strong>aligned_reads entity</strong></li>
+<li>Added 2 new properties <!--DAT-2787--></li>
+<li><code>tumor_ploidy</code></li>
+<li><code>tumor_purity</code></li>
+<li><strong>treatment entity</strong></li>
+<li>Added enumeration to <code>therapeutic_agent</code> property <!--DAT-2727--></li>
+<li><strong>copy_number_estimate entity</strong> <!--DAT-2729--></li>
+<li>Added new enum to <code>data_format</code></li>
+<li><code>TSV</code></li>
+<li><strong>demographic entity</strong> <!--DAT-2733--></li>
+<li>Added new property <code>country_of_residence_at_enrollment</code></li>
+<li><strong>family_history entity</strong> <!--DAT-2738--></li>
+<li>Added new permissible values to <code>relationship_primary_diagnosis</code> property</li>
+<li><strong>follow_up entity</strong> <!--DAT-2739--></li>
+<li>Added new properties</li>
+<li><code>body_surface_area</code></li>
+<li><code>recist_targeted_regions_number</code></li>
+<li><code>recist_targeted_regions_sum</code></li>
+<li><code>adverse_event_grade</code></li>
+<li><code>cd4_count</code></li>
+<li><code>imaging_type</code></li>
+<li><code>scan_tracer_used</code></li>
+<li><code>nadir_cd4_count</code></li>
+<li><code>hiv_viral_load</code></li>
+<li><code>aids_risk_factors</code></li>
+<li><code>haart_treatment_indicator</code></li>
+<li><code>immunosuppressive_treatment_type</code></li>
+<li><code>evidence_of_recurrence_type</code></li>
+<li><code>imaging_result</code></li>
+<li><code>hormonal_contraceptive_use</code></li>
+<li><code>pregnancy_outcome</code></li>
+<li><code>hysterectomy_type</code></li>
+<li><code>hysterectomy_margins_involved</code></li>
+<li><code>days_to_imaging</code></li>
+<li><code>cdc_hiv_risk_factors</code></li>
+<li><code>risk_factor</code></li>
+<li>Added new enum to <code>days_to_follow_up</code></li>
+<li><code>null</code></li>
+<li><strong>molecular_test entity</strong> <!--DAT-2741--></li>
+<li>Added new permissible values to various properties</li>
+<li><code>laboratory_test</code></li>
+<li><code>second_gene_symbol</code></li>
+<li><code>molecular_consequence</code></li>
+<li><code>biospecimen_type</code></li>
+<li><code>molecular_analysis_method</code></li>
+<li><code>gene_symbol</code></li>
+<li><code>clonality</code></li>
+<li><strong>sample entity</strong> <!--DAT-2742--></li>
+<li>Added new permissible values to various properties</li>
+<li><code>method_of_sample_procurement</code></li>
+<li><code>biospecimen_anatomic_site</code></li>
+<li><code>tumor_descriptor</code></li>
+<li>Added new property</li>
+<li><code>tissue_collection_type</code></li>
+<li><strong>treatment entity</strong> <!--DAT-2745--></li>
+<li>Added new properties</li>
+<li><code>treatment_arm</code></li>
+<li><code>reason_treatment_ended</code></li>
+<li><code>number_of_cycles</code></li>
+<li><code>treatment_effect_indicator</code></li>
+<li><code>treatment_dose</code></li>
+<li><code>treatment_dose_units</code></li>
+<li><code>treatment_frequency</code></li>
+<li><code>chemo_concurent_to_radiation</code></li>
+<li>Added new permissible values to various properties</li>
+<li><code>therapeutic_agent</code></li>
+<li><code>treatment_effect</code></li>
+<li><code>treatment_intent_type</code></li>
+<li><strong>slide entity</strong> <!--DAT-2747--></li>
+<li>Added new properties</li>
+<li><code>percent_sarcomatoid_features</code></li>
+<li><code>percent_rhabdoid_features</code></li>
+<li><code>prostatic_chips_total_count</code></li>
+<li><code>prostatic_chips_positive_count</code></li>
+<li><code>prostatic_involvement_percent</code></li>
+<li><code>bone_marrow_malignant_cells</code></li>
+<li><code>percent_follicular_component</code></li>
+<li><code>tissue_microarray_coordinates</code></li>
+<li><strong>diagnosis entity</strong> <!--DAT-2735--></li>
+<li>Added new properties</li>
+<li><code>tumor_depth</code></li>
+<li><code>margin_distance</code></li>
+<li><code>transglottic_extension</code></li>
+<li><code>margins_involved_site</code></li>
+<li><code>gleason_grade_tertiary</code></li>
+<li><code>papillary_renal_cell_type</code></li>
+<li><code>gleason_patterns_percent</code></li>
+<li><code>greatest_tumor_dimension</code></li>
+<li><code>lymph_node_involved_site</code></li>
+<li><code>pregnant_at_diagnosis</code></li>
+<li><code>figo_staging_edition_year</code></li>
+<li>Added new permissible values to various properties</li>
+<li><code>classification_of_tumor</code></li>
+<li><code>figo_stage</code></li>
+<li><code>tumor_grade</code></li>
+<li><code>metastasis_at_diagnosis_site</code></li>
+<li><code>gleason_grade_group</code></li>
+<li><code>tissue_or_organ_of_origin</code></li>
+<li><code>morphology</code></li>
+<li><strong>exposure entity</strong> <!--DAT-2737--></li>
+<li>Added new properties</li>
+<li><code>secondhand_smoke_as_child</code></li>
+<li><code>exposure_type</code></li>
+<li><code>type_of_tobacco_used</code></li>
+<li><code>exposure_duration</code></li>
+<li><code>tobacco_use_per_day</code></li>
+<li><code>age_at_onset</code></li>
+<li><code>marijuana_use_per_week</code></li>
+<li><code>tobacco_smoking_status</code></li>
+<li><strong>case entity</strong> <!--DAT-2746--></li>
+<li>Added new properties</li>
+<li><code>consent_type</code></li>
+<li><code>days_to_consent</code></li>
+<li>Added new permissible values to <code>index_date</code></li>
+<li>Added <code>scRNA-Seq</code> as new enum to <code>experimental_strategy</code> in 4 entities <!--DAT-2794--></li>
+<li><code>submitted_unaligned_reads</code></li>
+<li><code>submitted_aligned_reads</code></li>
+<li><code>aligned_reads</code></li>
+<li><code>gene_expression</code></li>
+<li>Added 3 new permissible values to <code>workflow_type</code> in alignment_workflow <!--2795--></li>
+<li><code>CellRanger - 10x Chromium</code></li>
+<li><code>STAR - Smart-Seq2</code></li>
+<li><code>zUMIs - Smart-Seq2</code></li>
+<li>Added 4 new permissible values to <code>workflow_type</code> in rna_expression_workflow <!--DAT-2796--></li>
+<li><code>CellRanger - 10x Raw Counts</code></li>
+<li><code>CellRanger - 10x Filtered Counts</code></li>
+<li><code>STAR - Smart-Seq2 Counts</code></li>
+<li><code>zUMIs - Smart-Seq2 Counts</code></li>
+<li>Add one new integer property to <code>read_group</code> <!--DAT-2798--></li>
+<li><code>number_expect_cells</code></li>
+<li>Add one new enum to <code>read_pair_number</code> in <code>submitted_unaligned_reads</code> <!--DAT-2799--></li>
+<li><code>I1</code></li>
+<li>Add one new enum property in <code>read_group</code> node <!--DAT-2800--></li>
+<li><code>Chromium 3' Gene Expression v2 Library</code></li>
+<li><code>Chromium 3' Gene Expression v3 Library</code></li>
+<li><code>Smart-Seq2</code></li>
+<li>Created new node <code>expression_analysis_workflow</code> <!--DAT-2802--></li>
+<li>Created new node <code>secondary_expression_analysis</code> <!--2803--></li>
+<li>Add one new enum to <code>data_format</code> in <code>gene_expression</code> <!--DAT-2804--></li>
+<li><code>MEX</code></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="None">v2.0.0 <!--REQ-393--></h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: January 30, 2020</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>The API that includes the GDC data dictionary now uses Python 3.</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="v.1.18.1">v.1.18.1</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: November 6, 2019</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added new permissible value <code>deleted</code> to property <code>file_state</code></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="v.1.18">v.1.18</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: July 31, 2019</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added new entities <!--DAT-2450--></li>
+<li><code>protein_expression_quantification</code> <!--DAT-2237--></li>
+<li><code>submitted_genotyping_array</code> <!--DAT-2327--></li>
+<li><code>somatic_copy_number_workflow</code> <!--DAT-2330--></li>
+<li>Add links in data model to <code>somatic_copy_number_workflow</code> from <code>copy_number_segment</code> <!--DAT-2331--></li>
+<li>Add links in data model to <code>somatic_copy_number_workflow</code> from <code>copy_number_estimate</code> <!--DAT-2415--></li>
+<li>Add links in data model from <code>annotated_somatic_mutation</code> to <code>genomic_profile_harmonization_workflow</code> <!--DAT-2333--></li>
+<li>Modified <code>copy_number_segment</code> entity</li>
+<li>Add new data type <!--DAT-2332--><ul>
+<li><code>Allele-specific Copy Number Segment</code></li>
+</ul>
+</li>
+<li>Update data dictionary to support new annotation classifications <!--DAT-2238--></li>
+<li>Fixed typo in <code>sample</code> entity schema <!--DAT-2247--></li>
+<li>Unrequired project link for aliquot level MAFs <!--DAT-2260--></li>
+<li>Added NCIt codes for gender values <!--DAT-2314--></li>
+<li>Changed description of <code>masked_somatic_mutation</code> and <code>aggregated_somatic_mutation</code> nodes to be the same <!--DAT-2311--></li>
+<li>Modified <code>archive</code> entity <!--DAT-2259--></li>
+<li>Set <code>downloadable</code> property to <code>true</code></li>
+<li>Modified <code>publication</code> entity<!--DAT-2259--></li>
+<li>Set <code>downloadable</code> property to <code>true</code></li>
+<li>Modified <code>filtered_copy_number_segment</code> entity<!--DAT-2259--></li>
+<li>Set <code>downloadable</code> property to <code>true</code></li>
+<li>Modified <code>aligned_reads</code> entity</li>
+<li>Added <code>MSI properties</code> as new property</li>
+<li>Modified <code>read_group</code> entity</li>
+<li>Added <code>Custom SureSelect Human All Exon v1.1 Plus 3 Boosters</code> as new permissible value for <code>target_capture_kit</code> field <!--DAT-2003--></li>
+<li>Added <code>SeqCap EZ Human Exome v3.0</code> as new permissible value for <code>target_capture_kit</code> field <!--DAT-2310--></li>
+<li>Added new permissible values for <code>instrument_model</code><ul>
+<li><code>Unknown</code> <!--DAT-2411--></li>
+<li><code>Not Reported</code> <!--DAT-2411--></li>
+<li><code>Ion Torrent S5</code> <!--DAT-2338--></li>
+</ul>
+</li>
+<li>Modified <code>biospecimen_supplement</code> entity <!--  DAT-2266--></li>
+<li>Added <code>CDC JSON</code> as new permissible data format</li>
+<li>Modified <code>demographic</code> entity <!--DAT-2303--></li>
+<li>Added new property<ul>
+<li><code>age_is_obfuscated</code></li>
+</ul>
+</li>
+<li>Modified <code>demographic</code> entity <!--DAT-2303--></li>
+<li>Added new properties<ul>
+<li><code>cause_of_death_source</code> <!--DAT-2341--></li>
+<li><code>occupation_duration_years</code> <!--DAT-2342--></li>
+</ul>
+</li>
+<li>Modified <code>diagnosis</code> entity</li>
+<li>Added new properties<ul>
+<li><code>non_nodal_regional_disease</code> <!--DAT-2353--></li>
+<li><code>non_nodal_tumor_deposits</code> <!--DAT-2354--></li>
+<li><code>ovarian_specimen_status</code> <!--DAT-2356--></li>
+<li><code>ovarian_surface_involvement</code> <!--DAT-2357--></li>
+<li><code>percent_tumor_invasion</code> <!--DAT-2360--></li>
+<li><code>peritoneal_fluid_cytological_status</code> <!-- DAT-2361--></li>
+<li><code>breslow_thickness</code> <!--DAT-2345--></li>
+<li><code>international_prognostic_index</code> <!--DAT-2349--></li>
+<li><code>largest_extrapelvic_peritoneal_focus</code> <!--DAT-2350--></li>
+<li><code>mitotic_count</code> <!--DAT-2352--></li>
+</ul>
+</li>
+<li>Removed permissible values from <code>primary_diagnosis</code> <!--DAT-2377 --></li>
+<li>Removed permissible values from <code>site_of_resection_or_biopsy</code> <!--DAT-2378--></li>
+<li>Removed <code>tumor_stage</code> as required property <!--DAT-2397--></li>
+<li>Added new permissible values for<ul>
+<li><code>ajcc_pathologic_stage</code> <!--DAT-2368--></li>
+<li><code>metastasis_at_diagnosis_site</code> <!--DAT-2370--></li>
+</ul>
+</li>
+<li>Migrated values not part of permissible values to <code>Not Reported</code> for following properties - <code>primary_diagnosis</code> <!--DAT-2412--> - <code>site_of_resection_or_biopsy</code> <!--DAT-2413 --> - <code>tumor_grade</code> <!--DAT-2414--> - <code>tissue_or_organ_of_origin</code> <!--DAT-2438--></li>
+<li>
+<p>Removed permissible values from - <code>tissue_or_organ_of_origin</code> <!--DAT-2426--> - <code>morphology</code> <!--  DAT-2427--></p>
+</li>
+<li>
+<p>Modified <code>structural_variant_calling_workflow</code> entity <!--DAT-233--></p>
+</li>
+<li>Added new <code>workflow_type</code></li>
+<li>Modified <code>structural_variant</code> entity</li>
+<li>Added <code>BEDPE</code> to <code>data_format</code> as permissible value <!--DAT-2336--></li>
+<li>Modified <code>molecular_test</code> entity</li>
+<li>Added new permissible values for <code>gene_symbol</code> <!--DAT-2373--></li>
+<li>Added new permissible values for <code>test_result</code><!--DAT-2374--></li>
+<li>Added new permissible values for <code>antigen</code><!--DAT-2372--></li>
+<li>Added new property <code>pathogenicity</code> <!--DAT-2366--></li>
+<li>Modified <code>follow_up</code> entity</li>
+<li>Added new permissible value for <code>risk_factor</code> <!--DAT-2371--></li>
+<li>Modified <code>sample</code> entity</li>
+<li>Added new permissible values for <code>method_of_sample_procurement</code> <!--DAT-2376--></li>
+<li>Modified <code>genomic_profile_harmonization_workflow</code> entity</li>
+<li>Added new <code>workflow_type</code> permissible values <!--DAT-2388--></li>
+<li>Modified <code>somatic_mutation_calling_workflow</code> entity</li>
+<li>Added new <code>workflow_type</code> permissible values <!--DAT-2389--></li>
+<li>Modified <code>somatic_annotation_workflow</code> entity</li>
+<li>Added new <code>workflow_type</code> permissible values <!--DAT-2391--></li>
+<li>Modified <code>case</code> entity</li>
+<li>Added new permissible value to <code>disease_type</code> <!--DAT-2390--><ul>
+<li><code>Not Applicable</code></li>
+</ul>
+</li>
+<li>Modified <code>copy_number_estimate</code> entity</li>
+<li>Added new permissible value to <code>experimental_strategy</code> <!--DAT-2334--><ul>
+<li><code>WXS</code></li>
+</ul>
+</li>
+<li>Modified <code>family_history</code> entity</li>
+<li>Added new property <!--DAT-2365--><ul>
+<li><code>relatives_with_cancer_history_count</code></li>
+</ul>
+</li>
+<li>Modified <code>sample</code> entity <!--DAT-2418--></li>
+<li>Added new permissible values<ul>
+<li><code>sample_type</code></li>
+<li><code>sample_type_id</code></li>
+</ul>
+</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="v.1.17">v.1.17</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: June 5, 2019</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Deleted vital status, days_to_birth, and days_to_death from Diagnosis node. Data submission and data requests should all be directed to the corresponding properties on the Demographic Node.</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="v.1.16">v.1.16</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: April 17, 2019</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Updates to the Data Dictionary Search Tool</li>
+<li>Added new bioinformatics workflow for methylation arrays (Sesame) <!--DAT-2025--></li>
+<li>Changed <code>somatic_mutation_calling_workflow</code> link from <code>one_to_many</code> to <code>many_to_many</code> <!--DAT-1697--></li>
+<li>Modified <code>read_group</code> entity</li>
+<li>Added <code>SeqCap EZ Human Exome v2.0</code> as new permissible value for <code>target_capture_kit</code> field <!--DAT-1827--></li>
+<li>Added <code>Custom SureSelect Human All Exon v1.1 Plus 3 Boosters</code> as new permissible value <code>target_capture_kit</code> field <!--DAT-2002--></li>
+<li>Added <code>Custom SureSelect CGCI-HTMCP-CC Panel - 19.7 Mb</code> as new permissible value <code>target_capture_kit</code> field <!--DAT-2013--></li>
+<li>Modified <code>case</code> entity</li>
+<li>Updated the description for the <code>primary_site</code> field <!--DAT-1928--></li>
+<li>Added new permissible value to <code>lost_to_followup</code> field <!--DAT-2133--></li>
+<li>Modified <code>molecular_test</code> entity</li>
+<li>Removed properties with genomic coordinates <!--DAT-1991--></li>
+<li>Add new permissible values to <code>test_result</code> <!--TT-918--></li>
+<li>Added <code>second_exon</code> as new property<!--TT-919--></li>
+<li>Modified <code>aligned_reads_index</code> entity</li>
+<li>Made these files not submittable <!--DAT-1985--></li>
+<li>Modified <code>somatic_mutation_index</code> entity</li>
+<li>Made these files not submittable <!--DAT-1986--></li>
+<li>Modified <code>sample</code> entity</li>
+<li>Added new permissible values for <code>sample_type</code> <!--DAT-2017--><ul>
+<li><code>Blood Derived Cancer - Bone Marrow</code></li>
+<li><code>Blood Derived Cancer - Peripheral Blood</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>sample_type_id</code> <!--DAT-2116--></li>
+<li>Modified <code>diagnosis</code> entity</li>
+<li>Added 6 new staging and grading properties for TCGA <!--DAT-2056--><ul>
+<li><code>igcccg_stage</code></li>
+<li><code>masaoka_stage</code></li>
+<li><code>gleason_grade_group</code></li>
+<li><code>primary_gleason_grade</code></li>
+<li><code>secondary_gleason_grade</code></li>
+<li><code>weiss_assessment_score</code></li>
+</ul>
+</li>
+<li>Made <code>vital_status</code> an optional field <!--DAT-2157--></li>
+<li>Removed deprecated properties <!--TT-939--><!--TT-938--><ul>
+<li><code>days_to_death</code></li>
+<li><code>days_to_birth</code></li>
+<li><code>cause_of_death</code></li>
+<li><code>hiv_positive</code></li>
+<li><code>days_to_hiv_diagnosis</code></li>
+<li><code>ldh_normal_range_upper</code></li>
+<li><code>new_event_type</code></li>
+<li><code>hpv_status</code></li>
+<li><code>hpv_positive_type</code></li>
+<li><code>colon_polyps_history</code></li>
+<li><code>progression_free_survival</code></li>
+<li><code>progression_free_survival_event</code></li>
+<li><code>overall_survival</code></li>
+<li><code>days_to_treatment</code></li>
+<li><code>ldh_level_at_diagnosis</code></li>
+</ul>
+</li>
+<li>Added <code>vital_status</code> property to deprecated list<!--DAT-2158--></li>
+<li>Modified <code>somatic_aggregation_workflow</code> entity</li>
+<li>Added <code>Aliquot Ensemble Somatic Variant Merging and Masking</code> as new permissible value to <code>workflow_type</code></li>
+<li>Modified <code>slide</code> entity</li>
+<li>Updated the description for the <code>magnification</code> field <!--DAT-2125--></li>
+<li>Modified <code>aliquot</code> entity</li>
+<li>Updated the the description for several fields <!--DAT-2126--><ul>
+<li><code>selected_normal_low_pass_wgs</code></li>
+<li><code>selected_normal_targeted_sequencing</code></li>
+<li><code>selected_normal_wgs</code></li>
+<li><code>selected_normal_wxs</code></li>
+</ul>
+</li>
+<li>Modified <code>follow-up</code> entity</li>
+<li>Added new field <code>days_to_progression_free</code> <!--DAT-2135--></li>
+<li>Modified <code>demographic</code> entity</li>
+<li>Made <code>vital_status</code> a required field <!--DAT-2157--></li>
+<li>Modified <code>exposure</code> entity <!--TT-926--></li>
+<li>Added new properties<ul>
+<li><code>environmental_tobacco_smoke_exposure</code></li>
+<li><code>respirable_crystalline_silica_exposure</code></li>
+<li><code>coal_dust_exposure</code></li>
+<li><code>type_of_smoke_exposure</code></li>
+<li><code>type_of_tobacco_used</code></li>
+<li><code>smoking_frequency</code></li>
+<li><code>time_between_waking_and_first_smoke</code></li>
+</ul>
+</li>
+<li>Removed <code>cigarettes_per_day</code> property from deprecated list<!--DAT-2062--></li>
+<li>Modified <code>annotation</code> entity</li>
+<li>Modified permissible values to <code>status</code> <!--TT-930--><ul>
+<li>Approved</li>
+<li>Rescinded</li>
+</ul>
+</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="v.1.15">v.1.15</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: December 18, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Removed <code>Raw Sequencing Data</code> and <code>Sequencing Data</code> as permissible values from <code>submitted_aligned_reads</code>, <code>submitted_unaligned_reads</code>, and <code>aligned_reads</code> <!--DAT-42--> <!--DAT-1904--></li>
+<li>Deleted <code>aligned_reads_metrics</code> entity <!--DAT-1754--></li>
+<li>Created new <code>raw_methylation_array</code> entity <!--DAT-1854--></li>
+<li>Add regex validation to property <code>md5sum</code> for following entities: <!--DAT-1899--></li>
+<li><code>slide_image</code></li>
+<li><code>analysis_metadata</code></li>
+<li><code>clinical_supplement</code></li>
+<li><code>experiment_metadata</code></li>
+<li><code>pathology_report</code></li>
+<li><code>run_metadata</code></li>
+<li><code>biospecimen_supplement</code></li>
+<li><code>submitted_aligned_reads</code></li>
+<li><code>submitted_genomic_profile</code></li>
+<li><code>submitted_methylation_beta_value</code></li>
+<li><code>submitted_tangent_copy_number</code></li>
+<li><code>submitted_unaligned_reads</code></li>
+<li>Modified <code>molecular_test</code> entity</li>
+<li>Migrated data from <code>blood_test</code> to <code>laboratory_test</code> and <code>biospecimen_type</code> for all entities<!--TT-754--></li>
+<li>Added new property <code>intron</code> <!--DAT-1847--></li>
+<li>Deleted <code>blood_test</code> entity <!--DAT-1639--></li>
+<li>Added new permissible values for <code>gene_symbol</code><!--DAT-1553--></li>
+<li>Added new permissible values for <code>antigen</code><!--DAT-1662--></li>
+<li>Added new permissible values for <code>molecular_analysis_method</code> <!--DAT-1663--></li>
+<li>Added new permissible values for <code>variant_type</code> <!--DAT-1664--></li>
+<li>Added new permissible values for <code>test_result</code> <!--DAT-1665--></li>
+<li>Added new permissible values for <code>molecular_consequence</code> <!--DAT-1666--></li>
+<li>Added regex validation to property <code>transcript</code> <!--DAT-1916--></li>
+<li>Added regex validation to property <code>locus</code> <!--DAT-1874--></li>
+<li>Changed data type of <code>exon</code> property to be <code>string</code> with regex validation <!--DAT-1890--></li>
+<li>Modified <code>diagnosis</code> entity</li>
+<li>Added new fields<ul>
+<li><code>tumor_focality</code><!-- DAT-1832--></li>
+<li><code>tumor_regression_grade</code> <!--DAT-1833--></li>
+<li><code>lymph_nodes_tested</code> <!--DAT-1834--></li>
+</ul>
+</li>
+<li>Added new permissible value for <code>primary_diagnosis</code> field<!--DAT-1879--></li>
+<li>Added min and max values to time-based properties <!--DAT-1885--></li>
+<li>Added new permissible value for <code>morphology</code> field <!--TT-818--></li>
+<li>Modified <code>follow_up</code> entity</li>
+<li>Added new permissible values for <code>ecog_performance_status</code><!--DAT-1684--></li>
+<li>Added new permissible values for <code>comorbidity</code> <!--DAT-1766--></li>
+<li>Added new permissible values for <code>disease_response</code><!--DAT-1840--></li>
+<li>Added new permissible values for <code>risk_factor</code><!-- DAT-1841--></li>
+<li>Added min and max values to time-based properties <!--DAT-1884--></li>
+<li>Added new property:<ul>
+<li><code>hepatitis_sustained_virological_response</code> <!--DAT-1845--></li>
+</ul>
+</li>
+<li>Updated CDE, CDE version, description and URL for <code>comorbidity</code><!--DAT-1911--></li>
+<li>Added a CDE for <code>days_to_comorbidity</code> <!--DAT-1912--></li>
+<li>Removed <code>reflux_treatment</code> property <!--DAT-1913--></li>
+<li>Add a new property:<!--DAT-1843--><ul>
+<li><code>risk_factor_treatment</code></li>
+</ul>
+</li>
+<li>Modified <code>aligned_reads</code> entity</li>
+<li>Added new contamination properties <!--DAT-1749--><ul>
+<li><code>contamination</code></li>
+<li><code>contamination_error</code></li>
+</ul>
+</li>
+<li>Modified <code>read_group</code> entity</li>
+<li>Added new permissible values for <code>target_capture_kit</code> <!--DAT-1757--></li>
+<li>Updated description for property <code>instrument_model</code> <!--DAT-1763--></li>
+<li>Added new permissible values for <code>target_capture_kit</code> <!--DAT-1799--></li>
+<li>Added new permissible values for <code>library_strategy</code><!--DAT-1814--></li>
+<li>Added regex validation to property <code>adapter_sequence</code> <!--DAT-1895--></li>
+<li>Added regex validation to property <code>multiplex_barcode</code><!--DAT-1897--></li>
+<li>Allow users to enter null for property <code>read_length</code> <!--DAT-1908--></li>
+<li>Allow users to enter null for property <code>is_paired_end</code> <!--DAT-1909--></li>
+<li>Modified <code>family_history</code> entity</li>
+<li>Added new permissible values for <code>relationship_primary_diagnosis</code> <!--DAT-1765--></li>
+<li>Added min and max values to properties <!--DAT-1887--></li>
+<li>Modified <code>case</code> entity</li>
+<li>Add min and max values to properties <!--DAT-1888--></li>
+<li>Delete permissible value from <code>primary_site</code> <!-- DAT-1772--><ul>
+<li><code>Unknown Primary Site</code></li>
+</ul>
+</li>
+<li>Modified <code>analyte</code> entity</li>
+<li>Corrected the description for fields <code>analyte_volume</code> to include microliters as unit <!--DAT-1801--></li>
+<li>Modified <code>exposure</code> entity</li>
+<li>Added new properties<ul>
+<li><code>asbestos_exposure</code> <!-- DAT-1836--></li>
+<li><code>radon_exposure</code> <!-- DAT-1837--></li>
+</ul>
+</li>
+<li>Modified <code>sample</code> entity</li>
+<li>Added new permissible values to <code>method_of_sample_procurement</code> <!--DAT-1849--></li>
+<li>Added regex validation to <code>pathology_report_uuid</code> <!--DAT-1893--></li>
+<li>Change type from string to number for properties:<ul>
+<li><code>intermediate_dimension</code> <!--DAT-1861--></li>
+<li><code>longest_dimension</code> <!--DAT-1863--></li>
+<li><code>shortest_dimension</code> <!--DAT-1865--></li>
+<li><code>time_between_clamping_and_freezing</code> <!--DAT-1867--></li>
+<li><code>time_between_excision_and_freezing</code> <!--DAT-1869--></li>
+</ul>
+</li>
+<li>Add min and max to properties on the sample node <!--DAT-1883--></li>
+<li>Populated sample nodes that have no value for <code>tissue_type</code> to "Not Reported" <!--TT-658--></li>
+<li>Modified <code>treatment</code> entity</li>
+<li>Added a new property<ul>
+<li><code>prior_treatment_effect</code> <!--DAT-1850--></li>
+</ul>
+</li>
+<li>Add min and max values to properties <!--DAT-1889--></li>
+<li>Modified <code>aliquot</code> entity</li>
+<li>Corrected the description for fields <code>analyte_volume</code> to include microliters as unit <!--DAT-1859--></li>
+<li>Modified <code>demographic</code> entity</li>
+<li>Added min and max to properties <!--DAT-1886--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed value of <code>pathology_report_uuid</code> on sample entity <code>7b29b034-86e4-4266-8657-036e96e04430</code> to satisfy regex requirements <!--DAT-1939--></li>
+<li>Migrated a few unsupported values for sample.pathology_report_uuid, read_group.adapter_sequence, read_group.multiplex_barcode <!--DAT-1941--></li>
+</ul>
+<h2 id="v.1.14">v.1.14</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: September 27, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added description and type information to generic properties <!--TT-1347--></li>
+<li>Modify the dictionary viewer to be case sensitive for deprecated fields <!--PRTL-2180--></li>
+<li>Deleted <code>sample_level_maf</code> entity <!--TT-666--></li>
+<li>Added new field for all nodes: <!--TT-556--></li>
+<li><code>previous_versions_downloadable</code></li>
+<li>Modified <code>molecular_test</code> entity</li>
+<li>Migrated data from <code>blood_test</code> to <code>laboratory_test</code> and <code>biospecimen_type</code> <!--TT-754--></li>
+<li>Added new fields: <!--DAT-1644--><ul>
+<li><code>laboratory_test</code></li>
+<li><code>biospecimen_type</code></li>
+</ul>
+</li>
+<li>Added new permissible values for <code>gene_symbol</code> fields <!--DAT-1553--><ul>
+<li><code>Not Applicable</code></li>
+</ul>
+</li>
+<li>Deleted field <code>blood_test</code> <!--DAT-1639--></li>
+<li>Added new permissible values for <code>antigen</code> field <!--DAT-1662--></li>
+<li>Added new permissible values to <code>molecular_analysis_method</code> <!--DAT-1663--></li>
+<li>Added new permissible values for <code>variant_type</code> field <!--DAT-1664--></li>
+<li>Added new permissible values to <code>test_result</code> <!--DAT-1665--></li>
+<li>Modified <code>case</code> entity</li>
+<li>Modified permissible values on <code>index_date</code><ul>
+<li>Added new value <code>Initial Genomic Sequencing</code> <!--TT-1461--></li>
+</ul>
+</li>
+<li>Updated CDE codes for properties <!--DAT-1590--></li>
+<li>Add new permissible value to <code>index_date</code> <!--DAT-1669--><ul>
+<li><code>Sample Procurement</code> <!--TT-678--></li>
+</ul>
+</li>
+<li>Modified <code>aliquot</code> entity</li>
+<li>Changed <code>exclusive</code> to <code>True</code> <!--DAT-1519--></li>
+<li>Modified <code>read_group_qc</code> entity</li>
+<li>Made following fields not <code>required</code> and added <code>Unknown</code>/<code>Not Reported</code> as permissible values: <!--DAT-1519--><!--DAT-1525--><ul>
+<li><code>adapter_content</code></li>
+<li><code>basic_statistics</code></li>
+<li><code>encoding</code></li>
+<li><code>kmer_content</code></li>
+<li><code>overrepresented_sequences</code></li>
+<li><code>per_base_sequence_quality</code></li>
+<li><code>per_tile_sequence_quality</code></li>
+<li><code>per_sequence_quality_score</code></li>
+<li><code>per_base_sequence_content</code></li>
+<li><code>per_sequence_gc_content</code></li>
+<li><code>per_base_n_content</code></li>
+<li><code>percent_gc_content</code></li>
+<li><code>sequence_length_distribution</code></li>
+<li><code>sequence_duplication_levels</code></li>
+<li><code>total_sequences</code></li>
+</ul>
+</li>
+<li>Modified <code>aligned_reads</code> entity</li>
+<li>Added new permissible values to <code>experimental_strategy</code> field <!--DAT-1526--><ul>
+<li><code>Targeted Sequencing</code></li>
+<li><code>Bisulfite-Seq</code></li>
+<li><code>ChIP-Seq</code></li>
+<li><code>ATAC-Seq</code></li>
+</ul>
+</li>
+<li>Modified <code>read_group</code> entity</li>
+<li>Added new field <code>days_to_sequencing</code> <!--DAT-1533--></li>
+<li>Add new permissible values to <code>target_capture_kit</code> <!--DAT-667--><ul>
+<li><code>Custom Personalis ACEcp VAREPOP-APOLLO Panel v2</code></li>
+<li><code>xGen Exome Research Panel v1.0</code></li>
+<li><code>SureSelect Human All Exon v5 + UTR</code></li>
+</ul>
+</li>
+<li>Modified <code>treatment</code> entity</li>
+<li>Updated CDE codes for properties <!--DAT-1596--></li>
+<li>Updated description for <code>treatment_or_therapy</code> <!--DAT-1548--></li>
+<li>Updated description for <code>therapeutic_agents</code> <!--DAT-1549--></li>
+<li>Added new field:<ul>
+<li><code>initial_disease_status</code> <!--DAT-1647--></li>
+</ul>
+</li>
+<li>Updated permissible values for <code>treatment_type</code> <!--TT-672--></li>
+<li>Added new permissible values for <code>treatment_outcome</code> <!--TT-680--><ul>
+<li><code>No Measurable Disease</code></li>
+<li><code>Persistent Disease</code></li>
+</ul>
+</li>
+<li>Deleted values from <code>treatment_intent_type</code> <!--TT-681--></li>
+<li>Modified <code>annotated_somatic_mutation</code> entity</li>
+<li>Added new permissible values to <code>experimental_strategy</code> field <!--DAT-1554--><ul>
+<li><code>RNA-Seq</code></li>
+<li><code>miRNA-Seq</code></li>
+<li><code>Bisulfite-Seq</code></li>
+<li><code>ChIP-Seq</code></li>
+<li><code>ATAC-Seq</code></li>
+</ul>
+</li>
+<li>Add new permissible value to <code>data_format</code> <!--TT-663--><ul>
+<li><code>MAF</code></li>
+</ul>
+</li>
+<li>Add new permissible value to <code>data_type</code> <!--TT-665--><ul>
+<li><code>Masked Annotated Somatic Mutation</code></li>
+</ul>
+</li>
+<li>Modified <code>masked_somatic_mutation</code> entity</li>
+<li>Added new permissible values to <code>experimental_strategy</code> field <!--DAT-1555--><ul>
+<li><code>RNA-Seq</code></li>
+<li><code>miRNA-Seq</code></li>
+<li><code>Bisulfite-Seq</code></li>
+<li><code>ChIP-Seq</code></li>
+<li><code>ATAC-Seq</code></li>
+</ul>
+</li>
+<li>Removed <code>Validation</code> as permissible from <code>experimental_strategy</code> <!--TT-532--></li>
+<li>Modified <code>simple_germlne_variation</code> entity</li>
+<li>Added new permissible values to <code>experimental_strategy</code> field <!--DAT-1556--><ul>
+<li><code>RNA-Seq</code></li>
+<li><code>miRNA-Seq</code></li>
+<li><code>Bisulfite-Seq</code></li>
+<li><code>ChIP-Seq</code></li>
+<li><code>ATAC-Seq</code></li>
+</ul>
+</li>
+<li>Modified <code>simple_somatic_mutation</code> entity</li>
+<li>Added new permissible values to <code>experimental_strategy</code> field <!--DAT-1558--><ul>
+<li><code>RNA-Seq</code></li>
+<li><code>miRNA-Seq</code></li>
+<li><code>Bisulfite-Seq</code></li>
+<li><code>ChIP-Seq</code></li>
+<li><code>ATAC-Seq</code></li>
+</ul>
+</li>
+<li>Modified <code>submitted_genomic_profile</code> entity</li>
+<li>Added new permissible values to <code>experimental_strategy</code> field <!--DAT-1558--><ul>
+<li><code>WXS</code></li>
+<li><code>Low Pass WGS</code></li>
+<li><code>RNA-Seq</code></li>
+<li><code>miRNA-Seq</code></li>
+<li><code>Bisulfite-Seq</code></li>
+<li><code>ChIP-Seq</code></li>
+<li><code>ATAC-Seq</code></li>
+</ul>
+</li>
+<li>Modified <code>diagnosis</code> entity</li>
+<li>Updated CDE codes for properties <!--DAT-1592--></li>
+<li>Corrected the reference to <code>ubiquitous_properties</code> <!--DAT-1634--></li>
+<li>Deleted permissible values from <code>vascular_invasion_present</code> field <!--DAT-1560--><ul>
+<li><code>Extramural</code></li>
+<li><code>Intramural</code></li>
+</ul>
+</li>
+<li>Added permissible value to <code>ajcc_clinical_stage</code> <!--DAT-1571--><ul>
+<li><code>Stage IIIC1</code></li>
+</ul>
+</li>
+<li>Added permissible values to <code>method_of_diagnosis</code> <!--DAT-1567--><ul>
+<li><code>Imaging</code></li>
+<li><code>Physical Exam</code></li>
+<li><code>Pathologic Review</code></li>
+</ul>
+</li>
+<li>Added permissible value to <code>vascular_invasion_type</code> <!--DAT-1579--><ul>
+<li><code>Extramural</code></li>
+<li><code>Intramural</code></li>
+</ul>
+</li>
+<li>Added permissible value to <code>metastasis_at_diagnosis_site</code> <!--TT-673--></li>
+<li>Updated deprecated values list <!--TT-682--></li>
+<li>Deleted field <code>ldh_level</code> <!--TT-686--></li>
+<li>Modified <code>follow_up</code> entity</li>
+<li>Updated CDE codes for properties <!--DAT-1594--></li>
+<li>Added permissible value to <code>progression_or_recurrence_type</code> <!--DAT-1581--><ul>
+<li><code>Biochemical</code></li>
+</ul>
+</li>
+<li>Added permissible values to <code>hpv_positive_type</code> <!--DAT-1583--><ul>
+<li><code>63</code></li>
+<li><code>70</code></li>
+</ul>
+</li>
+<li>Added permissible value to <code>disease_response</code> <!--DAT-1584--><ul>
+<li><code>BED-Biochemical Evidence of Disease</code></li>
+<li><code>PDM-Persistent Distant Metastasis</code></li>
+<li><code>PLD-Persistent Locoregional Disease</code></li>
+<li><code>TF-Tumor Free</code></li>
+<li><code>WT-With Tumor</code></li>
+</ul>
+</li>
+<li>Added permissible value to <code>comorbidity</code> <!--DAT-1585--><ul>
+<li><code>Hepatitis A Infection</code></li>
+<li><code>Herpes</code></li>
+</ul>
+</li>
+<li>Added permissible values to <code>risk_factor</code> field <!--TT-674--></li>
+<li>Modified <code>demographic</code> entity</li>
+<li>Updated CDE codes for properties <!--DAT-1591--></li>
+<li>Modified permissible values for <code>cause_of_death</code> field <!--TT-676--><ul>
+<li><code>Cardiovascular Disorder, NOS</code></li>
+<li><code>Renal Disorder, NOS</code></li>
+<li><code>Surgical Complications</code></li>
+</ul>
+</li>
+<li>Updated <code>days_to</code> descriptions <!--TT-683--></li>
+<li>Modified <code>family_history</code> entity</li>
+<li>Updated CDE codes for properties <!--DAT-1635--></li>
+<li>Added new fields: <!--DAT-1635--><ul>
+<li><code>relationship_primary_diagnosis</code></li>
+<li><code>relationship_gender</code></li>
+</ul>
+</li>
+<li>Updated CDE for field <code>relative_with_cancer_history</code> <!--TT-254--></li>
+<li>Modified <code>submitted_unaligned_reads</code> entity</li>
+<li>Make field <code>read_pair_number</code> required <!--DAT-1648--></li>
+<li>Added permissible values to <code>read_pair_number</code> <!--DAT-1651--><ul>
+<li><code>Not Applicable</code></li>
+</ul>
+</li>
+<li>Modified <code>aligned_reads</code> entity <!--DAT-1668--></li>
+<li>Added new fields:<ul>
+<li><code>average_base_quality</code></li>
+<li><code>average_insert_size</code></li>
+<li><code>average_read_length</code></li>
+<li><code>mean_coverage</code></li>
+<li><code>pairs_on_diff_chr</code></li>
+<li><code>proportion_base_mismatch</code></li>
+<li><code>proportion_coverage_10X</code></li>
+<li><code>proportion_coverage_30X</code></li>
+<li><code>proportion_reads_duplicated</code></li>
+<li><code>proportion_reads_mapped</code></li>
+<li><code>proportion_targets_no_coverage</code></li>
+<li><code>total_reads</code></li>
+</ul>
+</li>
+<li>Changed nodes with <code>experimental_strategy</code> as <code>Validation</code> to <code>Targeted Sequencing</code> <!--TT-704--></li>
+<li>Modified <code>sample</code> entity</li>
+<li>Made <code>tissue_type</code> a required field <!--TT-657--></li>
+<li>Populated <code>tissue_type</code> with <code>Not Reported</code> for all nodes with no value <!--TT-658--></li>
+<li>Modified <code>alignment_workflow</code> entity</li>
+<li>Added new field to <code>workflow_type</code> <!--TT-659--><ul>
+<li><code>STAR 2-Pass Chimeric</code></li>
+</ul>
+</li>
+<li>Modified <code>rna_expression_workflow</code> entity</li>
+<li>Added new field to <code>workflow_type</code> <!--TT-660--><ul>
+<li><code>STAR - FPKM</code></li>
+</ul>
+</li>
+<li>Modified <code>gene_expression</code> entity</li>
+<li>Add new permissible value to <code>data_type</code> <!--TT-663--><ul>
+<li><code>Splice Junction Quantification</code></li>
+</ul>
+</li>
+<li>Modified <code>aggregated_somatic_mutation</code> entity</li>
+<li>Updated field <code>experimental_strategy</code> <!--TT-694--></li>
+<li>Modified <code>somatic_mutation_calling_workflow</code> entity</li>
+<li>Added <code>workflow_type</code> field <!--TT-661--></li>
+<li>Modified <code>somatic_annotation_workflow</code> entity</li>
+<li>Added <code>workflow_type</code> field <!--TT-662--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="v.1.13">v.1.13</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: May 21, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Submitted Genomic Profile to Read Group relationship is updated to be many-to-many <!--DAT-1425--></li>
+<li>Added requirement for submitter_id on additional nodes <!--TT-609--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="v.1.12.1">v.1.12.1</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: April 26, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Moved read_pair_number from Read Group to Submitted Unaligned Reads node <!--SV-1089--></li>
+</ul>
+<h2 id="v.1.12">v.1.12</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: April 23, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Updates to data dictionary viewer:</li>
+<li>Data dictionary viewer displays <code>true/false</code> instead of <code>boolean</code> <!--DOC-75--></li>
+<li>Updated <code>md5</code> description in data dictionary viewer to be more complete <!--TT-400--></li>
+<li>Creation of new entities:</li>
+<li><code>Copy Number Estimate</code> entity for copy number variation data <!--TT-439--></li>
+<li><code>Copy Number Variation Workflow</code> entity for copy number variation pipeline metadata <!--TT-440--></li>
+<li><code>Molecular Test</code> entity <!--TT-464--></li>
+<li>Updates to all entities:</li>
+<li>Updated all entities to include <code>batch_id</code> field for submission <!--TT-434--></li>
+<li>Updated all entities to include <code>downloadable</code> field <!--TT-501--></li>
+<li>Modified all file entities <code>file_size</code> field to be an integer <!--TT-457--> <!--TT-403--></li>
+<li>Added support for creation of annotations on all entities in data model <!--DAT-1331--></li>
+<li>Added new links / updated links between entities:</li>
+<li>Created optional link between <code>follow_up</code> and <code>diagnosis</code> entities <!--TT-401--></li>
+<li>Created many-to-many link between <code>genomic_profile_harmonization_workflows</code> and <code>masked_somatic_mutations</code> <!--TT-530--></li>
+<li>Remove the restriction that prevents having alignment workflows to point to both <code>submitted_aligned_reads</code> and <code>submitted_unaligned_reads</code> <!--TT-422--></li>
+<li>Updated the BCR XML endpoint to support submission of new entity relationships <!--DAT-1207--></li>
+<li>Fixed description of <code>prior_malignancy</code> on <code>diagnosis</code> entity <!--TT-412--></li>
+<li>Modified <code>sample</code> entity</li>
+<li>Added new fields <!--TT-399--><ul>
+<li><code>growth_rate</code></li>
+<li><code>passage_count</code></li>
+<li><code>catalog_reference</code></li>
+<li><code>distributor_reference</code></li>
+<li><code>distance_normal_to_tumor</code></li>
+<li><code>biospecimen_laterality</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>composition</code> field <!--TT-527--><ul>
+<li><code>Sorted Cells</code></li>
+</ul>
+</li>
+<li>Added new permissible value to <code>sample_type</code> field <!--TT-509--><ul>
+<li><code>Next Generation Cancer Model</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>method_of_sample_procurement</code> field <!--TT-528--><ul>
+<li><code>Pancreatectomy</code></li>
+<li><code>Whipple Procedure</code></li>
+<li><code>Paracentesis</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>biospecimen_anatomic_site</code> field <!--TT-529--><ul>
+<li><code>Esophageal; Distal</code></li>
+<li><code>Esophageal; Mid</code></li>
+<li><code>Esophageal; Proximal</code></li>
+<li><code>Hepatic Flexure</code></li>
+<li><code>Rectosigmoid Junction</code></li>
+</ul>
+</li>
+<li>Removed permissible values on <code>sample_type</code> <!--TT-510--><ul>
+<li><code>2D Classical Conditionally Reprogrammed Cells</code></li>
+<li><code>2D Modified Conditionally Reprogrammed Cells</code></li>
+<li><code>3D Organoid</code></li>
+<li><code>3D Air-Liquid Interface Organoid</code></li>
+<li><code>3D Neurosphere</code></li>
+<li><code>Adherent Cell Line</code></li>
+<li><code>Liquid Suspension Cell Line</code></li>
+</ul>
+</li>
+<li>Modified <code>aliquot</code> entity <!--TT-416--></li>
+<li>Added new fields<ul>
+<li><code>no_matched_normal_wxs</code></li>
+<li><code>no_matched_normal_wgs</code></li>
+<li><code>no_matched_normal_targeted_sequencing</code></li>
+<li><code>no_matched_normal_low_pass_wgs</code></li>
+</ul>
+</li>
+<li>Modified <code>read_group</code> entity</li>
+<li>Updated descriptions on <code>read_group</code> entity <!--TT-463--></li>
+<li>Added new field <!--TT-415--><ul>
+<li><code>target_capture_kit</code></li>
+</ul>
+</li>
+<li>Made <code>library_selection</code> a required field <!--TT-472--></li>
+<li>Removed duplicate <code>validators</code> field <!--TT-484--></li>
+<li>Modified permissible values on <code>library_selection</code> field<ul>
+<li>Replaced <code>Affinity_Enrichment</code> with <code>Affinity Enrichment</code> <!--TT-447--></li>
+<li>Replaced <code>Poly-T_Enrichment</code> with <code>Poly-T Enrichment</code> <!--TT-449--></li>
+<li>Replaced <code>Hybrid_Selection</code> with <code>Hybrid Selection</code> <!--TT-451--></li>
+<li>Replaced <code>RNA_Depletion</code> with <code>rRNA Depletion</code> <!--TT-453--></li>
+<li>Replaced <code>Targeted Sequencing</code> with <code>Hybrid Selection</code> for FM-AD <!--TT-505--></li>
+</ul>
+</li>
+<li>Added new permissible value on <code>library_strand</code> field<ul>
+<li><code>Not Applicable</code> <!--TT-402--></li>
+</ul>
+</li>
+<li>Removed permissible values in <code>library_strategy</code> field <!--TT-442--><ul>
+<li><code>Amplicon</code></li>
+<li><code>Validation</code></li>
+<li><code>Other</code></li>
+</ul>
+</li>
+<li>Modified <code>diagnosis</code> entity</li>
+<li>Added new fields <!--TT-380--><ul>
+<li><code>ajcc_staging_system_edition</code></li>
+<li><code>anaplasia_present</code></li>
+<li><code>anaplasia_present_type</code></li>
+<li><code>child_pugh_classification</code></li>
+<li><code>cog_neuroblastoma_risk_group</code></li>
+<li><code>cog_rhabdomyosarcoma_risk_group</code></li>
+<li><code>enneking_msts_grade</code></li>
+<li><code>enneking_msts_metastasis</code></li>
+<li><code>enneking_msts_stage</code></li>
+<li><code>enneking_msts_tumor_site</code></li>
+<li><code>esophageal_columnar_dysplasia_degree</code></li>
+<li><code>esophageal_columnar_metaplasia_present</code></li>
+<li><code>first_symptom_prior_to_diagnosis</code></li>
+<li><code>gastric_esophageal_junction_involvement</code></li>
+<li><code>goblet_cells_columnar_mucosa_present</code></li>
+<li><code>inpc_grade</code></li>
+<li><code>inss_stage</code></li>
+<li><code>irs_group</code></li>
+<li><code>ishak_fibrosis_score</code></li>
+<li><code>micropapillary_features</code></li>
+<li><code>meduloblastoma_molecular_classification</code></li>
+<li><code>metastasis_at_diagnosis</code></li>
+<li><code>mitosis_karyorrhexis_index</code></li>
+<li><code>peripancreatic_lymph_nodes_positive</code></li>
+<li><code>peripancreatic_lymph_nodes_tested</code></li>
+<li><code>synchronous_malignancy</code></li>
+<li><code>supratentorial_localization</code></li>
+<li><code>tumor_confined_to_organ_of_origin</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>vascular_invasion_present</code> field <!--TT-495--><ul>
+<li><code>Extramural</code></li>
+<li><code>Intramural</code></li>
+</ul>
+</li>
+<li>Updated <code>ann_arbor_clinical_stage</code> and <code>ann_arbor_pathologic_stage</code> fields <!--TT-524--></li>
+<li>Modified <code>aliquot</code> entity</li>
+<li>Added new fields <!--TT-425--><ul>
+<li><code>selected_normal_wxs</code></li>
+<li><code>selected_normal_wgs</code></li>
+<li><code>selected_normal_targeted_sequencing</code></li>
+<li><code>selected_normal_low_pass_wgs</code></li>
+</ul>
+</li>
+<li>Modified <code>project</code> entity</li>
+<li>Added new fields<ul>
+<li><code>request_submission</code></li>
+<li><code>in_review</code> <!--TT-428--></li>
+<li><code>submission_enabled</code> <!--TT-429--></li>
+</ul>
+</li>
+<li>Removed duplicate <code>intended_release_date</code> field <!--TT-483--></li>
+<li>Made fields <code>not required</code> <!--TT-465--><ul>
+<li><code>disease_type</code></li>
+<li><code>primary_site</code></li>
+</ul>
+</li>
+<li>Modified <code>case</code> entity</li>
+<li>Updated descriptions <!--TT-488--><ul>
+<li><code>disease_type</code></li>
+<li><code>primary_site</code></li>
+</ul>
+</li>
+<li>Modified <code>demographic</code> entity</li>
+<li>Added new fields <!--TT-379--><ul>
+<li><code>premature_at_birth</code></li>
+<li><code>weeks_gestation_at_birth</code></li>
+</ul>
+</li>
+<li>Made <code>submitter_id</code> a required field <!--TT-544--></li>
+<li>Changed type of <code>year_of_birth</code> from number to integer <!--TT-489--></li>
+<li>Changed type of <code>year_of_death</code> from number to integer <!--TT-490--></li>
+<li>Modified <code>treatment</code> entity</li>
+<li>Updated CDE code for <code>treatment_anatomic_site</code> <!--TT-492--></li>
+<li>Modified permissible values to <code>treatment_anatomic_site</code> field <!--TT-493--> <!--TT-506--></li>
+<li>Made <code>submitter_id</code> a required field <!--TT-544--></li>
+<li>Added new permissible value to <code>treatment_intent_type</code> <!--TT-494--><ul>
+<li><code>Neoadjuvant</code></li>
+</ul>
+</li>
+<li>Added new permissible value to <code>treatment_outcome</code> <!--TT-498--><ul>
+<li><code>Very Good Partial Response</code></li>
+<li><code>Mixed Response</code></li>
+<li><code>No Response</code></li>
+</ul>
+</li>
+<li>Added new permissible value to <code>treatment_type</code> <!--TT-499--><ul>
+<li><code>Brachytherapy, High Dose</code></li>
+<li><code>Brachytherapy, Low Dose</code></li>
+<li><code>Radiation, 2D Conventional</code></li>
+<li><code>Radiation, 3D Conformal</code></li>
+<li><code>Radiation, Intensity-Modulated Radiotherapy</code></li>
+<li><code>Radiation, Proton Beam</code></li>
+<li><code>Radiation, Stereotactic Body</code></li>
+<li><code>Radiation Therapy, NOS</code></li>
+<li><code>Stereotactic Radiosurgery</code></li>
+</ul>
+</li>
+<li>Removed field<ul>
+<li><code>days_to_treatment</code></li>
+</ul>
+</li>
+<li>Removed permissible values for <code>treatment_type</code> <!--TT-523--><ul>
+<li><code>Radiation</code></li>
+<li><code>Radiation Therapy</code></li>
+</ul>
+</li>
+<li>Modified <code>analyte</code> entity</li>
+<li>Removed duplicate <code>project</code> field <!--TT-486--></li>
+<li>Modified <code>follow_up</code> entity</li>
+<li>Added new permissible values to <code>comorbidity</code> field <!--TT-500--></li>
+<li>Added new fields <!--TT-365--><ul>
+<li><code>progression_or_recurrence_type</code></li>
+<li><code>diabetes_treatment_type</code></li>
+<li><code>reflux_treatment_type</code></li>
+<li><code>barretts_esophagus_goblet_cells_present</code></li>
+<li><code>karnofsky__performance_status</code></li>
+<li><code>menopause_status</code></li>
+<li><code>viral_hepatitis_serologies</code></li>
+<li><code>reflux_treatment</code></li>
+<li><code>pancreatitis_onset_year</code></li>
+<li><code>comorbidity_method_of_diagnosis</code></li>
+<li><code>risk_factor</code></li>
+</ul>
+</li>
+<li>Removed fields <!--TT-517--><ul>
+<li><code>absolute_neutrophil</code></li>
+<li><code>albumin</code></li>
+<li><code>beta_2_microglobulin</code></li>
+<li><code>bun</code></li>
+<li><code>calcium</code></li>
+<li><code>cea_level</code></li>
+<li><code>colon_polyps_history</code></li>
+<li><code>creatinine</code></li>
+<li><code>crp</code></li>
+<li><code>days_to_hiv_diagnosis</code></li>
+<li><code>estrogen_receptor_percent_positive_ihc</code></li>
+<li><code>estrogen_receptor_result_ihc</code></li>
+<li><code>glucose</code></li>
+<li><code>hemoglobin</code></li>
+<li><code>her2_erbb2_percent_positive_ihc</code></li>
+<li><code>her2_erbb2_result_fish</code></li>
+<li><code>her2_erbb2_result_ihc</code></li>
+<li><code>hiv_positive</code></li>
+<li><code>hpv_status</code></li>
+<li><code>iga</code></li>
+<li><code>igg</code></li>
+<li><code>igl_kappa</code></li>
+<li><code>igl_lambda</code></li>
+<li><code>igm</code></li>
+<li><code>ldh_level</code></li>
+<li><code>ldh_normal_range_upper</code></li>
+<li><code>m_protein</code></li>
+<li><code>microsatellite_instability_abnormal</code></li>
+<li><code>platelet_count</code></li>
+<li><code>progesterone_receptor_percent_positive_ihc</code></li>
+<li><code>progesterone_receptor_result_ihc</code></li>
+<li><code>total_protein</code></li>
+<li><code>wbc</code></li>
+</ul>
+</li>
+<li>Modified <code>exposure</code> entity</li>
+<li>Added new fields <!--TT-383--><ul>
+<li><code>alcohol_days_per week</code></li>
+<li><code>alcohol_drinks_per_day</code></li>
+</ul>
+</li>
+<li>Added <code>molecular_test</code> entity</li>
+<li>Added new fields <!--TT-384--><ul>
+<li><code>gene_symbol</code></li>
+<li><code>second_gene_symbol</code></li>
+<li><code>test_analyte_type</code></li>
+<li><code>test_result</code></li>
+<li><code>molecular_analysis_method</code></li>
+<li><code>variant_type</code></li>
+<li><code>molecular_consequence</code></li>
+<li><code>chromosome</code></li>
+<li><code>cytoband</code></li>
+<li><code>exon</code></li>
+<li><code>transcript</code></li>
+<li><code>locus</code></li>
+<li><code>dna_change</code></li>
+<li><code>aa_change</code></li>
+<li><code>rna_change</code></li>
+<li><code>zygosity</code></li>
+<li><code>histone_family</code></li>
+<li><code>histone_variant</code></li>
+<li><code>copy_number</code></li>
+<li><code>antigen</code></li>
+<li><code>test_value</code></li>
+<li><code>test_units</code></li>
+<li><code>specialized_molecular_test</code></li>
+<li><code>ploidy</code></li>
+<li><code>cell_count</code></li>
+<li><code>loci_count</code></li>
+<li><code>loci_abnormal_count</code></li>
+<li><code>mismatch_repair_mutation</code></li>
+<li><code>blood_test</code></li>
+<li><code>blood_test_normal_range_upper</code></li>
+<li><code>blood_test_normal_range_lower</code></li>
+</ul>
+</li>
+<li>Modified <code>biospecimen_supplement</code> entity</li>
+<li>Added new permissible values to <code>data_format</code> field <!--TT-394--><ul>
+<li><code>TSV</code></li>
+<li><code>BCR Biotab</code></li>
+<li><code>BCR SSF XML</code></li>
+<li><code>BCR PPS XML</code></li>
+<li><code>FoundationOne XML</code></li>
+<li><code>BCR Auxiliary XML</code></li>
+</ul>
+</li>
+<li>Removed permissible values on <code>data_format</code> field <!--TT-397--><ul>
+<li><code>SSF</code></li>
+<li><code>PPS</code></li>
+</ul>
+</li>
+<li>Modified <code>clinical_supplement</code> entity</li>
+<li>Added new permissible values to <code>data_format</code> field <!--TT-395--><ul>
+<li><code>TSV</code></li>
+<li><code>BCR OMF XML</code></li>
+<li><code>BCR Biotab</code></li>
+</ul>
+</li>
+<li>Removed field<ul>
+<li><code>data_format</code></li>
+</ul>
+</li>
+<li>Modified <code>submitted_aligned_reads</code> entity</li>
+<li>Added new permissible values to <code>experimental_strategy</code> field <!--TT-404--><ul>
+<li><code>Targeted Sequencing</code></li>
+<li><code>Bisulfite-Seq</code></li>
+<li><code>ChIP-Seq</code></li>
+<li><code>ATAC-Seq</code></li>
+</ul>
+</li>
+<li>Removed permissible values from <code>experimental_strategy</code> field <!--TT-404--><ul>
+<li><code>Validation</code></li>
+<li><code>Total RNA-Seq</code></li>
+</ul>
+</li>
+<li>Modified <code>submitted_unaligned_reads</code> entity <!--TT-411--></li>
+<li>Added new field<ul>
+<li><code>read_pair_number</code></li>
+</ul>
+</li>
+<li>Added new permissible values to <code>experimental_strategy</code> field <!--TT-405--><ul>
+<li><code>Targeted Sequencing</code></li>
+<li><code>Bisulfite-Seq</code></li>
+<li><code>ChIP-Seq</code></li>
+<li><code>ATAC-Seq</code></li>
+</ul>
+</li>
+<li>Modified <code>alignment_workflow</code> entity</li>
+<li>Added new permissible values to <code>workflow_type</code> field<ul>
+<li><code>BWA with Mark Duplicates and BQSR</code> <!--TT-426--></li>
+<li><code>BWA with BQSR</code> <!--TT-479--></li>
+</ul>
+</li>
+<li>Modified <code>copy_number_segment</code> entity</li>
+<li>Removed permissible values for <code>data_type</code> field <!--TT-441--><ul>
+<li><code>Gene Level Copy Number</code></li>
+<li><code>Gene Level Copy Number Scores</code></li>
+</ul>
+</li>
+<li>Modified <code>submitted_genomic_profile</code> entity <!--TT-461--></li>
+<li>Added new permissible values for <code>data_type</code><ul>
+<li><code>Raw GCI Variant</code></li>
+</ul>
+</li>
+<li>Added new permissible values for <code>data_category</code><ul>
+<li><code>Combined Nucleotide Variation</code></li>
+</ul>
+</li>
+<li>Added new permissible values for <code>experimental_strategy</code><ul>
+<li><code>WGS</code></li>
+</ul>
+</li>
+<li>Added new permissible values for <code>data_format</code><ul>
+<li><code>VCF</code></li>
+</ul>
+</li>
+<li>Modified <code>genomic_profile_harmonization_workflow</code> entity <!--TT-466--></li>
+<li>Added new permissible value for <code>workflow_type</code><ul>
+<li><code>VCF LiftOver</code></li>
+</ul>
+</li>
+<li>Modified <code>simple_somatic_mutation</code> entity <!--TT-467--></li>
+<li>Added new permissible values for <code>data_type</code><ul>
+<li><code>Raw GCI Variant</code></li>
+</ul>
+</li>
+<li>Added new permissible values for <code>data_category</code><ul>
+<li><code>Combined Nucleotide Variation</code></li>
+</ul>
+</li>
+<li>Modified <code>masked_somatic_mutations</code> entity</li>
+<li>Added new permissible value for <code>experimental_strategy</code> <!--TT-533--><ul>
+<li><code>Targeted Sequencing</code></li>
+</ul>
+</li>
+<li>Removed permissible value for <code>experimental_strategy</code> <!--TT-532--><ul>
+<li><code>Validation</code></li>
+</ul>
+</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed issue when <code>file_size</code> is specified as a float in submitted json file</li>
+</ul>
+<h2 id="v.1.11">v.1.11</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: January 20, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added a link between the <code>sample</code> and <code>analyte</code> entities in the data model <!--TT-260--> <!--TT-259--></li>
+<li>Added a link between the <code>sample</code> entity and other <code>sample</code> entities in the data model <!--TT-261--></li>
+<li>Created <code>structural_variant_calling_workflow</code> entity <!--TT-270--></li>
+<li>Created <code>structural_variation</code> entity <!--TT-207--></li>
+<li>Removed <code>clinical_test</code> entity <!--TT-232--></li>
+<li>Removed <code>exon_expression</code> entity <!--TT-203--></li>
+<li>Modified relationships of entities</li>
+<li>Changed relationship between <code>submitted_genomic_profile</code> and <code>read_group</code> to one-to-many <!--TT-75--></li>
+<li>Changed relationship between <code>projects</code> and <code>masked_somatic_mutations</code> from one-to-one to many_to_one <!--TT-172--></li>
+<li>Changed relationship between <code>projects</code> and <code>aggregated_somatic_mutations</code> from one-to-one to many_to_one <!--TT-173--></li>
+<li>Changed relationship of <code>rna_expression_workflow</code> to downstream entities from one-to-one to one-to-many <!--TT-171--></li>
+<li>Changed relationship of <code>alignment_workflow</code> to downstream entities from many-to-one to many-to-many <!--TT-174--></li>
+<li>Modified <code>project</code> entity</li>
+<li>Added new state<ul>
+<li><code>processed</code> <!--TT-266--></li>
+</ul>
+</li>
+<li>Added new fields<ul>
+<li><code>release_requested</code> <!--TT-267--></li>
+<li><code>awg_review</code> <!--TT-267--></li>
+<li><code>is_legacy</code> <!--TT-252--></li>
+</ul>
+</li>
+<li>Modified <code>clinical_supplement</code> entity</li>
+<li>Added new <code>data_format</code> field <!--TT-271--><ul>
+<li><code>CDC JSON</code></li>
+</ul>
+</li>
+<li>Modified <code>case</code> entity</li>
+<li>Enumerated <code>primary_site</code> field <!--TT-189--></li>
+<li>Modified <code>diagnosis</code> entity</li>
+<li>Enumerated fields<ul>
+<li><code>primary_diagnosis</code> <!--TT-185--></li>
+<li><code>tissue_or_organ_of_origin</code> <!--TT-190--></li>
+<li><code>site_of_resection_or_biopsy</code> <!--TT-192--></li>
+<li><code>tumor_grade</code> <!--TT-193--></li>
+<li><code>morphology</code> <!--TT-186--></li>
+<li><code>ajcc_clinical_stage</code> <!--TT-238--></li>
+<li><code>ajcc_pathologic_stage</code> <!--TT-239--></li>
+<li><code>laterality</code> <!--TT-242--></li>
+<li><code>method_of_diagnosis</code> <!--TT-244--></li>
+</ul>
+</li>
+<li>Changed type of fields<ul>
+<li><code>year_of_diagnosis</code>: changed type to <code>int</code><!--TT-121--></li>
+<li><code>age_at_diagnosis</code>: changed type to <code>int</code> <!--TT-121--></li>
+</ul>
+</li>
+<li>Added new permissible values to fields<ul>
+<li><code>figo_stage</code></li>
+<li><code>Stage IIC</code> <!--TT-241--></li>
+<li><code>lymphatic_invasion_present</code></li>
+<li><code>Not Reported</code> <!--TT-243--></li>
+<li><code>perineural_invasion_present</code></li>
+<li><code>Not Reported</code> <!--TT-245--></li>
+<li><code>ann_arbor_clinical_stage</code></li>
+<li><code>Not Reported</code> <!--TT-222--></li>
+<li><code>Unknown</code><!--TT-240--></li>
+<li><code>residual_disease</code><!--TT-265--></li>
+<li><code>Not Reported</code></li>
+<li><code>Unknown</code></li>
+<li><code>vascular_invasion_type</code><!--TT-246--></li>
+<li><code>Macro</code></li>
+<li><code>Micro</code></li>
+<li><code>No Vascular Invasion</code></li>
+<li><code>Not Reported</code></li>
+<li><code>Unknown</code></li>
+</ul>
+</li>
+<li>Modified <code>exposure</code> entity</li>
+<li>Enumerated fields<ul>
+<li><code>alcohol_intensity</code> <!--TT-191--></li>
+<li><code>alcohol_history</code> <!--TT-247--></li>
+<li><code>cause_of_death</code> <!--TT-264--></li>
+</ul>
+</li>
+<li>Removed <code>6</code> as a valid field from <code>tobacco_smoking_status</code> <!--TT-214--></li>
+<li>Modified <code>demographic</code> entity</li>
+<li>Enumerated field<ul>
+<li><code>comorbidity</code> <!--TT-290--></li>
+</ul>
+</li>
+<li>Added new permissible values to field<ul>
+<li><code>cause_of_death</code> <!--TT-264--></li>
+<li><code>Infection</code></li>
+<li><code>Toxicity</code></li>
+<li><code>Spinal Muscular Atrophy</code></li>
+<li><code>End-stage Renal Disease</code></li>
+</ul>
+</li>
+<li>Modified <code>family history</code> entity</li>
+<li>Enumerated fields<ul>
+<li><code>relationship_primary_diagnosis</code> <!--TT-67--></li>
+<li><code>relationship_type</code> <!--TT-67--></li>
+</ul>
+</li>
+<li>Modified <code>treatment</code> entity</li>
+<li>Enumerated fields<ul>
+<li><code>treatment_anatomic_site</code> <!--TT-221--></li>
+<li><code>treatment_type</code> <!--TT-226--></li>
+</ul>
+</li>
+<li>Changed type of fields<ul>
+<li><code>days_to_treatment</code>: changed type to <code>int</code><!--TT-213--></li>
+<li><code>days_to_treatment_end</code>: changed type to <code>int</code><!--TT-213--></li>
+<li><code>days_to_treatment_start</code>: changed type to <code>int</code><!--TT-213--></li>
+</ul>
+</li>
+<li>Modified <code>follow_up</code> entity</li>
+<li>Enumerated field<ul>
+<li><code>comorbidity</code> <!--TT-225--></li>
+</ul>
+</li>
+<li>Removed <code>None</code> as valid field from <code>comorbidity</code> <!--TT-290--></li>
+<li>Modified <code>demographic</code> entity</li>
+<li>Added new field<ul>
+<li><code>age_at_index</code> <!--TT-181--></li>
+</ul>
+</li>
+<li>Modified read_group entity <!--TT-200--></li>
+<li>Added new fields<ul>
+<li><code>fragment_minimum_length</code></li>
+<li><code>fragment_maximum_length</code></li>
+<li><code>fragment_mean_length</code></li>
+<li><code>fragment_standard_deviation_length</code></li>
+</ul>
+</li>
+<li>Modified <code>slide image</code> entity <!--TT-262--></li>
+<li>Added new data_formats<ul>
+<li><code>JPEG</code> and <code>TIFF</code></li>
+</ul>
+</li>
+<li>Added new data_type<ul>
+<li><code>Cell Culture</code></li>
+</ul>
+</li>
+<li>Added new experimental strategy<ul>
+<li><code>Cell Culture</code></li>
+</ul>
+</li>
+<li>Added new property<ul>
+<li><code>Magnification</code></li>
+</ul>
+</li>
+<li>Added new field<ul>
+<li><code>date_time</code></li>
+</ul>
+</li>
+<li>Modified <code>sample</code> entity</li>
+<li>Added new permissible values to fields <!--TT-274--><ul>
+<li><code>method_of_sample_procurement</code></li>
+<li><code>Autopsy</code></li>
+<li><code>sample_type</code> <!--TT-257--></li>
+<li><code>2D Classical Conditionally Reprogrammed Cells</code></li>
+<li><code>2D Modified Conditionally Reprogrammed Cells</code></li>
+<li><code>3D Organoid</code></li>
+<li><code>3D Air-Liquid Interface Organoid</code></li>
+<li><code>3D Neurosphere</code></li>
+<li><code>Adherent Cell Line</code></li>
+<li><code>Liquid Suspension Cell Line</code></li>
+<li><code>composition</code> <!--TT-258--></li>
+<li><code>2D Classical Conditionally Reprogrammed Cells</code></li>
+<li><code>2D Modified Conditionally Reprogrammed Cells</code></li>
+<li><code>3D Organoid</code></li>
+<li><code>3D Air-Liquid Interface Organoid</code></li>
+<li><code>3D Neurosphere</code></li>
+<li><code>Adherent Cell Line</code></li>
+<li><code>Liquid Suspension Cell Line</code></li>
+</ul>
+</li>
+<li>Modified <code>genomic_profile_harmonization_workflow</code> entity</li>
+<li>Added new permissible values to field<ul>
+<li><code>workflow_type</code> <!--TT-117--></li>
+<li><code>GENIE Simple Somatic Mutation</code></li>
+<li><code>GENIE Copy Number Variation</code></li>
+</ul>
+</li>
+<li>Modified <code>somatic_mutation_calling_workflow</code> entity</li>
+<li>Added new permissible values to field<ul>
+<li><code>workflow_type</code><!--TT-206--></li>
+<li><code>Pindel</code></li>
+</ul>
+</li>
+<li>Modified <code>rna_expression_workflow</code> entity <!--TT-202--> <!--TT-208--></li>
+<li>Added new permissible values to field<ul>
+<li><code>workflow_type</code></li>
+<li><code>RSEM - Quantification</code></li>
+<li><code>STAR - Counts</code></li>
+<li><code>RNA-SeQC - Counts</code></li>
+<li><code>RNA-SeQC - FPKM</code></li>
+<li><code>Kallisto - Quantification</code></li>
+<li><code>Kallisto - HDF5</code></li>
+</ul>
+</li>
+<li>Modified <code>somatic_aggregation_workflow</code> <!--TT-202--> <!--TT-208--></li>
+<li>Added new permissible values to field<ul>
+<li><code>workflow_type</code></li>
+<li><code>Pindel Variant Aggregation and Masking</code></li>
+<li><code>GENIE Variant Aggregation and Masking</code></li>
+</ul>
+</li>
+<li>Modified <code>gene_expression entity</code> <!--TT-204--></li>
+<li>Added new data_types<ul>
+<li><code>Isoform Expression Quantification</code></li>
+<li><code>Exon Expression Quantification</code></li>
+</ul>
+</li>
+<li>Added new data_format<ul>
+<li><code>HDF5</code></li>
+</ul>
+</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed issue when submitting <code>tobacco_smoking_status</code> via tsv <!--TT-205--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<h2 id="Release with API v1.10.0">Release with API v1.10.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: August 22, 2017</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Created <code>follow_up</code> entity to support longitudinal clinical data <!--TT-65--></li>
+<li>Deprecated <code>clinical_test</code> entity <!--DOC-67--></li>
+<li>Modified acceptable values for Read Group properties <!--TT-9,TT-76--></li>
+<li><code>library_selection</code> : "Hybrid Selection, Affinity Enrichment, Poly-T Enrichment, Random, rRNA Depletion, miRNA Size Fractionation, Targeted Sequencing"</li>
+<li><code>library_strategy</code> : "Targeted Sequencing"</li>
+<li>Modified Diagnosis entity <!--TT-64--></li>
+<li>Added field <code>iss_stage</code></li>
+<li>Added field <code>best_overall_response</code></li>
+<li>Added field <code>days_to_best_overall_response</code></li>
+<li>Added field <code>progression_free_survival</code></li>
+<li>Added field <code>progression_free_survival_event</code></li>
+<li>Added field <code>overall_survival</code></li>
+<li>Added field <code>days_to_diagnosis</code> <!--TT-91--></li>
+<li>Modified Treatment entity <!--TT-66--></li>
+<li>Added field <code>regimen_or_line_of_therapy</code></li>
+<li>Modified Demographic entity <!--TT-83--></li>
+<li>Added field <code>cause_of_death</code></li>
+<li>Added field <code>days_to_birth</code></li>
+<li>Added field <code>days_to_death</code></li>
+<li>Added field <code>vital_status</code></li>
+<li>Modified Case entity <!--TT-84--></li>
+<li>Added field <code>days_to_lost_to_followup</code></li>
+<li>Added field <code>lost_to_followup</code></li>
+<li>Added field <code>index_date</code></li>
+<li>Added new tumor code, tumor id, and sample types to Sample entity to support OCG <!--TT-85, TT-68--></li>
+<li><code>tumor_code</code> : "Acute leukemia of Ambiguous Lineage (ALAL), Lymphoid Normal, Tumor Adjacent Normal - Post Neo Adjuvant Therapy"</li>
+<li><code>tumor_code_id</code> : "15, 17, 18"</li>
+<li>Created <code>somatic_mutation_index</code> entity <!--TT-92--></li>
+<li>Updated caDSR CDE links in data dictionary <!--DAT-794--></li>
+<li>Added new <code>sample_type</code> : <code>tumor</code> to sample entity <!--TT-77--></li>
+<li>Made <code>classification_of_tumor</code> on diagnosis entity non-required <!--DAT-203--></li>
+<li>Added support for FM-AD to Genomic Profile Harmonization Workflow entity <!--DAT-985--></li>
+<li>Added <code>data_type</code> : <code>Gene Level Copy Number Scores</code> to Copy Number Segment entity <!--TT-94--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<p>None</p>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Portion <code>weight</code> property is incorrectly described in the Data Dictionary as the weight of the patient in kg, should be described as the weight of the portion in mg <!--SV-391--></li>
+</ul>
+<h2 id="Release with API v1.7.1">Release with API v1.7.1</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: March 16, 2017</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added "submittable" property to all entities <!--DAT-215--></li>
+<li>Changed Read Group to category biospecimen <!--DAT-216--></li>
+<li>Added many new clinical properties available for submission <!--DAT-210, DAT-31, DAT-226, DAT-205--></li>
+<li>Added sample codes from Office of Cancer Genomics (OCG) to analyte and aliquot <!--DAT-170--></li>
+<li>Slides can now be attached to sample rather than just portion <!--DAT-205--></li>
+<li><code>sample_type_id</code> is no longer required when submitting sample entities <!--DAT-233--></li>
+<li><code>analyte_type_id</code> is no longer required when submitting aliquot and analyte entities<!--DAT-255--></li>
+<li>Clinical Test Entity is created for storing results of a variety of potential clinical tests related to the diagnosis - <!--DAT-223--></li>
+<li>Genomic Profiling Report entity created for storing particular derived sequencing results <!--DAT-229--></li>
+<li>Structural Variation entity created <!--DAT-229--></li>
+<li>Project entity includes new field "Intended Release Date" <!--API-143--></li>
+<li>Project entity includes new field "Releasable" <!--API-157--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<p>None</p>
+<h3>Known Issues and Workarounds</h3>
+<p>None</p>
+<h2 id="Release with API v1.3.1">Release with API v1.3.1</h2>
+<ul>
+<li><strong>GDC Product</strong>: GDC Data Dictionary</li>
+<li><strong>Release Date</strong>: September 7, 2016</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Clinical Supplement entities can have <code>data_format</code> set to OMF.</li>
+<li>Biospecimen Supplement entities can have <code>data_format</code> set to SSF or PPS.</li>
+<li>Read group <code>instrument_model</code> can be set to "Illumina HiSeq 4000".</li>
+<li>Category of Slide entities in the GDC Data Model has changed from <code>data_bundle</code> to <code>biospecimen</code>.</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<p>None</p>
+<h3>Known Issues and Workarounds</h3>
+<p>None</p></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

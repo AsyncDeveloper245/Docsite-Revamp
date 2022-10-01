@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Examples</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/API/Users_Guide/Getting_Started">Getting Started</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Submission">Submission</a></li><li class="main"><a href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a></li><ul><li><a href='#Querying Metadata'>Querying Metadata</a></li><li><a href='#Downloading Files'>Downloading Files</a></li><li><a href='#Basic Troubleshooting'>Basic Troubleshooting</a></li></ul><li class="inactive"><a href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/System_Information">System Information</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a></li><li class="inactive"><a href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/API/PDF/API_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   Using Python to Query the GDC API</h1><hr/>
+<p>Python can be a versatile tool for retrieving information from the GDC API and performing downstream processing. This page details some examples that demonstrate the basic API queries using Python. The examples in this guide will use the <a href="http://docs.python-requests.org/en/master/">requests</a> Python library and should be compatible with Python3.</p>
+<h2 id="Querying Metadata">Querying Metadata</h2>
+<p>Python can be used with the GDC API to retrieve metadata that is indexed in the GDC Database. See the <a href="Search_and_Retrieval">Search and Retrieval</a> section of the API documentation for specific details about parameters and usage.</p>
+<h3>A Basic Query</h3>
+<p>This example passes some basic parameters (fields, format, size) to the <code>cases</code> endpoint and prints the results in a tab-delimited format. Note that the <code>fields</code> parameter needs to be a string comprising comma-delimited field names.</p>
+<pre><code class="language-TXT">Choose the Python tab to view script.
+</code></pre>
+<pre><code class="language-Python">import requests
+import json
+
+cases_endpt = 'https://api.gdc.cancer.gov/cases'
+
+# The 'fields' parameter is passed as a comma-separated string of single names.
+fields = [
+    "submitter_id",
+    "case_id",
+    "primary_site",
+    "disease_type",
+    "diagnoses.vital_status"
+    ]
+
+fields = ','.join(fields)
+
+params = {
+    "fields": fields,
+    "format": "TSV",
+    "size": "100"
+    }
+
+response = requests.get(cases_endpt, params = params)
+
+print(response.content)
+</code></pre>
+<p><a href="../scripts/Basic_Query.py">Download Script</a></p>
+<h3>A Filtered Query</h3>
+<p>In the next example, a <code>filters</code> parameter is added to the script. This parameter is passed as a Python dictionary object. The filter used in this example will only display cases that come from a kidney disease study (<code>primary_site: Kidney</code>).</p>
+<pre><code class="language-TXT">Choose the Python tab to view script.
+</code></pre>
+<pre><code class="language-Python">import requests
+import json
+
+fields = [
+    "submitter_id",
+    "case_id",
+    "primary_site",
+    "disease_type",
+    "diagnoses.vital_status"
+    ]
+
+fields = ",".join(fields)
+
+cases_endpt = "https://api.gdc.cancer.gov/cases"
+
+filters = {
+    "op": "in",
+    "content":{
+        "field": "primary_site",
+        "value": ["Kidney"]
+        }
+    }
+
+# With a GET request, the filters parameter needs to be converted
+# from a dictionary to JSON-formatted string
+
+params = {
+    "filters": json.dumps(filters),
+    "fields": fields,
+    "format": "TSV",
+    "size": "100"
+    }
+
+response = requests.get(cases_endpt, params = params)
+
+print(response.content)
+</code></pre>
+<p><a href="../scripts/Filter_Query.py">Download Script</a></p>
+<h3>Complex Filters</h3>
+<p>The following example uses the <code>and</code> operator in the filter to returns information about files that 1) were produced using RNA-Seq, 2) are downloadable in BAM format, and 3) originate from lung cancer patients. Note that these three filters are nested within a list in the highest level <code>content</code> key.</p>
+<pre><code class="language-TXT">Choose the Python tab to view script.
+</code></pre>
+<pre><code class="language-Python">import requests
+import json
+
+fields = [
+    "file_name",
+    "cases.submitter_id",
+    "cases.samples.sample_type",
+    "cases.disease_type",
+    "cases.project.project_id"
+    ]
+
+fields = ",".join(fields)
+
+files_endpt = "https://api.gdc.cancer.gov/files"
+
+# This set of filters is nested under an 'and' operator.
+filters = {
+    "op": "and",
+    "content":[
+        {
+        "op": "in",
+        "content":{
+            "field": "cases.project.primary_site",
+            "value": ["Lung"]
+            }
+        },
+        {
+        "op": "in",
+        "content":{
+            "field": "files.experimental_strategy",
+            "value": ["RNA-Seq"]
+            }
+        },
+        {
+        "op": "in",
+        "content":{
+            "field": "files.data_format",
+            "value": ["BAM"]
+            }
+        }
+    ]
+}
+
+# A POST is used, so the filter parameters can be passed directly as a Dict object.
+params = {
+    "filters": filters,
+    "fields": fields,
+    "format": "TSV",
+    "size": "2000"
+    }
+
+# The parameters are passed to 'json' rather than 'params' in this case
+response = requests.post(files_endpt, headers = {"Content-Type": "application/json"}, json = params)
+
+print(response.content.decode("utf-8"))
+</code></pre>
+<p><a href="../scripts/Complex_Query.py">Download Script</a></p>
+<h2 id="Downloading Files">Downloading Files</h2>
+<p>GDC files can also be downloaded from the API and saved locally using Python scripts. See the <a href="Downloading_Files">File Download</a> section of the API documentation for more information.</p>
+<h3>A Simple Download Request</h3>
+<p>An open-access GDC file can be downloaded by appending the file UUID to the <code>data</code> endpoint URL.</p>
+<pre><code class="language-TXT">Choose the Python tab to view script.
+</code></pre>
+<pre><code class="language-Python">import requests
+import json
+import re
+
+file_id = "b658d635-258a-4f6f-8377-767a43771fe4"
+
+data_endpt = "https://api.gdc.cancer.gov/data/{}".format(file_id)
+
+response = requests.get(data_endpt, headers = {"Content-Type": "application/json"})
+
+# The file name can be found in the header within the Content-Disposition key.
+response_head_cd = response.headers["Content-Disposition"]
+
+file_name = re.findall("filename=(.+)", response_head_cd)[0]
+
+with open(file_name, "wb") as output_file:
+    output_file.write(response.content)
+</code></pre>
+<p><a href="../scripts/Download_Files.py">Download Script</a></p>
+<h3>Passing a Token to Download a Controlled-Access File</h3>
+<p>A token can be passed to the script by specifying a plain text file that contains only the GDC token. A token can be downloaded by logging into the GDC Data Portal. See the <a href="../../../Data/Data_Security/Data_Security">Data Security</a> documentation for more details.</p>
+<pre><code class="language-TXT">Choose the Python tab to view script.
+</code></pre>
+<pre><code class="language-Python">import requests
+import json
+
+'''
+ This script will not work until $TOKEN_FILE_PATH
+ is replaced with an actual path.
+'''
+token_file = "$TOKEN_FILE_PATH"
+
+file_id = "11443f3c-9b8b-4e47-b5b7-529468fec098"
+
+data_endpt = "https://api.gdc.cancer.gov/slicing/view/{}".format(file_id)
+
+with open(token_file,"r") as token:
+    token_string = str(token.read().strip())
+
+params = {"gencode": ["BRCA1", "BRCA2"]}
+
+response = requests.post(data_endpt,
+                        data = json.dumps(params),
+                        headers = {
+                            "Content-Type": "application/json",
+                            "X-Auth-Token": token_string
+                            })
+
+file_name = "brca_slices.bam"
+
+with open(file_name, "wb") as output_file:
+    output_file.write(response.content)
+</code></pre>
+<p><a href="../scripts/Download_Files_Token.py">Download Script</a></p>
+<h3>Post Request to Download Multiple Files</h3>
+<p>This example uses a Python list to specify a set of file UUIDs. The list in the example was populated manually but could potentially be populated programmatically from an external list or API call.</p>
+<pre><code class="language-TXT">Choose the Python tab to view script.
+</code></pre>
+<pre><code class="language-Python">import requests
+import json
+import re
+
+data_endpt = "https://api.gdc.cancer.gov/data"
+
+ids = [
+    "b658d635-258a-4f6f-8377-767a43771fe4",
+    "3968213d-b293-4b3d-8033-5b5a0ca07b6c"
+    ]
+
+params = {"ids": ids}
+
+response = requests.post(data_endpt,
+                        data = json.dumps(params),
+                        headers={
+                            "Content-Type": "application/json"
+                            })
+
+response_head_cd = response.headers["Content-Disposition"]
+
+file_name = re.findall("filename=(.+)", response_head_cd)[0]
+
+with open(file_name, "wb") as output_file:
+    output_file.write(response.content)
+</code></pre>
+<p><a href="../scripts/Download_Files_Post.py">Download Script</a></p>
+<h3>Downloading a Set of Files Based on a Filter</h3>
+<p>Here a list of files based on a set of filters are downloaded. File UUIDs are retrieved based on the filters. These UUIDs are then passed to the <code>data</code> endpoint to download the correct files.</p>
+<pre><code class="language-TXT">Choose the Python tab to view script.
+</code></pre>
+<pre><code class="language-Python">import requests
+import json
+import re
+
+files_endpt = "https://api.gdc.cancer.gov/files"
+
+filters = {
+    "op": "and",
+    "content":[
+        {
+        "op": "in",
+        "content":{
+            "field": "cases.project.primary_site",
+            "value": ["Lung"]
+            }
+        },
+        {
+        "op": "in",
+        "content":{
+            "field": "cases.demographic.race",
+            "value": ["white"]
+            }
+        },
+        {
+        "op": "in",
+        "content":{
+            "field": "cases.demographic.gender",
+            "value": ["female"]
+            }
+        },
+        {
+        "op": "in",
+        "content":{
+            "field": "files.analysis.workflow_type",
+            "value": ["HTSeq - FPKM"]
+            }
+        }
+    ]
+}
+
+# Here a GET is used, so the filter parameters should be passed as a JSON string.
+
+params = {
+    "filters": json.dumps(filters),
+    "fields": "file_id",
+    "format": "JSON",
+    "size": "1000"
+    }
+
+response = requests.get(files_endpt, params = params)
+
+file_uuid_list = []
+
+# This step populates the download list with the file_ids from the previous query
+for file_entry in json.loads(response.content.decode("utf-8"))["data"]["hits"]:
+    file_uuid_list.append(file_entry["file_id"])
+
+data_endpt = "https://api.gdc.cancer.gov/data"
+
+params = {"ids": file_uuid_list}
+
+response = requests.post(data_endpt, data = json.dumps(params), headers = {"Content-Type": "application/json"})
+
+response_head_cd = response.headers["Content-Disposition"]
+
+file_name = re.findall("filename=(.+)", response_head_cd)[0]
+
+with open(file_name, "wb") as output_file:
+    output_file.write(response.content)
+</code></pre>
+<p><a href="../scripts/Download_Files_Filter.py">Download Script</a></p>
+<h3>BAM Slicing</h3>
+<p>The GDC <a href="BAM_Slicing">BAM Slicing</a> feature can also be accessed through Python. Below is an example of a basic BAM slicing command.</p>
+<pre><code class="language-TXT">Choose the Python tab to view script.
+</code></pre>
+<pre><code class="language-Python">import requests
+import json
+
+'''
+ This script will not work until $TOKEN_FILE_PATH
+ is replaced with an actual path.
+'''
+token_file = "$TOKEN_FILE_PATH"
+
+file_id = "11443f3c-9b8b-4e47-b5b7-529468fec098"
+
+data_endpt = "https://api.gdc.cancer.gov/slicing/view/{}".format(file_id)
+
+with open(token_file,"r") as token:
+    token_string = str(token.read().strip())
+
+params = {"gencode": ["BRCA1", "BRCA2"]}
+
+response = requests.post(data_endpt,
+                        data = json.dumps(params),
+                        headers = {
+                            "Content-Type": "application/json",
+                            "X-Auth-Token": token_string
+                            })
+
+file_name = "brca_slices.bam"
+
+with open(file_name, "wb") as output_file:
+    output_file.write(response.content)
+</code></pre>
+<p><a href="../scripts/BAM_Slice.py">Download Script</a></p>
+<p>The same region(s) across multiple BAM files can be retrieved using a for-loop within a Python script.</p>
+<pre><code class="language-TXT">Choose the Python tab to view script.
+</code></pre>
+<pre><code class="language-Python">import requests
+import json
+
+'''
+ This script will not work until $TOKEN_FILE_PATH
+ is replaced with an actual path.
+'''
+token_file = "$TOKEN_FILE_PATH"
+
+file_ids = [
+    "11443f3c-9b8b-4e47-b5b7-529468fec098",
+    "1f103620-bb34-46f1-b565-94f0027e396d",
+    "ca549554-a244-4209-9086-92add7bb7109"
+    ]
+
+for file_id in file_ids:
+
+    data_endpt = "https://api.gdc.cancer.gov/slicing/view/{}".format(file_id)
+
+    with open(token_file, "r") as token:
+        token_string = str(token.read().strip())
+
+    params = {
+        "regions": ["chr1:1-20000", "chr10:129000-160000"]
+        }
+
+    response = requests.post(data_endpt,
+                            data = json.dumps(params),
+                            headers = {
+                                "Content-Type": "application/json",
+                                "X-Auth-Token": token_string
+                                })
+
+    file_name = "{}_region_slices.bam".format(file_id)
+
+    with open(file_name, "wb") as output_file:
+        output_file.write(response.content)
+</code></pre>
+<p><a href="../scripts/BAM_Slice_Multiple.py">Download Script</a></p>
+<h2 id="Basic Troubleshooting">Basic Troubleshooting</h2>
+<p>The following script should produce an unformatted JSON string with information about the API status. Run this script to verify that a valid connection is being made to the GDC API.</p>
+<pre><code class="language-Python">import requests
+status_endpt = "https://api.gdc.cancer.gov/status"
+response = requests.get(status_endpt)
+
+# OUTPUT METHOD 1: Write to a file.
+file = open("api_status.json", "w")
+file.write(response.text)
+file.close()
+
+# OUTPUT METHOD 2: View on screen.
+print(response.content)
+</code></pre>
+<p><a href="../scripts/Basic_Troubleshooting.py">Download Script</a></p></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

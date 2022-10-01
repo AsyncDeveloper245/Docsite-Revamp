@@ -1,0 +1,4859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appendix A: Available Fields</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/API/Users_Guide/Getting_Started">Getting Started</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Submission">Submission</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/System_Information">System Information</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a></li><li class="main"><a href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a></li><ul><li><a href='#Field Listing by Endpoint'>Field Listing by Endpoint</a></li><li><a href='#Field Group Listing by Endpoint'>Field Group Listing by Endpoint</a></li></ul><li class="inactive"><a href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a></li><li class="inactive"><a href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/API/PDF/API_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   Appendix A: Available Fields</h1><hr/>
+<p>The GDC API's <a href="Search_and_Retrieval">search and retrieval endpoints</a> provide access to fields that correspond to properties defined in the <a href="../../Data_Dictionary/viewer">GDC Data Dictionary</a>. This appendix contains a list of fields available at each endpoint, and a list of field groups accessible via the <a href="Search_and_Retrieval#expand">expand parameter</a>.</p>
+<h2 id="Field Listing by Endpoint">Field Listing by Endpoint</h2>
+<h3>Project Fields</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Field Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dbgap_accession_number</td>
+</tr>
+<tr>
+<td>disease_type</td>
+</tr>
+<tr>
+<td>name</td>
+</tr>
+<tr>
+<td>primary_site</td>
+</tr>
+<tr>
+<td>project_id</td>
+</tr>
+<tr>
+<td>released</td>
+</tr>
+<tr>
+<td>state</td>
+</tr>
+<tr>
+<td>program.dbgap_accession_number</td>
+</tr>
+<tr>
+<td>program.name</td>
+</tr>
+<tr>
+<td>program.program_id</td>
+</tr>
+<tr>
+<td>summary.case_count</td>
+</tr>
+<tr>
+<td>summary.file_count</td>
+</tr>
+<tr>
+<td>summary.file_size</td>
+</tr>
+<tr>
+<td>summary.data_categories.case_count</td>
+</tr>
+<tr>
+<td>summary.data_categories.data_category</td>
+</tr>
+<tr>
+<td>summary.data_categories.file_count</td>
+</tr>
+<tr>
+<td>summary.experimental_strategies.case_count</td>
+</tr>
+<tr>
+<td>summary.experimental_strategies.experimental_strategy</td>
+</tr>
+<tr>
+<td>summary.experimental_strategies.file_count</td>
+</tr>
+</tbody>
+</table>
+<h3>Case Fields</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Field Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aliquot_ids</td>
+</tr>
+<tr>
+<td>analyte_ids</td>
+</tr>
+<tr>
+<td>case_id</td>
+</tr>
+<tr>
+<td>created_datetime</td>
+</tr>
+<tr>
+<td>days_to_index</td>
+</tr>
+<tr>
+<td>portion_ids</td>
+</tr>
+<tr>
+<td>sample_ids</td>
+</tr>
+<tr>
+<td>slide_ids</td>
+</tr>
+<tr>
+<td>state</td>
+</tr>
+<tr>
+<td>submitter_aliquot_ids</td>
+</tr>
+<tr>
+<td>submitter_analyte_ids</td>
+</tr>
+<tr>
+<td>submitter_id</td>
+</tr>
+<tr>
+<td>submitter_portion_ids</td>
+</tr>
+<tr>
+<td>submitter_sample_ids</td>
+</tr>
+<tr>
+<td>submitter_slide_ids</td>
+</tr>
+<tr>
+<td>updated_datetime</td>
+</tr>
+<tr>
+<td>annotations.annotation_id</td>
+</tr>
+<tr>
+<td>annotations.case_id</td>
+</tr>
+<tr>
+<td>annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>annotations.category</td>
+</tr>
+<tr>
+<td>annotations.classification</td>
+</tr>
+<tr>
+<td>annotations.created_datetime</td>
+</tr>
+<tr>
+<td>annotations.creator</td>
+</tr>
+<tr>
+<td>annotations.entity_id</td>
+</tr>
+<tr>
+<td>annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>annotations.entity_type</td>
+</tr>
+<tr>
+<td>annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>annotations.notes</td>
+</tr>
+<tr>
+<td>annotations.state</td>
+</tr>
+<tr>
+<td>annotations.status</td>
+</tr>
+<tr>
+<td>annotations.submitter_id</td>
+</tr>
+<tr>
+<td>annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>demographic.created_datetime</td>
+</tr>
+<tr>
+<td>demographic.demographic_id</td>
+</tr>
+<tr>
+<td>demographic.ethnicity</td>
+</tr>
+<tr>
+<td>demographic.gender</td>
+</tr>
+<tr>
+<td>demographic.race</td>
+</tr>
+<tr>
+<td>demographic.state</td>
+</tr>
+<tr>
+<td>demographic.submitter_id</td>
+</tr>
+<tr>
+<td>demographic.updated_datetime</td>
+</tr>
+<tr>
+<td>demographic.year_of_birth</td>
+</tr>
+<tr>
+<td>demographic.year_of_death</td>
+</tr>
+<tr>
+<td>diagnoses.age_at_diagnosis</td>
+</tr>
+<tr>
+<td>diagnoses.classification_of_tumor</td>
+</tr>
+<tr>
+<td>diagnoses.created_datetime</td>
+</tr>
+<tr>
+<td>diagnoses.days_to_birth</td>
+</tr>
+<tr>
+<td>diagnoses.days_to_death</td>
+</tr>
+<tr>
+<td>diagnoses.days_to_last_follow_up</td>
+</tr>
+<tr>
+<td>diagnoses.days_to_last_known_disease_status</td>
+</tr>
+<tr>
+<td>diagnoses.days_to_recurrence</td>
+</tr>
+<tr>
+<td>diagnoses.diagnosis_id</td>
+</tr>
+<tr>
+<td>diagnoses.last_known_disease_status</td>
+</tr>
+<tr>
+<td>diagnoses.morphology</td>
+</tr>
+<tr>
+<td>diagnoses.primary_diagnosis</td>
+</tr>
+<tr>
+<td>diagnoses.prior_malignancy</td>
+</tr>
+<tr>
+<td>diagnoses.progression_or_recurrence</td>
+</tr>
+<tr>
+<td>diagnoses.site_of_resection_or_biopsy</td>
+</tr>
+<tr>
+<td>diagnoses.state</td>
+</tr>
+<tr>
+<td>diagnoses.submitter_id</td>
+</tr>
+<tr>
+<td>diagnoses.tissue_or_organ_of_origin</td>
+</tr>
+<tr>
+<td>diagnoses.tumor_grade</td>
+</tr>
+<tr>
+<td>diagnoses.tumor_stage</td>
+</tr>
+<tr>
+<td>diagnoses.updated_datetime</td>
+</tr>
+<tr>
+<td>diagnoses.vital_status</td>
+</tr>
+<tr>
+<td>diagnoses.treatments.created_datetime</td>
+</tr>
+<tr>
+<td>diagnoses.treatments.days_to_treatment</td>
+</tr>
+<tr>
+<td>diagnoses.treatments.state</td>
+</tr>
+<tr>
+<td>diagnoses.treatments.submitter_id</td>
+</tr>
+<tr>
+<td>diagnoses.treatments.therapeutic_agents</td>
+</tr>
+<tr>
+<td>diagnoses.treatments.treatment_id</td>
+</tr>
+<tr>
+<td>diagnoses.treatments.treatment_intent_type</td>
+</tr>
+<tr>
+<td>diagnoses.treatments.treatment_or_therapy</td>
+</tr>
+<tr>
+<td>diagnoses.treatments.updated_datetime</td>
+</tr>
+<tr>
+<td>exposures.alcohol_history</td>
+</tr>
+<tr>
+<td>exposures.alcohol_intensity</td>
+</tr>
+<tr>
+<td>exposures.bmi</td>
+</tr>
+<tr>
+<td>exposures.cigarettes_per_day</td>
+</tr>
+<tr>
+<td>exposures.created_datetime</td>
+</tr>
+<tr>
+<td>exposures.exposure_id</td>
+</tr>
+<tr>
+<td>exposures.height</td>
+</tr>
+<tr>
+<td>exposures.state</td>
+</tr>
+<tr>
+<td>exposures.submitter_id</td>
+</tr>
+<tr>
+<td>exposures.updated_datetime</td>
+</tr>
+<tr>
+<td>exposures.weight</td>
+</tr>
+<tr>
+<td>exposures.years_smoked</td>
+</tr>
+<tr>
+<td>family_histories.created_datetime</td>
+</tr>
+<tr>
+<td>family_histories.family_history_id</td>
+</tr>
+<tr>
+<td>family_histories.relationship_age_at_diagnosis</td>
+</tr>
+<tr>
+<td>family_histories.relationship_gender</td>
+</tr>
+<tr>
+<td>family_histories.relationship_primary_diagnosis</td>
+</tr>
+<tr>
+<td>family_histories.relationship_type</td>
+</tr>
+<tr>
+<td>family_histories.relative_with_cancer_history</td>
+</tr>
+<tr>
+<td>family_histories.state</td>
+</tr>
+<tr>
+<td>family_histories.submitter_id</td>
+</tr>
+<tr>
+<td>family_histories.updated_datetime</td>
+</tr>
+<tr>
+<td>files.access</td>
+</tr>
+<tr>
+<td>files.acl</td>
+</tr>
+<tr>
+<td>files.created_datetime</td>
+</tr>
+<tr>
+<td>files.data_category</td>
+</tr>
+<tr>
+<td>files.data_format</td>
+</tr>
+<tr>
+<td>files.data_type</td>
+</tr>
+<tr>
+<td>files.error_type</td>
+</tr>
+<tr>
+<td>files.experimental_strategy</td>
+</tr>
+<tr>
+<td>files.file_id</td>
+</tr>
+<tr>
+<td>files.file_name</td>
+</tr>
+<tr>
+<td>files.file_size</td>
+</tr>
+<tr>
+<td>files.file_state</td>
+</tr>
+<tr>
+<td>files.md5sum</td>
+</tr>
+<tr>
+<td>files.origin</td>
+</tr>
+<tr>
+<td>files.platform</td>
+</tr>
+<tr>
+<td>files.revision</td>
+</tr>
+<tr>
+<td>files.state</td>
+</tr>
+<tr>
+<td>files.state_comment</td>
+</tr>
+<tr>
+<td>files.submitter_id</td>
+</tr>
+<tr>
+<td>files.tags</td>
+</tr>
+<tr>
+<td>files.type</td>
+</tr>
+<tr>
+<td>files.updated_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.analysis_id</td>
+</tr>
+<tr>
+<td>files.analysis.analysis_type</td>
+</tr>
+<tr>
+<td>files.analysis.created_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.state</td>
+</tr>
+<tr>
+<td>files.analysis.submitter_id</td>
+</tr>
+<tr>
+<td>files.analysis.updated_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.workflow_end_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.workflow_link</td>
+</tr>
+<tr>
+<td>files.analysis.workflow_start_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.workflow_type</td>
+</tr>
+<tr>
+<td>files.analysis.workflow_version</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.access</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.created_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.data_category</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.data_format</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.data_type</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.error_type</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.experimental_strategy</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.file_id</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.file_name</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.file_size</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.file_state</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.md5sum</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.platform</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.revision</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.state</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.state_comment</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.submitter_id</td>
+</tr>
+<tr>
+<td>files.analysis.input_files.updated_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.adapter_name</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.adapter_sequence</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.base_caller_name</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.base_caller_version</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.created_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.experiment_name</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.flow_cell_barcode</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.includes_spike_ins</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.instrument_model</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.is_paired_end</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.library_name</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.library_preparation_kit_catalog_number</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.library_preparation_kit_name</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.library_preparation_kit_vendor</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.library_preparation_kit_version</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.library_selection</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.library_strand</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.library_strategy</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.platform</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_id</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_name</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_length</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.RIN</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.sequencing_center</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.sequencing_date</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.size_selection_range</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.spike_ins_concentration</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.spike_ins_fasta</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.state</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.submitter_id</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.target_capture_kit_catalog_number</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.target_capture_kit_name</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.target_capture_kit_target_region</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.target_capture_kit_vendor</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.target_capture_kit_version</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.to_trim_adapter_sequence</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.updated_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.adapter_content</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.basic_statistics</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.created_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.encoding</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.fastq_name</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.kmer_content</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.overrepresented_sequences</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.per_base_n_content</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.per_base_sequence_content</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.per_base_sequence_quality</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.per_sequence_gc_content</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.per_sequence_quality_score</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.per_tile_sequence_quality</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.percent_gc_content</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.read_group_qc_id</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.sequence_duplication_levels</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.sequence_length_distribution</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.state</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.submitter_id</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.total_sequences</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.updated_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.workflow_end_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.workflow_link</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.workflow_start_datetime</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.workflow_type</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs.workflow_version</td>
+</tr>
+<tr>
+<td>files.archive.archive_id</td>
+</tr>
+<tr>
+<td>files.archive.created_datetime</td>
+</tr>
+<tr>
+<td>files.archive.data_category</td>
+</tr>
+<tr>
+<td>files.archive.data_format</td>
+</tr>
+<tr>
+<td>files.archive.data_type</td>
+</tr>
+<tr>
+<td>files.archive.error_type</td>
+</tr>
+<tr>
+<td>files.archive.file_name</td>
+</tr>
+<tr>
+<td>files.archive.file_size</td>
+</tr>
+<tr>
+<td>files.archive.file_state</td>
+</tr>
+<tr>
+<td>files.archive.md5sum</td>
+</tr>
+<tr>
+<td>files.archive.revision</td>
+</tr>
+<tr>
+<td>files.archive.state</td>
+</tr>
+<tr>
+<td>files.archive.state_comment</td>
+</tr>
+<tr>
+<td>files.archive.submitter_id</td>
+</tr>
+<tr>
+<td>files.archive.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.aliquot_ids</td>
+</tr>
+<tr>
+<td>files.cases.analyte_ids</td>
+</tr>
+<tr>
+<td>files.cases.case_id</td>
+</tr>
+<tr>
+<td>files.cases.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.days_to_index</td>
+</tr>
+<tr>
+<td>files.cases.portion_ids</td>
+</tr>
+<tr>
+<td>files.cases.sample_ids</td>
+</tr>
+<tr>
+<td>files.cases.slide_ids</td>
+</tr>
+<tr>
+<td>files.cases.state</td>
+</tr>
+<tr>
+<td>files.cases.submitter_aliquot_ids</td>
+</tr>
+<tr>
+<td>files.cases.submitter_analyte_ids</td>
+</tr>
+<tr>
+<td>files.cases.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.submitter_portion_ids</td>
+</tr>
+<tr>
+<td>files.cases.submitter_sample_ids</td>
+</tr>
+<tr>
+<td>files.cases.submitter_slide_ids</td>
+</tr>
+<tr>
+<td>files.cases.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>files.cases.annotations.case_id</td>
+</tr>
+<tr>
+<td>files.cases.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.annotations.category</td>
+</tr>
+<tr>
+<td>files.cases.annotations.classification</td>
+</tr>
+<tr>
+<td>files.cases.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.annotations.creator</td>
+</tr>
+<tr>
+<td>files.cases.annotations.entity_id</td>
+</tr>
+<tr>
+<td>files.cases.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.annotations.entity_type</td>
+</tr>
+<tr>
+<td>files.cases.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.annotations.notes</td>
+</tr>
+<tr>
+<td>files.cases.annotations.state</td>
+</tr>
+<tr>
+<td>files.cases.annotations.status</td>
+</tr>
+<tr>
+<td>files.cases.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.demographic.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.demographic.demographic_id</td>
+</tr>
+<tr>
+<td>files.cases.demographic.ethnicity</td>
+</tr>
+<tr>
+<td>files.cases.demographic.gender</td>
+</tr>
+<tr>
+<td>files.cases.demographic.race</td>
+</tr>
+<tr>
+<td>files.cases.demographic.state</td>
+</tr>
+<tr>
+<td>files.cases.demographic.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.demographic.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.demographic.year_of_birth</td>
+</tr>
+<tr>
+<td>files.cases.demographic.year_of_death</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.age_at_diagnosis</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.classification_of_tumor</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.days_to_birth</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.days_to_death</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.days_to_last_follow_up</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.days_to_last_known_disease_status</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.days_to_recurrence</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.diagnosis_id</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.last_known_disease_status</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.morphology</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.primary_diagnosis</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.prior_malignancy</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.progression_or_recurrence</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.site_of_resection_or_biopsy</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.state</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.tissue_or_organ_of_origin</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.tumor_grade</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.tumor_stage</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.vital_status</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments.days_to_treatment</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments.state</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments.therapeutic_agents</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments.treatment_id</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments.treatment_intent_type</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments.treatment_or_therapy</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.exposures.alcohol_history</td>
+</tr>
+<tr>
+<td>files.cases.exposures.alcohol_intensity</td>
+</tr>
+<tr>
+<td>files.cases.exposures.bmi</td>
+</tr>
+<tr>
+<td>files.cases.exposures.cigarettes_per_day</td>
+</tr>
+<tr>
+<td>files.cases.exposures.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.exposures.exposure_id</td>
+</tr>
+<tr>
+<td>files.cases.exposures.height</td>
+</tr>
+<tr>
+<td>files.cases.exposures.state</td>
+</tr>
+<tr>
+<td>files.cases.exposures.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.exposures.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.exposures.weight</td>
+</tr>
+<tr>
+<td>files.cases.exposures.years_smoked</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.family_history_id</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.relationship_age_at_diagnosis</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.relationship_gender</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.relationship_primary_diagnosis</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.relationship_type</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.relative_with_cancer_history</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.state</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.family_histories.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.files.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.files.error_type</td>
+</tr>
+<tr>
+<td>files.cases.files.file_id</td>
+</tr>
+<tr>
+<td>files.cases.files.file_name</td>
+</tr>
+<tr>
+<td>files.cases.files.file_size</td>
+</tr>
+<tr>
+<td>files.cases.files.file_state</td>
+</tr>
+<tr>
+<td>files.cases.files.md5sum</td>
+</tr>
+<tr>
+<td>files.cases.files.state</td>
+</tr>
+<tr>
+<td>files.cases.files.state_comment</td>
+</tr>
+<tr>
+<td>files.cases.files.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.files.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.project.dbgap_accession_number</td>
+</tr>
+<tr>
+<td>files.cases.project.disease_type</td>
+</tr>
+<tr>
+<td>files.cases.project.name</td>
+</tr>
+<tr>
+<td>files.cases.project.primary_site</td>
+</tr>
+<tr>
+<td>files.cases.project.project_id</td>
+</tr>
+<tr>
+<td>files.cases.project.released</td>
+</tr>
+<tr>
+<td>files.cases.project.state</td>
+</tr>
+<tr>
+<td>files.cases.project.program.dbgap_accession_number</td>
+</tr>
+<tr>
+<td>files.cases.project.program.name</td>
+</tr>
+<tr>
+<td>files.cases.project.program.program_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.composition</td>
+</tr>
+<tr>
+<td>files.cases.samples.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.current_weight</td>
+</tr>
+<tr>
+<td>files.cases.samples.days_to_collection</td>
+</tr>
+<tr>
+<td>files.cases.samples.days_to_sample_procurement</td>
+</tr>
+<tr>
+<td>files.cases.samples.freezing_method</td>
+</tr>
+<tr>
+<td>files.cases.samples.initial_weight</td>
+</tr>
+<tr>
+<td>files.cases.samples.intermediate_dimension</td>
+</tr>
+<tr>
+<td>files.cases.samples.is_ffpe</td>
+</tr>
+<tr>
+<td>files.cases.samples.longest_dimension</td>
+</tr>
+<tr>
+<td>files.cases.samples.oct_embedded</td>
+</tr>
+<tr>
+<td>files.cases.samples.pathology_report_uuid</td>
+</tr>
+<tr>
+<td>files.cases.samples.preservation_method</td>
+</tr>
+<tr>
+<td>files.cases.samples.sample_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.sample_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.sample_type_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.shortest_dimension</td>
+</tr>
+<tr>
+<td>files.cases.samples.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.time_between_clamping_and_freezing</td>
+</tr>
+<tr>
+<td>files.cases.samples.time_between_excision_and_freezing</td>
+</tr>
+<tr>
+<td>files.cases.samples.tissue_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.tumor_code</td>
+</tr>
+<tr>
+<td>files.cases.samples.tumor_code_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.tumor_descriptor</td>
+</tr>
+<tr>
+<td>files.cases.samples.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.case_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.category</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.classification</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.creator</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.entity_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.entity_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.notes</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.status</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.creation_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.is_ffpe</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.portion_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.portion_number</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.weight</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.a260_a280_ratio</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.amount</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.analyte_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.analyte_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.analyte_type_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.concentration</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.spectrophotometer_method</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.well_number</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.aliquot_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.amount</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.analyte_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.analyte_type_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.concentration</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.source_center</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.case_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.category</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.classification</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.creator</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.entity_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.entity_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.notes</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.status</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.center.center_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.center.center_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.center.code</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.center.name</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.center.namespace</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.center.short_name</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.case_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.category</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.classification</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.creator</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.entity_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.entity_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.notes</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.status</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.case_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.category</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.classification</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.creator</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.entity_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.entity_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.notes</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.status</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.center.center_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.center.center_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.center.code</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.center.name</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.center.namespace</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.center.short_name</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.number_proliferating_cells</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_eosinophil_infiltration</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_granulocyte_infiltration</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_inflam_infiltration</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_lymphocyte_infiltration</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_monocyte_infiltration</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_necrosis</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_neutrophil_infiltration</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_normal_cells</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_stromal_cells</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_tumor_cells</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.percent_tumor_nuclei</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.section_location</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.slide_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.case_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.category</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.classification</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.creator</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.entity_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.entity_type</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.notes</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.state</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.status</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>files.cases.summary.file_count</td>
+</tr>
+<tr>
+<td>files.cases.summary.file_size</td>
+</tr>
+<tr>
+<td>files.cases.summary.data_categories.data_category</td>
+</tr>
+<tr>
+<td>files.cases.summary.data_categories.file_count</td>
+</tr>
+<tr>
+<td>files.cases.summary.experimental_strategies.experimental_strategy</td>
+</tr>
+<tr>
+<td>files.cases.summary.experimental_strategies.file_count</td>
+</tr>
+<tr>
+<td>files.cases.tissue_source_site.bcr_id</td>
+</tr>
+<tr>
+<td>files.cases.tissue_source_site.code</td>
+</tr>
+<tr>
+<td>files.cases.tissue_source_site.name</td>
+</tr>
+<tr>
+<td>files.cases.tissue_source_site.project</td>
+</tr>
+<tr>
+<td>files.cases.tissue_source_site.tissue_source_site_id</td>
+</tr>
+<tr>
+<td>files.center.center_id</td>
+</tr>
+<tr>
+<td>files.center.center_type</td>
+</tr>
+<tr>
+<td>files.center.code</td>
+</tr>
+<tr>
+<td>files.center.name</td>
+</tr>
+<tr>
+<td>files.center.namespace</td>
+</tr>
+<tr>
+<td>files.center.short_name</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.analysis_id</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.analysis_type</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.created_datetime</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.state</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.submitter_id</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.updated_datetime</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.workflow_end_datetime</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.workflow_link</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.workflow_start_datetime</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.workflow_type</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.workflow_version</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.access</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.created_datetime</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.data_category</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.data_format</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.data_type</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.error_type</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.experimental_strategy</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.file_id</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.file_name</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.file_size</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.file_state</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.md5sum</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.platform</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.revision</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.state</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.state_comment</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.submitter_id</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files.updated_datetime</td>
+</tr>
+<tr>
+<td>files.index_files.access</td>
+</tr>
+<tr>
+<td>files.index_files.created_datetime</td>
+</tr>
+<tr>
+<td>files.index_files.data_category</td>
+</tr>
+<tr>
+<td>files.index_files.data_format</td>
+</tr>
+<tr>
+<td>files.index_files.data_type</td>
+</tr>
+<tr>
+<td>files.index_files.error_type</td>
+</tr>
+<tr>
+<td>files.index_files.experimental_strategy</td>
+</tr>
+<tr>
+<td>files.index_files.file_id</td>
+</tr>
+<tr>
+<td>files.index_files.file_name</td>
+</tr>
+<tr>
+<td>files.index_files.file_size</td>
+</tr>
+<tr>
+<td>files.index_files.file_state</td>
+</tr>
+<tr>
+<td>files.index_files.md5sum</td>
+</tr>
+<tr>
+<td>files.index_files.platform</td>
+</tr>
+<tr>
+<td>files.index_files.revision</td>
+</tr>
+<tr>
+<td>files.index_files.state</td>
+</tr>
+<tr>
+<td>files.index_files.state_comment</td>
+</tr>
+<tr>
+<td>files.index_files.submitter_id</td>
+</tr>
+<tr>
+<td>files.index_files.updated_datetime</td>
+</tr>
+<tr>
+<td>files.metadata_files.access</td>
+</tr>
+<tr>
+<td>files.metadata_files.created_datetime</td>
+</tr>
+<tr>
+<td>files.metadata_files.data_category</td>
+</tr>
+<tr>
+<td>files.metadata_files.data_format</td>
+</tr>
+<tr>
+<td>files.metadata_files.data_type</td>
+</tr>
+<tr>
+<td>files.metadata_files.error_type</td>
+</tr>
+<tr>
+<td>files.metadata_files.file_id</td>
+</tr>
+<tr>
+<td>files.metadata_files.file_name</td>
+</tr>
+<tr>
+<td>files.metadata_files.file_size</td>
+</tr>
+<tr>
+<td>files.metadata_files.file_state</td>
+</tr>
+<tr>
+<td>files.metadata_files.md5sum</td>
+</tr>
+<tr>
+<td>files.metadata_files.state</td>
+</tr>
+<tr>
+<td>files.metadata_files.state_comment</td>
+</tr>
+<tr>
+<td>files.metadata_files.submitter_id</td>
+</tr>
+<tr>
+<td>files.metadata_files.type</td>
+</tr>
+<tr>
+<td>files.metadata_files.updated_datetime</td>
+</tr>
+<tr>
+<td>project.dbgap_accession_number</td>
+</tr>
+<tr>
+<td>project.disease_type</td>
+</tr>
+<tr>
+<td>project.name</td>
+</tr>
+<tr>
+<td>project.primary_site</td>
+</tr>
+<tr>
+<td>project.project_id</td>
+</tr>
+<tr>
+<td>project.released</td>
+</tr>
+<tr>
+<td>project.state</td>
+</tr>
+<tr>
+<td>project.program.dbgap_accession_number</td>
+</tr>
+<tr>
+<td>project.program.name</td>
+</tr>
+<tr>
+<td>project.program.program_id</td>
+</tr>
+<tr>
+<td>samples.composition</td>
+</tr>
+<tr>
+<td>samples.created_datetime</td>
+</tr>
+<tr>
+<td>samples.current_weight</td>
+</tr>
+<tr>
+<td>samples.days_to_collection</td>
+</tr>
+<tr>
+<td>samples.days_to_sample_procurement</td>
+</tr>
+<tr>
+<td>samples.freezing_method</td>
+</tr>
+<tr>
+<td>samples.initial_weight</td>
+</tr>
+<tr>
+<td>samples.intermediate_dimension</td>
+</tr>
+<tr>
+<td>samples.is_ffpe</td>
+</tr>
+<tr>
+<td>samples.longest_dimension</td>
+</tr>
+<tr>
+<td>samples.oct_embedded</td>
+</tr>
+<tr>
+<td>samples.pathology_report_uuid</td>
+</tr>
+<tr>
+<td>samples.preservation_method</td>
+</tr>
+<tr>
+<td>samples.sample_id</td>
+</tr>
+<tr>
+<td>samples.sample_type</td>
+</tr>
+<tr>
+<td>samples.sample_type_id</td>
+</tr>
+<tr>
+<td>samples.shortest_dimension</td>
+</tr>
+<tr>
+<td>samples.state</td>
+</tr>
+<tr>
+<td>samples.submitter_id</td>
+</tr>
+<tr>
+<td>samples.time_between_clamping_and_freezing</td>
+</tr>
+<tr>
+<td>samples.time_between_excision_and_freezing</td>
+</tr>
+<tr>
+<td>samples.tissue_type</td>
+</tr>
+<tr>
+<td>samples.tumor_code</td>
+</tr>
+<tr>
+<td>samples.tumor_code_id</td>
+</tr>
+<tr>
+<td>samples.tumor_descriptor</td>
+</tr>
+<tr>
+<td>samples.updated_datetime</td>
+</tr>
+<tr>
+<td>samples.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>samples.annotations.case_id</td>
+</tr>
+<tr>
+<td>samples.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>samples.annotations.category</td>
+</tr>
+<tr>
+<td>samples.annotations.classification</td>
+</tr>
+<tr>
+<td>samples.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>samples.annotations.creator</td>
+</tr>
+<tr>
+<td>samples.annotations.entity_id</td>
+</tr>
+<tr>
+<td>samples.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>samples.annotations.entity_type</td>
+</tr>
+</tbody>
+</table>
+<p>| samples.annotations.legacy_creat
+| samples.annotations.legacy_updated_datetime |
+| samples.annotations.notes |
+| samples.annotations.state |
+| samples.annotations.status |
+| samples.annotations.submitter_id |
+| samples.annotations.updated_datetime |
+| samples.portions.created_datetime |
+| samples.portions.creation_datetime |
+| samples.portions.is_ffpe |
+| samples.portions.portion_id |
+| samples.portions.portion_number |
+| samples.portions.state |
+| samples.portions.submitter_id |
+| samples.portions.updated_datetime |
+| samples.portions.weight |
+| samples.portions.analytes.a260_a280_ratio |
+| samples.portions.analytes.amount |
+| samples.portions.analytes.analyte_id |
+| samples.portions.analytes.analyte_type |
+| samples.portions.analytes.analyte_type_id |
+| samples.portions.analytes.concentration |
+| samples.portions.analytes.created_datetime |
+| samples.portions.analytes.spectrophotometer_method |
+| samples.portions.analytes.state |
+| samples.portions.analytes.submitter_id |
+| samples.portions.analytes.updated_datetime |
+| samples.portions.analytes.well_number |
+| samples.portions.analytes.aliquots.aliquot_id |
+| samples.portions.analytes.aliquots.amount |
+| samples.portions.analytes.aliquots.analyte_type |
+| samples.portions.analytes.aliquots.analyte_type_id |
+| samples.portions.analytes.aliquots.concentration |
+| samples.portions.analytes.aliquots.created_datetime |
+| samples.portions.analytes.aliquots.source_center |
+| samples.portions.analytes.aliquots.state |
+| samples.portions.analytes.aliquots.submitter_id |
+| samples.portions.analytes.aliquots.updated_datetime |
+| samples.portions.analytes.aliquots.annotations.annotation_id |
+| samples.portions.analytes.aliquots.annotations.case_id |
+| samples.portions.analytes.aliquots.annotations.case_submitter_id |
+| samples.portions.analytes.aliquots.annotations.category |
+| samples.portions.analytes.aliquots.annotations.classification |
+| samples.portions.analytes.aliquots.annotations.created_datetime |
+| samples.portions.analytes.aliquots.annotations.creator |
+| samples.portions.analytes.aliquots.annotations.entity_id |
+| samples.portions.analytes.aliquots.annotations.entity_submitter_id |
+| samples.portions.analytes.aliquots.annotations.entity_type |
+| samples.portions.analytes.aliquots.annotations.legacy_created_datetime |
+| samples.portions.analytes.aliquots.annotations.legacy_updated_datetime |
+| samples.portions.analytes.aliquots.annotations.notes |
+| samples.portions.analytes.aliquots.annotations.state |
+| samples.portions.analytes.aliquots.annotations.status |
+| samples.portions.analytes.aliquots.annotations.submitter_id |
+| samples.portions.analytes.aliquots.annotations.updated_datetime |
+| samples.portions.analytes.aliquots.center.center_id |
+| samples.portions.analytes.aliquots.center.center_type |
+| samples.portions.analytes.aliquots.center.code |
+| samples.portions.analytes.aliquots.center.name |
+| samples.portions.analytes.aliquots.center.namespace |
+| samples.portions.analytes.aliquots.center.short_name |
+| samples.portions.analytes.annotations.annotation_id |
+| samples.portions.analytes.annotations.case_id |
+| samples.portions.analytes.annotations.case_submitter_id |
+| samples.portions.analytes.annotations.category |
+| samples.portions.analytes.annotations.classification |
+| samples.portions.analytes.annotations.created_datetime |
+| samples.portions.analytes.annotations.creator |
+| samples.portions.analytes.annotations.entity_id |
+| samples.portions.analytes.annotations.entity_submitter_id |
+| samples.portions.analytes.annotations.entity_type |
+| samples.portions.analytes.annotations.legacy_created_datetime |
+| samples.portions.analytes.annotations.legacy_updated_datetime |
+| samples.portions.analytes.annotations.notes |
+| samples.portions.analytes.annotations.state |
+| samples.portions.analytes.annotations.status |
+| samples.portions.analytes.annotations.submitter_id |
+| samples.portions.analytes.annotations.updated_datetime |
+| samples.portions.annotations.annotation_id |
+| samples.portions.annotations.case_id |
+| samples.portions.annotations.case_submitter_id |
+| samples.portions.annotations.category |
+| samples.portions.annotations.classification |
+| samples.portions.annotations.created_datetime |
+| samples.portions.annotations.creator |
+| samples.portions.annotations.entity_id |
+| samples.portions.annotations.entity_submitter_id |
+| samples.portions.annotations.entity_type |
+| samples.portions.annotations.legacy_created_datetime |
+| samples.portions.annotations.legacy_updated_datetime |
+| samples.portions.annotations.notes |
+| samples.portions.annotations.state |
+| samples.portions.annotations.status |
+| samples.portions.annotations.submitter_id |
+| samples.portions.annotations.updated_datetime |
+| samples.portions.center.center_id |
+| samples.portions.center.center_type |
+| samples.portions.center.code |
+| samples.portions.center.name |
+| samples.portions.center.namespace |
+| samples.portions.center.short_name |
+| samples.portions.slides.created_datetime |
+| samples.portions.slides.number_proliferating_cells |
+| samples.portions.slides.percent_eosinophil_infiltration |
+| samples.portions.slides.percent_granulocyte_infiltration |
+| samples.portions.slides.percent_inflam_infiltration |
+| samples.portions.slides.percent_lymphocyte_infiltration |
+| samples.portions.slides.percent_monocyte_infiltration |
+| samples.portions.slides.percent_necrosis |
+| samples.portions.slides.percent_neutrophil_infiltration |
+| samples.portions.slides.percent_normal_cells |
+| samples.portions.slides.percent_stromal_cells |
+| samples.portions.slides.percent_tumor_cells |
+| samples.portions.slides.percent_tumor_nuclei |
+| samples.portions.slides.section_location |
+| samples.portions.slides.slide_id |
+| samples.portions.slides.state |
+| samples.portions.slides.submitter_id |
+| samples.portions.slides.updated_datetime |
+| samples.portions.slides.annotations.annotation_id |
+| samples.portions.slides.annotations.case_id |
+| samples.portions.slides.annotations.case_submitter_id |
+| samples.portions.slides.annotations.category |
+| samples.portions.slides.annotations.classification |
+| samples.portions.slides.annotations.created_datetime |
+| samples.portions.slides.annotations.creator |
+| samples.portions.slides.annotations.entity_id |
+| samples.portions.slides.annotations.entity_submitter_id |
+| samples.portions.slides.annotations.entity_type |
+| samples.portions.slides.annotations.legacy_created_datetime |
+| samples.portions.slides.annotations.legacy_updated_datetime |
+| samples.portions.slides.annotations.notes |
+| samples.portions.slides.annotations.state |
+| samples.portions.slides.annotations.status |
+| samples.portions.slides.annotations.submitter_id |
+| samples.portions.slides.annotations.updated_datetime |
+| summary.file_count |
+| summary.file_size |
+| summary.data_categories.data_category |
+| summary.data_categories.file_count |
+| summary.experimental_strategies.experimental_strategy |
+| summary.experimental_strategies.file_count |
+| tissue_source_site.bcr_id |
+| tissue_source_site.code |
+| tissue_source_site.name |
+| tissue_source_site.project |
+| tissue_source_site.tissue_source_site_id |</p>
+<h3>File Fields</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Field Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access</td>
+</tr>
+<tr>
+<td>acl</td>
+</tr>
+<tr>
+<td>created_datetime</td>
+</tr>
+<tr>
+<td>data_category</td>
+</tr>
+<tr>
+<td>data_format</td>
+</tr>
+<tr>
+<td>data_type</td>
+</tr>
+<tr>
+<td>error_type</td>
+</tr>
+<tr>
+<td>experimental_strategy</td>
+</tr>
+<tr>
+<td>file_id</td>
+</tr>
+<tr>
+<td>file_name</td>
+</tr>
+<tr>
+<td>file_size</td>
+</tr>
+<tr>
+<td>file_state</td>
+</tr>
+<tr>
+<td>md5sum</td>
+</tr>
+<tr>
+<td>origin</td>
+</tr>
+<tr>
+<td>platform</td>
+</tr>
+<tr>
+<td>revision</td>
+</tr>
+<tr>
+<td>state</td>
+</tr>
+<tr>
+<td>state_comment</td>
+</tr>
+<tr>
+<td>submitter_id</td>
+</tr>
+<tr>
+<td>tags</td>
+</tr>
+<tr>
+<td>type</td>
+</tr>
+<tr>
+<td>updated_datetime</td>
+</tr>
+<tr>
+<td>analysis.analysis_id</td>
+</tr>
+<tr>
+<td>analysis.analysis_type</td>
+</tr>
+<tr>
+<td>analysis.created_datetime</td>
+</tr>
+<tr>
+<td>analysis.state</td>
+</tr>
+<tr>
+<td>analysis.submitter_id</td>
+</tr>
+<tr>
+<td>analysis.updated_datetime</td>
+</tr>
+<tr>
+<td>analysis.workflow_end_datetime</td>
+</tr>
+<tr>
+<td>analysis.workflow_link</td>
+</tr>
+<tr>
+<td>analysis.workflow_start_datetime</td>
+</tr>
+<tr>
+<td>analysis.workflow_type</td>
+</tr>
+<tr>
+<td>analysis.workflow_version</td>
+</tr>
+<tr>
+<td>analysis.input_files.access</td>
+</tr>
+<tr>
+<td>analysis.input_files.created_datetime</td>
+</tr>
+<tr>
+<td>analysis.input_files.data_category</td>
+</tr>
+<tr>
+<td>analysis.input_files.data_format</td>
+</tr>
+<tr>
+<td>analysis.input_files.data_type</td>
+</tr>
+<tr>
+<td>analysis.input_files.error_type</td>
+</tr>
+<tr>
+<td>analysis.input_files.experimental_strategy</td>
+</tr>
+<tr>
+<td>analysis.input_files.file_id</td>
+</tr>
+<tr>
+<td>analysis.input_files.file_name</td>
+</tr>
+<tr>
+<td>analysis.input_files.file_size</td>
+</tr>
+<tr>
+<td>analysis.input_files.file_state</td>
+</tr>
+<tr>
+<td>analysis.input_files.md5sum</td>
+</tr>
+<tr>
+<td>analysis.input_files.platform</td>
+</tr>
+<tr>
+<td>analysis.input_files.revision</td>
+</tr>
+<tr>
+<td>analysis.input_files.state</td>
+</tr>
+<tr>
+<td>analysis.input_files.state_comment</td>
+</tr>
+<tr>
+<td>analysis.input_files.submitter_id</td>
+</tr>
+<tr>
+<td>analysis.input_files.updated_datetime</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.adapter_name</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.adapter_sequence</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.base_caller_name</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.base_caller_version</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.created_datetime</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.experiment_name</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.flow_cell_barcode</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.includes_spike_ins</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.instrument_model</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.is_paired_end</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.library_name</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.library_preparation_kit_catalog_number</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.library_preparation_kit_name</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.library_preparation_kit_vendor</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.library_preparation_kit_version</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.library_selection</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.library_strand</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.library_strategy</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.platform</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_id</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_name</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_length</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.RIN</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.sequencing_center</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.sequencing_date</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.size_selection_range</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.spike_ins_concentration</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.spike_ins_fasta</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.state</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.submitter_id</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.target_capture_kit_catalog_number</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.target_capture_kit_name</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.target_capture_kit_target_region</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.target_capture_kit_vendor</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.target_capture_kit_version</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.to_trim_adapter_sequence</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.updated_datetime</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.adapter_content</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.basic_statistics</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.created_datetime</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.encoding</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.fastq_name</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.kmer_content</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.overrepresented_sequences</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.per_base_n_content</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.per_base_sequence_content</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.per_base_sequence_quality</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.per_sequence_gc_content</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.per_sequence_quality_score</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.per_tile_sequence_quality</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.percent_gc_content</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.read_group_qc_id</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.sequence_duplication_levels</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.sequence_length_distribution</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.state</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.submitter_id</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.total_sequences</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.updated_datetime</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.workflow_end_datetime</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.workflow_link</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.workflow_start_datetime</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.workflow_type</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs.workflow_version</td>
+</tr>
+<tr>
+<td>annotations.annotation_id</td>
+</tr>
+<tr>
+<td>annotations.case_id</td>
+</tr>
+<tr>
+<td>annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>annotations.category</td>
+</tr>
+<tr>
+<td>annotations.classification</td>
+</tr>
+<tr>
+<td>annotations.created_datetime</td>
+</tr>
+<tr>
+<td>annotations.creator</td>
+</tr>
+<tr>
+<td>annotations.entity_id</td>
+</tr>
+<tr>
+<td>annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>annotations.entity_type</td>
+</tr>
+<tr>
+<td>annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>annotations.notes</td>
+</tr>
+<tr>
+<td>annotations.state</td>
+</tr>
+<tr>
+<td>annotations.status</td>
+</tr>
+<tr>
+<td>annotations.submitter_id</td>
+</tr>
+<tr>
+<td>annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>archive.archive_id</td>
+</tr>
+<tr>
+<td>archive.created_datetime</td>
+</tr>
+<tr>
+<td>archive.data_category</td>
+</tr>
+<tr>
+<td>archive.data_format</td>
+</tr>
+<tr>
+<td>archive.data_type</td>
+</tr>
+<tr>
+<td>archive.error_type</td>
+</tr>
+<tr>
+<td>archive.file_name</td>
+</tr>
+<tr>
+<td>archive.file_size</td>
+</tr>
+<tr>
+<td>archive.file_state</td>
+</tr>
+<tr>
+<td>archive.md5sum</td>
+</tr>
+<tr>
+<td>archive.revision</td>
+</tr>
+<tr>
+<td>archive.state</td>
+</tr>
+<tr>
+<td>archive.state_comment</td>
+</tr>
+<tr>
+<td>archive.submitter_id</td>
+</tr>
+<tr>
+<td>archive.updated_datetime</td>
+</tr>
+<tr>
+<td>associated_entities.case_id</td>
+</tr>
+<tr>
+<td>associated_entities.entity_id</td>
+</tr>
+<tr>
+<td>associated_entities.entity_submitter_id</td>
+</tr>
+<tr>
+<td>associated_entities.entity_type</td>
+</tr>
+<tr>
+<td>cases.aliquot_ids</td>
+</tr>
+<tr>
+<td>cases.analyte_ids</td>
+</tr>
+<tr>
+<td>cases.case_id</td>
+</tr>
+<tr>
+<td>cases.created_datetime</td>
+</tr>
+<tr>
+<td>cases.days_to_index</td>
+</tr>
+<tr>
+<td>cases.portion_ids</td>
+</tr>
+<tr>
+<td>cases.sample_ids</td>
+</tr>
+<tr>
+<td>cases.slide_ids</td>
+</tr>
+<tr>
+<td>cases.state</td>
+</tr>
+<tr>
+<td>cases.submitter_aliquot_ids</td>
+</tr>
+<tr>
+<td>cases.submitter_analyte_ids</td>
+</tr>
+<tr>
+<td>cases.submitter_id</td>
+</tr>
+<tr>
+<td>cases.submitter_portion_ids</td>
+</tr>
+<tr>
+<td>cases.submitter_sample_ids</td>
+</tr>
+<tr>
+<td>cases.submitter_slide_ids</td>
+</tr>
+<tr>
+<td>cases.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>cases.annotations.case_id</td>
+</tr>
+<tr>
+<td>cases.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>cases.annotations.category</td>
+</tr>
+<tr>
+<td>cases.annotations.classification</td>
+</tr>
+<tr>
+<td>cases.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>cases.annotations.creator</td>
+</tr>
+<tr>
+<td>cases.annotations.entity_id</td>
+</tr>
+<tr>
+<td>cases.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>cases.annotations.entity_type</td>
+</tr>
+<tr>
+<td>cases.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>cases.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>cases.annotations.notes</td>
+</tr>
+<tr>
+<td>cases.annotations.state</td>
+</tr>
+<tr>
+<td>cases.annotations.status</td>
+</tr>
+<tr>
+<td>cases.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>cases.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.demographic.created_datetime</td>
+</tr>
+<tr>
+<td>cases.demographic.demographic_id</td>
+</tr>
+<tr>
+<td>cases.demographic.ethnicity</td>
+</tr>
+<tr>
+<td>cases.demographic.gender</td>
+</tr>
+<tr>
+<td>cases.demographic.race</td>
+</tr>
+<tr>
+<td>cases.demographic.state</td>
+</tr>
+<tr>
+<td>cases.demographic.submitter_id</td>
+</tr>
+<tr>
+<td>cases.demographic.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.demographic.year_of_birth</td>
+</tr>
+<tr>
+<td>cases.demographic.year_of_death</td>
+</tr>
+<tr>
+<td>cases.diagnoses.age_at_diagnosis</td>
+</tr>
+<tr>
+<td>cases.diagnoses.classification_of_tumor</td>
+</tr>
+<tr>
+<td>cases.diagnoses.created_datetime</td>
+</tr>
+<tr>
+<td>cases.diagnoses.days_to_birth</td>
+</tr>
+<tr>
+<td>cases.diagnoses.days_to_death</td>
+</tr>
+<tr>
+<td>cases.diagnoses.days_to_last_follow_up</td>
+</tr>
+<tr>
+<td>cases.diagnoses.days_to_last_known_disease_status</td>
+</tr>
+<tr>
+<td>cases.diagnoses.days_to_recurrence</td>
+</tr>
+<tr>
+<td>cases.diagnoses.diagnosis_id</td>
+</tr>
+<tr>
+<td>cases.diagnoses.last_known_disease_status</td>
+</tr>
+<tr>
+<td>cases.diagnoses.morphology</td>
+</tr>
+<tr>
+<td>cases.diagnoses.primary_diagnosis</td>
+</tr>
+<tr>
+<td>cases.diagnoses.prior_malignancy</td>
+</tr>
+<tr>
+<td>cases.diagnoses.progression_or_recurrence</td>
+</tr>
+<tr>
+<td>cases.diagnoses.site_of_resection_or_biopsy</td>
+</tr>
+<tr>
+<td>cases.diagnoses.state</td>
+</tr>
+<tr>
+<td>cases.diagnoses.submitter_id</td>
+</tr>
+<tr>
+<td>cases.diagnoses.tissue_or_organ_of_origin</td>
+</tr>
+<tr>
+<td>cases.diagnoses.tumor_grade</td>
+</tr>
+<tr>
+<td>cases.diagnoses.tumor_stage</td>
+</tr>
+<tr>
+<td>cases.diagnoses.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.diagnoses.vital_status</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments.created_datetime</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments.days_to_treatment</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments.state</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments.submitter_id</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments.therapeutic_agents</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments.treatment_id</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments.treatment_intent_type</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments.treatment_or_therapy</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.exposures.alcohol_history</td>
+</tr>
+<tr>
+<td>cases.exposures.alcohol_intensity</td>
+</tr>
+<tr>
+<td>cases.exposures.bmi</td>
+</tr>
+<tr>
+<td>cases.exposures.cigarettes_per_day</td>
+</tr>
+<tr>
+<td>cases.exposures.created_datetime</td>
+</tr>
+<tr>
+<td>cases.exposures.exposure_id</td>
+</tr>
+<tr>
+<td>cases.exposures.height</td>
+</tr>
+<tr>
+<td>cases.exposures.state</td>
+</tr>
+<tr>
+<td>cases.exposures.submitter_id</td>
+</tr>
+<tr>
+<td>cases.exposures.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.exposures.weight</td>
+</tr>
+<tr>
+<td>cases.exposures.years_smoked</td>
+</tr>
+<tr>
+<td>cases.family_histories.created_datetime</td>
+</tr>
+<tr>
+<td>cases.family_histories.family_history_id</td>
+</tr>
+<tr>
+<td>cases.family_histories.relationship_age_at_diagnosis</td>
+</tr>
+<tr>
+<td>cases.family_histories.relationship_gender</td>
+</tr>
+<tr>
+<td>cases.family_histories.relationship_primary_diagnosis</td>
+</tr>
+<tr>
+<td>cases.family_histories.relationship_type</td>
+</tr>
+<tr>
+<td>cases.family_histories.relative_with_cancer_history</td>
+</tr>
+<tr>
+<td>cases.family_histories.state</td>
+</tr>
+<tr>
+<td>cases.family_histories.submitter_id</td>
+</tr>
+<tr>
+<td>cases.family_histories.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.files.created_datetime</td>
+</tr>
+<tr>
+<td>cases.files.error_type</td>
+</tr>
+<tr>
+<td>cases.files.file_id</td>
+</tr>
+<tr>
+<td>cases.files.file_name</td>
+</tr>
+<tr>
+<td>cases.files.file_size</td>
+</tr>
+<tr>
+<td>cases.files.file_state</td>
+</tr>
+<tr>
+<td>cases.files.md5sum</td>
+</tr>
+<tr>
+<td>cases.files.state</td>
+</tr>
+<tr>
+<td>cases.files.state_comment</td>
+</tr>
+<tr>
+<td>cases.files.submitter_id</td>
+</tr>
+<tr>
+<td>cases.files.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.project.dbgap_accession_number</td>
+</tr>
+<tr>
+<td>cases.project.disease_type</td>
+</tr>
+<tr>
+<td>cases.project.name</td>
+</tr>
+<tr>
+<td>cases.project.primary_site</td>
+</tr>
+<tr>
+<td>cases.project.project_id</td>
+</tr>
+<tr>
+<td>cases.project.released</td>
+</tr>
+<tr>
+<td>cases.project.state</td>
+</tr>
+<tr>
+<td>cases.project.program.dbgap_accession_number</td>
+</tr>
+<tr>
+<td>cases.project.program.name</td>
+</tr>
+<tr>
+<td>cases.project.program.program_id</td>
+</tr>
+<tr>
+<td>cases.samples.composition</td>
+</tr>
+<tr>
+<td>cases.samples.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.current_weight</td>
+</tr>
+<tr>
+<td>cases.samples.days_to_collection</td>
+</tr>
+<tr>
+<td>cases.samples.days_to_sample_procurement</td>
+</tr>
+<tr>
+<td>cases.samples.freezing_method</td>
+</tr>
+<tr>
+<td>cases.samples.initial_weight</td>
+</tr>
+<tr>
+<td>cases.samples.intermediate_dimension</td>
+</tr>
+<tr>
+<td>cases.samples.is_ffpe</td>
+</tr>
+<tr>
+<td>cases.samples.longest_dimension</td>
+</tr>
+<tr>
+<td>cases.samples.oct_embedded</td>
+</tr>
+<tr>
+<td>cases.samples.pathology_report_uuid</td>
+</tr>
+<tr>
+<td>cases.samples.preservation_method</td>
+</tr>
+<tr>
+<td>cases.samples.sample_id</td>
+</tr>
+<tr>
+<td>cases.samples.sample_type</td>
+</tr>
+<tr>
+<td>cases.samples.sample_type_id</td>
+</tr>
+<tr>
+<td>cases.samples.shortest_dimension</td>
+</tr>
+<tr>
+<td>cases.samples.state</td>
+</tr>
+<tr>
+<td>cases.samples.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.time_between_clamping_and_freezing</td>
+</tr>
+<tr>
+<td>cases.samples.time_between_excision_and_freezing</td>
+</tr>
+<tr>
+<td>cases.samples.tissue_type</td>
+</tr>
+<tr>
+<td>cases.samples.tumor_code</td>
+</tr>
+<tr>
+<td>cases.samples.tumor_code_id</td>
+</tr>
+<tr>
+<td>cases.samples.tumor_descriptor</td>
+</tr>
+<tr>
+<td>cases.samples.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.case_id</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.category</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.classification</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.creator</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.entity_id</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.entity_type</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.notes</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.state</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.status</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.creation_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.is_ffpe</td>
+</tr>
+<tr>
+<td>cases.samples.portions.portion_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.portion_number</td>
+</tr>
+<tr>
+<td>cases.samples.portions.state</td>
+</tr>
+<tr>
+<td>cases.samples.portions.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.weight</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.a260_a280_ratio</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.amount</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.analyte_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.analyte_type</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.analyte_type_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.concentration</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.spectrophotometer_method</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.state</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.well_number</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.aliquot_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.amount</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.analyte_type</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.analyte_type_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.concentration</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.source_center</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.state</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.case_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.category</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.classification</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.creator</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.entity_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.entity_type</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.notes</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.state</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.status</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.center.center_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.center.center_type</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.center.code</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.center.name</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.center.namespace</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.center.short_name</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.case_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.category</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.classification</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.creator</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.entity_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.entity_type</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.notes</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.state</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.status</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.case_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.category</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.classification</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.creator</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.entity_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.entity_type</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.notes</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.state</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.status</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.center.center_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.center.center_type</td>
+</tr>
+<tr>
+<td>cases.samples.portions.center.code</td>
+</tr>
+<tr>
+<td>cases.samples.portions.center.name</td>
+</tr>
+<tr>
+<td>cases.samples.portions.center.namespace</td>
+</tr>
+<tr>
+<td>cases.samples.portions.center.short_name</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.number_proliferating_cells</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_eosinophil_infiltration</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_granulocyte_infiltration</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_inflam_infiltration</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_lymphocyte_infiltration</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_monocyte_infiltration</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_necrosis</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_neutrophil_infiltration</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_normal_cells</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_stromal_cells</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_tumor_cells</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.percent_tumor_nuclei</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.section_location</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.slide_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.state</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.annotation_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.case_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.case_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.category</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.classification</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.creator</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.entity_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.entity_submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.entity_type</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.legacy_created_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.notes</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.state</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.status</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.submitter_id</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations.updated_datetime</td>
+</tr>
+<tr>
+<td>cases.summary.file_count</td>
+</tr>
+<tr>
+<td>cases.summary.file_size</td>
+</tr>
+<tr>
+<td>cases.summary.data_categories.data_category</td>
+</tr>
+<tr>
+<td>cases.summary.data_categories.file_count</td>
+</tr>
+<tr>
+<td>cases.summary.experimental_strategies.experimental_strategy</td>
+</tr>
+<tr>
+<td>cases.summary.experimental_strategies.file_count</td>
+</tr>
+<tr>
+<td>cases.tissue_source_site.bcr_id</td>
+</tr>
+<tr>
+<td>cases.tissue_source_site.code</td>
+</tr>
+<tr>
+<td>cases.tissue_source_site.name</td>
+</tr>
+<tr>
+<td>cases.tissue_source_site.project</td>
+</tr>
+<tr>
+<td>cases.tissue_source_site.tissue_source_site_id</td>
+</tr>
+<tr>
+<td>center.center_id</td>
+</tr>
+<tr>
+<td>center.center_type</td>
+</tr>
+<tr>
+<td>center.code</td>
+</tr>
+<tr>
+<td>center.name</td>
+</tr>
+<tr>
+<td>center.namespace</td>
+</tr>
+<tr>
+<td>center.short_name</td>
+</tr>
+<tr>
+<td>downstream_analyses.analysis_id</td>
+</tr>
+<tr>
+<td>downstream_analyses.analysis_type</td>
+</tr>
+<tr>
+<td>downstream_analyses.created_datetime</td>
+</tr>
+<tr>
+<td>downstream_analyses.state</td>
+</tr>
+<tr>
+<td>downstream_analyses.submitter_id</td>
+</tr>
+<tr>
+<td>downstream_analyses.updated_datetime</td>
+</tr>
+<tr>
+<td>downstream_analyses.workflow_end_datetime</td>
+</tr>
+<tr>
+<td>downstream_analyses.workflow_link</td>
+</tr>
+<tr>
+<td>downstream_analyses.workflow_start_datetime</td>
+</tr>
+<tr>
+<td>downstream_analyses.workflow_type</td>
+</tr>
+<tr>
+<td>downstream_analyses.workflow_version</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.access</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.created_datetime</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.data_category</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.data_format</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.data_type</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.error_type</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.experimental_strategy</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.file_id</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.file_name</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.file_size</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.file_state</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.md5sum</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.platform</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.revision</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.state</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.state_comment</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.submitter_id</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files.updated_datetime</td>
+</tr>
+<tr>
+<td>index_files.access</td>
+</tr>
+<tr>
+<td>index_files.created_datetime</td>
+</tr>
+<tr>
+<td>index_files.data_category</td>
+</tr>
+<tr>
+<td>index_files.data_format</td>
+</tr>
+<tr>
+<td>index_files.data_type</td>
+</tr>
+<tr>
+<td>index_files.error_type</td>
+</tr>
+<tr>
+<td>index_files.experimental_strategy</td>
+</tr>
+<tr>
+<td>index_files.file_id</td>
+</tr>
+<tr>
+<td>index_files.file_name</td>
+</tr>
+<tr>
+<td>index_files.file_size</td>
+</tr>
+<tr>
+<td>index_files.file_state</td>
+</tr>
+<tr>
+<td>index_files.md5sum</td>
+</tr>
+<tr>
+<td>index_files.platform</td>
+</tr>
+<tr>
+<td>index_files.revision</td>
+</tr>
+<tr>
+<td>index_files.state</td>
+</tr>
+<tr>
+<td>index_files.state_comment</td>
+</tr>
+<tr>
+<td>index_files.submitter_id</td>
+</tr>
+<tr>
+<td>index_files.updated_datetime</td>
+</tr>
+<tr>
+<td>metadata_files.access</td>
+</tr>
+<tr>
+<td>metadata_files.created_datetime</td>
+</tr>
+<tr>
+<td>metadata_files.data_category</td>
+</tr>
+<tr>
+<td>metadata_files.data_format</td>
+</tr>
+<tr>
+<td>metadata_files.data_type</td>
+</tr>
+<tr>
+<td>metadata_files.error_type</td>
+</tr>
+<tr>
+<td>metadata_files.file_id</td>
+</tr>
+<tr>
+<td>metadata_files.file_name</td>
+</tr>
+<tr>
+<td>metadata_files.file_size</td>
+</tr>
+<tr>
+<td>metadata_files.file_state</td>
+</tr>
+<tr>
+<td>metadata_files.md5sum</td>
+</tr>
+<tr>
+<td>metadata_files.state</td>
+</tr>
+<tr>
+<td>metadata_files.state_comment</td>
+</tr>
+<tr>
+<td>metadata_files.submitter_id</td>
+</tr>
+<tr>
+<td>metadata_files.type</td>
+</tr>
+<tr>
+<td>metadata_files.updated_datetime</td>
+</tr>
+</tbody>
+</table>
+<h3>Annotation Fields</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Field Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>annotation_id</td>
+</tr>
+<tr>
+<td>case_id</td>
+</tr>
+<tr>
+<td>case_submitter_id</td>
+</tr>
+<tr>
+<td>category</td>
+</tr>
+<tr>
+<td>classification</td>
+</tr>
+<tr>
+<td>created_datetime</td>
+</tr>
+<tr>
+<td>entity_id</td>
+</tr>
+<tr>
+<td>entity_submitter_id</td>
+</tr>
+<tr>
+<td>entity_type</td>
+</tr>
+<tr>
+<td>legacy_created_datetime</td>
+</tr>
+<tr>
+<td>legacy_updated_datetime</td>
+</tr>
+<tr>
+<td>notes</td>
+</tr>
+<tr>
+<td>state</td>
+</tr>
+<tr>
+<td>status</td>
+</tr>
+<tr>
+<td>submitter_id</td>
+</tr>
+<tr>
+<td>updated_datetime</td>
+</tr>
+<tr>
+<td>project.code</td>
+</tr>
+<tr>
+<td>project.dbgap_accession_number</td>
+</tr>
+<tr>
+<td>project.disease_type</td>
+</tr>
+<tr>
+<td>project.name</td>
+</tr>
+<tr>
+<td>project.primary_site</td>
+</tr>
+<tr>
+<td>project.program.dbgap_accession_number</td>
+</tr>
+<tr>
+<td>project.program.name</td>
+</tr>
+<tr>
+<td>project.program.program_id</td>
+</tr>
+<tr>
+<td>project.project_id</td>
+</tr>
+<tr>
+<td>project.released</td>
+</tr>
+<tr>
+<td>project.state</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Field Group Listing by Endpoint">Field Group Listing by Endpoint</h2>
+<h3>Projects Field Groups</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Field Group Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>program</td>
+</tr>
+<tr>
+<td>summary</td>
+</tr>
+<tr>
+<td>summary.data_categories</td>
+</tr>
+<tr>
+<td>summary.experimental_strategies</td>
+</tr>
+</tbody>
+</table>
+<h3>Cases Field Groups</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Field Group Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>annotations</td>
+</tr>
+<tr>
+<td>demographic</td>
+</tr>
+<tr>
+<td>diagnoses</td>
+</tr>
+<tr>
+<td>diagnoses.treatments</td>
+</tr>
+<tr>
+<td>exposures</td>
+</tr>
+<tr>
+<td>family_histories</td>
+</tr>
+<tr>
+<td>files</td>
+</tr>
+<tr>
+<td>files.analysis</td>
+</tr>
+<tr>
+<td>files.analysis.input_files</td>
+</tr>
+<tr>
+<td>files.analysis.metadata</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups</td>
+</tr>
+<tr>
+<td>files.analysis.metadata.read_groups.read_group_qcs</td>
+</tr>
+<tr>
+<td>files.archive</td>
+</tr>
+<tr>
+<td>files.cases</td>
+</tr>
+<tr>
+<td>files.cases.annotations</td>
+</tr>
+<tr>
+<td>files.cases.demographic</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses</td>
+</tr>
+<tr>
+<td>files.cases.diagnoses.treatments</td>
+</tr>
+<tr>
+<td>files.cases.exposures</td>
+</tr>
+<tr>
+<td>files.cases.family_histories</td>
+</tr>
+<tr>
+<td>files.cases.files</td>
+</tr>
+<tr>
+<td>files.cases.project</td>
+</tr>
+<tr>
+<td>files.cases.project.program</td>
+</tr>
+<tr>
+<td>files.cases.samples</td>
+</tr>
+<tr>
+<td>files.cases.samples.annotations</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.annotations</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.aliquots.center</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.analytes.annotations</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.annotations</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.center</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides</td>
+</tr>
+<tr>
+<td>files.cases.samples.portions.slides.annotations</td>
+</tr>
+<tr>
+<td>files.cases.summary</td>
+</tr>
+<tr>
+<td>files.cases.summary.data_categories</td>
+</tr>
+<tr>
+<td>files.cases.summary.experimental_strategies</td>
+</tr>
+<tr>
+<td>files.cases.tissue_source_site</td>
+</tr>
+<tr>
+<td>files.center</td>
+</tr>
+<tr>
+<td>files.downstream_analyses</td>
+</tr>
+<tr>
+<td>files.downstream_analyses.output_files</td>
+</tr>
+<tr>
+<td>files.index_files</td>
+</tr>
+<tr>
+<td>files.metadata_files</td>
+</tr>
+<tr>
+<td>project</td>
+</tr>
+<tr>
+<td>project.program</td>
+</tr>
+<tr>
+<td>samples</td>
+</tr>
+<tr>
+<td>samples.annotations</td>
+</tr>
+<tr>
+<td>samples.portions</td>
+</tr>
+<tr>
+<td>samples.portions.analytes</td>
+</tr>
+<tr>
+<td>samples.portions.analytes.aliquots</td>
+</tr>
+<tr>
+<td>samples.portions.analytes.aliquots.annotations</td>
+</tr>
+<tr>
+<td>samples.portions.analytes.aliquots.center</td>
+</tr>
+<tr>
+<td>samples.portions.analytes.annotations</td>
+</tr>
+<tr>
+<td>samples.portions.annotations</td>
+</tr>
+<tr>
+<td>samples.portions.center</td>
+</tr>
+<tr>
+<td>samples.portions.slides</td>
+</tr>
+<tr>
+<td>samples.portions.slides.annotations</td>
+</tr>
+<tr>
+<td>summary</td>
+</tr>
+<tr>
+<td>summary.data_categories</td>
+</tr>
+<tr>
+<td>summary.experimental_strategies</td>
+</tr>
+<tr>
+<td>tissue_source_site</td>
+</tr>
+</tbody>
+</table>
+<h3>Files Field Groups</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Field Group Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>analysis</td>
+</tr>
+<tr>
+<td>analysis.input_files</td>
+</tr>
+<tr>
+<td>analysis.metadata</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups</td>
+</tr>
+<tr>
+<td>analysis.metadata.read_groups.read_group_qcs</td>
+</tr>
+<tr>
+<td>annotations</td>
+</tr>
+<tr>
+<td>archive</td>
+</tr>
+<tr>
+<td>associated_entities</td>
+</tr>
+<tr>
+<td>cases</td>
+</tr>
+<tr>
+<td>cases.annotations</td>
+</tr>
+<tr>
+<td>cases.demographic</td>
+</tr>
+<tr>
+<td>cases.diagnoses</td>
+</tr>
+<tr>
+<td>cases.diagnoses.treatments</td>
+</tr>
+<tr>
+<td>cases.exposures</td>
+</tr>
+<tr>
+<td>cases.family_histories</td>
+</tr>
+<tr>
+<td>cases.files</td>
+</tr>
+<tr>
+<td>cases.project</td>
+</tr>
+<tr>
+<td>cases.project.program</td>
+</tr>
+<tr>
+<td>cases.samples</td>
+</tr>
+<tr>
+<td>cases.samples.annotations</td>
+</tr>
+<tr>
+<td>cases.samples.portions</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.annotations</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.aliquots.center</td>
+</tr>
+<tr>
+<td>cases.samples.portions.analytes.annotations</td>
+</tr>
+<tr>
+<td>cases.samples.portions.annotations</td>
+</tr>
+<tr>
+<td>cases.samples.portions.center</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides</td>
+</tr>
+<tr>
+<td>cases.samples.portions.slides.annotations</td>
+</tr>
+<tr>
+<td>cases.summary</td>
+</tr>
+<tr>
+<td>cases.summary.data_categories</td>
+</tr>
+<tr>
+<td>cases.summary.experimental_strategies</td>
+</tr>
+<tr>
+<td>cases.tissue_source_site</td>
+</tr>
+<tr>
+<td>center</td>
+</tr>
+<tr>
+<td>downstream_analyses</td>
+</tr>
+<tr>
+<td>downstream_analyses.output_files</td>
+</tr>
+<tr>
+<td>index_files</td>
+</tr>
+<tr>
+<td>metadata_files</td>
+</tr>
+</tbody>
+</table>
+<h3>Annotations Field Groups</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Field Group Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>project</td>
+</tr>
+<tr>
+<td>project.program</td>
+</tr>
+</tbody>
+</table>
+<h3>GDC Conventions Supplemental</h3>
+<p>| Field Group Name |
+| ---------------- | ---------------------------------------------------------------------- |
+| File size        | Listed in bytes                                                        |
+| Submitter id     | String supplied by submitter                                           |
+| Datetime         | Combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss |
+| Id               | GDC supplied UUID ID                                                   |</p></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

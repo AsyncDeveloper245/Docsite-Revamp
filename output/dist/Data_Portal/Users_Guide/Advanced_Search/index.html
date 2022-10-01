@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Search</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Getting_Started">Getting Started</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a></li><li class="main"><a href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a></li><ul><li><a href='#Overview: GQL'>Overview: GQL</a></li><li><a href='#Using the Advanced Search'>Using the Advanced Search</a></li><li><a href='#Setting Precedence of Operators'>Setting Precedence of Operators</a></li><li><a href='#Keywords'>Keywords</a></li><li><a href='#Operators'>Operators</a></li><li><a href='#Special Cases'>Special Cases</a></li><li><a href='#Fields Reference'>Fields Reference</a></li></ul><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   Advanced Search</h1><hr/>
+<p>Only available in the Repository view, the Advanced Search page offers complex query building capabilities to identify specific set of cases and files.</p>
+<p><a href="../images/gdc-data-portal-access-advanced-search-data-view.png" title="Click to see the full image."><img alt="Access to Advanced Search from Data View" src="../images/gdc-data-portal-access-advanced-search-data-view_v2.png"/></a></p>
+<h2 id="Overview: GQL">Overview: GQL</h2>
+<p>Advanced search allows for structured queries to search for files and cases. This is done via Genomic Query Language (GQL), a query language created by the <a href="https://gdc.cancer.gov/">GDC</a> and <a href="https://oicr.on.ca/">OICR</a>.</p>
+<p><a href="../images/gdc-data-portal-advanced-search.png" title="Click to see the full image."><img alt="Advanced Search View" src="../images/gdc-data-portal-advanced-search.png"/></a></p>
+<p>A simple query in GQL (also known as a 'clause') consists of a <strong>field</strong>, followed by an <strong>operator</strong>, followed by one or more <strong>values</strong>. For example, the simple query <code>cases.primary_site = Brain</code> will find all cases for projects in which the primary site is Brain:</p>
+<p><a href="../images/gdc-data-portal-advanced-search-example.png" title="Click to see the full image."><img alt="Advanced Search Example" src="../images/gdc-data-portal-advanced-search-example.png"/></a></p>
+<p>Note that it is not possible to compare two fields (e.g. disease_type = project.name).</p>
+<blockquote>
+<p><strong>Note:</strong> GQL is not a database query language. For example, GQL does not have a "SELECT" statement.</p>
+</blockquote>
+<h3>Switching between Advanced Search and Facet Filters</h3>
+<p>When accessing Advanced Search from Repository View, a query created using facet filters in Repository View will be automatically translated to an Advanced Search GQL Query.</p>
+<p>A query created in Advanced Search is not translated back to facet filters. Clicking on "Back to Facet Search" will return the user to Data View and reset the filters.</p>
+<h2 id="Using the Advanced Search">Using the Advanced Search</h2>
+<p>When opening the Advanced Search Page (via the Repository View), the search field will be automatically populated with facets filters already applied (if any).</p>
+<p>This default query can be removed by pressing "Reset".</p>
+<p>Once the query has been entered and is identified as a "Valid Query", click on "Search" to run your query.</p>
+<h3>Auto-complete</h3>
+<p>As a query is being written, the GDC Data Portal will analyze the context and offer a list of auto-complete suggestions. Auto-complete suggests both fields and values as described below.</p>
+<h3>Field Auto-complete</h3>
+<p>The list of auto-complete suggestions includes <strong>all</strong> available fields matching the user text input. The user has to scroll down to see more fields in the dropdown:</p>
+<p><a href="../images/gdc-data-portal-advanced-search-project.png" title="Click to see the full image."><img alt="Field Auto-complete" src="../images/gdc-data-portal-advanced-search-project.png"/></a></p>
+<h3>Value Auto-complete</h3>
+<p>The list of auto-complete suggestions includes top 100 values that match the user text input. The user has to scroll down to see more values in the dropdown.</p>
+<p>The value auto-complete is not aware of the general context of the query, the system will display all available values in GDC for the selected field. It means the query could return 0 results depending of other filters.</p>
+<p><a href="../images/gdc-data-portal-advanced-search-value.png" title="Click to see the full image."><img alt="Value Auto-complete" src="../images/gdc-data-portal-advanced-search-value.png"/></a></p>
+<blockquote>
+<p><strong>Note:</strong> Quotes are automatically added to the value if it contains spaces.</p>
+</blockquote>
+<h2 id="Setting Precedence of Operators">Setting Precedence of Operators</h2>
+<p>You can use parentheses in complex GQL statements to enforce the precedence of operators.</p>
+<p>For example, if you want to find all the open files in TCGA program as well as the files in TARGET program, you can use parentheses to enforce the precedence of the Boolean operators in your query, i.e.:</p>
+<pre><code>(files.access = open and cases.project.program.name = TCGA) or cases.project.program.name = TARGET
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Without parentheses, the statement will be evaluated left-to-right.</p>
+</blockquote>
+<h2 id="Keywords">Keywords</h2>
+<p>A GQL keyword is a word that joins two or more clauses together to form a complex GQL query.</p>
+<p><strong>List of Keywords:</strong></p>
+<ul>
+<li><strong>AND</strong></li>
+<li><strong>OR</strong></li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Parentheses can be used to control the order in which clauses are executed.</p>
+</blockquote>
+<h3>"<strong>AND</strong>" Keyword</h3>
+<p>Used to combine multiple clauses, allowing you to refine your search.</p>
+<p>Examples:</p>
+<ul>
+<li>
+<p>Find all open files in breast cancer:</p>
+<p>cases.primary_site = Breast and files.access = open</p>
+</li>
+<li>
+<p>Find all open files in breast cancer and data type is gene expression quantification:</p>
+<p>cases.primary_site = Breast and files.access = open and files.data_type = "Gene Expression Quantification"</p>
+</li>
+</ul>
+<h3>"<strong>OR</strong>" Keyword</h3>
+<p>Used to combine multiple clauses, allowing you to expand your search.</p>
+<blockquote>
+<p><strong>Note:</strong> The <strong>IN</strong> keyword can be an alternative to <strong>OR</strong> and result in simplified queries.</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>
+<p>Find all files that are raw sequencing data or aligned reads:</p>
+<p>files.data_type = "Aligned Reads" or files.data_type = "Raw sequencing data"</p>
+</li>
+<li>
+<p>Find all files where cases are male or vital status is alive:</p>
+<p>cases.demographic.gender = male or cases.diagnoses.vital_status = alive</p>
+</li>
+</ul>
+<h2 id="Operators">Operators</h2>
+<p>An operator in GQL is one or more symbols or words comparing the value of a field on its left with one or more values on its right, such that only true results are retrieved by the clause.</p>
+<h3>List of Operators and Query format</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Field EQUAL Value (String or Number)</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Field NOT EQUAL Value (String or Number)</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Field LOWER THAN Value (Number or Date)</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Field LOWER THAN OR EQUAL Value (Number or Date)</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Field GREATER THAN Value (Number or Date)</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Field GREATER THAN OR EQUAL Value (Number or Date)</td>
+</tr>
+<tr>
+<td>IN</td>
+<td>Field IN [Value 1, Value 2]</td>
+</tr>
+<tr>
+<td>EXCLUDE</td>
+<td>Field EXCLUDE [Value 1, Value 2]</td>
+</tr>
+<tr>
+<td>IS MISSING</td>
+<td>Field IS MISSING</td>
+</tr>
+<tr>
+<td>NOT MISSING</td>
+<td>Field NOT MISSING</td>
+</tr>
+</tbody>
+</table>
+<h3>"<strong>=</strong>" Operator - <strong>EQUAL</strong></h3>
+<p>The "<strong>=</strong>" operator is used to search for files where the value of the specified field exactly matches the specified value.</p>
+<p>Examples:</p>
+<ul>
+<li>
+<p>Find all files that are gene expression quantification:</p>
+<p>files.data_type = "Gene Expression Quantification"</p>
+</li>
+<li>
+<p>Find all cases whose gender is female:</p>
+<p>cases.demographic.gender = female</p>
+</li>
+</ul>
+<h3>"<strong>!=</strong>" Operator - <strong>NOT EQUAL</strong></h3>
+<p>The "<strong>!=</strong>" operator is used to search for files where the value of the specified field does not match the specified value.</p>
+<p>The "<strong>!=</strong>" operator will not match a field that has no value (i.e. a field that is empty). For example:
+cases.demographic.gender != male</p>
+<p>This search will only match cases who have a gender and the gender is not male. To find cases other than male or with no gender populated, you would need to search:</p>
+<pre><code>    cases.demographic.gender != male or cases.demographic.gender is missing.
+</code></pre>
+<p>Example:</p>
+<ul>
+<li>
+<p>Find all files with an experimental strategy that is not genotyping array:</p>
+<p>files.experimental_strategy != "Genotyping array"</p>
+</li>
+</ul>
+<h3>"<strong>&gt;</strong>" Operator - <strong>GREATER THAN</strong></h3>
+<p>The "<strong>&gt;</strong>" operator is used to search for files where the value of the specified field is greater than the specified value.</p>
+<p>Example:</p>
+<ul>
+<li>
+<p>Find all cases whose number of days to death is greater than 60:</p>
+<p>cases.diagnoses.days_to_death &gt; 60</p>
+</li>
+</ul>
+<h3>"<strong>&gt;=</strong>" Operator - <strong>GREATER THAN OR EQUALS</strong></h3>
+<p>The "<strong>&gt;=</strong>" operator is used to search for files where the value of the specified field is greater than or equal to the specified value.</p>
+<p>Example:</p>
+<ul>
+<li>
+<p>Find all cases whose number of days to death is equal or greater than 60:</p>
+<p>cases.diagnoses.days_to_death &gt;= 60</p>
+</li>
+</ul>
+<h3>"<strong>&lt;</strong>" Operator - <strong>LESS THAN</strong></h3>
+<p>The "<strong>&lt;</strong>" operator is used to search for files where the value of the specified field is less than the specified value.</p>
+<p>Example:</p>
+<ul>
+<li>
+<p>Find all cases whose age at diagnosis is less than 400 days:</p>
+<p>cases.diagnoses.age_at_diagnosis &lt; 400</p>
+</li>
+</ul>
+<h3>"<strong>&lt;=</strong>" Operator - <strong>LESS THAN OR EQUALS</strong></h3>
+<p>The "<strong>&lt;=</strong>" operator is used to search for files where the value of the specified field is less than or equal to the specified value.</p>
+<p>Example:</p>
+<ul>
+<li>
+<p>Find all cases with a number of days to death less than or equal to 20:</p>
+<p>cases.diagnoses.days_to_death &lt;= 20</p>
+</li>
+</ul>
+<h3>"<strong>IN</strong>" Operator</h3>
+<p>The "<strong>IN</strong>" operator is used to search for files where the value of the specified field is one of multiple specified values. The values are specified as a comma-delimited list, surrounded by brackets [ ].</p>
+<p>Using "<strong>IN</strong>" is equivalent to using multiple "<strong>=</strong>" (<strong>EQUALS</strong>) statements, but is shorter and more convenient. That is, these two following statement will retrieve the same output:</p>
+<pre><code>    cases.project.name IN [ProjectA, ProjectB, ProjectC]
+    cases.project.name = "ProjectA" OR cases.project.name = "ProjectB" OR cases.project.name = "ProjectC"
+</code></pre>
+<p>Examples:</p>
+<ul>
+<li>
+<p>Find all files in breast, brain, and lung cancer:</p>
+<p>cases.primary_site IN [Breast, Brain, Lung]</p>
+</li>
+<li>
+<p>Find all files that are annotated somactic mutations or raw simple somatic mutations:</p>
+<p>files.data_type IN ["Annotated Somatic Mutation", "Raw Simple Somatic Mutation"]</p>
+</li>
+</ul>
+<h3>"<strong>EXCLUDE</strong>" Operator</h3>
+<p>The "<strong>EXCLUDE</strong>" operator is used to search for files where the value of the specified field is not one of multiple specified values.</p>
+<p>Using "<strong>EXCLUDE</strong>" is equivalent to using multiple "<strong>!=</strong>" (<strong>NOT_EQUALS</strong>) statements, but is shorter and more convenient. That is, these two following statement will retrieve the same output:</p>
+<pre><code>    cases.project.name EXCLUDE [ProjectA, ProjectB, ProjectC]
+    cases.project.name != "ProjectA" OR cases.project.name != "ProjectB" OR cases.project.name != "ProjectC"
+</code></pre>
+<p>The "<strong>EXCLUDE</strong>" operator will not match a field that has no value (i.e. a field that is empty). For example:</p>
+<pre><code>    files.experimental_strategy EXCLUDE ["WGS","WXS"]
+</code></pre>
+<p>This search will only match files that have an experimental strategy <strong>and</strong> the experimental strategy is not "WGS" or "WXS". To find files with an experimental strategy different than "WGS" or "WXS" <strong>or is not assigned</strong>, you would need to type:</p>
+<pre><code>    files.experimental_strategy in ["WXS","WGS"] or files.experimental_strategy is missing
+</code></pre>
+<p>Examples:</p>
+<ul>
+<li>
+<p>Find all files where experimental strategy is not WXS, WGS, Genotyping array:</p>
+<p>files.experimental_strategy EXCLUDE [WXS, WGS, "Genotyping array"]</p>
+</li>
+</ul>
+<h3>"<strong>IS MISSING</strong>" Operator</h3>
+<p>The "<strong>IS</strong>" operator can only be used with "<strong>MISSING</strong>". That is, it is used to search for files where the specified field has no value.</p>
+<p>Examples:</p>
+<ul>
+<li>
+<p>Find all cases where gender is missing:</p>
+<p>cases.demographic.gender is MISSING</p>
+</li>
+</ul>
+<h3>"<strong>NOT MISSING</strong>" Operator</h3>
+<p>The "<strong>NOT</strong>" operator can only be used with "<strong>MISSING</strong>". That is, it is used to search for files where the specified field has a value.</p>
+<p>Examples:</p>
+<ul>
+<li>
+<p>Find all cases where race is not missing:</p>
+<p>cases.demographic.race NOT MISSING</p>
+</li>
+</ul>
+<h2 id="Special Cases">Special Cases</h2>
+<h3>Date Format</h3>
+<p>The date format should be the following: <strong>YYYY-MM-DD</strong> (without quotes).</p>
+<p>Example:</p>
+<pre><code>    files.updated_datetime &gt; 2015-12-31
+</code></pre>
+<h3>Using Quotes</h3>
+<p>A value must be quoted if it contains a space. Otherwise the advanced search will not be able to interpret the value.</p>
+<p>Quotes are not necessary if the value consists of one single word.</p>
+<ul>
+<li>
+<p>Example: Find all cases with primary site is brain and data type is copy number segment:</p>
+<p>cases.primary_site = Brain and files.data_type = "Copy Number Segment"</p>
+</li>
+</ul>
+<h3>Age at Diagnosis - Unit in Days</h3>
+<p>The unit for age at diagnosis is in <strong>days</strong>. The user has to convert the number of years to number of days.</p>
+<p>The <strong>conversion factor</strong> is 1 year = 365.25 days</p>
+<ul>
+<li>
+<p>Example: Find all cases whose age at diagnosis &gt; 40 years old (40 * 365.25)</p>
+<p>cases.diagnoses.age_at_diagnosis &gt; 14610</p>
+</li>
+</ul>
+<h2 id="Fields Reference">Fields Reference</h2>
+<p>The full list of fields available on the GDC Data Portal can be found through the GDC API using the following endpoint:</p>
+<p><a href="https://api.gdc.cancer.gov/gql/_mapping">https://api.gdc.cancer.gov/gql/_mapping</a></p></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

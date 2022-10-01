@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Release Notes</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/API/Users_Guide/Getting_Started">Getting Started</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Submission">Submission</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/System_Information">System Information</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a></li><li class="inactive"><a href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a></li><li class="main"><a href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a></li><ul><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#None'>None</a></li><li><a href='#v1.17.0'>v1.17.0</a></li><li><a href='#v1.16.0'>v1.16.0</a></li><li><a href='#v1.15.0'>v1.15.0</a></li><li><a href='#v1.14.1'>v1.14.1</a></li><li><a href='#v1.14.0'>v1.14.0</a></li><li><a href='#v1.13.0'>v1.13.0</a></li><li><a href='#v1.12.0'>v1.12.0</a></li><li><a href='#v1.11.0'>v1.11.0</a></li><li><a href='#v1.10.0'>v1.10.0</a></li><li><a href='#v1.9.0'>v1.9.0</a></li><li><a href='#v1.8.0'>v1.8.0</a></li><li><a href='#v1.7.1'>v1.7.1</a></li><li><a href='#v1.5.0'>v1.5.0</a></li><li><a href='#v1.4.0'>v1.4.0</a></li><li><a href='#v1.3.1'>v1.3.1</a></li><li><a href='#v1.2.0'>v1.2.0</a></li><li><a href='#v1.1.0'>v1.1.0</a></li><li><a href='#v1.0.1'>v1.0.1</a></li></ul><li class="inactive"><a href="/API/PDF/API_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   API Release Notes</h1><hr/>
+<table class="table">
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="API_Release_Notes#v330">v3.3.0</a></td>
+<td>May 17, 2021</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v300">v3.0.0</a></td>
+<td>August 14, 2020</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v212">v2.1.2</a></td>
+<td>May 7, 2020</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v210">v2.1.0</a></td>
+<td>March 10, 2020</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v200">v2.0.0</a></td>
+<td>January 30, 2020</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1230">v1.23.0</a></td>
+<td>November 6, 2019</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1220">v1.22.0</a></td>
+<td>July 31, 2019</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1210">v1.21.0</a></td>
+<td>June 5, 2019</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1200">v1.20.0</a></td>
+<td>April 17, 2019</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1190">v1.19.0</a></td>
+<td>February 20, 2019</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1180">v1.18.0</a></td>
+<td>December 18, 2018</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1170">v1.17.0</a></td>
+<td>November 7, 2018</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1160">v1.16.0</a></td>
+<td>September 27, 2018</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1150">v1.15.0</a></td>
+<td>August 23, 2018</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1141">v1.14.1</a></td>
+<td>May 21, 2018</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1140">v1.14.0</a></td>
+<td>April 23, 2018</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1130">v1.13.0</a></td>
+<td>February 15, 2018</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1120">v1.12.0</a></td>
+<td>December 21, 2017</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1110">v1.11.0</a></td>
+<td>November 16, 2017</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v1100">v1.10.0</a></td>
+<td>August 22, 2017</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v190">v1.9.0</a></td>
+<td>June 29, 2017</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v180">v1.8.0</a></td>
+<td>May 9, 2017</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v171">v1.7.1</a></td>
+<td>March 16, 2017</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v150">v1.5.0</a></td>
+<td>October 31, 2016</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v140">v1.4.0</a></td>
+<td>September 23, 2016</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v131">v1.3.1</a></td>
+<td>September 7, 2016</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v120">v1.2.0</a></td>
+<td>August 9, 2016</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v110">v1.1.0</a></td>
+<td>May 25, 2016</td>
+</tr>
+<tr>
+<td><a href="API_Release_Notes#v101">v1.0.1</a></td>
+<td>May 16, 2016</td>
+</tr>
+</tbody>
+</table>
+<h2 id="None">v3.3.0 <!--REQ-422--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: May 17, 2021</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Features to better support batch tracking for submitted data were added.</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v3.0.0 <!--REQ-408--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: August 14, 2020</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Enhancements were made to increase performance.</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v2.1.2 <!--REQ-395--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: May 7, 2020</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>An update to improve usability in the homepage quicksearch <!--DEV-173--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v2.1.0 <!--REQ-395--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: March 10, 2020</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>New data dictionary changes. <!--REQ-395--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v2.0.0 <!--REQ-393--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: January 30, 2020</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>API code now uses Python 3. <!--REQ-393--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v1.23.0 <!--REQ-390--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: November 6, 2019</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>QC Tests added for Submission <!--TT-748--></li>
+<li>BAM slicing is now supported for unmapped reads <!--TT-1061--></li>
+<li>API now includes data from molecular_test and follow_up nodes. This impacts what is displayed on the GDC Data Portal <!--API-750--></li>
+<li>Better handling of concurrent transactions <!--API-767--></li>
+<li>CIViC annotations now included on the ssms endpoint. You can read more about CIViC annotations <a href="https://civicdb.org/home">here</a> <!--API-733--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed API memory leak <!--API-719, API-775--></li>
+<li>Fixed data offset issue returned by clinical.tar endpoint <!--API-732--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v1.22.0 <!--REQ-387--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: July 31, 2019</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>
+<p>Updated BCR Clinical XML parser code to support future indexing of additional clinical data. Parser code can be found <a href="https://github.com/NCI-GDC/gdcdatamodel/tree/develop/gdcdatamodel/xml_mappings">here</a> <!--DAT-2315--></p>
+</li>
+<li>
+<p>Added a mapping for:</p>
+<ul>
+<li><code>ann_arbor_b_symptoms</code> <!--DAT-2399--></li>
+<li><code>ann_arbor_extranodal_involvement</code> <!--DAT-2399--></li>
+<li><code>ajcc_pathologic_t</code> <!--DAT-2399--></li>
+<li><code>ajcc_pathologic_n</code> <!--DAT-2399--></li>
+<li><code>ajcc_pathologic_m</code> <!--DAT-2399--></li>
+<li><code>ajcc_clinical_t</code> <!--DAT-2399--></li>
+<li><code>ajcc_clinical_n</code> <!--DAT-2399--></li>
+<li><code>ajcc_clinical_m</code> <!--DAT-2399--></li>
+<li><code>ajcc_staging_system_edition</code> <!--DAT-2398--></li>
+<li><code>figo_stage</code> <!--DAT-2401--></li>
+<li><code>ajcc_clinical_stage</code> <!--DAT-2403--></li>
+<li><code>primary_gleason_grade</code> <!--DAT-2404--></li>
+<li><code>secondary_gleason_graade</code> <!--DAT-2405--></li>
+<li><code>igcccg_stage</code> <!--DAT-2406--></li>
+<li><code>masaoka_stage</code> <!--DAT-2407--></li>
+</ul>
+</li>
+<li>
+<p>Updated the mapping for:</p>
+<ul>
+<li><code>primary_diagnosis</code>, <code>morphology</code>, <code>tissue_or_organ_of_origin</code>, and <code>site_of_resection_or_biopsy</code> <!--DAT-2409--></li>
+</ul>
+</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed a bug preventing multipart uploads <!--API-748, SV-1472--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v1.21.0 <!--REQ-383--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: June 5, 2019</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Mutation indexer update to accommodate data model changes <!--API-677--></li>
+<li>Updates to when in the release cycle downloaders and submitters have access to files <!--TT-973--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v1.20.0 <!--REQ-385--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: April 17, 2019</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Disallowed creation of multiple file versions in the same data release <!--API-585--></li>
+<li>Improved API concurrency performance and addressed random failures/4XX/5XX responses <!--GDCDEVOPS-187,GP-15--></li>
+<li>Improved API/Portal performances for querying large sets of data from the Elasticsearch indices <!--API-613--></li>
+<li>Updated BCR Clinical XML parser code to support future indexing of additional clinical data. Parser code can be found <a href="https://github.com/NCI-GDC/gdcdatamodel/tree/develop/gdcdatamodel/xml_mappings">here</a> <!--DAT-2076--></li>
+<li>Updated the mapping for:<ul>
+<li><code>days_to_death</code> <!--DAT-2083--></li>
+<li><code>days_to_birth</code> <!--DAT-2084--></li>
+<li><code>vital_status</code> <!--DAT-2085--></li>
+<li><code>prior_malignancy</code> and <code>synchronous_malignancy</code> <!--DAT-2094--></li>
+</ul>
+</li>
+<li>Added a mapping for:<ul>
+<li><code>pack_years_smoked</code> <!--DAT-2086--></li>
+<li><code>prior_treatment</code> <!--DAT-2095--></li>
+<li><code>age_at_index</code> <!--DAT-2096--></li>
+<li><code>days_to_diagnosis</code> <!--DAT-2097--></li>
+<li><code>icd_10_code</code> <!--DAT-2098--></li>
+<li><code>year_of_diagnosis</code> <!--DAT-2099--></li>
+</ul>
+</li>
+<li>Remove calculation for:<ul>
+<li><code>cigarettes_per_day</code> <!--DAT-2091--></li>
+<li><code>year_of_birth</code> <!--DAT-2092--></li>
+<li><code>year_of_death</code> <!--DAT-2093--></li>
+<li><code>bmi</code> <!--DAT-2087--></li>
+</ul>
+</li>
+<li>Updated XML Parser to pull the most Up-to-Date Survival Information <!--DAT-2063--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v1.19.0 <!--REQ-381--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: February 20, 2019</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added API features to support controlled access DAVE <!--TT-393--></li>
+<li>Updated API query endpoints to handle filtering of queries based on tokens <!--TT-641--></li>
+<li>Created login notification Endpoint <!--API-586--></li>
+<li>Added hashing and logging for similar ES queries <!--API-569--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed bug where quick search ES query grows with each request <!--API-580--></li>
+<li>Fixed bug where new file versions could be created when exactly the same existing metadata is uploaded <!--API-571--></li>
+<li>Fixed bug where submitting to specific projects produced error that data already existed <!--API-568--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="None">v1.18.0 <!--REQ-335--></h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: December 18, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Update to auth for GDC Pre-Release Data Portal <!--TT-739--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.17.0">v1.17.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: November 7, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Created new index cnv_centric <!--TT743--></li>
+<li>Created new index cnv_occurrence_centric <!--TT-744--></li>
+<li>Created new REST API endpoints for CNV <!--TT-757--></li>
+<li>Created mapping from aliquot to case for occurrence on cnv_centric <!--TT-762--></li>
+<li>Created new graphql endpoints for CNV <!--TT-769--></li>
+<li>Updated index case_centric to add cnv <!--TT-745--></li>
+<li>Updated index gene_centric to add cnv <!--TT-747--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed bug to prevent users from deleting files in state submitted or released <!--API-560--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.16.0">v1.16.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: September 27, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Tissue_type is now parsed from the BCR Biospecimen submission <!--TT-753--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Re-attach the /files path to the legacy blueprints in gdcapi <!--SV-1195--></li>
+<li>Fix Internal Server Error when exporting JSON in Data Portal <!--SV-1209--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.15.0">v1.15.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: August 23, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added support for file versioning <!--TT-482--></li>
+<li>Added new API endpoints in support of versioning: history, files/versions, and files/versions/manifest <!--PRTL-2015--></li>
+<li>Updated the submit and release process <!--TT-249--></li>
+<li>Created admin endpoint to allow for modifying file and project flags and states <!--API-368--></li>
+<li>Populate version and release information for all existing files <!--TT-154--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.14.1">v1.14.1</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: May 21, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Update to XML submission to correctly import biospecimen relationnships <!--TT-578--></li>
+<li>GraphQL submission queries return incorrect information <!--SV-1086--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>The error message for not including a token is incorrect for controlled access API requests (e.g. bam slicing). It states that your token is invalid, but it should request that a token be supplied. <!--API-495--></li>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.14.0">v1.14.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: April 23, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Updated support of BCR XML submission for Next Generation Cancer Models <!--DAT-1207--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.13.0">v1.13.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: February 15, 2018</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Reduced number of submission portal timeouts by optimizing graphql API requests <!--API-317--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed bug preventing submission of clinical data via BCR XML <!--SV-985--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.12.0">v1.12.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: December 21, 2017</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Updated submit project button on submission portal to work more quickly for projects with large numbers of nodes <!--API-344--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.11.0">v1.11.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: November 16, 2017</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Added support for histogram aggregation for numeric fields <!--API-355--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.10.0">v1.10.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: August 22, 2017</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Longitudinal clinical data can now be submitted to the GDC</li>
+<li>Created new entities and reorganized the location of many properties in the GDC Dictionary. A list of deprecated properties and their new locations can be found <a href="../Release_Notes/DeprecatedFields_072017.txt">here</a>. Note that the deprecated properties still contain all information that they previously did. In a later release we will map the data from the old location to the new. Eventually, we will suspend submission to the old properties and will remove them entirely from the GDC.</li>
+<li>GDC Data Dictionary Changes Details</li>
+<li>Created follow_up entity to support longitudinal clinical data <!--TT-65--></li>
+<li>Deprecated clinical test entity <!--DOC-67--></li>
+<li>Modified acceptable values for Read Group properties <!--TT-9,TT-76--></li>
+<li>Modified Diagnosis entity <!--TT-64--></li>
+<li>Modified Treatment entity <!--TT-66--></li>
+<li>Modified Demographic entity <!--TT-83--></li>
+<li>Modified Case entity <!--TT-84--></li>
+<li>Added new tumor code, tumor id, and sample types to Sample entity to support OCG <!--TT-85, TT-68--></li>
+<li>Added property <code>days_to_diagnosis</code> to Diagnosis entity <!--TT-91--></li>
+<li>Created Somatic Mutation Index entity <!--TT-92--></li>
+<li>Updated CaDSR CDE links in data dictionary <!--DAT-794--></li>
+<li>Added new sample type <code>tumor</code> to sample entity <!--TT-77--></li>
+<li>Made classification_of_tumor on diagnosis entity non-required <!--DAT-203--></li>
+<li>Added support for FM-AD to Genomic Profile Harmonization Workflow entity <!--DAT-985--></li>
+<li>Added data type <code>Gene Level Copy Number Scores</code> to Copy Number Segment entity <!--TT-94--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.9.0">v1.9.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: June 29, 2017</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Updated ability to search data based on genes and mutations have been released. Discussion of the new endpoints and their use can be found in the Data Portal User Guide. These feature are limited to those projects for which the GDC contains open-access MAF files.</li>
+</ul>
+<!--API-112, API-114, API-116, API-118, API-119, APIT-179, API-180, API-181, API-181-->
+<ul>
+<li>API request parameter <code>from</code> now returns first record when <code>from=0</code>. Previously, <code>from=1</code> was the first record. <code>from=0</code> is now the default.</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.8.0">v1.8.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: May 9, 2017</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Users can now control whether a set of files will be compressed or not when downloading. For further details see the <a href="../Users_Guide/Downloading_Files/#downloading-an-uncompressed-group-of-files">API User Guide</a>. <!--API-175--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.7.1">v1.7.1</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: March 16, 2017</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Submission: Due to Data Dictionary updates new submission templates may be required for users submitting JSON and TSV formats</li>
+<li>Submission: Entities in submitted state (assigned when the project has been submitted) cannot be deleted. <!-- API-129 --></li>
+<li>Submission: When attempting to delete an entity that has child entities not specified in the request, an error message is generated that will include all of the child entities' UUIDs. <!-- API-130 --></li>
+<li>Submission: Entities associated with files uploaded to the GDC object store cannot be deleted until the associated file has been deleted. <!-- API-132 --></li>
+<li>Re-enable Review, Submit, and Release functions for submission <!--API-73, API-138, API-159--></li>
+<li>GDC Data Dictionary Changes</li>
+<li>Added "submittable" property to all entities <!--DAT-215--></li>
+<li>Changed Read Group to category biospecimen <!--DAT-216--></li>
+<li>Added many new clinical properties available for submission <!--DAT-210, DAT-31, DAT-226, DAT-205--></li>
+<li>Added sample codes from Office of Cancer Genomics (OCG) to analyte and aliquot <!--DAT-170--></li>
+<li>Slides can now be attached to sample rather than just portion <!--DAT-205--></li>
+<li><code>sample_type_id</code> is no longer required when submitting sample entities <!--DAT-233--></li>
+<li><code>analyte_type_id</code> is no longer required when submitting aliquot and analyte entities<!--DAT-255--></li>
+<li>Clinical Test Entity is created for storing results of a variety of potential clinical tests related to the diagnosis - <!--DAT-223--></li>
+<li>Genomic Profiling Report entity created for storing particular derived sequencing results <!--DAT-229--></li>
+<li>Structural Variation entity created <!--DAT-229--></li>
+<li>Project entity includes new field "Intended Release Date" <!--API-143--></li>
+<li>Project entity includes new field "Releasable" <!--API-157--></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed bug where boolean properties were not accepted with TSV submission <!--API-168--></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.5.0">v1.5.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: October 31, 2016</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>API responds with an error when the request specifies an unsupported combination of <code>filters</code> and <code>facets</code>. <!-- API-34 --></li>
+<li>In TSV submissions, trailing and leading whitespace, including non-ASCII whitespace characters, are stripped from property names and values. <!-- API-63, API-29--></li>
+<li>For released projects, any updates to previously submitted entities (i.e. <code>"state": "submitted"</code>) will be included in the following GDC data release. <!-- API-81 --></li>
+<li>Performance improvements for manifest generation. <!-- API-58 --></li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Uploading certain unsupported metadata files caused the associated submission transactions to remain stuck in pending state. <!-- API-78 --></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.4.0">v1.4.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: September 23, 2016</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Submission transaction log includes additional information to assist in tracking. <!-- API-40 --></li>
+<li>Submission project state transitions are disabled temporarily while project release features are being improved. <!-- API-56 --></li>
+<li>GDC data dictionary changes:</li>
+<li>The <code>submittable</code> property was added to all entity types in the GDC data model. It indicates whether the entity type can be submitted by users. <!-- DM-16 --></li>
+<li>Category of Read Group entities in the GDC Data Model has changed from <code>data_bundle</code> to <code>biospecimen</code>.</li>
+<li>Analyte entities support an expanded set of <code>analyte_type</code> values.</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None to report</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>API search &amp; retrieval queries that do not include a <code>sort</code> parameter may return results in different order each time they are executed. This is a particular problem for paginated responses (i.e. responses to queries for which the number of results is greater than the <code>size</code> parameter). <!-- FEAT-120 --></li>
+<li><strong>Workaround:</strong> Include a <code>sort</code> parameter in API search &amp; retrieval queries.</li>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.3.1">v1.3.1</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: September 7, 2016</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Successful <code>_dry_run</code> submission transactions can be committed to the GDC data model without having to re-upload metadata. The transactions can also be closed to prevent them from being committed in the future.</li>
+<li>Submission transactions can be submitted in asynchronous mode. In this mode, the GDC API will issue an immediate acknowledgement of the transaction, along with the <code>transaction_id</code>. The status of the transaction can be verified by the user at a later time by specifying the <code>transaction_id</code>. Users submitting large transactions may find this mode helpful.</li>
+<li>New submission transaction properties can be queried with GraphQL</li>
+<li>GDC Data Dictionary changes:</li>
+<li>Clinical Supplement entities can have <code>data_format</code> set to OMF.</li>
+<li>Biospecimen Supplement entities can have <code>data_format</code> set to SSF or PPS.</li>
+<li>Read group <code>instrument_model</code> can be set to "Illumina HiSeq 4000".</li>
+<li>Category of Slide entities in the GDC Data Model has changed from <code>data_bundle</code> to <code>biospecimen</code>.</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Incorrect BMI calculation in the import of BCR XML files.</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>API search &amp; retrieval queries that do not include a <code>sort</code> parameter may return results in different order each time they are executed. This is a particular problem for paginated responses (i.e. responses to queries for which the number of results is greater than the <code>size</code> parameter). <!-- FEAT-120 --></li>
+<li><strong>Workaround:</strong> Include a <code>sort</code> parameter in API search &amp; retrieval queries.</li>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.2.0">v1.2.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: August 9, 2016</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>Tarballs generated by the <code>data</code> endpoint in response to multi-file data download requests now include a folder structure that puts each file in a folder whose name is the file's UUID. <!-- PGDC-2581 --></li>
+<li>UUIDs in clinical XML files are no longer treated in a case-sensitive way by the <code>submission</code> endpoint. <!-- API-14 --></li>
+<li>Improved performance of <code>submission</code> endpoint for transactions that include many cases. <!-- https://github.com/NCI-GDC/gdcapi/pull/495 --></li>
+<li>Speed improvements for the <code>submission</code> endpoint.</li>
+<li>BCR XML is no longer validated against its XSD at submission.</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Fixed handling of <code>POST</code> requests to address problems with cart functionality in older versions of Firefox <!-- PGDC-2555 --></li>
+<li>Files of category <code>related_files</code> can now be downloaded from the <code>data</code> endpoint. <!-- PGDC-2542 --></li>
+<li>Allowed submission by projects in certain dbGaP registration states that were previously blocked. <!--API-3 --></li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>API search &amp; retrieval queries that do not include a <code>sort</code> parameter may return results in different order each time they are executed. This is a particular problem for paginated responses (i.e. responses to queries for which the number of results is greater than the <code>size</code> parameter). <!-- FEAT-120 --></li>
+<li><strong>Workaround:</strong> Include a <code>sort</code> parameter in API search &amp; retrieval queries.</li>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING". <!-- PGDC-2530 // https://github.com/NCI-GDC/gdcapi/pull/524  --></li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests. <!-- PGDC-2411 --></li>
+</ul>
+<h2 id="v1.1.0">v1.1.0</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: May 25, 2016</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>BAM index files (.bai) are now automatically downloaded with parent BAM.</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None to report</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>Sorting by file <code>submitter_id</code> no longer causes an internal server error</li>
+<li>BAM index files are now included with harmonized BAM files</li>
+<li>Certain very long API requests will time out. It is recommended to break up into a series of smaller requests.</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Fields are not counted as missing if parent field is also missing. This may occur with queries of nested fields in the Data Portal Advanced Search or an API query using a filter. This behavior could impact results reported using search parameters of "IS MISSING" or "NOT MISSING".</li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests.</li>
+</ul>
+<h2 id="v1.0.1">v1.0.1</h2>
+<ul>
+<li><strong>GDC Product</strong>: Application Programming Interface (API)</li>
+<li><strong>Release Date</strong>: May 16, 2016</li>
+</ul>
+<h3>New Features and Changes</h3>
+<ul>
+<li>HTTP interface that uses JSON as the primary data exchange format</li>
+<li>Programmatic access to functionality provided by GDC Data and Submission portals, via <code>projects</code>, <code>cases</code>, <code>files</code>, <code>annotations</code>, <code>data</code>, <code>slicing</code>, <code>status</code>, and <code>submission</code> endpoints</li>
+<li>Programmatic access to GDC Legacy Archive via <code>legacy</code> endpoint</li>
+<li>Token-based authentication for secure access to controlled data and to submission functionality</li>
+<li>RESTful search that supports simple and complex queries via <code>filters</code>, <code>fields</code>, and <code>facets</code> parameters, and <code>project</code>, <code>files</code>, <code>cases</code>, and <code>annotations</code> endpoints.</li>
+<li>Search results can be sorted using <code>sort</code> parameter, paginated using <code>size</code> and <code>from</code> parameters, and output in JSON, TSV, and XML using <code>format</code> and <code>pretty</code> parameters.</li>
+<li><code>_mapping</code> endpoint enables user discovery of fields available for data search and retrieval operations</li>
+<li>Support for downloading of individual files and of archives containing multiple files</li>
+<li>Generation of download and upload manifests for use with the GDC Data Transfer Tool</li>
+<li>BAM slicing functionality for downloading part(s) of a BAM file specified using chromosomal coordinates or HGNC gene names</li>
+<li>Transactional submission system that links individual data elements according to a graph-based GDC Data Model</li>
+<li>Two data entity identifiers: UUIDs, which are consistent across GDC, and Submitter IDs, for compatibility with submitters' tracking systems</li>
+</ul>
+<h3>Bugs Fixed Since Last Release</h3>
+<ul>
+<li>None to report</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>Use of non-ascii characters in token passed to Data Transfer Tool will produce incorrect error message "Internal server error: Auth service temporarily unavailable".</li>
+<li>Use of a decimal in an integer search field produces unexpected error.</li>
+<li>Certain very large API requests will time out. It is recommended to break up very large requests into a series of smaller requests.</li>
+</ul></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

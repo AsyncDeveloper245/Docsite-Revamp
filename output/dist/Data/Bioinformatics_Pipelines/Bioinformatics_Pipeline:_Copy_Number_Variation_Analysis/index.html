@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bioinformatics Pipeline: Copy Number Variation Analysis</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/Data/Introduction">Introduction</a></li><li class="inactive"><a href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a></li><li class="inactive"><a href="/output/dist/Data/Data_Security/Data_Security">Data Security</a></li><li class="inactive"><a href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a></li><li class="inactive"><a href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a></li><li class="main"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a></li><ul><li><a href='#Introduction'>Introduction</a></li><li><a href='#ASCAT Pipelines'>ASCAT Pipelines</a></li><li><a href='#GENIE Copy Number'>GENIE Copy Number</a></li><li><a href='#DNACopy and GISTIC2 Pipelines'>DNACopy and GISTIC2 Pipelines</a></li></ul><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a></li><li class="inactive"><a href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/Data/PDF/Data_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   Copy Number Variation Analysis Pipeline</h1><hr/>
+<h2 id="Introduction">Introduction</h2>
+<p>The copy number variation (CNV) pipeline uses either NGS or Affymetrix SNP 6.0 (SNP6) array data to identify genomic regions that are repeated and infer the copy number of these repeats. Three sets of pipelines have been used for CNV inferences.</p>
+<ul>
+<li>ASCAT</li>
+<li>AACR GENIE</li>
+<li>DNAcopy </li>
+</ul>
+<p>The first set of CNV pipelines are built upon the ASCAT <a href="https://www.pnas.org/content/107/39/16910">[4]</a> algorithm for both WGS and SNP6 data. ASCAT is able to generate Allele-specific Copy Number Segment data with integer copy number values, and the derived integer Gene-Level Copy Number. The WGS copy number analysis pipeline, <a href="https://github.com/cancerit/ascatNgs">ascatNGS</a>, is described in detail <a href="https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/#whole-genome-sequencing-variant-calling">here</a>. The SNP6 copy number analysis pipeline, ASCAT2, is adopted from the <a href="https://github.com/VanLoo-lab/ascat/blob/v2.5/ExampleData/ASCAT_examplePipeline.R">example ASCAT analysis</a> and generates data similar to ascatNGS.</p>
+<p>The second CNV pipeline is only used in <a href="https://www.aacr.org/professionals/research/aacr-project-genie/">AACR Project GENIE</a>. The gene-level copy number scores derived by the AACR project GENIE team are remapped to new gene names in the gene model that GDC uses (GENCODE v36).   </p>
+<p>The third set of CNV pipelines are built onto the existing TCGA level 2 SNP6 data generated by <a href="https://www.broadinstitute.org/scientific-community/science/programs/medical-and-population-genetics/birdsuite/birdsuite">Birdsuite</a> and uses the <a href="http://www.bioconductor.org/packages/release/bioc/html/DNAcopy.html">DNAcopy</a> R-package to perform a circular binary segmentation (CBS) analysis <a href="http://biostatistics.oxfordjournals.org/content/5/4/557.short">[1]</a>. CBS translates noisy intensity measurements into chromosomal regions of equal copy number. The final output files are segmented into genomic regions with the estimated copy number for each region. The GDC further transforms these copy number values into segment mean values, which are equal to log2(copy-number/ 2). Diploid regions will have a segment mean of zero, amplified regions will have positive values, and deletions will have negative values. The resulting Copy Number Segment outputs were then used by GISTIC2 <a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2011-12-4-r41">[2]</a>, <a href="https://www.nature.com/articles/nature08822">[3]</a> to generate Gene-Level Copy Number Scores that powered the GDC copy number visualization before Data Release 32. GISTIC2 pipeline and output are no longer supported since Data Release 32.</p>
+<h2 id="ASCAT Pipelines">ASCAT Pipelines</h2>
+<h3>Data Processing Steps</h3>
+<h4>Copy Number Segmentation</h4>
+<p>The <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=somatic_copy_number_workflow">Somatic Copy Number Workflow</a> uses a tumor-normal pair of either SNP6 raw CEL data, or WGS data as input. The ASCAT algorithm derives allele-specific copy number segments while estimating and adjusting for tumor purity and ploidy <a href="https://www.pnas.org/content/107/39/16910">[4]</a>. Because there are two parental strands, the resulting Copy Number Segment or Allele-Specific Copy Number Segment files contains 3 different copy number integer values: Major_Copy_Number refers to the larger strand copy number, Minor_Copy_Number refers to the smaller strand copy number, Copy_Number is the sum of Major_Copy_Number and Minor_Copy_Number, and thus equals to the total copy number at the locus.   </p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=submitted_genotyping_array">Submitted Genotype_Array</a></td>
+<td>CEL</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_segment">Copy Number Segment</a> or <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_segment">Allele-Specific Copy Number Segment</a></td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aligned_reads">Aligned Reads</a></td>
+<td>BAM</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_segment">Copy Number Segment</a> or <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_segment">Allele-Specific Copy Number Segment</a></td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<h4>Gene-Level Copy Number</h4>
+<p>Gene-level Copy Number is generated by inheriting the Copy_Number value of the residing segment in the Copy Number Segment file generated from ASCAT2 or ascatNGS workflows.</p>
+<p>In some occasions, one gene may overlap with more than one segment. In this case, min_copy_number is the minimum value of all segments it overlaps, max_copy_number is the maximum value of all segments it overlaps, and copy_number is calculated as the weighted (on length of overlapped regions) median of copy number values from all overlapped segments. When there is a tie (very rare), the smaller number is used. If a gene overlaps with only one segment, copy_number = min_copy_number = max_copy_number. If a gene overlaps with no segments, the gene gets empty value "" in copy_number, min_copy_number and max_copy_number.</p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_segment">Copy Number Segment</a> or Allele-Specific Copy Number Segment</td>
+<td>TXT</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_estimate">Copy Number Estimate</a></td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<h3>File Access and Availability</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy Number Segment</td>
+<td>A table that associates contiguous chromosomal segments with genomic coordinates, and integer copy numbers.</td>
+<td>TXT</td>
+</tr>
+<tr>
+<td>Allele-Specific Copy Number Segment</td>
+<td>A table that associates contiguous chromosomal segments with genomic coordinates, and integer copy numbers.</td>
+<td>TXT</td>
+</tr>
+<tr>
+<td>Copy Number Estimate</td>
+<td>A Gene-level Copy Number file that displays integer copy number on a gene level.  Generated from Copy Number Segment or Allele-Specific Copy Number Segment files.</td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="GENIE Copy Number">GENIE Copy Number</h2>
+<h3>Data Processing Steps</h3>
+<h4>Copy Number Estimation</h4>
+<p>The gene names used in the AACR GENIE Project are remapped to the gene model GDC uses (GENCODE v36). The copy number values are not changed. Please refer to AACR GENIE for the exact method how these values were derived.</p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=submitted_genomic_profile">Submitted_Genomic_Profile</a></td>
+<td>TXT</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_estimate">Copy Number Estimate</a></td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<h3>File Access and Availability</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy Number Estimate</td>
+<td>A Gene-level Copy Number Score file that displays GISTIC2-like copy number scores on a gene level.</td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="DNACopy and GISTIC2 Pipelines">DNACopy and GISTIC2 Pipelines</h2>
+<h3>Data Processing Steps</h3>
+<p>The GRCh38 SNP6 probe-set was produced by mapping probe sequences to the GRCh38 reference genome and can be downloaded at the <a href="https://gdc.cancer.gov/about-data/data-harmonization-and-generation/gdc-reference-files">GDC Reference File Website</a>.</p>
+<h4>Copy Number Segmentation</h4>
+<p>The <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_liftover_workflow">Copy Number Liftover Workflow</a> uses TCGA level 2 tangent.copynumber files. These files were generated by first normalizing array intensity values, estimating raw copy number, and performing tangent normalization, which subtracts variation that is found in a set of normal samples. Original array intensity values (TCGA level 1) are available in the <a href="https://portal.gdc.cancer.gov/legacy-archive/">GDC Legacy Archive</a> under the "Data Format: CEL" and "Platform: Affymetrix SNP 6.0" filters.</p>
+<p>The Copy Number Liftover Workflow performs CBS analysis using the DNACopy R-package to process tangent normalized data into <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_segment">Copy Number Segment</a> files, which associate contiguous chromosome regions with log2 ratio segment means in a tab-delimited format.  The number of probes with intensity values associated with each chromosome region is also reported (probes with no intensity values are not included in this count).  During copy number segmentation probe sets from Pseudo-Autosomal Regions (PARs) were removed from males and Y chromosome segments were removed from females.</p>
+<p>Masked copy number segments are generated using the same method except that a filtering step is performed that removes the Y chromosome and probe sets that were previously indicated to be associated with frequent germline copy-number variation.   </p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=submitted_tangent_copy_number">Submitted Tangent Copy Number</a></td>
+<td>TXT</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_segment">Copy Number Segment</a> or <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_segment">Masked Copy Number Segment</a></td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<h4>Copy Number Estimation</h4>
+<p>Numeric focal-level Copy Number Variation (CNV) values were generated with "Masked Copy Number Segment" files from tumor aliquots using GISTIC2 on a project level. Only protein-coding genes were kept, and their numeric CNV values were further thresholded by a noise cutoff of 0.3:</p>
+<ul>
+<li>Genes with focal CNV values smaller than -0.3 are categorized as a "loss" (-1)</li>
+<li>Genes with  focal CNV values larger than 0.3 are categorized as a "gain" (+1)</li>
+<li>Genes with focal CNV values between and including -0.3 and 0.3 are categorized as "neutral" (0).</li>
+</ul>
+<p>Values are reported in a project-level TSV file. Each row represents a gene, which is reported as an Ensembl ID and associated cytoband.  The columns represent aliquots, which are associated with CNV value categorizations (0/1/-1) for each gene.</p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_segment">Masked Copy Number Segment</a></td>
+<td>TXT</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=copy_number_estimate">Copy Number Estimate</a></td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<h4>GISTIC2 Command Line Parameters</h4>
+<pre><code class="language-Shell">gistic2 \
+-b &lt;base_directory&gt; \
+-seg &lt;segmentation_file&gt; \
+-mk &lt;marker_file&gt; \
+-refgene &lt;reference_gene_file&gt; \
+-ta 0.1 \
+-armpeel 1 \
+-brlen 0.7 \
+-cap 1.5 \
+-conf 0.99 \
+-td 0.1 \
+-genegistic 1 \
+-gcm extreme \
+-js 4 \
+-maxseg 2000 \
+-qvt 0.25 \
+-rx 0 \
+-savegene 1 \
+(-broad 1)
+</code></pre>
+<h3>File Access and Availability</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy Number Segment</td>
+<td>A table that associates contiguous chromosomal segments with genomic coordinates, mean array intensity, and the number of probes that bind to each segment.</td>
+<td>TXT</td>
+</tr>
+<tr>
+<td>Masked Copy Number Segment</td>
+<td>A table with the same information as the Copy Number Segment except that segments with probes known to contain germline mutations are removed.</td>
+<td>TXT</td>
+</tr>
+<tr>
+<td>Copy Number Estimate</td>
+<td>A project-level file that displays gains/losses on a gene level.  Generated from the Masked Copy Number Segment files.</td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<p>[1] Olshen, Adam B., E. S. Venkatraman, Robert Lucito, and Michael Wigler. "Circular binary segmentation for the analysis of array-based DNA copy number data." Biostatistics 5, no. 4 (2004): 557-572.</p>
+<p>[2] Mermel, Craig H., Steven E. Schumacher, Barbara Hill, Matthew L. Meyerson, Rameen Beroukhim, and Gad Getz. "GISTIC2. 0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers." Genome biology 12, no. 4 (2011): R41.</p>
+<p>[3] Beroukhim, Rameen, Craig H. Mermel, Dale Porter, Guo Wei, Soumya Raychaudhuri, Jerry Donovan, Jordi Barretina et al. "The landscape of somatic copy-number alteration across human cancers." Nature 463, no. 7283 (2010): 899.</p>
+<p>[4] Van Loo, P., Nordgard, S. H., Lingjaerde, O. C., Russnes, H. G., Rye, I. H., Sun, W. et al. "Allele-specific copy number analysis of tumors." Proceedings of the National Academy of Sciences, 107.39 (2010): 16910-16915.</p></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

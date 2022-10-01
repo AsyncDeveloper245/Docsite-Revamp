@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Submission Overview</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/Before_Submitting_Data_to_the_GDC_Portal">Before Submitting Data to the GDC Portal</a></li><li class="main"><a href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a></li><ul><li><a href='#Overview'>Overview</a></li><li><a href='#GDC Data Submission Workflow'>GDC Data Submission Workflow</a></li><li><a href='#Project and File Lifecycles'>Project and File Lifecycles</a></li></ul><li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a></li><li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a></li><li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a></li><li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a></li><li class="inactive"><a href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   Data Submission Overview</h1><hr/>
+<h2 id="Overview">Overview</h2>
+<p>This section will walk users through two parts of the submission process. The first portion will be the steps taken by the users to go through the submission process from start to finish. The second portion will describe the lifecycle of a project and a file throughout the data submission process.</p>
+<h2 id="GDC Data Submission Workflow">GDC Data Submission Workflow</h2>
+<p>The diagram below illustrates the process from uploading through releasing data in the GDC Data Submission Portal. To review the steps needed before beginning submission see <a href="https://docs.gdc.cancer.gov/Data_Submission_Portal/Users_Guide/Checklist/">Before Submitting Data to the GDC Portal</a></p>
+<p><a href="../images/GDC_Data_Submission_Workflow-updated_20190301.jpg" title="Click to see the full image."><img alt="GDC Data Submission Portal Workflow Upload" src="../images/GDC_Data_Submission_Workflow-updated_20190301.jpg"/></a></p>
+<h3>Review GDC Dictionary and GDC Data Model - Submitter Activity</h3>
+<p>It is suggested that all submitters review the <a href="https://docs.gdc.cancer.gov/Data_Dictionary/viewer/">GDC Dictionary</a> and <a href="https://gdc.cancer.gov/developers/gdc-data-model/gdc-data-model-components">GDC Data Model</a>. It is beneficial for submitters to know which nodes will need metadata submission, how these nodes relate to each other, and what information is required for each node in the model.</p>
+<h3>Download Templates - Submitter Activity</h3>
+<p>After determining the required nodes for the submission, go to each node page in the <a href="https://docs.gdc.cancer.gov/Data_Dictionary/viewer/">GDC Dictionary</a>. There will be a "Download Template" drop down list. Select the file format, either TSV or JSON, and download the template for the node. If <a href="Data_Submission_Walkthrough.md#submitting-numerous-cases">numerous entries</a> are being submitted all at one time, it is suggested that the user uses a TSV template. At this point, it is suggested to go through the template and remove fields that will not be populated by the metadata submission, but make sure to complete all fields that are required for the node. For more information about the Data Dictionary, please visit <a href="../../../Data_Dictionary/">here</a>.</p>
+<p><a href="https://docs.gdc.cancer.gov/Data_Dictionary/viewer/"><code>See GDC Data Dictionary here.</code></a></p>
+<h3>Upload Case Information Including dbGaP Submitted Subject IDs - Submitter Activity</h3>
+<p>After registering the study in <a href="https://gdc.cancer.gov/submit-data/obtaining-access-submit-data">dbGaP</a>, the first node to be created in the data model is the <a href="Data_Submission_Walkthrough.md#case-submission"><code>case</code> node</a>. The <code>case</code> node is important as it will contain a unique <code>submitter_id</code> that is registered in dbGaP under a particular project. This will connect the two databases, dbGaP and GDC, and allows for access to be granted to a controlled data set based on the study and its cases.</p>
+<p>To <a href="Data_Submission_Walkthrough.md#uploading-the-case-submission-file">submit the <code>case</code></a> nodes, a user must be able to <a href="Data_Submission_Process.md#authentication">login</a> and access the <a href="https://portal.gdc.cancer.gov/submission/">GDC Submission Portal</a> for their respective project. Metadata for all nodes are uploaded via the <a href="https://docs.gdc.cancer.gov/API/Users_Guide/Submission/#creating-and-updating-entities">API</a> or through the <a href="Data_Submission_Walkthrough.md#upload-using-the-gdc-data-submission-portal">Submission Portal</a>.</p>
+<p><a href="Data_Submission_Walkthrough.md#case-submission"><code>See case example here.</code></a></p>
+<p><a href="Data_Submission_Walkthrough.md#upload-using-the-gdc-data-submission-portal"><code>See metadata upload example here.</code></a></p>
+<h3>Upload Clinical and Biospecimen Data - Submitter Activity</h3>
+<p>With the creation of <code>case</code> nodes, other nodes in the <a href="https://gdc.cancer.gov/developers/gdc-data-model/gdc-data-model-components">data model</a> can be <a href="Data_Submission_Walkthrough.md#upload-using-the-gdc-data-submission-portal">uploaded</a>. This includes the <a href="Data_Submission_Walkthrough.md#clinical-data-submission">Clinical</a> and <a href="Data_Submission_Walkthrough.md#biospecimen-submission">Biospecimen</a> nodes, with examples for each that can be found in the <a href="Data_Submission_Walkthrough.md">Data Upload Walkthrough</a>.</p>
+<p><a href="Data_Submission_Walkthrough.md#clinical-data-submission"><code>See clinical example here.</code></a></p>
+<p><a href="Data_Submission_Walkthrough.md#biospecimen-submission"><code>See biospecimen example here.</code></a></p>
+<p><a href="Data_Submission_Walkthrough.md#upload-using-the-gdc-data-submission-portal"><code>See metadata upload example here.</code></a></p>
+<h3>Register Data Files - Submitter Activity</h3>
+<p>Registering data files is necessary before they can be uploaded. This allows the GDC to later validate the uploads against the user-supplied md5sum and file size. The <a href="Data_Submission_Walkthrough.md#experiment-data-submission">submission</a> of these files can range from clinical and biospecimen supplements to <code>submitted_aligned_reads</code> and <code>submitted_unaligned_reads</code>.</p>
+<p><a href="Data_Submission_Walkthrough.md#experiment-data-submission"><code>See experiment data example here.</code></a></p>
+<h3>Upload Data Using Data Transfer Tool - Submitter Activity</h3>
+<p>Before uploading the submittable data files to the GDC, a user will need to determine if the correct nodes have been created and the information within them are correct. This is accomplished using the <a href="Data_Submission_Process.md#browse">Browse</a> page in the <a href="https://portal.gdc.cancer.gov/submission">Data Submission Portal</a>. Here you can find the metadata and file_state, which must have progressed to <code>registered</code> for an associated file to be uploaded. You can find more about the file life cycle <a href="#file-lifecycle">here</a>.</p>
+<p>Once the submitter has verified that the submittable data files have been registered, the user can obtain the submission manifest file that is found on the <a href="Data_Submission_Process.md#project-overview">Project Overview</a> page. From this point the submission process is described in the <a href="Data_Submission_Walkthrough.md#uploading-the-submittable-data-file-to-the-gdc">"Uploading the Submittable Data File to the GDC"</a> section.</p>
+<p>For strategies on data upload, further documentation for the GDC Data Submission process is detailed on the <a href="https://gdc.cancer.gov/submit-data/data-submission-processes-and-tools">Data Submission Processes and Tools</a> section of the GDC Website.</p>
+<p><a href="Data_Submission_Walkthrough.md#uploading-the-submittable-data-file-to-the-gdc"><code>See submittable data file upload example here.</code></a></p>
+<h3>Verify Accuracy and Completeness of Project Data (Project QC) - Submitter Activity</h3>
+<p>The submitter is responsible for reviewing the data uploaded to the project workspace and ensuring there are no critical QC errors, see <a href="Data_Submission_Walkthrough.md">Data Submission Walkthrough</a>, and ensuring that it is ready for processing by the GDC <a href="https://gdc.cancer.gov/submit-data/gdc-data-harmonization">Harmonization Process</a>. A user should be able to go through the <a href="Data_Submission_Process.md#pre-harmonization-checklist">Pre-Harmonization Checklist</a>, and verify that their submission meets these criteria.</p>
+<p><a href="Data_Submission_Process.md#pre-harmonization-checklist"><code>See pre-harmonization checklist here.</code></a></p>
+<h3>Request Data Harmonization - Submitter Activity</h3>
+<p>When the project is complete and ready for processing, the submitter will <a href="Data_Submission_Process.md#submit-your-workspace-data-to-the-gdc">request harmonization</a>. If the project is not ready for processing, the project can be re-opened and the submitter will be able to upload more data to the project workspace.</p>
+<p><a href="Data_Submission_Process.md#submit-your-workspace-data-to-the-gdc"><code>See harmonization request example here.</code></a></p>
+<blockquote>
+<p><strong>NOTE:</strong> The GDC requests that users submit their data to the GDC within six months from the first upload of data to the project workspace.</p>
+</blockquote>
+<h3>GDC Review/QC Submitted Data - GDC Activity</h3>
+<p>The Bioinformatics Team at the GDC runs the Quality Control pipeline on the submitted data. This pipeline mirrors the <a href="Data_Submission_Process.md#pre-harmonization-checklist">Pre-Harmonization Checklist</a> and will determine if the submission is complete and is ready for the Harmonization pipeline. If the submission does contain problems, the GDC will contact the user to "Re-Open" the project and fix the errors in their submission.</p>
+<p>Once the review is complete, all validated nodes will be changed to state "submitted". At this point users can submit more files to a project, but they will be considered as a different batch for harmonization.</p>
+<h3>GDC Harmonize Data - GDC Activity</h3>
+<p>After the submission passes the GDC Quality Control pipeline, it will be queued for the <a href="https://gdc.cancer.gov/about-data/gdc-data-harmonization">GDC Harmonization pipeline</a>.</p>
+<h3>Submitter Review/QC of Harmonized Data - Submitter Activity</h3>
+<p>After the data is processed in the Harmonization pipeline, the GDC asks submitters to <a href="https://portal.gdc.cancer.gov/submission/login?next=%2Fsubmission%2F">verify the quality</a> of their harmonized data. It is the user's responsibility to notify the GDC of any errors in their harmonized data sets. The GDC will then work with the user to correct the issue and rerun the Harmonization pipeline if needed.</p>
+<h3>Release Data Within Six Months - Submitter Activity</h3>
+<p>Project release occurs after the data has been harmonized, and allows users to access this data with the <a href="https://portal.gdc.cancer.gov/">GDC Data Portal</a> and other <a href="https://gdc.cancer.gov/access-data/data-access-processes-and-tools">GDC Data Access Tools</a>. The GDC will release data according to <a href="https://gdc.cancer.gov/submit-data/data-submission-policies">GDC Data Sharing Policies</a>. Data must be released within six months after GDC data processing has been completed, or the submitter may request earlier release.</p>
+<p><a href="Data_Submission_Process.md#release"><code>See release example here.</code></a></p>
+<blockquote>
+<p><strong>Note</strong>: Released cases and/or files can be redacted from the GDC. For more information, visit the <a href="https://gdc.cancer.gov/submit-data/data-submission-policies">GDC Policies page (under GDC Data Sharing Policies)</a>.</p>
+</blockquote>
+<h3>GDC Releases Data - GDC Activity</h3>
+<p>GDC data releases are not continuous, but instead are released in discrete data updates. Once harmonized data is approved and release request is approved, data will be available in an upcoming GDC Data Release.</p>
+<h2 id="Project and File Lifecycles">Project and File Lifecycles</h2>
+<h3>Project Lifecycle</h3>
+<p>The diagram of the project lifecycle below demonstrates the transition of a project through the various states. Initially the project is open for data upload and validation. Any changes to the data must be made while the project status is open. When the data is uploaded and ready for review, the submitter changes the project state to review. During the review state, the project is locked and additional data cannot be uploaded. If data changes are needed during the review period, the project has to be re-opened.</p>
+<p>The process of Harmonization does not occur immediately after submitted files are uploaded. After the submission is complete and all the necessary data and files have been uploaded, the user submits the data to the GDC for processing through the <a href="https://gdc.cancer.gov/submit-data/gdc-data-harmonization">GDC Data Harmonization Pipelines</a> and the project state changes to submitted. When the data has been processed, the project state changes back to open for new data to be submitted to the project and the submitter can review the processed data. After review of the processed data, the submitter can then release the harmonized data to the <a href="https://portal.gdc.cancer.gov/">GDC Data Portal</a> and other <a href="https://gdc.cancer.gov/access-data/data-access-processes-and-tools">GDC Data Access Tools</a> according to <a href="https://gdc.cancer.gov/submit-data/data-submission-policies">GDC Data Sharing Policies</a>.</p>
+<p><a href="../images/Submission.png" title="Click to see the full image."><img alt="GDC Data Submission Portal Workflow" src="../images/Submission.png"/></a></p>
+<h3>File Lifecycle</h3>
+<p>This section describes states pertaining to submittable data files throughout the data submission process. A submittable data file could contain data such as genomic sequences (such as a BAM or FASTQ) or pathology slide images. The file lifecycle starts when a submitter uploads metadata for a file to the <a href="https://portal.gdc.cancer.gov/submission/">GDC Data Submission Portal</a>. This metadata file registers a description of the file as an entity on the GDC, the status for this is known as "state" and is represented by <strong>purple</strong> cirlces. The submitter can then use the <a href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool">GDC Data Transfer Tool</a> to upload the actual file, which is represeneted by <strong>red</strong> circles. Throughout the lifecycle, the file and its associated entity transition through various states from when they are initially registered through file submission and processing. The diagram below details these state transitions.</p>
+<p><a href="../images/gdc-submission-portal-file-state-vs-state.png" title="Click to see the full image."><img alt="GDC Data Submission Portal File Status" src="../images/gdc-submission-portal-file-state-vs-state.png"/></a></p></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

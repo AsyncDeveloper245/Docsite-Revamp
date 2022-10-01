@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submission Best Practices</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/Before_Submitting_Data_to_the_GDC_Portal">Before Submitting Data to the GDC Portal</a></li><li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a></li><li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a></li><li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a></li><li class="inactive"><a href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a></li><li class="main"><a href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a></li><ul><li><a href='#Date Obfuscation'>Date Obfuscation</a></li><li><a href='#Array Submission'>Array Submission</a></li><li><a href='#Submitting Complex Data Model Relationships'>Submitting Complex Data Model Relationships</a></li><li><a href='#Submission File Quality Control'>Submission File Quality Control</a></li><li><a href='#Target Capture Kit Q and A'>Target Capture Kit Q and A</a></li><li><a href='#Specifying Tumor Normal Pairs for Analysis'>Specifying Tumor Normal Pairs for Analysis</a></li><li><a href='#Clinical Data Requirements'>Clinical Data Requirements</a></li><li><a href='#miRNA Submission'>miRNA Submission</a></li></ul><li class="inactive"><a href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   Submission Best Practices</h1><hr/>
+<p>Because of the data types and relationships included in the GDC, data submission can become a complex procedure. The purpose of this section is to present guidelines that will aid in the incorporation and harmonization of submitters' data. Please contact the GDC Help Desk at <strong><a href="mailto:support@nci-gdc.datacommons.io">support@nci-gdc.datacommons.io</a></strong> if you have any questions or concerns regarding a submission project.</p>
+<h2 id="Date Obfuscation">Date Obfuscation</h2>
+<p>The GDC is committed to providing accurate and useful information as well as protecting the privacy of  patients if necessary. Following this, the GDC accepts time intervals that were transformed to remove information that could identify an individual but preserve clinically useful timelines. The GDC recommends following a series of HIPAA regulations regarding the reporting of age-related information, which can be downloaded <a href="BCRInformatics-DateObfuscator-291116-1100-2.pdf">here</a> as a PDF.</p>
+<h3>General Guidelines</h3>
+<p>Actual calendar dates are not reported in GDC clinical fields but the lengths of time between events are preserved. Time points are reported based on the number of days since the patient's initial diagnosis. Events that occurred after the initial diagnosis are reported as positive and events that occurred before are reported as negative. Dates are not automatically obfuscated by the GDC validation system and submitters are required to make these changes in their clinical data. This affects these fields: <code>days_to_birth</code>, <code>days_to_death</code>, <code>days_to_last_follow_up</code>, <code>days_to_last_known_disease_status</code>, <code>days_to_recurrence</code>, <code>days_to_treatment</code></p>
+<blockquote>
+<p><strong>Note:</strong> The day-based fields take leap years into account.  </p>
+</blockquote>
+<h3>Patients Older than 90 Years and Clinical Events</h3>
+<p>Because of the low population number within the demographic of patients over 90 years old, it becomes more likely that patients can potentially be identified by a combination of their advanced age and publicly available clinical data. Because of this, patients over 90 years old are reported as exactly 90 years or 32,872 days old.</p>
+<p>Following this, clinical events that occur over 32,872 days are also capped at 32,872 days. When timelines are capped, the priority should be to shorten the post-diagnosis values to preserve the accuracy of the age of the patient (except for patients who were diagnosed at over 90 years old). Values such as <code>days_to_death</code> and <code>days_to_recurrence</code> should be compressed before <code>days_to_birth</code> is compressed.</p>
+<h3>Examples Timelines</h3>
+<p><strong>Example 1:</strong> An 88 year old patient is diagnosed with cancer and dies 13 years later.  The <code>days_to_birth</code> value is less than 32,872 days, so it can be accurately reported.  However, between the initial diagnosis and death, the patient turned 90 years old. Since 32,872 is the maximum, <code>days_to_death</code> would be calculated as 32872 - 32142 = 730.</p>
+<blockquote>
+<p><strong>Dates</strong></p>
+<ul>
+<li><em>Date of Birth:</em> 01-01-1900</li>
+<li><em>Date of Initial Diagnosis:</em> 01-01-1988</li>
+<li><em>Date of Death:</em> 01-01-2001</li>
+</ul>
+<p><strong>Actual-Values</strong></p>
+<ul>
+<li><em>days_to_birth:</em> -32142</li>
+<li><em>days_to_death:</em> 4748</li>
+</ul>
+<p><strong>Obfuscated-Values</strong></p>
+<ul>
+<li><em>days_to_birth:</em> -32142</li>
+<li><em>days_to_death:</em> 730</li>
+</ul>
+</blockquote>
+<p><strong>Example 2:</strong> A 98 year old patient is diagnosed with cancer and dies three years later.  Because <code>days_to_X</code> values are counted from initial diagnosis, days will be at their maximum value of 32,872 upon initial diagnosis. This will compress the later dates and reduce <code>days_to_birth</code> to -32,872 and <code>days_to_death</code> to zero.  </p>
+<blockquote>
+<p><strong>Dates</strong></p>
+<ul>
+<li><em>Date of Birth:</em> 01-01-1900</li>
+<li><em>Date of Initial Diagnosis:</em> 01-01-1998</li>
+<li><em>Date of Death:</em> 01-01-2001</li>
+</ul>
+<p><strong>Actual-Values</strong></p>
+<ul>
+<li><em>days_to_birth:</em> -35794</li>
+<li><em>days_to_death:</em> 1095</li>
+</ul>
+<p><strong>Obfuscated-Values</strong></p>
+<ul>
+<li><em>days_to_birth:</em> -32872</li>
+<li><em>days_to_death:</em> 0</li>
+</ul>
+</blockquote>
+<h2 id="Array Submission">Array Submission</h2>
+<p>Certain fields in the GDC, such as diagnosis.sites_of_involvement, are of type "array".  This allows multiple values to be submitted on one property. These values need to be uploaded in a <code>|</code>-delimited format. See the example below.  </p>
+<p><strong>Example:</strong> <code>"sites_of_involvement" : "Kidney, Upper Pole|Kidney, Middle"</code></p>
+<h2 id="Submitting Complex Data Model Relationships">Submitting Complex Data Model Relationships</h2>
+<p>The GDC Data Model includes relationships in which more than one entity of one type can be associated with one entity of another type. For example, more than one <code>read_group</code> entity can be associated with a <code>submitted_aligned_reads</code> entity. JSON-formatted files, in which a list object can be used, are well-suited to represent this type of relationship. Tab-delimited (TSV) files require additional syntax to demonstrate these relationships. For example, associating a <code>submitted_aligned_reads</code> entity to three read groups would require three <code>read_groups.submitter_id</code> columns, each with the <code>#</code> symbol and a number appended to them. See the two files below:</p>
+<pre><code class="language-TSV">type    submitter_id    data_category   data_format data_type   experimental_strategy   file_name   file_size   md5sum  read_groups.submitter_id#1 read_groups.submitter_id#2  read_groups.submitter_id#3
+submitted_aligned_reads Alignment.bam  Raw Sequencing Data BAM Aligned Reads   WGS test_alignment.bam    123456789  aa6e82d11ccd8452f813a15a6d84faf1    READ_GROUP_1  READ_GROUP_2  READ_GROUP_3  
+
+</code></pre>
+<pre><code class="language-JSON">{
+    "type": "submitted_aligned_reads",
+    "submitter_id": "Alignment.bam",
+    "data_category": "Raw Sequencing Data",
+    "data_format": "BAM",
+    "data_type": "Aligned Reads",
+    "experimental_strategy": "WGS",
+    "file_name": "test_alignment.bam",
+    "file_size": 123456789,
+    "md5sum": "aa6e82d11ccd8452f813a15a6d84faf1",
+    "read_groups": [
+        {"submitter_id": "READ_GROUP_1"},
+        {"submitter_id": "READ_GROUP_2"},
+        {"submitter_id": "READ_GROUP_3"}
+    ]
+}
+</code></pre>
+<h3>Read groups</h3>
+<h4>Submitting Read Group Names</h4>
+<p>The <code>read_group</code> entity requires a <code>read_group_name</code> field for submission.  If the <code>read_group</code> entity is associated with a BAM file, the submitter should use the <code>@RG</code> ID present in the BAM header as the <code>read_group_name</code>. This is important for the harmonization process and will reduce the possibility of errors.  </p>
+<h4>Multiple FASTQs from One Read Group</h4>
+<p>To align reads according to their direction and pair, the GDC requires that unaligned forward and reverse reads are submitted as "submitted_unaligned_reads."  When more than one FASTQ exists for a read group direction, the GDC requires that the FASTQ files are concatenated for each direction. In other words, each paired-end read group should be associated with exactly two FASTQ files (submitted_unaligned_reads).  </p>
+<h4>Minimal and Recommended Read Group Information</h4>
+<p>In addition to the required properties on <code>read_group</code> we also recommend submitting <code>flow_cell_barcode</code>, <code>lane_number</code> and <code>multiplex_barcode</code>.  This information can be used by our bioinformatics team and data downloaders to construct a <code>Platform Unit</code> (<code>PU</code>), which is a universally unique identifier that can be used to model various sequencing technical artifacts.  More information can be found in the <a href="https://github.com/samtools/hts-specs/blob/master/SAMv1.pdf">SAM specification PDF</a>.</p>
+<p>For projects with library strategies of targeted sequencing or WXS we also require information on the target capture protocol included on <code>target_capture_kit</code>.</p>
+<p>If this information is not provided it may cause a delay in the processing of submitted data.</p>
+<p>Additional read group information will benefit data users.  Such information can be used by bioinformatics pipelines and will aid understanding and mitigation of batch effects.  If available, you should also provide as many of the remaining read group properties as possible.</p>
+<h2 id="Submission File Quality Control">Submission File Quality Control</h2>
+<p>The GDC harmonization pipelines include multiple quality control steps to ensure the integrity of harmonized files and the efficient use of computational resources. For fastest turnaround of data processing we recommend that submitters perform basic QC of their data files prior to upload to identify any underlying data quality issues. This may include such tests as verifying expected genome coverage levels and sequencing quality.</p>
+<p>Except for <a href="https://docs.gdc.cancer.gov/Data_Submission_Portal/Users_Guide/Best_Practices/#mirna-submission">miRNA data</a> submission, sequencing data for all other experimental strategy types (i.e. whole exome sequencing, whole genome sequencing, targeted sequencing and mRNA sequencing) do not need to be trimmed by submitters prior to submission, as tools used in GDC alignment workflows are capable of handling adaptors and low quality bases correctly.</p>
+<h2 id="Target Capture Kit Q and A">Target Capture Kit Q and A</h2>
+<ol>
+<li>
+<p>What is a Target Capture Kit?<br/>
+Target capture kits contain reagents designed to enrich for and thus increase sequencing depth in certain genomic regions before library preparation. Two of the major methods to enrich genomic regions are by Hybridization and by PCR (Amplicon).</p>
+</li>
+<li>
+<p>Why do we need Target Capture Kit information?<br/>
+Target region information is important for DNA-Seq variant calling and filtering, and essential for Copy Number Alternation and other analyses. This information is only needed for the Experimental Strategies of WXS or Targeted Sequencing.</p>
+</li>
+<li>
+<p>How do submitters provide this information?<br/>
+There are 3 steps  </p>
+<ul>
+<li>Step 1. The submitter should contact GDC User Service about any new Target Capture Kits that do not already exist in the GDC Dictionary. The GDC Bioinformatics and User Services teams will work together with the submitter to create a meaningful name for the kit and import this name and Target Region Bed File into the GDC.</li>
+<li>Step 2. The submitter can then select one and only one GDC Target Capture Kit for each read group during molecular data submission.</li>
+<li>Step 3. The submitter should also select the appropriate <code>library_strategy</code> and <code>library_selection</code> on the read_group entity.</li>
+</ul>
+</li>
+<li>
+<p>What is a Target Region Bed File?<br/>
+A Target Region Bed File is tab-delimited file describing the kit target region in <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1">bed format</a>. The first 3 columns of such files are chrom, chromStart, and chromEnd.
+Note that by definition, bed files are 0-based or "left-open, right-closed", which means bed interval "chr1    10    20" only contains 10 bases on chr1, from the 11th to the 20th.
+In addition, submitters should also let GDC know the genome build (hg18, hg19 or GRCh38) of their bed files.</p>
+</li>
+<li>
+<p>Is a Target Capture Kit uniquely defined by its Target Region Bed File?<br/>
+Not necessarily. Sometimes, users or manufactures may want to augment an existing kit with additional probes, in order to capture more regions or simply improve the quality of existing regions. In the latter case, the bed file stays the same, but it is now a different Target Capture Kit and should be registered separately as described in Step 3 above.</p>
+</li>
+</ol>
+<h2 id="Specifying Tumor Normal Pairs for Analysis">Specifying Tumor Normal Pairs for Analysis</h2>
+<p>It is critical for many cancer bioinformatics pipelines to specify which normal sample to use to factor out germline variation.  In particular, this is a necessary specification for all tumor normal paired variant calling pipelines.  The following details describe how the GDC determines which normal sample to use for variant calling.</p>
+<ul>
+<li>Every tumor aliquot will be used for variant calling.  For example, if 10 WXS tumor aliquots are submitted, the GDC will produce 10 alignments and 10 VCFs for each variant calling pipeline.</li>
+<li>If there is only one normal we will use that normal for variant calling</li>
+<li>If there are multiple normals of the same experimental_strategy for a case:<ul>
+<li>Users can specify which normal to use by specifying on the aliquot.  To do so one of the following should be set to <code>TRUE</code> for the specified experimental strategy: <code>selected_normal_low_pass_wgs</code>, <code>selected_normal_targeted_sequencing</code>, <code>selected_normal_wgs</code>, or <code>selected_normal_wxs</code>.</li>
+<li>
+<p>Or if no normal is specified the GDC will select the best normal for that patient based on the following criteria.  This same logic will also be used if multiple normal are selected.</p>
+<ul>
+<li>
+<p>If a case has blood cancer we will use sample type in the following priority order:</p>
+<p>Blood Derived Normal &gt; Bone Marrow Normal &gt; Mononuclear Cells from Bone Marrow Normal &gt; Fibroblasts from Bone Marrow Normal &gt; Lymphoid Normal &gt; Buccal Cell Normal &gt; Solid Tissue Normal &gt; EBV Immortalized Normal</p>
+</li>
+<li>
+<p>If a case does not have blood cancer we will use sample type in the following priority order:</p>
+<p>Solid Tissue Normal &gt; Buccal Cell Normal &gt; Lymphoid Normal &gt; Fibroblasts from Bone Marrow Normal &gt; Mononuclear Cells from Bone Marrow Normal &gt; Bone Marrow Normal &gt; Blood Derived Normal &gt; EBV Immortalized Normal</p>
+</li>
+<li>
+<p>If there are still ties, we will choose the aliquot submitted first.</p>
+</li>
+<li>If there are no normals.<ul>
+<li>The GDC will not run tumor only variant calling pipeline by default.  The submitter must specify one of the following properties as TRUE: <code>no_matched_normal_low_pass_wgs</code>, <code>no_matched_normal_targeted_sequencing</code>, <code>no_matched_normal_wgs</code>, <code>no_matched_normal_wxs</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Note that we will only run variant calling for a particular tumor aliquot per experimental strategy once. You must make sure that the appropriate normal control is uploaded to the GDC when Requesting Submission. Uploading a different normal sample later will not result in reanalysis by the GDC.</p>
+<h2 id="Clinical Data Requirements">Clinical Data Requirements</h2>
+<p>For the GDC to release a project there is a minimum number of clinical properties that are required.  Minimal cross-project GDC requirements include age, gender, and diagnosis information.  Other requirements may be added when the submitter is approved for submission to the GDC.</p>
+<h2 id="miRNA Submission">miRNA Submission</h2>
+<p>The GDC requires that miRNA reads be adapter-trimmed before being uploaded to the GDC because miRNA datasets can have different trimming schemas. Uploading untrimmed miRNA reads will result in unusably low miRNA quantifications.  </p></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

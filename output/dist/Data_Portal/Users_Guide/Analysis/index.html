@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Getting_Started">Getting Started</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a></li><li class="main"><a href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a></li><ul><li><a href='#Generating a Cohort for Analysis'>Generating a Cohort for Analysis</a></li><li><a href='#Analysis Page'>Analysis Page</a></li><li><a href='#Analysis Page: Set Operations'>Analysis Page: Set Operations</a></li><li><a href='#Analysis Tab: Cohort Comparison'>Analysis Tab: Cohort Comparison</a></li><li><a href='#Analysis Tab: Clinical Data Analysis'>Analysis Tab: Clinical Data Analysis</a></li><li><a href='#Analysis Page: Results'>Analysis Page: Results</a></li></ul><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a></li><li class="inactive"><a href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   Analysis</h1><hr/>
+<p>In addition to the <a href="../Exploration">Exploration Page</a>, the GDC Data Portal also has features used to save and compare sets of cases, genes, and mutations. These sets can either be generated with existing filters (e.g. males with lung cancer) or through custom selection (e.g. a user-generated list of case IDs).</p>
+<p>Note that saving a set only saves the type of entity included in the set. For example, a saved case set will not include filters that were applied to genes or mutations. Please be aware that your custom sets are deleted during each new GDC data release. You can export them and re-upload them in the "Manage Sets" link at the top right of the Portal.</p>
+<h2 id="Generating a Cohort for Analysis">Generating a Cohort for Analysis</h2>
+<p>Cohort sets are completely customizable and can be generated for cases, genes, or mutations using the following methods:</p>
+<p><strong>Apply Filters in Exploration:</strong> Sets can be assembled using the existing filters in the Exploration page. They can be saved by choosing the "Save/Edit Case Set" button under the pie charts for case sets. This will prompt a decision to save as new case set. The same can be done for both gene and mutation filters, and can be applied and saved in the Genes and Mutations tab, respectively.</p>
+<p><a href="../images/GDC-ExplorationSet-Cohort_v2.png" title="Click to see the full image."><img alt="Exploration Set" src="../images/GDC-ExplorationSet-Cohort_v2.png"/></a></p>
+<p><strong>Upload ID Set:</strong> This feature is available in the "Manage Sets" link at the top right of the Portal. Choose "Upload Set" and then select whether the set comprises cases, genes, or mutations. A set of IDs or UUIDs can then be uploaded in a text file or copied and pasted into the list of identifiers field along with a name identifying the set. Once the list of identifiers is uploaded, the IDs are validated and grouped according to whether or not the identifier matched an existing GDC ID.</p>
+<p><a href="../images/GDC-UploadSet-Cohort_v2.png" title="Click to see the full image."><img alt="Upload Set" src="../images/GDC-UploadSet-Cohort_v2.png"/></a></p>
+<h3>Upload Case Set</h3>
+<p>In the <code>Cases</code> filters panel, instead of supplying cases one-by-one, users can supply a list of cases. Clicking on the <code>Upload Case Set</code> button will launch a dialog as shown below, where users can supply a list of cases or upload a comma-separated text file of cases.</p>
+<p><a href="../images/gdc-exploration-case-set.png" title="Click to see the full image."><img alt="Upload Case Set" src="../images/gdc-exploration-case-set.png"/></a></p>
+<p>After supplying a list of cases, a table below will appear which indicates whether the case was found.</p>
+<p><a href="../images/gdc-exploration-case-set-validation.png" title="Click to see the full image."><img alt="Upload Case Set Validation" src="../images/gdc-exploration-case-set-validation.png"/></a></p>
+<p>Clicking on <code>Submit</code> will filter the results in the Exploration Page by those cases.</p>
+<p><a href="../images/case-set-filter_v2.png" title="Click to see the full image."><img alt="Upload Case Set Results" src="../images/case-set-filter_v3.png"/></a></p>
+<h3>Upload Gene Set</h3>
+<p>In the <code>Genes</code> filters panel, instead of supplying genes one-by-one, users can supply a list of genes. Clicking on the <code>Upload Gene Set</code> button will launch a dialog as shown below, where users can supply a list of genes or upload a comma-separated text file of genes.</p>
+<p><a href="../images/Exploration-Upload-Gene-Set.png" title="Click to see the full image."><img alt="Upload Gene Set" src="../images/Exploration-Upload-Gene-Set.png"/></a></p>
+<p>After supplying a list of genes, a table below will appear which indicates whether the gene was found.</p>
+<p><a href="../images/Exploration-Upload-Gene-Set-Validation.png" title="Click to see the full image."><img alt="Upload Gene Set Validation" src="../images/Exploration-Upload-Gene-Set-Validation.png"/></a></p>
+<p>Clicking on <code>Submit</code> will filter the results in the Exploration Page by those genes.</p>
+<h3>Upload Mutation Set</h3>
+<p>In the <code>Mutations</code> filters panel, instead of supplying mutation id's one-by-one, users can supply a list of mutations. Clicking on the <code>Upload Mutation Set</code> button will launch a dialog as shown below, where users can supply a list of mutations or upload a comma-separated text file of mutations.</p>
+<p><a href="../images/gdc-exploration-mutation-set.png" title="Click to see the full image."><img alt="Upload Case Set" src="../images/gdc-exploration-mutation-set.png"/></a></p>
+<p>After supplying a list of mutations, a table below will appear which indicates whether the mutation was found.</p>
+<p><a href="../images/gdc-exploration-mutation-set-validation.png" title="Click to see the full image."><img alt="Upload Case Set Validation" src="../images/gdc-exploration-mutation-set-validation.png"/></a></p>
+<p>Clicking on <code>Submit</code> will filter the results in the Exploration Page by those mutations.</p>
+<p><a href="../images/mutation-set-filter_v2.png" title="Click to see the full image."><img alt="Upload Case Set Results" src="../images/mutation-set-filter_v2.png"/></a></p>
+<h2 id="Analysis Page">Analysis Page</h2>
+<p>Clicking on the <code>Analysis</code> button in the top toolbar will launch the Analysis Page which displays the various options available for comparing saved sets.</p>
+<p><a href="../images/GDC-Analysis-Tab_v2.png" title="Click to see the full image."><img alt="Analysis Tab" src="../images/GDC-Analysis-Tab_v2.png"/></a></p>
+<p>There are three tabs on this page:</p>
+<ul>
+<li><strong>Launch Analysis</strong>: Where users can select either to do <code>Set Operations</code>, <code>Cohort Comparison</code> or <code>Clinical Data Analysis</code>.</li>
+<li><strong>Results</strong>: Where users can view the results of current or previous set analyses.</li>
+</ul>
+<h2 id="Analysis Page: Set Operations">Analysis Page: Set Operations</h2>
+<p>Up to three sets of the same set type can be compared and exported based on complex overlapping subsets. The features of this page include:</p>
+<p><a href="../images/GDC-SetOpsFull-Cohort.png" title="Click to see the full image."><img alt="Set Operations" src="../images/GDC-SetOpsFull-Cohort.png"/></a></p>
+<ul>
+<li>
+<p><strong>Venn Diagram:</strong> Visually displays the overlapping items included within the three sets. Subsets based on overlap can be selected by clicking one or many sections of the Venn diagram. As sections of the Venn Diagram become highlighted in blue, their corresponding row in the overlap table becomes highlighted.</p>
+</li>
+<li>
+<p><strong>Summary Table:</strong> Displays the alias, item type, and name for each set included in this analysis.</p>
+</li>
+<li>
+<p><strong>Overlap Table:</strong> Displays the number of overlapping items with set operations rather than a visual diagram. Subsets can be selected by checking boxes in the "Select" column, which will highlight the corresponding section of the Venn Diagram. As rows are selected, the "Union of selected sets" row is populated. Each row has an option to save the subset as a new set, export the set as a TSV, or view files in the repository. The links that correspond to the number of items in each row will open the cohort in the Exploration Page.</p>
+</li>
+</ul>
+<h2 id="Analysis Tab: Cohort Comparison">Analysis Tab: Cohort Comparison</h2>
+<p>The "Cohort Comparison" analysis displays a series of graphs and tables that demonstrate the similarities and differences between two case sets. The following features are displayed for each two sets:</p>
+<ul>
+<li>
+<p>A key detailing the number of cases in each cohort and the color that represents each (blue/gold).</p>
+</li>
+<li>
+<p>A Venn diagram, which shows the overlap between the two cohorts. The Venn diagram can be opened in a 'Set Operations' tab by choosing "Open Venn diagram in new tab".</p>
+</li>
+<li>
+<p>A selectable <a href="Exploration.md#survival-analysis">survival plot</a> that compares both sets with information about the percentage of represented cases.</p>
+</li>
+</ul>
+<p><a href="../images/GDC-Cohort-Comparison-Top_v2.png" title="Click to see the full image."><img alt="Top Cohort" src="../images/GDC-Cohort-Comparison-Top_v2.png"/></a></p>
+<ul>
+<li>A breakdown of each cohort by selectable clinical facets with a bar graph and table. Facets include <code>vital_status</code>, <code>gender</code>, <code>race</code>, <code>ethnicity</code>, and <code>age_at_diagnosis</code>. A p-value (if it can be calculated from the data) that demonstrates whether the statuses are proportionally represented is displayed for the <code>vital_status</code>, <code>gender</code>, and <code>ethnicity</code> facets.</li>
+</ul>
+<p><a href="../images/GDC-Clinical-Cohort_v2.png" title="Click to see the full image."><img alt="Clinical Cohort" src="../images/GDC-Clinical-Cohort_v2.png"/></a></p>
+<h2 id="Analysis Tab: Clinical Data Analysis">Analysis Tab: Clinical Data Analysis</h2>
+<p>The "Clinical Data Analysis" feature allows users to specifically examine the clinical data of a single case set in more detail. Users can select which clinical fields they want to display and visualize the data using various supported plot types. The clinical analysis features include:</p>
+<ul>
+<li>Ability to select which clinical fields to display</li>
+<li>Examine the clinical data of each field using these visualizations:</li>
+<li>Histogram</li>
+<li>Survival Plot</li>
+<li>Box Plot</li>
+<li>QQ Plot</li>
+<li>Create custom bins for each field and re-visualize the data with those bins</li>
+<li>Select specific cases from a clinical field and use them to create a new set, or modify/remove from an existing set</li>
+<li>Download the visualizations of each plot type for each variable in SVG, PNG, JSON formats</li>
+<li>Download the data table of each field in TSV format</li>
+<li>Print all clinical variable cards in the analysis with their active plot to a single PDF</li>
+</ul>
+<h3>Selecting a Case Set</h3>
+<p>First, a case set must be selected to run the clinical analysis on:</p>
+<p><a href="../images/GDC-Select-Clinical-Cohort.png" title="Click to see the full image."><img alt="Select Clinical Cohort" src="../images/GDC-Select-Clinical-Cohort.png"/></a></p>
+<p>Click <strong>'Run'</strong> - The results page loads with a new tab for the new clinical analysis for the selected set:</p>
+<p><a href="../images/GDC-Load-Clinical-Analysis.png" title="Click to see the full image."><img alt="Select Clinical Cohort" src="../images/GDC-Load-Clinical-Analysis.png"/></a></p>
+<h3>Enabling Clinical Variable Cards</h3>
+<p>Users can use the control panel on the left side of the analysis to display which clinical variables they want. To enable or disable specific variables for display, click the on/off toggle controls:</p>
+<p><a href="../images/GDC-Enable-Clinical-Cards.png" title="Click to see the full image."><img alt="Enable Clinical Cards" src="../images/GDC-Enable-Clinical-Cards.png"/></a></p>
+<p>The clinical fields are grouped into these categories:</p>
+<ul>
+<li><strong>Demographic:</strong> Data for the characterization of the patient by means of segmenting the population (e.g. characterization by age, sex, race, etc.).</li>
+<li><strong>Diagnoses:</strong> Data from the investigation, analysis, and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.</li>
+<li><strong>Treatments:</strong> Records of the administration and intention of therapeutic agents provided to a patient to alter the course of a pathologic process.</li>
+<li><strong>Exposures:</strong> Clinically-relevant patient information not immediately resulting from genetic predispositions.</li>
+</ul>
+<p>Since the list of fields can be long, users can collapse and expand the field list for each clinical category for easier browsing, or use the search box:</p>
+<p><a href="../images/GDC-Search-Clinical-Fields.png" title="Click to see the full image."><img alt="Search Clinical Fields" src="../images/GDC-Search-Clinical-Fields.png"/></a></p>
+<h3>Exploring Clinical Card Visualizations</h3>
+<p>Users can explore different visualizations for each clinical field they have enabled for display. Each card supports theses plot types:</p>
+<ul>
+<li>Histogram</li>
+<li>Survival Plot</li>
+<li>Box Plot &amp; QQ Plot (these plots are visualized side-by-side)</li>
+</ul>
+<p>To switch between plot types, click the different plot type icons in the top-right of each card.</p>
+<h4>Histogram</h4>
+<p>The histogram plot type suppports these features:</p>
+<ul>
+<li>View the distribution of cases (# and % of cases) in the cohort for the clinical field's data categories as a histogram</li>
+<li>View the distribution of cases in tabular format</li>
+<li>Select the cases for specific data categories to create new sets, append to existing sets, or remove from existing sets</li>
+<li>Download the histogram visualization in SVG or PNG format</li>
+<li>Download the raw data used to generate the histogram in JSON format</li>
+</ul>
+<p><a href="../images/GDC-Clinical-Analysis-Histogram.png" title="Click to see the full image."><img alt="Clinical Analysis Histogram" src="../images/GDC-Clinical-Analysis-Histogram.png"/></a></p>
+<p>Note that the histogram plot applies to, and can be displayed for, both categorical and continuous variables.</p>
+<h4>Survival Plot</h4>
+<p>The survival plot type supports these features:</p>
+<ul>
+<li>View the distribution of cases (# and % of cases) in the cohort for the clinical field's data categories as a table</li>
+<li>Select and plot the survival analysis for the cases of specific data categories in the table:</li>
+<li>By default the top 2 categories (highest # of cases) are displayed</li>
+<li>Users can manually select and plot up to 5 categories at a time</li>
+<li>Download the survival plot visualization in SVG or PNG format</li>
+<li>Download the raw data used to generate the survival plot in JSON or TSV format</li>
+</ul>
+<p><a href="../images/GDC-Clinical-Analysis-Survival-Plot.png" title="Click to see the full image."><img alt="Clinical Analysis Survival Plot" src="../images/GDC-Clinical-Analysis-Survival-Plot.png"/></a></p>
+<p>Note that the survival plot applies to, and can be displayed for, both categorical and continuous variables.</p>
+<h4>Box Plot &amp; QQ Plot</h4>
+<p>The box plot and QQ plot are displayed side-by-side in the same visualization. This visualization supports these features:</p>
+<ul>
+<li>View standard summary statistics for the clinical field's data across the cohort as both a box plot visualization and a data table:</li>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Mean</li>
+<li>Median</li>
+<li>Standard Deviation</li>
+<li>Interquartile Range (IQR)</li>
+<li>View a QQ plot visualization to explore whether the clinical field's data across the cohort is normally distributed, where:</li>
+<li>The clinical data values are plotted as the sample quantiles on the vertical axis</li>
+<li>The the quantiles of the normal distribution are plotted on the horizontal axis</li>
+<li>Download the box plot and QQ plot visualizations in SVG or PNG format</li>
+<li>Download the raw data used to generate the QQ plot in JSON or TSV format</li>
+</ul>
+<p><a href="../images/GDC-Clinical-Analysis-Box-And-QQ-Plots.png" title="Click to see the full image."><img alt="Clinical Analysis Box &amp; QQ Plots" src="../images/GDC-Clinical-Analysis-Box-And-QQ-Plots.png"/></a></p>
+<p>Note that the box plot and QQ plot only apply to continuous variables. They cannot be displayed for categorical variables.</p>
+<h3>Creating Custom Bins</h3>
+<p>For each clinical variable, whether categorical or continuous, users can create custom bins to group the data in ways they find scientifically interesting or significant. Once saved, the bins are applied to these visualizations and they are then re-rendered:</p>
+<ul>
+<li>Histogram and associated data table</li>
+<li>Survival plot and associated data table</li>
+</ul>
+<p>Custom bins can be reset to their defaults at any time for each card. Note that custom bins are <strong>saved per analysis</strong>.</p>
+<h4>Categorical Binning</h4>
+<p>To create custom bins for a categorical variable, click <em><strong>Customize Bins</strong></em>, then <em><strong>Edit Bins</strong></em>. A configuration window appears where the user can create their bins:</p>
+<p><a href="../images/GDC-Clinical-Analysis-Categorical-Bins.png" title="Click to see the full image."><img alt="Clinical Analysis Categorical Bins" src="../images/GDC-Clinical-Analysis-Categorical-Bins.png"/></a></p>
+<p>The user can:</p>
+<ul>
+<li>Group existing individual values into a single group</li>
+<li>Give a custom name to each group</li>
+<li>Ungroup previously grouped values</li>
+<li>Completely hide values from being shown in the visualization</li>
+<li>Re-show previously hidden values</li>
+</ul>
+<h4>Continuous Binning</h4>
+<p>To create custom bins for a continuous variable, click <em><strong>Customize Bins</strong></em>, then <em><strong>Edit Bins</strong></em>. A configuration window appears where the user can create their bins:</p>
+<p><a href="../images/GDC-Clinical-Analysis-Continuous-Bins.png" title="Click to see the full image."><img alt="Clinical Analysis Continuous Bins" src="../images/GDC-Clinical-Analysis-Continuous-Bins.png"/></a></p>
+<p>The user can choose one of these continuous binning methods:</p>
+<ul>
+<li>(1) Create equi-distant bins based on a set interval:</li>
+<li>User must choose the interval (e.g. equi-distant bins of 1,825 days for the Age of Diagnosis field)</li>
+<li>User can optionally define the starting and ending value between which the equi-distant bins will be created</li>
+<li>(2) Create completely custom ranges:</li>
+<li>User manually enters 1 or more bins with custom ranges</li>
+<li>User must enter a name for each range and the start and end values</li>
+<li>The ranges can be of different interval lengths</li>
+</ul>
+<p>Before saving the bins, if there are errors in the configuration, the user will be notified to correct them and try saving again. For example:</p>
+<p><a href="../images/GDC-Clinical-Analysis-Continuous-Bins-Error-Example1.png" title="Click to see the full image."><img alt="Clinical Analysis Continuous Bins Error Example 1" src="../images/GDC-Clinical-Analysis-Continuous-Bins-Error-Example1.png"/></a></p>
+<p><a href="../images/GDC-Clinical-Analysis-Continuous-Bins-Error-Example2.png" title="Click to see the full image."><img alt="Clinical Analysis Continuous Bins Error Example 2" src="../images/GDC-Clinical-Analysis-Continuous-Bins-Error-Example2.png"/></a></p>
+<h3>Other Useful Functions</h3>
+<p>Clinical Analysis also provides these additional useful functions:</p>
+<ul>
+<li>Like other analysis types, all Clinical Analysis tabs are saved to the browser's local storage:</li>
+<li>Each Analysis tab and its associated configurations (active cards, active plots, custom bins) is saved and is not deleted until local storage is cleared</li>
+<li>The currently-enabled clinical cards and their currently-selected plot types are <strong>saved per analysis</strong></li>
+<li>Custom bins are <strong>saved per analysis</strong></li>
+<li>Switch the current set that the analysis applies to - This does the following:</li>
+<li>Applies all currently-enabled clinical cards and their currently-selected plot types to the data in the set being switched to</li>
+<li>Re-renders all active visualizations to reflect the data in the set being switched to</li>
+<li>Rename your analysis with a custom name</li>
+<li>Copy your current analysis to a new analysis:</li>
+<li>User is prompted to name the new copy</li>
+<li>All currently-enabled clinical cards and their currently-selected plot types are copied to the new analysis</li>
+<li>A new vertical tab appears on the left for the new copy</li>
+<li>Print the current analysis to PDF format:</li>
+<li>All currently-enabled clinical cards and their currently-selected plot types are printed</li>
+<li>3 cards per page, with the fixed Overall Survival Plot displayed as the first card in the entire file</li>
+</ul>
+<h2 id="Analysis Page: Results">Analysis Page: Results</h2>
+<p>The results of the previous analyses are displayed on this page.</p>
+<p><a href="../images/gdc-analysis-resultstab_v2.png" title="Click to see the full image."><img alt="Results" src="../images/gdc-analysis-resultstab_v2.png"/></a></p>
+<p>Each tab at the left side of the page is labeled according to the analysis type and the date that the analysis was performed and can be reviewed as long as it is present. The "Delete All" button will remove all of the previous analyses.</p></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

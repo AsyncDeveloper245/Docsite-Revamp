@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bioinformatics Pipeline: DNA-Seq Analysis</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/Data/Introduction">Introduction</a></li><li class="inactive"><a href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a></li><li class="inactive"><a href="/output/dist/Data/Data_Security/Data_Security">Data Security</a></li><li class="inactive"><a href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a></li><li class="inactive"><a href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a></li><li class="main"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a></li><ul><li><a href='#Introduction'>Introduction</a></li><li><a href='#Data Processing Steps'>Data Processing Steps</a></li><li><a href='#Microsatellite Instability Detection'>Microsatellite Instability Detection</a></li><li><a href='#File Access and Availability'>File Access and Availability</a></li></ul><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a></li><li class="inactive"><a href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/Data/PDF/Data_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   DNA-Seq Analysis Pipeline</h1><hr/>
+<h2 id="Introduction">Introduction</h2>
+<p>The GDC DNA-Seq analysis pipeline identifies somatic variants within whole exome sequencing (WXS) and whole genome sequencing (WGS) data. Somatic variants are identified by comparing allele frequencies in normal and tumor sample alignments, annotating each mutation, and aggregating mutations from multiple cases into one project file.</p>
+<p>The first pipeline starts with a reference alignment step followed by co-cleaning to increase the alignment quality. Four different variant calling pipelines are then implemented separately to identify somatic mutations. Somatic-caller-identified variants are then annotated. An aggregation pipeline incorporates variants from all cases in one project into a MAF file for each pipeline.</p>
+<p>DNA-Seq analysis is implemented across six main procedures:</p>
+<ul>
+<li>Genome Alignment</li>
+<li>Alignment Co-Cleaning</li>
+<li>Somatic Variant Calling</li>
+<li>Variant Annotation</li>
+<li>Mutation Aggregation</li>
+<li>Aggregated Mutation Masking</li>
+</ul>
+<h2 id="Data Processing Steps">Data Processing Steps</h2>
+<h3>Pre-Alignment</h3>
+<p>Prior to alignment, BAM files that were submitted to the GDC are split by read groups and converted to FASTQ format. Reads that failed the Illumina chastity test are removed. Note that this filtering step is distinct from trimming reads using base quality scores.</p>
+<h3>Alignment Workflow</h3>
+<p>DNA-Seq analysis begins with the <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=alignment_workflow">Alignment Workflow</a>. Read groups are aligned to the reference genome using one of two <a href="http://bio-bwa.sourceforge.net">BWA</a> algorithms <a href="http://www.ncbi.nlm.nih.gov/pubmed/19451168">[1]</a>. BWA-MEM is used if mean read length is greater than or equal to 70 bp. Otherwise BWA-aln is used.
+Each read group is aligned to the reference genome separately and all read group alignments that belong to a single aliquot are merged using <a href="http://broadinstitute.github.io/picard">Picard Tools</a> <a href="https://broadinstitute.github.io/picard/command-line-overview.html#SortSam">SortSam</a> and <a href="https://broadinstitute.github.io/picard/command-line-overview.html#MergeSamFiles">MergeSamFiles</a>. Duplicate reads, which may persist as PCR artifacts, are then flagged to prevent downstream variant call errors.</p>
+<h4>Reference Genome</h4>
+<p>All alignments are performed using the human reference genome GRCh38.d1.vd1. Decoy viral sequences are included in the reference genome to prevent reads from aligning erroneously and attract reads from viruses known to be present in human samples. Ten types of human viral genomes are included: human cytomegalovirus (CMV), Epstein-Barr virus (EBV), hepatitis B (HBV), hepatitis C (HCV), human immunodeficiency virus (HIV), human herpes virus 8 (HHV-8), human T-lymphotropic virus 1 (HTLV-1), Merkel cell polyomavirus (MCV), Simian vacuolating virus 40 (SV40), and human papillomavirus (HPV). Reference sequences used by the GDC can be downloaded <a href="https://gdc.cancer.gov/download-gdc-reference-files">here</a>.</p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=submitted_unaligned_reads">Submitted Unaligned Reads</a> or <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=submitted_aligned_reads">Submitted Aligned Reads</a></td>
+<td>FASTQ or BAM</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aligned_reads">Aligned Reads</a></td>
+<td>BAM</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="DNA-Seq Alignment Pipeline" src="images/dna-alignment-pipeline_1.png"/></p>
+<h3>DNA-Seq Alignment Command Line Parameters</h3>
+<p><strong>Note that version numbers may vary in files downloaded from the GDC Portal due to ongoing pipeline development and improvement.</strong></p>
+<h4>Step 1: Converting BAMs to FASTQs with Biobambam - biobambam2</h4>
+<pre><code class="language-Shell">bamtofastq \
+collate=1 \
+exclude=QCFAIL,SECONDARY,SUPPLEMENTARY \
+filename= &lt;input.bam&gt; \
+gz=1 \
+inputformat=bam \
+level=5 \
+outputdir= &lt;output_path&gt; \
+outputperreadgroup=1 \
+outputperreadgroupsuffixF=_1.fq.gz \
+outputperreadgroupsuffixF2=_2.fq.gz \
+outputperreadgroupsuffixO=_o1.fq.gz \
+outputperreadgroupsuffixO2=_o2.fq.gz \
+outputperreadgroupsuffixS=_s.fq.gz \
+tryoq=1 \
+</code></pre>
+<h4>Step 2: BWA Alignment - bwa - samtools</h4>
+<p>If mean read length is greater than or equal to 70bp:</p>
+<pre><code class="language-Shell">bwa mem \
+-t 8 \
+-T 0 \
+-R &lt;read_group&gt; \
+&lt;reference&gt; \
+&lt;fastq_1.fq.gz&gt; \
+&lt;fastq_2.fq.gz&gt; |
+samtools view \
+-Shb
+-o &lt;output.bam&gt; -
+</code></pre>
+<p>If mean read length is less than 70bp:</p>
+<pre><code class="language-Shell">bwa aln -t 8 &lt;reference&gt; &lt;fastq_1.fq.gz&gt; &gt; &lt;sai_1.sai&gt; &amp;&amp;
+bwa aln -t 8 &lt;reference&gt; &lt;fastq_2.fq.gz&gt; &gt; &lt;sai_2.sai&gt; &amp;&amp;
+bwa sampe -r &lt;read_group&gt; &lt;reference&gt; &lt;sai_1.sai&gt; &lt;sai_2.sai&gt; &lt;fastq_1.fq.gz&gt; &lt;fastq_2.fq.gz&gt; | samtools view -Shb -o &lt;output.bam&gt; -
+</code></pre>
+<p>If the quality scores are encoded as Illumina 1.3 or 1.5, use BWA aln with the "-l" flag.  </p>
+<h4>Step 3: BAM Sort - picard 2</h4>
+<pre><code class="language-Shell">java -jar picard.jar SortSam \
+CREATE_INDEX=true \
+INPUT=&lt;input.bam&gt; \
+OUTPUT=&lt;output.bam&gt; \
+SORT_ORDER=coordinate \
+VALIDATION_STRINGENCY=STRICT
+</code></pre>
+<h4>Step 4: BAM Merge - picard 2</h4>
+<pre><code class="language-Shell">java -jar picard.jar MergeSamFiles \
+ASSUME_SORTED=false \
+CREATE_INDEX=true \                 
+[INPUT= &lt;input.bam&gt;]  \
+MERGE_SEQUENCE_DICTIONARIES=false \
+OUTPUT= &lt;output_path&gt; \
+SORT_ORDER=coordinate \
+USE_THREADING=true \
+VALIDATION_STRINGENCY=STRICT
+</code></pre>
+<h4>Step 5: Mark Duplicates - picard 2</h4>
+<pre><code class="language-Shell">java -jar picard.jar MarkDuplicates \
+CREATE_INDEX=true \
+INPUT=&lt;input.bam&gt; \
+VALIDATION_STRINGENCY=STRICT
+</code></pre>
+<h3>Co-cleaning Workflow</h3>
+<p>The alignment quality is further improved by the <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=alignment_cocleaning_workflow">Co-cleaning workflow</a>. Co-cleaning is performed as a separate pipeline as it uses multiple BAM files (i.e. the tumor BAM and normal tissue BAM) associated with the same patient. Both steps of this process are implemented using <a href="https://software.broadinstitute.org/gatk/">GATK</a>.  </p>
+<h4>Indel Local Realignment</h4>
+<p>Local realignment of insertions and deletions is performed using <a href="https://software.broadinstitute.org/gatk/documentation/tooldocs/3.8-0/org_broadinstitute_gatk_tools_walkers_indels_IndelRealigner.php">IndelRealigner</a>. This step locates regions that contain misalignments across BAM files, which can often be caused by insertion-deletion (indel) mutations with respect to the reference genome. Misalignment of indel mutations, which can often be erroneously scored as substitutions, reduces the accuracy of downstream variant calling steps.</p>
+<h4>Base Quality Score Recalibration</h4>
+<p>A base quality score recalibration (BQSR) step is then performed using  <a href="https://software.broadinstitute.org/gatk/documentation/tooldocs/3.8-0/org_broadinstitute_gatk_tools_walkers_bqsr_BaseRecalibrator.php">BaseRecalibrator</a>. This step adjusts base quality scores based on detectable and systematic errors. This step also increases the accuracy of downstream variant calling algorithms. Note that the original quality scores are kept in the OQ field of co-cleaned BAM files. These scores should be used if conversion of BAM files to FASTQ format is desired.</p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aligned_reads">Aligned Reads</a></td>
+<td>BAM</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Harmonized Aligned Reads</td>
+<td>BAM</td>
+</tr>
+</tbody>
+</table>
+<h3>DNA-Seq Co-Cleaning Command Line Parameters</h3>
+<h4><strong>Step 1:</strong> RealignTargetCreator</h4>
+<pre><code class="language-Shell">java -jar GenomeAnalysisTK.jar \
+-T RealignerTargetCreator \
+-R &lt;reference&gt;
+-known &lt;known_indels.vcf&gt;
+[ -I &lt;input.bam&gt; ]
+-o &lt;realign_target.intervals&gt;
+</code></pre>
+<h4><strong>Step 2:</strong> IndelRealigner</h4>
+<pre><code class="language-Shell">java -jar GenomeAnalysisTK.jar \
+-T IndelRealigner \
+-R &lt;reference&gt; \
+-known &lt;known_indels.vcf&gt; \
+-targetIntervals &lt;realign_target.intervals&gt; \
+--noOriginalAlignmentTags \
+[ -I &lt;input.bam&gt; ] \
+-nWayOut &lt;output.map&gt;
+</code></pre>
+<h4><strong>Step 3:</strong> BaseRecalibrator; dbSNP v.144</h4>
+<pre><code class="language-Shell">java -jar GenomeAnalysisTK.jar \
+-T BaseRecalibrator \
+-R &lt;reference&gt; \
+-I &lt;input.bam&gt; \
+-knownSites &lt;dbsnp.vcf&gt;
+-o &lt;bqsr.grp&gt;
+</code></pre>
+<h4><strong>Step 4:</strong> PrintReads</h4>
+<pre><code class="language-Shell">java -jar GenomeAnalysisTK.jar \
+-T PrintReads \
+-R &lt;reference&gt; \
+-I &lt;input.bam&gt; \
+--BQSR &lt;bqsr.grp&gt; \
+-o &lt;output.bam&gt;
+</code></pre>
+<h3>Somatic Variant Calling Workflow</h3>
+<p>Aligned and co-cleaned BAM files are processed through the <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=somatic_mutation_calling_workflow">Somatic Mutation Calling Workflow</a> as tumor-normal pairs. Variant calling is performed using five separate pipelines:</p>
+<ul>
+<li><a href="http://bioinformatics.mdanderson.org/main/MuSE">MuSE</a> <a href="http://www.biorxiv.org/content/early/2016/05/25/055467.abstract">[2]</a></li>
+<li><a href="https://gatkforums.broadinstitute.org/gatk/discussion/9183/how-to-call-somatic-snvs-and-indels-using-mutect2">MuTect2</a> <a href="http://www.nature.com/nbt/journal/v31/n3/abs/nbt.2514.html">[3]</a> </li>
+<li><a href="http://dkoboldt.github.io/varscan/">VarScan2</a> <a href="http://genome.cshlp.org/content/22/3/568.short">[4]</a></li>
+<li><a href="http://gmt.genome.wustl.edu/packages/somatic-sniper/">SomaticSniper</a> <a href="http://bioinformatics.oxfordjournals.org/content/28/3/311.short">[5]</a></li>
+<li><a href="https://github.com/ucscCancer/pindel-tool">Pindel</a></li>
+</ul>
+<p>Variant calls are reported by each pipeline in a VCF formatted file. See the GDC <a href="../File_Formats/VCF_Format/">VCF Format</a> documentation for details on each available field. At this point in the DNA-Seq pipeline, all downstream analyses are branched into four separate paths that correspond to their respective variant calling pipeline.</p>
+<h4>Pipeline Descriptions</h4>
+<p>Five separate variant calling pipelines are implemented for GDC data harmonization. There is currently no scientific consensus on the best variant calling pipeline so the investigator is responsible for choosing the pipeline(s) most appropriate for the data. Some details about the pipelines are indicated below.</p>
+<p>The <a href="https://gdc.cancer.gov/files/public/image/Broad_MuTect_0.png">MuTect2 pipeline</a> employs a "Panel of Normals" to identify additional germline mutations. This panel is generated using TCGA blood normal genomes from thousands of individuals that were curated and confidently assessed to be cancer-free. This method allows for a higher level of confidence to be assigned to somatic variants that were called by the MuTect2 pipeline.</p>
+<p>Basic outlines for the other three of the pipelines can be found here:</p>
+<ul>
+<li><a href="https://gdc.cancer.gov/files/public/image/varscan-somatic-variant-calling-pipeline.png">VarScan2 pipeline</a></li>
+<li><a href="https://gdc.cancer.gov/files/public/image/muse-somatic-variant-calling-pipeline.png">MuSE pipeline</a> </li>
+<li><a href="https://gdc.cancer.gov/files/public/image/somaticsniper-variant-calling-pipeline.png">SomaticSniper pipeline</a></li>
+</ul>
+<h4>Indels</h4>
+<p>Indel mutations that were generated with the MuTect2, Pindel, and VarScan pipelinesd are detected and reported in GDC VCF files.</p>
+<h4>Germline Variants</h4>
+<p>At this time, germline variants are deliberately excluded as harmonized data. The GDC does not recommend using germline variants that were previously detected and stored in the Legacy Archive as they do not meet the GDC criteria for high-quality data.  </p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aligned_reads">Aligned Reads</a></td>
+<td>BAM</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=simple_somatic_mutation">Raw Simple Somatic Mutation</a></td>
+<td>VCF</td>
+</tr>
+</tbody>
+</table>
+<h3>Variant Call Command-Line Parameters</h3>
+<h4>MuSE</h4>
+<p>MuSEv1.0; dbSNP v.144</p>
+<p><strong>Step 1:</strong> MuSE call</p>
+<pre><code class="language-Shell">MuSE call \
+-f &lt;reference&gt; \
+-r &lt;region&gt; \                                   
+&lt;tumor.bam&gt; \
+&lt;normal.bam&gt; \
+-O &lt;intermediate_muse_call.txt&gt;
+</code></pre>
+<p><strong>Step 2:</strong> MuSE sump</p>
+<pre><code class="language-Shell">MuSE sump \
+-I &lt;intermediate_muse_call.txt&gt; \                           
+-E \                                
+-D &lt;dbsnp_known_snp_sites.vcf&gt; \
+-O &lt;muse_variants.vcf&gt;  
+</code></pre>
+<p><strong>Note:</strong> -E is used for WXS data and -G can be used for WGS data.  </p>
+<h4>MuTect2</h4>
+<p>GATK; dbSNP v.144</p>
+<pre><code class="language-Shell">java -jar GenomeAnalysisTK.jar \
+-T MuTect2 \
+-R &lt;reference&gt; \
+-L &lt;region&gt; \
+-I:tumor &lt;tumor.bam&gt; \
+-I:normal &lt;normal.bam&gt; \
+--normal_panel &lt;pon.vcf&gt; \                        
+--cosmic &lt;cosmic.vcf&gt; \
+--dbsnp &lt;dbsnp.vcf&gt; \
+--contamination_fraction_to_filter 0.02 \                   
+-o &lt;mutect_variants.vcf&gt; \
+--output_mode EMIT_VARIANTS_ONLY \
+--disable_auto_index_creation_and_locking_when_reading_rods
+</code></pre>
+<h4>SomaticSniper</h4>
+<p>Somatic-sniper v1</p>
+<pre><code class="language-Shell">bam-somaticsniper \
+-q 1 \
+-L \
+-G \
+-Q 15 \
+-s 0.01 \
+-T 0.85 \
+-N 2 \
+-r 0.001 \
+-n NORMAL \
+-t TUMOR \
+-F vcf \
+-f ref.fa \
+&lt;tumor.bam&gt; \
+&lt;normal.bam&gt; \
+&lt;somaticsniper_variants.vcf&gt;
+</code></pre>
+<h4>VarScan</h4>
+<p><strong>Step 1:</strong> Mpileup; Samtools</p>
+<pre><code class="language-Shell">samtools mpileup \
+-f &lt;reference&gt; \
+-q 1 \
+-B \
+&lt;normal.bam&gt; \
+&lt;tumor.bam&gt; &gt;
+&lt;intermediate_mpileup.pileup&gt;
+</code></pre>
+<p><strong>Step 2:</strong> Varscan Somatic; Varscan.v2</p>
+<pre><code class="language-Shell">java -jar VarScan.jar somatic \
+&lt;intermediate_mpileup.pileup&gt; \
+&lt;output_path&gt; \
+--mpileup      1 \
+--min-coverage 8 \
+--min-coverage-normal 8 \
+--min-coverage-tumor 6 \
+--min-var-freq 0.10 \
+--min-freq-for-hom 0.75 \
+--normal-purity 1.0 \
+--tumor-purity 1.00 \
+--p-value 0.99 \
+--somatic-p-value 0.05 \
+--strand-filter 0 \
+--output-vcf
+</code></pre>
+<p><strong>Step 3:</strong> Varscan ProcessSomatic; Varscan.v2</p>
+<pre><code class="language-Shell">java -jar VarScan.jar processSomatic \
+&lt;intermediate_varscan_somatic.vcf&gt; \
+--min-tumor-freq 0.10 \
+--max-normal-freq 0.05 \
+--p-value 0.07
+</code></pre>
+<h4>Pindel</h4>
+<p><strong>Step 1:</strong> Filter Reads</p>
+<p>Filter BAM reads that are not unmapped or duplicate or secondary_alignment or failed_quality_control or supplementary for both tumor and normal BAM files</p>
+<p>Tool: sambamba</p>
+<pre><code class="language-Shell">Sambamba view $(input.bam) --filter "not (unmapped or duplicate or secondary_alignment or failed_quality_control or supplementary)" --format bam --nthreads 1 --output-filename $(output.bam)
+</code></pre>
+<p><strong>Step 2:</strong> Pindel</p>
+<p><a href="https://github.com/genome/pindel/releases/tag/v0.2.5b8">Pindel Repo</a></p>
+<p><strong>Step 2a.:</strong> Calculate mean insert size</p>
+<pre><code class="language-Python">cmd = "samtools view -f66 %s | head -n 1000000" % (bam)
+output = do_shell_command(cmd)
+lines = output.decode('utf-8').split('\n')
+b_sum = 0
+b_count = 0
+numlines = 0
+for line in lines:
+    numlines += 1
+    tmp = line.split("\t")
+    if len(tmp) &lt; 9:
+        break
+    if abs(int(tmp[8])) &lt; 10000:
+        b_sum += abs(int(tmp[8]))
+        b_count += 1
+try:
+    mean = b_sum / b_count
+</code></pre>
+<p><strong>Step 2b.:</strong> Write it to a config file</p>
+<pre><code class="language-Python">for inputBamFile, meanInsertSize, tag in zip(inputBamFiles, meanInsertSizes, tags):
+        fil.write("%s\t%s\t%s\n" %(inputBamFile, meanInsertSize, tag))
+    fil.close()
+</code></pre>
+<p><strong>Step 2c.:</strong> Run pindel</p>
+<pre><code class="language-Shell">pindel \
+-f GRCh38.d1.vd1.fa \
+-i config_file \
+-o $(output_prefix) \
+--exclude GRCh38.d1.vd1.centromeres.telomeres.bed
+
+</code></pre>
+<p><strong>Step 2d.:</strong> Merge DI and SI OUTPUT</p>
+<pre><code class="language-Python">with open(os.path.join(args.workdir, "pindel_somatic"), "w") as handle:
+        for p in pindel_files:
+            if p.endswith("_D"):
+              with open(p) as ihandle:
+                for line in ihandle:
+                    if re.search("ChrID", line):
+                        handle.write(line)
+        for p in pindel_files:
+            if p.endswith("_SI"):
+              with open(p) as ihandle:
+                for line in ihandle:
+                  if re.search("ChrID", line):
+                     handle.write(line)
+</code></pre>
+<p><strong>Step 2e.:</strong> Create a config for pindel somatic filter</p>
+<pre><code class="language-Python">indel.filter.input = $(merged.pindel.output)
+indel.filter.vaf = 0.08
+indel.filter.cov = 20
+indel.filter.hom = 6
+indel.filter.pindel2vcf = "/path/to/pindel/pindel2vcf4tcga"
+indel.filter.reference =  "GRCh38.d1.vd1.fa"
+indel.filter.referencename = "GRCh38"
+indel.filter.referencedate = datetime.datetime.now().strftime("%Y%m%d")
+indel.filter.output = $(output.file.name.vcf)
+
+</code></pre>
+<p><strong>Step 2f.:</strong> Apply somatic filter on pindel output
+Tool: pindel2vcf4tcga</p>
+<pre><code class="language-Perl">perl pindel/somatic_filter/somatic_indelfilter.pl $(somatic.indel.filter.config)
+</code></pre>
+<p><strong>Step 3:</strong> Pindel
+Tool: Picard.jar 2</p>
+<pre><code class="language-Shell">java \
+-d64 \
+-XX: +UseSerialGC \
+-Xmx16G \
+-jar picard.jar \
+SortVcf \
+CREATE_INDEX=true \
+SEQUENCE_DICTIONARY=GRCh38.d1.vd1.dict \
+I=$(pindel.somatic.vcf) \
+OUTPUT=$(output.vcf.gz)
+</code></pre>
+<p><strong>Step 5:</strong> Vt Normalization
+Tool: GenomeAnalysisTK.jar nightly-2016-02-25-gf39d340</p>
+<pre><code class="language-Shell">java \
+-Xmx4G \
+-jar \
+/bin/GenomeAnalysisTK.jar \
+-T VariantFiltration \
+--disable_auto_index_creation_and_locking_when_reading_rods \
+--variant $(vt.normal.output.vcf.gz) \
+-R GRCh38.d1.vd1.fa \
+--filterExpression vc.isBiallelic() &amp;&amp; vc.getGenotype(\"TUMOR\").getAD().1 &lt; 3" \
+--filterName TALTDP \
+-o $(output.vcf.gz)
+
+
+</code></pre>
+<h3>Variant Call Annotation Workflow</h3>
+<p>Raw VCF files are then annotated in the <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=somatic_annotation_workflow">Somatic Annotation Workflow</a> with the <a href="https://www.ensembl.org/info/docs/tools/vep/index.html">Variant Effect Predictor (VEP)</a> v84 <a href="http://dx.doi.org/10.1093/bioinformatics/btq330">[6]</a> along with VEP GDC plugins.   </p>
+<p>The VEP uses the coordinates and alleles in the VCF file to infer biological context for each variant including the location of each mutation, its biological consequence (frameshift/ silent mutation), and the affected genes. See the documentation on the <a href="../File_Formats/VCF_Format/">GDC VCF Format</a> for more details. Variants in the VCF files are also matched to known variants from external mutation databases. The following databases are used for VCF annotation:  </p>
+<ul>
+<li>GENCODE v.22</li>
+<li>sift v.5.2.2</li>
+<li>ESP v.20141103</li>
+<li>polyphen v.2.2.2</li>
+<li>dbSNP v.146</li>
+<li>Ensembl genebuild v.2014-07</li>
+<li>Ensembl regbuild v.13.0</li>
+<li>HGMD public v.20154</li>
+<li>ClinVar v.201601</li>
+</ul>
+<p>Due to licensing constraints COSMIC is not utilized for annotation in the GDC VEP workflow.</p>
+<p>In addition to annotation, <a href="https://github.com/ucscCancer/fpfilter-tool">False Positive Filter</a> is used to label low quality variants in VarScan and SomaticSniper outputs. Variants with SSQ &lt; 25 in SomaticSniper are also removed.</p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=simple_somatic_mutation">Simple Somatic Mutation</a></td>
+<td>VCF</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=annotated_somatic_mutation">Annotated Somatic Mutation</a></td>
+<td>VCF</td>
+</tr>
+</tbody>
+</table>
+<h3>Tumor-Only Variant Calling Workflow</h3>
+<p>Tumor only variant calling is performed on a tumor sample with no paired normal at the request of the research group. This method takes advantage of the normal cell contamination that is present in most tumor samples. These calls are made using the version of MuTect2 included in GATK4. Tumor-only variant call files can be found in the GDC Portal by filtering for "Workflow Type: GATK4 MuTect2".   </p>
+<h3>Tumor-Only Variant Call Command-Line Parameters</h3>
+<pre><code>GATK4 v4
+
+## 1. Generate OXOG metrics:
+
+java -d64 -XX:+UseSerialGC -Xmx3G -jar /gatk/gatk.jar \
+CollectSequencingArtifactMetrics \
+-I Tumor_Sample_Alignment.bam \
+-O &lt;job_identifier&gt; \
+--FILE_EXTENSION .txt \
+-R GRCh38.d1.vd1.fa  ## Only chr1-22 + XYM
+
+## 2. Generate pileup summaries on tumor sample:
+
+java -d64 -XX:+UseSerialGC -Xmx3G -jar /gatk/gatk.jar \
+GetPileupSummaries
+-I Tumor_Sample_Alignment.bam \
+-O &lt;job_identifier&gt;.targeted_sequencing.table \
+-V af-only-gnomad-common-biallelic.grch38.main.vcf.gz \ # Germline reference from gnomad
+-L intervals.bed \ ## Only chr1-22 + XYM
+-R GRCh38.d1.vd1.fa
+
+## 3. Calculate contamination on tumor sample
+
+java -d64 -XX:+UseSerialGC -Xmx3G -jar /gatk/gatk.jar \
+CalculateContamination \
+-I &lt;job_identifier&gt;.targeted_sequencing.table \ # From step 2
+-O &lt;job_identifier&gt;.targeted_sequencing.contamination.table
+
+## 4. Find tumor sample name from BAM
+
+java -d64 -XX:+UseSerialGC -Xmx3G -jar /gatk/gatk.jar \
+GetSampleName \
+-I Tumor_Sample_Alignment.bam \
+-O &lt;job_identifier&gt;.targeted_sequencing.sample_name
+
+## 5. Run MuTect2 using only tumor sample on chromosome level (25 commands with different intervals)
+
+java -Djava.io.tmpdir=/tmp/job_tmp_3 -d64 -jar -Xmx3G -XX:+UseSerialGC \
+/bin/gatk-4.0.4.0/gatk-package-4.0.4.0-local.jar \
+Mutect2 \
+-R GRCh38.d1.vd1.fa \
+-L chr4:1-190214555 \ # Specify chromosome
+-I Tumor_Sample_Alignment.bam \
+-O 3.mt2.vcf \
+-tumor &lt;tumor_sample_name&gt; \ # From step 4
+--af-of-alleles-not-in-resource 2.5e-06 \
+--germline-resource af-only-gnomad.hg38.vcf.gz \ # Germline reference from gnomad
+-pon gatk4_mutect2_4136_pon.vcf.gz # New panel of normal created by 4136 TCGA curated normal samples, using GATK4
+
+## After this step, all chromosome level VCFs are merged into one.
+
+## 6. Sort VCF with Picard
+
+java -d64 -XX:+UseSerialGC -Xmx16G -jar /usr/local/bin/picard.jar \
+SortVcf \
+SEQUENCE_DICTIONARY=GRCh38.d1.vd1.dict \
+OUTPUT=&lt;job_identifier&gt;.targeted_sequencing.mutect2.tumor_only.sorted.vcf.gz \
+I=merged_multi_gatk4_mutect2_tumor_only_calling.vcf \ # From step 5
+CREATE_INDEX=true
+
+## 7. Filter variant calls from MuTect
+java -d64 -XX:+UseSerialGC -Xmx3G -jar /gatk/gatk.jar \
+FilterMutectCalls \
+-O &lt;job_identifier&gt;.targeted_sequencing.mutect2.tumor_only.contFiltered.vcf.gz \
+-V &lt;job_identifier&gt;.targeted_sequencing.mutect2.tumor_only.sorted.vcf.gz \ # From step 6
+--contamination-table &lt;job_identifier&gt;.targeted_sequencing.contamination.table \ # From step 3
+-L intervals.bed
+
+## 8. Filter variants by orientation bias
+java -d64 -XX:+UseSerialGC -Xmx3G -jar /gatk/gatk.jar \
+FilterByOrientationBias \
+-O &lt;job_identifier&gt;.targeted_sequencing.tumor_only.gatk4_mutect2.raw_somatic_mutation.vcf.gz \ # final output
+-P &lt;job_identifier&gt;.pre_adapter_detail_metrics.txt \ # From step 1
+-V &lt;job_identifier&gt;.targeted_sequencing.mutect2.tumor_only.contFiltered.vcf.gz \ # From step 7
+-L intervals.bed \
+-R GRCh38.d1.vd1.fa \
+-AM G/T \
+-AM C/T
+</code></pre>
+<h3>Tumor-Only Variant Annotation Workflow</h3>
+<p>After single-tumor variant calling is performed with MuTect2, a series of filters are applied to minimize the release of germline variants in downloadable VCFs. In all cases, the GDC applies a set of custom filters based on allele frequency, mapping quality, somatic/germline probability, and copy number. In some cases an additional variant classification step is applied before the GDC filters.</p>
+<p>The <a href="https://bioconductor.org/packages/devel/bioc/html/PureCN.html">PureCN</a> R-package <a href="https://doi.org/10.1186/s13029-016-0060-z">[7]</a> <a href="https://doi.org/10.1101/552711">[8]</a> is used to classify the variants by somatic/germline status and clonality based on tumor purity, ploidy, contamination, copy number, and loss of heterozygosity. The following steps are performed with this package:</p>
+<ul>
+<li><strong>Interval Capture</strong> : Generates an interval file using a FASTA and BED file coordinates.</li>
+<li><strong>GC-Normalization</strong> : Calculates GC-normalized tumor/normal coverage data.</li>
+<li><strong>Normal DB Creation</strong> : Generates a normal database  using the normalized coverage file and panel-of-normals VCF</li>
+<li><strong>Somatic Variant Calling</strong> : Classifies each of the previously called variants</li>
+</ul>
+<p>Note that PureCN will not be performed if there is insufficient data to produce a target capture kit specific normal database. In rare occasions, PureCN may not find a numeric solution. If PureCN is not performed or does not find a solution, this is indicated in the VCF header. VCF files that were annotated with these pipelines can be found in the GDC Portal by filtering for "Workflow Type: GATK4 MuTect2 Annotation".</p>
+<h3>Somatic Aggregation Workflow</h3>
+<p>The Somatic Aggregation Workflow generates one MAF file from multiple VCF files; see the <a href="/Data/File_Formats/MAF_Format/">GDC MAF Format</a> guide for details on file structure. In this step, one MAF file is generated per variant calling pipeline for each project and contains all available cases within this project.  </p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Multiple <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=annotated_somatic_mutation">Annotated Somatic Mutation</a></td>
+<td>VCF</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aggregated_somatic_mutation">Aggregated Somatic Mutation</a></td>
+<td>MAF</td>
+</tr>
+</tbody>
+</table>
+<h3>Masked Somatic Aggregation Workflow</h3>
+<p>The MAF files generated by Somatic Aggregation Workflow are controlled-access due to the presence of germline mutations. Open-access MAF files are modified for public release by removing columns and variants that could potentially contain germline mutation information. See the GDC <a href="../File_Formats/MAF_Format/">MAF Format</a> for details about the criteria used to remove variants.</p>
+<p>While these criteria cause the pipeline to over-filter some of the true positive somatic variants in open-access MAF files, they prevent personally identifiable germline mutation information from becoming publicly available. The GDC recommends that investigators explore both controlled and open-access MAF files if omission of certain somatic mutations is a concern.  </p>
+<table class="table">
+<thead>
+<tr>
+<th>I/O</th>
+<th>Entity</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aggregated_somatic_mutation">Aggregated Somatic Mutation</a></td>
+<td>Protected MAF</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=masked_somatic_mutation">Masked Somatic Mutation</a></td>
+<td>Somatic MAF</td>
+</tr>
+</tbody>
+</table>
+<h3>Whole Genome Sequencing Variant Calling</h3>
+<p>Variant calls are generated from WGS data using a different pipeline than WXS and Targeted Sequencing samples. This pipeline, based on a <a href="https://github.com/cancerit/dockstore-cgpwgs">workflow generated by the Sanger Institute</a>,  generates multiple downstream data types using the following software packages:</p>
+<ul>
+<li><strong>CaVEMan:</strong> Single nucleotide variants, which are available in <a href="https://docs.gdc.cancer.gov/Data/File_Formats/VCF_Format/">VCF format</a>.</li>
+<li><strong>Pindel:</strong> Small indel variants, which are available in <a href="https://docs.gdc.cancer.gov/Data/File_Formats/VCF_Format/">VCF format</a>.</li>
+<li><strong>BRASS:</strong> Structural variants, which are available in <em>BEDPE format</em>.</li>
+<li><strong>AscatNGS:</strong>  Copy number variants, which are available as copy number estimates or copy number segment files, data may be available in <em>tab separated values (.TSV) or plain text file (.TXT)</em></li>
+</ul>
+<h4>BEDPE File Format</h4>
+<p><a href="https://bedtools.readthedocs.io/en/latest/content/general-usage.html#bedpe-format">BEDPE file format</a>, (<strong>b</strong>rowser <strong>e</strong>xtensible <strong>d</strong>ata <strong>p</strong>aired-<strong>e</strong>nd) is designed to concisely describe disjoint genome features, such as structural variations or paired-end sequence alignments. It's an enhanced version of the <a href="http://genome.ucsc.edu/FAQ/FAQformat#format1">BED format</a>, as BED does not allow inter-chromosomal feature definitions. In addition, BED only has one strand field, which is insufficient for paired-end sequence alignments, especially when studying structural variation. The BEDPE format is described below.</p>
+<ul>
+<li><strong>chr<em>x</em> (required):</strong> The name of the chromosome on which the <em>x</em>th end of the feature exists. (x is 1 or 2). Any string can be used. For example, "chr1", "III", "myChrom", "contig1112.23" (use "." for unknown).</li>
+<li><strong>start<em>x</em> (required):</strong> The zero-based starting position of the <strong>first</strong> end of the feature on chr<em>x</em>. The first base in a chromosome is numbered 0. The start position in each BEDPE feature is therefore interpreted to be 1 greater than the start position listed in the feature (use -1 for unknown).</li>
+<li><strong>end<em>x</em> (required):</strong> The one-based ending position of the first end of the feature on chr<em>x</em>. The end position in each BEDPE feature is one-based (use -1 for unknown).</li>
+<li><strong>name (optional):</strong> Defines the name of the BEDPE feature. Any string can be used.  </li>
+<li><strong>score (optional):</strong> A score between 0 and 1000. If the track line <em>useScore</em> attribute is set to 1 for this annotation data set, the score value will determine the level of gray in which this feature is displayed (higher numbers = darker gray). Any string can be used.</li>
+<li><strong>strand<em>x</em> (optional):</strong> Defines the strand for the <em>x</em>th end of the feature. Either "." (unknown),  "+", or "-".</li>
+</ul>
+<p>In addition to the above fields, bedtools allows for the addition of user-defined fields to the normal, 10-column BEDPE format as necessary. These columns are merely "passed through" pairToBed and pairToPair and are not part of any analysis. One would use these additional columns to add extra information (e.g., edit distance for each end of an alignment, or "deletion", "inversion", etc.) to each BEDPE feature.</p>
+<h4>CNV from WGS File Format</h4>
+<p>AscatNGS, originally developed by <a href="https://doi.org/10.1002/cpbi.17">Raine <em>et al</em> (2016)</a> (<a href="https://github.com/cancerit">GitHub page</a>), indicates the DNA copy number changes affecting a tumor genome when comparing to a matched normal sample. See below for a description of the copy number segment and copy number estimation files produced by AscatNGS:</p>
+<ul>
+<li><strong>GDC Aliquot:</strong>  The GDC ID for the aliquot collected from the sample (copy number segment files only).</li>
+<li><strong>Gene ID:</strong>  The gene ENSMBL ID (copy number variant only).</li>
+<li><strong>Gene Name:</strong>  The gene symbol (copy number variant only).</li>
+<li><strong>Chromosome:</strong>  The name of the chromosome on which the copy number change exists.</li>
+<li><strong>Start:</strong>  The starting position of the copy.</li>
+<li><strong>End:</strong>  The ending position of the copy.</li>
+<li><strong>Copy Number:</strong>  The weighted median of the strand copy numbers [9].</li>
+<li><strong>Major Copy Number:</strong> The greater strand copy number of the two strands of the DNA (copy number segment files only).</li>
+<li><strong>Minor Copy number:</strong>  The smaller strand copy number of the two strands of the DNA (copy number segment files only).</li>
+<li><strong>Max. Copy number:</strong> The highest copy number for overlapped segment (copy number variant only).</li>
+<li><strong>Min. Copy number:</strong> The lowest copy number for overlapped segment (copy number variant only).</li>
+</ul>
+<h3>Harmonization for GENIE variants</h3>
+<p>Variants reported from the AACR Project GENIE are available from the GDC Data Portal in MAF format.  These variants were produced using an abridged pipeline in which the Genomic Data Commons received the variants directly instead of calling them from aligned reads.  For an outline of the harmonization process, see the steps below:</p>
+<ol>
+<li>Variants are submitted directly to the GDC as a "Genomic Profile."</li>
+<li>GENIE variants are lifted over to GRCh38 coordinates.</li>
+<li>Variants are annotated using VEP and made available via the GDC Data Portal.</li>
+</ol>
+<h2 id="Microsatellite Instability Detection">Microsatellite Instability Detection</h2>
+<p>The GDC adopts <a href="https://github.com/niu-lab/msisensor2">MSIsensor2</a> to derive Microsatellite Instability (MSI) information from tumor DNA-Seq data. The MSIsensor2 software uses only the tumor BAM as input, and calculates the numeric MSI score (number of msi sites / all valid sites). The MSI status of MSI (Microsatellite Instable) or MSS (Microsatellite Stable) is then determined using a MSI score cutoff value of 20%.</p>
+<p>The output <code>msi_score</code> and <code>msi_status</code> values are stored directly as properties of the <code>aligned_reads</code> (BAM files), and can be <a href="https://api.gdc.cancer.gov/files/82488c57-9789-449c-a09d-594172381dc1?pretty=true&amp;fields=msi_score,msi_status,file_id,file_name">accessible via API</a>. In addition, the portal/API can be filtered using these proprties by choosing "Add a File Filter" in the <a href="https://portal.gdc.cancer.gov/repository">Repository Page</a> and selecting <code>msi_score</code> or <code>msi_status</code>.</p>
+<p>Please note:</p>
+<ol>
+<li>MSI status generated from DNA-Seq by the GDC is considered bioinformatics-derived information, and is not considered clinical data. If performed by the clinical lab, the clinical MSI test result would be stored as a <code>laboratory_test</code> in the molecular_test entity.</li>
+<li>MSIsensor2 can theoretically be applied to WGS, WXS, or Targeted Sequencing data. Given the number of MSI sites available in some Targeted Sequencing data, please consider the results carefully.</li>
+<li>It is possible that multiple MSI statuses exist within the same sample/case if more than one DNA-Seq BAM was generated. It is the users' responsibility to check for their consistency, especially when the MSI scores are close to 20%.</li>
+</ol>
+<h2 id="File Access and Availability">File Access and Availability</h2>
+<p>Files from the GDC DNA-Seq analysis pipeline are available in the <a href="https://portal.gdc.cancer.gov">GDC Data Portal</a> in BAM, VCF, and MAF formats. Descriptions are listed below for all available data types and their respective file formats.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Description</th>
+<th>File Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aligned_reads">Aligned Reads</a></td>
+<td>Reads that have been aligned to the GRCh38 reference and co-cleaned. Unaligned reads and reads that map to decoy sequences are also included in the BAM files.</td>
+<td>BAM</td>
+</tr>
+<tr>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=simple_somatic_mutation">Raw Simple Somatic Mutation</a></td>
+<td>A tab-delimited file with genotypic information related to genomic positions. Genomic variants are first identified here.</td>
+<td>VCF</td>
+</tr>
+<tr>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=annotated_somatic_mutation">Annotated Somatic Mutation</a></td>
+<td>An annotated version of a raw simple somatic mutation file. Annotated files include biological context about each observed mutation.</td>
+<td>VCF</td>
+</tr>
+<tr>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aggregated_somatic_mutation">Aggregated Somatic Mutation</a></td>
+<td>A tab-delimited file derived from multiple VCF files. Contains information from all available cases in a project.</td>
+<td>MAF</td>
+</tr>
+<tr>
+<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=masked_somatic_mutation">Masked Somatic Mutation</a></td>
+<td>A modified version of the Aggregated Somatic Mutation MAF file with sensitive or potentially erroneous data removed.</td>
+<td>MAF</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>[1]. Li, Heng, and Richard Durbin. "Fast and accurate short read alignment with Burrows-Wheeler transform." Bioinformatics 25, no. 14 (2009): 1754-1760.</p>
+<p>[2]. Fan, Yu, Liu Xi, Daniel ST Hughes, Jianjun Zhang, Jianhua Zhang, P. Andrew Futreal, David A. Wheeler, and Wenyi Wang. "Accounting for tumor heterogeneity using a sample-specific error model improves sensitivity and specificity in mutation calling for sequencing data." bioRxiv (2016): 055467.</p>
+<p>[3]. Cibulskis, Kristian, Michael S. Lawrence, Scott L. Carter, Andrey Sivachenko, David Jaffe, Carrie Sougnez, Stacey Gabriel, Matthew Meyerson, Eric S. Lander, and Gad Getz. "Sensitive detection of somatic point mutations in impure and heterogeneous cancer samples." Nature biotechnology 31, no. 3 (2013): 213-219.</p>
+<p>[4]. Koboldt, Daniel C., Qunyuan Zhang, David E. Larson, Dong Shen, Michael D. McLellan, Ling Lin, Christopher A. Miller, Elaine R. Mardis, Li Ding, and Richard K. Wilson. "VarScan 2: somatic mutation and copy number alteration discovery in cancer by exome sequencing." Genome research 22, no. 3 (2012): 568-576.</p>
+<p>[5]. Larson, David E., Christopher C. Harris, Ken Chen, Daniel C. Koboldt, Travis E. Abbott, David J. Dooling, Timothy J. Ley, Elaine R. Mardis, Richard K. Wilson, and Li Ding. "SomaticSniper: identification of somatic point mutations in whole genome sequencing data." Bioinformatics 28, no. 3 (2012): 311-317.</p>
+<p>[6]. McLaren, William, Bethan Pritchard, Daniel Rios, Yuan Chen, Paul Flicek, and Fiona Cunningham. "Deriving the consequences of genomic variants with the Ensembl API and SNP Effect Predictor." Bioinformatics 26, no. 16 (2010): 2069-2070.</p>
+<p>[7]. Riester, Markus, Angad P. Singh, A. Rose Brannon, Kun Yu, Catarina D. Campbell, Derek Y. Chiang, and Michael P. Morrissey. "PureCN: copy number calling and SNV classification using targeted short read sequencing." Source code for biology and medicine 11, no. 1 (2016): 13.</p>
+<p>[8]. Oh, Sehyun, Ludwig Geistlinger, Marcel Ramos, Martin Morgan, Levi Waldron, and Markus Riester. "Reliable analysis of clinical tumor-only whole exome sequencing data" bioRxiv 552711 (2019);</p>
+<p>[9]. Gene-level copy number data is generated by intersection of copy number segment and gene ranges. It is possible for one gene to overlap with multiple segments, and in this case, copy_number, min_copy_number and max_copy_number could take different values. In particular, the copy_number value is calculated as the median, weighted on length of overlapped bases, of segment copy numbers from all overlapped segments.</p></hr></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

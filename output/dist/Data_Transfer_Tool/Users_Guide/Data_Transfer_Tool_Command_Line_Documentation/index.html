@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Transfer Tool Command Line Documentation</title>
+    <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Get locas CSS files -->
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
+    
+  </head>
+  <body>
+    <!---->
+    <html>
+  <head> </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsed navigation -->
+        <div class="my-container">
+          <!-- Main title -->
+          <a class="navbar-brand float-start" href="/.">
+            <img
+              class="brand-image"
+              src="/img/nih-header-logo-color.png"
+              alt="NIH National Cancer
+          Institute GDC Documentation"
+            />
+            <span class="hidden"
+              >NIH National Cancer Institute GDC Documentation</span
+            >
+          </a>
+          <!-- Expander button -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- GDC Apps -->
+          <div class="pull-right">
+            <div class="gdc-app-list dropbtn">
+              <div class="dropbtn">
+                <a id="myToggle" class="dropbtn dropdown-toggle">
+                  <span class="dropbtn"
+                    ><i class="fas fa-th"></i> GDC Apps</span
+                  >
+                </a>
+                <div id="myDropdown" class="dropdown-content container">
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                  <div class="row gdc-app-row">
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                    <div class="col-sm gdc-app-list">
+                      <i class="fas fa-lg fa-heartbeat"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-dropdown-menu=""
+                class="dropdown-menu gdc-apps-menu-container"
+                role="menu"
+              >
+                <div class="gdc-apps-menu-grid">
+                  <div class="menu-column">
+                    <a
+                      href="https://portal.gdc.cancer.gov/"
+                      title="Data Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-data-portal-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Data Portal"
+                      />
+                      <div>Data Portal</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                      title="GDC API"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-portal-api">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>API</div>
+                    </a>
+                    <a
+                      href="https://docs.gdc.cancer.gov/"
+                      title="GDC Docs"
+                      target="_blank"
+                      class="active menu-item"
+                    >
+                      <span class="icon icon-gdc-docs">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span
+                        ><span class="path11"></span><span class="path12"></span
+                        ><span class="path13"></span
+                        ><span class="path14"></span>
+                      </span>
+                      <div>Documentation</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/legacy-archive"
+                      title="GDC Legacy Archive"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-legacy-archive">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Legacy Archive</div>
+                    </a>
+                  </div>
+                  <div class="menu-column">
+                    <a
+                      href="https://gdc.cancer.gov/"
+                      title="GDC Website"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <img
+                        width="21px"
+                        src="/img/GDC-App-website-blue.svg"
+                        class="icon icon-gdc-portal home"
+                        alt="GDC Website"
+                      />
+                      <div>Website</div>
+                    </a>
+                    <a
+                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                      class="menu-item"
+                      title="GDC Data Transfer Tool"
+                      target="_blank"
+                    >
+                      <span class="icon icon-gdc-data-transer-tool">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span>
+                      </span>
+                      <div>Data Transfer Tool</div>
+                    </a>
+                    <a
+                      href="https://portal.gdc.cancer.gov/submission/"
+                      title="GDC Submission Portal"
+                      target="_blank"
+                      class="menu-item"
+                    >
+                      <span class="icon icon-gdc-submission-portal">
+                        <span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                        ><span class="path7"></span><span class="path8"></span
+                        ><span class="path9"></span><span class="path10"></span>
+                      </span>
+                      <div>Data Submission Portal</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid container-fluid-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav navbar-center me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    aria-current="page"
+                    href="/output/dist/api-getting-started/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >API
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Portal
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-submission-portal-data-submission-process/"
+                  >
+                    Data Submission
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/output/dist/data-transfer-tool-index/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Transfer Tool
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="/output/dist/data-dictionary-index/"
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Data Dictionary
+                  </a>
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="/output/dist/data-getting-started/"
+                    >Data</a
+                  >
+
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                     
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
+                    </li>
+                      
+                    <li>
+                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+                    </li>
+                     
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link"
+                    role="button"
+                    id="navbarDropdownMenuLink"
+                    aria-expanded="false"
+                    href="/output/dist/encyclopedia"
+                  >
+                    Encyclopedia
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="container-fluid sidebar-container">
+          <div class="sidebar">
+            <ul class="main">
+              <li class="inactive"><a href="/output/dist/Data_Transfer_Tool/Users_Guide/Getting_Started">Getting Started</a></li><li class="inactive"><a href="/output/dist/Data_Transfer_Tool/Users_Guide/Preparing_for_Data_Download_and_Upload">Preparing for Data Download and Upload</a></li><li class="main"><a href="/output/dist/Data_Transfer_Tool/Users_Guide/Data_Transfer_Tool_Command_Line_Documentation">Data Transfer Tool Command Line Documentation</a></li><ul><li><a href='#Downloads'>Downloads</a></li><li><a href='#Uploads'>Uploads</a></li><li><a href='#Troubleshooting'>Troubleshooting</a></li><li><a href='#Help Menus'>Help Menus</a></li><li><a href='#Data Transfer Tool Configuration File'>Data Transfer Tool Configuration File</a></li></ul><li class="inactive"><a href="/output/dist/Data_Transfer_Tool/Release_Notes/Release_Notes_Command_Line">Release Notes - Command Line</a></li><li class="inactive"><a href="/output/dist/Data_Transfer_Tool/Users_Guide/Data_Transfer_Tool_UI_Documentation">Data Transfer Tool UI Documentation</a></li><li class="inactive"><a href="/output/dist/Data_Transfer_Tool/Release_Notes/Release_Notes_UI">Release Notes - UI</a></li><li class="inactive"><a href="/output/dist/Data_Transfer_Tool/Users_Guide/Troubleshooting_Guide">Troubleshooting Guide</a></li><li class="inactive"><a href="/Data_Transfer_Tool/PDF/Data_Transfer_Tool_UG.pdf">Download PDF</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   Data Transfer Tool Command Line Documentation</h1><hr/>
+<h2 id="Downloads">Downloads</h2>
+<h3>Downloading Data Using a Manifest File</h3>
+<p>A convenient way to download multiple files from the GDC is to use a manifest file generated by the GDC Data Portal. After generating a manifest file (see <a href="../Preparing_for_Data_Download_and_Upload">Preparing for Data Download and Upload</a> for instructions), initiate the download using the GDC Data Transfer Tool by supplying the <strong>-m</strong> or <strong>--manifest</strong> option, followed by the location and name of the manifest file. OS X users can drag and drop the manifest file into Terminal to provide its location.</p>
+<p>The following is an example of a command for downloading files from GDC using a manifest file:</p>
+<pre><code>gdc-client download -m  /Users/JohnDoe/Downloads/gdc_manifest_6746fe840d924cf623b4634b5ec6c630bd4c06b5.txt
+</code></pre>
+<h3>Downloading Data Using GDC File UUIDs</h3>
+<p>The GDC Data Transfer Tool also supports downloading of one or more individual files using UUID(s) instead of a manifest file. To do this, enter the UUID(s) after the download command:</p>
+<pre><code>gdc-client download 22a29915-6712-4f7a-8dba-985ae9a1f005
+</code></pre>
+<p>Multiple UUIDs can be specified, separated by a space:</p>
+<pre><code>gdc-client download e5976406-473a-4fbd-8c97-e95187cdc1bd fb3e261b-92ac-4027-b4d9-eb971a92a4c3
+</code></pre>
+<h3>Resuming a Failed Download</h3>
+<p>The GDC Data Transfer Tool supports resumption of interrupted downloads. To resume an incomplete download, repeat the download of the manifest or UUID(s) in the same folder as the initial download. Failed downloads will appear in the destination folder with a .partial extension. This feature allows users the ability to identify quickly where the download stopped. For large downloads this feature can let the user identify where the download was interrupted and edit the manifest accordingly.</p>
+<pre><code>gdc-client download f80ec672-d00f-42d5-b5ae-c7e06bc39da1
+</code></pre>
+<h3>Download Latest Version of a File</h3>
+<p>The GDC Data Transfer Tool supports file versioning. Our backend data storage supports multiple file versions so older and current versions can be accessible to our users. For information about accessing file versioning information with our API and finding older UUID information from current UUIDs please check out the <a href="https://docs.gdc.cancer.gov/API/Users_Guide/Search_and_Retrieval/#example-of-retrieving-file-version-information">the API User Guide</a> section in our API documentation. When working with older manifests or older lists of UUIDs the latest version of a file can always be download with the --latest flag.</p>
+<pre><code class="language-Shell">gdc-client download 426de656-7e34-4a49-b87e-6e2563fa3cdd --latest -t gdc-user-token.2018.txt
+</code></pre>
+<pre><code class="language-Output">Downloading LATEST versions of files
+Latest version for 426de656-7e34-4a49-b87e-6e2563fa3cdd ==&gt; 6633bfbd-87f1-4d3a-a475-7ad1e8c2017a
+100% [#############################################################################################################################] Time: 0:01:16  14.10 MB/s
+Successfully downloaded: 1
+</code></pre>
+<h3>Downloading Controlled-Access Data</h3>
+<p>A user authentication token is required for downloading Controlled-Access Data from GDC. Tokens can be obtained from the GDC Data Portal (see instructions in <a href="Preparing_for_Data_Download_and_Upload.md#obtaining-an-authentication-token">Obtaining an Authentication Token</a>). Once downloaded, the token <em>file</em> can be passed to the GDC Data Transfer Tool using the <strong>-t</strong> or <strong>--token-file</strong> option:</p>
+<pre><code>gdc-client download -m gdc_manifest_e24fac38d3b19f67facb74d3efa746e08b0c82c2.txt -t gdc-user-token.2015-06-17T09-10-02-04-00.txt
+</code></pre>
+<h3>Directory structure of downloaded files</h3>
+<p>The directory in which the files are downloaded will include folders named by the file UUID. Inside these folders, along with the the data and zipped metadata or index files, will exist a logs folder. The logs folder contains state files that insure that downloads are accurate and allow for resumption of failed or prematurely stopped downloads. While a download is in progress a file will have a .partial extension. This will also remain if a download failed. Once a file is finished downloading the extension will be removed. If an identical manifest is retried another attempt will be made to download files containing a .partial extension.</p>
+<pre><code>C501.TCGA-BI-A0VR-10A-01D-A10S-08.5_gdc_realn.bam.partial  logs
+</code></pre>
+<h2 id="Uploads">Uploads</h2>
+<h3>Uploading Data Using a Manifest File</h3>
+<p>GDC Data Transfer Tool supports uploading molecular data using a manifest file to the Data Submission Portal. The manifest file for submittable data files can be retrieved from the GDC Data Submission Portal, or directly from the GDC Submission API given a submittable data file UUID. The user authentication token file needs to be specified using the <strong>-t</strong> or <strong>--token-file</strong> option.</p>
+<p>First, generate an upload manifest, either using the GDC Data Submission Portal, or <a href="/API/Users_Guide/Submission.md#upload-manifest">using a call</a> to the GDC Submission API <code>manifest</code> endpoint (as in the following example):</p>
+<pre><code class="language-Manifest">export token=ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTOKEN-01234567890+AlPhAnUmErIcToKeN=0123456789-ALPHANUMERICTO
+
+curl --header "X-Auth-Token: $token" 'https://api.gdc.cancer.gov/submission/CGCI/BLGSP/manifest?ids=460ad2fe-5a7f-4797-9e18-336d33e21444' &gt;manifest.yml
+</code></pre>
+<pre><code class="language-Upload">gdc-client upload --manifest manifest.yml --token-file token.txt
+</code></pre>
+<h3>Uploading Data Using a GDC File UUID</h3>
+<p>The GDC Data Transfer Tool also supports uploading molecular data using a file UUID. The tool will first make a request to get the filename and project id from GDC API, and then upload the corresponding file from the current directory.</p>
+<pre><code>gdc-client upload cd939bdd-b607-4dd4-87a6-fad12893932d -t token.txt
+</code></pre>
+<h3>Resuming a Failed Upload</h3>
+<p>By default, GDC Data Transfer Tool uses multipart transfer to upload files. If an upload failed but some parts were transmitted successfully, a resume file will be saved with the filename <em>resume_[manifest_filename]</em>. Running the upload command again will resume the transfer of only those parts of the file that failed to upload in the previous attempt.</p>
+<pre><code>gdc-client upload -m manifest.yml -t token
+</code></pre>
+<h3>Deleting Previously Uploaded Data</h3>
+<p>Previously uploaded data can be replaced with new data by deleting it first using the <strong>--delete</strong> switch:</p>
+<pre><code>gdc-client upload -m manifest.yml -t token --delete
+</code></pre>
+<h2 id="Troubleshooting">Troubleshooting</h2>
+<h3>Invalid Token</h3>
+<p>An error message about an 'invalid token' means that a new authentication token needs to be obtained from the GDC Data Portal or the GDC Data Submission Portal as described in <a href="Preparing_for_Data_Download_and_Upload">Preparing for Data Download and Upload</a>.</p>
+<pre><code> 403 Client Error: FORBIDDEN: {
+      "message": "Your token is invalid or expired, please get a new token from GDC Data Portal"
+      }
+</code></pre>
+<h3>dbGaP Permissions Error</h3>
+<p>Users may see the following error message when attempting to download a file from GDC:</p>
+<pre><code> 403 Client Error: FORBIDDEN: {
+      "message": "You don't have access to the data: Please specify a X-Auth-Token"
+      }
+</code></pre>
+<p>This error message indicates that the user does not have dbGaP access to the project to which the file belongs. Instructions for requesting access from dbGaP can be found <a href="https://gdc.cancer.gov/access-data/obtaining-access-controlled-data/">here</a>.</p>
+<h3>File Availability Error</h3>
+<p>Users may also see the following error message when attempting to download a file from GDC:</p>
+<pre><code> 403 Client Error: FORBIDDEN: {
+    "message": "You don't have access to the data: Requested file abd28349-92cd-48a3-863a-007a218de80f does not allow read access"
+    }
+</code></pre>
+<p>This error message means that the file is not available for download. This may be because the file has not been uploaded or released yet or that it is not a file entity.</p>
+<h3>GDC Upload Privileges Error</h3>
+<p>Users may see the following error message when attempting to upload a file:</p>
+<pre><code> Can't upload: {
+     "message": "You don't have access to the data: You don't have create role to do 'upload'"
+     }
+</code></pre>
+<p>This means that the user has dbGaP read access to the data, but does not have GDC upload privileges. Users can contact <a href="https://www.ncbi.nlm.nih.gov/gap">The database of Genotypes and Phenotypes (dbGaP) </a> to request upload privileges.</p>
+<h3>File in Uploaded State Error</h3>
+<p>Re-uploading a file may return the following error:</p>
+<pre><code> Can't upload: {
+      "message": "File in uploaded state, upload not allowed"
+      }
+</code></pre>
+<p>To resolve this issue, delete the file using the <strong>--delete</strong> switch before re-uploading.</p>
+<h3>Microsoft Windows Executable Error</h3>
+<p>Attempting to run gdc-client.exe by double-clicking it in the Windows Explorer will produce a window that blinks once and disappears.</p>
+<p>This is normal, the executable must be run using the command prompt. Click 'Start', followed by 'Run' and type 'cmd' into the text bar. Then navigate to the path containing the executable using the 'cd' command.</p>
+<h2 id="Help Menus">Help Menus</h2>
+<p>The GDC Data Transfer Tool comes with built-in help menus. These menus are displayed when the GDC Data Transfer Tool is run with flags -h or --help for any of the main arguments to the tool. Running the GDC Data Transfer Tool without argument or flag will present a list of available command options.</p>
+<pre><code class="language-Shell">gdc-client --help
+</code></pre>
+<pre><code class="language-Output">usage: gdc-client [-h] [--version] {download,upload,settings} ...
+
+The Genomic Data Commons Command Line Client
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+
+commands:
+  {download,upload,settings}
+                        for more information, specify -h after a command
+    download            download data from the GDC
+    upload              upload data to the GDC
+    settings            display default settings
+</code></pre>
+<p>The available menus are provided below.</p>
+<h3>Root menu</h3>
+<p>The GDC Data Transfer Tool displays the following output when executed without any arguments.</p>
+<pre><code class="language-Shell">gdc-client
+</code></pre>
+<pre><code class="language-Output">usage: gdc-client [-h] [--version] {download,upload,settings} ...
+gdc-client: error: too few arguments
+</code></pre>
+<h3>Download help menu</h3>
+<p>The GDC Data Transfer Tool displays the following help menu for its download functionality.</p>
+<pre><code class="language-Shell">gdc-client download --help
+</code></pre>
+<pre><code class="language-Output">usage: gdc-client download [-h] [--debug]
+                           [--log-file LOG_FILE]
+                           [--color_off] [-t TOKEN_FILE]
+                           [-d DIR] [-s server]
+                           [--no-segment-md5sums]
+                           [--no-file-md5sum]
+                           [-n N_PROCESSES]
+                           [--http-chunk-size HTTP_CHUNK_SIZE]
+                           [--save-interval SAVE_INTERVAL]
+                           [--no-verify]
+                           [--no-related-files]
+                           [--no-annotations]
+                           [--no-auto-retry]
+                           [--retry-amount RETRY_AMOUNT]
+                           [--wait-time WAIT_TIME]
+                           [--latest] [--config FILE] [-u]
+                           [-m MANIFEST]
+                           [file_id [file_id ...]]
+
+positional arguments:
+file_id               The GDC UUID of the file(s) to download
+
+optional arguments:
+-h, --help            show this help message and exit
+--debug               Enable debug logging. If a failure occurs, the program
+                      will stop.
+--log-file LOG_FILE   Save logs to file. Amount logged affected by --debug
+--color_off           Disable colored output
+-t TOKEN_FILE, --token-file TOKEN_FILE
+                      GDC API auth token file
+-d DIR, --dir DIR     Directory to download files to. Defaults to current
+                      dir
+-s server, --server server
+                      The TCP server address server[:port]
+--no-segment-md5sums  Do not calculate inbound segment md5sums and/or do not
+                      verify md5sums on restart
+--no-file-md5sum      Do not verify file md5sum after download
+-n N_PROCESSES, --n-processes N_PROCESSES
+                      Number of client connections.
+--http-chunk-size HTTP_CHUNK_SIZE, -c HTTP_CHUNK_SIZE
+                      Size in bytes of standard HTTP block size.
+--save-interval SAVE_INTERVAL
+                      The number of chunks after which to flush state file.
+                      A lower save interval will result in more frequent
+                      printout but lower performance.
+--no-verify           Perform insecure SSL connection and transfer
+--no-related-files    Do not download related files.
+--no-annotations      Do not download annotations.
+--no-auto-retry       Ask before retrying to download a file
+--retry-amount RETRY_AMOUNT
+                      Number of times to retry a download
+--wait-time WAIT_TIME
+                      Amount of seconds to wait before retrying
+--latest              Download latest version of a file if it exists
+--config FILE         Path to INI-type config file
+-u, --udt             Use the UDT protocol.
+-m MANIFEST, --manifest MANIFEST
+                      GDC download manifest file
+</code></pre>
+<h3>Upload help menu</h3>
+<p>The GDC Data Transfer Tool displays the following help menu for its upload functionality.</p>
+<pre><code class="language-Shell">gdc-client upload --help
+</code></pre>
+<pre><code class="language-Output">usage: gdc-client upload [-h] [--debug]
+                                            [--log-file LOG_FILE]
+                                            [--color_off] [-t TOKEN_FILE]
+                                            [--project-id PROJECT_ID]
+                                            [--path path]
+                                            [--upload-id UPLOAD_ID]
+                                            [--insecure] [--server SERVER]
+                                            [--part-size PART_SIZE]
+                                            [--upload-part-size UPLOAD_PART_SIZE]
+                                            [-n N_PROCESSES]
+                                            [--disable-multipart] [--abort]
+                                            [--resume] [--delete]
+                                            [--manifest MANIFEST]
+                                            [--config FILE]
+                                            [file_id [file_id ...]]
+positional arguments:
+ file_id               The GDC UUID of the file(s) to upload
+
+optional arguments:
+ -h, --help            show this help message and exit
+ --debug               Enable debug logging. If a failure occurs, the program
+                       will stop.
+ --log-file LOG_FILE   Save logs to file. Amount logged affected by --debug
+ --color_off           Disable colored output
+ -t TOKEN_FILE, --token-file TOKEN_FILE
+                       GDC API auth token file
+ --project-id PROJECT_ID, -p PROJECT_ID
+                       The project ID that owns the file
+ --path path, -f path  directory path to find file
+ --upload-id UPLOAD_ID, -u UPLOAD_ID
+                       Multipart upload id
+ --insecure, -k        Allow connections to server without certs
+ --server SERVER, -s SERVER
+                       GDC API server address
+ --part-size PART_SIZE
+                       DEPRECATED in favor of [--upload-part-size]
+ --upload-part-size UPLOAD_PART_SIZE, -c UPLOAD_PART_SIZE
+                       Part size for multipart upload
+ -n N_PROCESSES, --n-processes N_PROCESSES
+                       Number of client connections
+ --disable-multipart   Disable multipart upload
+ --abort               Abort previous multipart upload
+ --resume, -r          Resume previous multipart upload
+ --delete              Delete an uploaded file
+ --manifest MANIFEST, -m MANIFEST
+                       Manifest which describes files to be uploaded
+ --config FILE         Path to INI-type config file
+</code></pre>
+<h2 id="Data Transfer Tool Configuration File">Data Transfer Tool Configuration File</h2>
+<p>The DTT has the ability to save and reuse configuration parameters in the format of a flat text file via a command line argument. A simple text file needs to be created first with an extension of either txt or dtt. The supported section headers are upload and download which can be used independently of each other or used in the same configuration file. Each section header corresponds to the main functions of the application which are to either download data from the GDC portals or to upload data to the submission system of the GDC. The configurable parameters are those listed in the help menus under either <a href="https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Data_Download_and_Upload/#download-help-menu">download</a> or <a href="https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Data_Download_and_Upload/#upload-help-menu">upload</a> displayed under the output tabs.</p>
+<p>Example usage:</p>
+<pre><code>gdc-client download d45ec02b-13c3-4afa-822d-443ccd3795ca --config my-dtt-config.dtt
+</code></pre>
+<p>Example of configuration file:</p>
+<pre><code>[upload]
+path = /some/upload/path
+upload_part_size = 1073741824
+
+
+[download]
+dir = /some/download/path
+http_chunk_size = 2048
+retry_amount = 6
+</code></pre>
+<h3>Display Config Parameters</h3>
+<p>This command line flag can be used with either the download or upload application feature to display what settings are active within a custom data transfer tool configuration file.</p>
+<pre><code>gdc-client settings download --config my-dtt-config.dtt
+[download]
+no_auto_retry = False
+no_file_md5sum = False
+save_interval = 1073741824
+http_chunk_size = 2048
+server = http://exmple-site.com
+n_processes = 8
+no_annotations = False
+no_related_files = False
+retry_amount = 6
+no_segment_md5sum = False
+manifest = []
+wait_time = 5.0
+no_verify = True
+dir = /some/download/path
+</code></pre></div>
+      </div>
+    </div>
+
+    <footer id="docs-footer">
+      <div class="container-fluid footer-container">
+        <div>
+          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
+          |
+          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+            >Policies</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/accessibility"
+            target="_blank"
+            >Accessibility</a
+          >
+          |
+          <a
+            href="http://www.cancer.gov/global/web/policies/foia"
+            target="_blank"
+            >FOIA</a
+          >
+        </div>
+        <div>
+          <a href="http://www.hhs.gov" target="_blank"
+            >U.S. Department of Health and Human Services</a
+          >
+          |
+          <a href="http://www.nih.gov" target="_blank"
+            >National Institutes of Health</a
+          >
+          |
+          <a href="http://www.cancer.gov" target="_blank"
+            >National Cancer Institute</a
+          >
+          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+        </div>
+        <div>NIH... Turning Discovery Into Health ®</div>
+
+        <div class="version-caption">GDC Docs Version 2.0</div>
+      </div>
+    </footer>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+      // Close the dropdown if the user clicks outside of it
+
+      var toggler = document.getElementById("myToggle");
+      toggler.onclick = function () {
+        var myDropdown = document.getElementById("myDropdown");
+        myDropdown.classList.toggle("show");
+      };
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
