@@ -1,32 +1,31 @@
 # Data Analysis
 
-The GDC DAVE tools use the same API as the rest of the Data Portal and takes advantage of several new endpoints. Similar to the [GDC Data Portal Exploration](http://docs.gdc.cancer.gov/Data_Portal/Users_Guide/Exploration/) feature, the GDC data analysis endpoints allow API users to programmatically explore data in the GDC using advanced filters at a gene and mutation level. Survival analysis data is also available.  
+The GDC DAVE tools use the same API as the rest of the Data Portal and takes advantage of several new endpoints. Similar to the [GDC Data Portal Exploration](http://docs.gdc.cancer.gov/Data_Portal/Users_Guide/Exploration/) feature, the GDC data analysis endpoints allow API users to programmatically explore data in the GDC using advanced filters at a gene and mutation level. Survival analysis data is also available.
 
 ## Endpoints
 
 The following data analysis endpoints are available from the GDC API:
 
-|__Node__| __Endpoint__ | __Description__ |
-|---|---|---|
-|__Genes__| __/genes__ | Allows users to access summary information about each gene using its Ensembl ID. |
-|__SSMS__| __/ssms__ | Allows users to access information about each somatic mutation. For example, a `ssm` would represent the transition of C to T at position 52000 of chromosome 1. |
-||__/ssms/`<ssm_id>`__|Get information about a specific ssm using a `<ssm_id>`, often supplemented with the `expand` option to show fields of interest. |
-|| __/ssm_occurrences__ | A `ssm` entity as applied to a single instance (case). An example of a `ssm occurrence` would be that the transition of C to T at position 52000 of chromosome 1 occurred in patient TCGA-XX-XXXX. |
-||__/ssm_occurrences/`<ssm_occurrences_id>`__|Get information about a specific ssm occurrence using a `<ssm_occurrences_id>`, often supplemented with the `expand` option to show fields of interest. |
-|__CNVS__|__/cnvs__|Allows users to access data about copy number variations (cnvs). This data will be specifc to cnvs and not a specific case. |
-||__/cnvs/`<cnv_id>`__|Get information about a specific copy number variation using a `<cnv_id>`, often supplemented with the `expand` option to show fields of interest. |
-||__/cnvs/ids__|This endpoint will retrieve nodes that contain the queried cnv_id. This is accomplished by adding the query parameter: /cnvs/ids?query=`<cnv_id>`.|
-||__/cnv_occurrences__|A `cnv` entity as applied to a single case.|
-||__/cnv_occurrences/`<cnv_occurrence_id>`__|Get information about a specific copy number variation occurrence using a `<cnv_occurrence_id>`, often supplemented with the `expand` option to show fields of interest. |
-||__/cnv_occurrences/ids__|This endpoint will retrieve nodes that contain the queried cnv_occurrence_id. This is accomplished by adding the query parameter: /cnv_occurrences/ids?query=`<cnv_occurrences_id>`|
-|__Analysis__|__/analysis/top_cases_counts_by_genes__| Returns the number of cases with a mutation in each gene listed in the gene_ids parameter for each project. Note that this endpoint cannot be used with the `format` or `fields` parameters.|
-||__/analysis/top_mutated_genes_by_project__| Returns a list of genes that have the most mutations within a given project. |
-||__/analysis/top_mutated_cases_by_gene__| Generates information about the cases that are most affected by mutations in a given number of genes |
-||__/analysis/mutated_cases_count_by_project__| Returns counts for the number of cases that have associated `ssm` data in each project. The number of affected cases can be found under "case_with_ssm": {"doc_count": $case_count}.|
-||__/analysis/survival__| Survival plots can be generated in the Data Portal for different subsets of data, based upon many query factors such as variants, disease type and projects. This endpoint can be used to programmatically retrieve the raw data to generate these plots and apply different filters to the data. (see Survival Example)|
+| **Node**     | **Endpoint**                                 | **Description**                                                                                                                                                                                                                                                                                                          |
+| ------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Genes**    | **/genes**                                   | Allows users to access summary information about each gene using its Ensembl ID.                                                                                                                                                                                                                                         |
+| **SSMS**     | **/ssms**                                    | Allows users to access information about each somatic mutation. For example, a `ssm` would represent the transition of C to T at position 52000 of chromosome 1.                                                                                                                                                         |
+|              | **/ssms/`<ssm_id>`**                         | Get information about a specific ssm using a `<ssm_id>`, often supplemented with the `expand` option to show fields of interest.                                                                                                                                                                                         |
+|              | **/ssm_occurrences**                         | A `ssm` entity as applied to a single instance (case). An example of a `ssm occurrence` would be that the transition of C to T at position 52000 of chromosome 1 occurred in patient TCGA-XX-XXXX.                                                                                                                       |
+|              | **/ssm_occurrences/`<ssm_occurrences_id>`**  | Get information about a specific ssm occurrence using a `<ssm_occurrences_id>`, often supplemented with the `expand` option to show fields of interest.                                                                                                                                                                  |
+| **CNVS**     | **/cnvs**                                    | Allows users to access data about copy number variations (cnvs). This data will be specifc to cnvs and not a specific case.                                                                                                                                                                                              |
+|              | **/cnvs/`<cnv_id>`**                         | Get information about a specific copy number variation using a `<cnv_id>`, often supplemented with the `expand` option to show fields of interest.                                                                                                                                                                       |
+|              | **/cnvs/ids**                                | This endpoint will retrieve nodes that contain the queried cnv_id. This is accomplished by adding the query parameter: /cnvs/ids?query=`<cnv_id>`.                                                                                                                                                                       |
+|              | **/cnv_occurrences**                         | A `cnv` entity as applied to a single case.                                                                                                                                                                                                                                                                              |
+|              | **/cnv_occurrences/`<cnv_occurrence_id>`**   | Get information about a specific copy number variation occurrence using a `<cnv_occurrence_id>`, often supplemented with the `expand` option to show fields of interest.                                                                                                                                                 |
+|              | **/cnv_occurrences/ids**                     | This endpoint will retrieve nodes that contain the queried cnv_occurrence_id. This is accomplished by adding the query parameter: /cnv_occurrences/ids?query=`<cnv_occurrences_id>`                                                                                                                                      |
+| **Analysis** | **/analysis/top_cases_counts_by_genes**      | Returns the number of cases with a mutation in each gene listed in the gene_ids parameter for each project. Note that this endpoint cannot be used with the `format` or `fields` parameters.                                                                                                                             |
+|              | **/analysis/top_mutated_genes_by_project**   | Returns a list of genes that have the most mutations within a given project.                                                                                                                                                                                                                                             |
+|              | **/analysis/top_mutated_cases_by_gene**      | Generates information about the cases that are most affected by mutations in a given number of genes                                                                                                                                                                                                                     |
+|              | **/analysis/mutated_cases_count_by_project** | Returns counts for the number of cases that have associated `ssm` data in each project. The number of affected cases can be found under "case_with_ssm": {"doc_count": $case_count}.                                                                                                                                     |
+|              | **/analysis/survival**                       | Survival plots can be generated in the Data Portal for different subsets of data, based upon many query factors such as variants, disease type and projects. This endpoint can be used to programmatically retrieve the raw data to generate these plots and apply different filters to the data. (see Survival Example) |
 
-
-The methods for retrieving information from these endpoints are very similar to those used for the `cases` and `files` endpoints. These methods are explored in depth in the [API Search and Retrieval](https://docs.gdc.cancer.gov/API/Users_Guide/Search_and_Retrieval/) documentation. The `_mapping` parameter can also be used with each of these endpoints to generate a list of potential fields.  For example:
+The methods for retrieving information from these endpoints are very similar to those used for the `cases` and `files` endpoints. These methods are explored in depth in the [API Search and Retrieval](https://docs.gdc.cancer.gov/API/Users_Guide/Search_and_Retrieval/) documentation. The `_mapping` parameter can also be used with each of these endpoints to generate a list of potential fields. For example:
 
 `https://api.gdc.cancer.gov/ssms/_mapping`
 
@@ -35,6 +34,7 @@ While it is not an endpoint, the `observation` entity is featured in the visuali
 ```Shell
 curl "https://api.gdc.cancer.gov/ssms/57bb3f2e-ec05-52c2-ab02-7065b7d24849?expand=occurrence.case.observation.read_depth&pretty=true"
 ```
+
 ```Response
 {
   "data": {
@@ -78,11 +78,12 @@ curl "https://api.gdc.cancer.gov/ssms/57bb3f2e-ec05-52c2-ab02-7065b7d24849?expan
 
 ## Genes Endpoint Examples
 
-__Example 1:__ A user would like to access information about the gene `ZMPSTE24`, which has an Ensembl gene ID of `ENSG00000084073`.  This would be accomplished by appending `ENSG00000084073` (`gene_id`) to the `genes` endpoint.
+**Example 1:** A user would like to access information about the gene `ZMPSTE24`, which has an Ensembl gene ID of `ENSG00000084073`. This would be accomplished by appending `ENSG00000084073` (`gene_id`) to the `genes` endpoint.
 
 ```Shell
 curl "https://api.gdc.cancer.gov/genes/ENSG00000084073?pretty=true"
 ```
+
 ```Response
 {
   "data": {
@@ -115,11 +116,12 @@ curl "https://api.gdc.cancer.gov/genes/ENSG00000084073?pretty=true"
 }
 ```
 
-__Example 2:__ A user wants a subset of elements such as a list of coordinates for all genes on chromosome 7. The query can be filtered for only results from chromosome 7 using a JSON-formatted query that is URL-encoded.
+**Example 2:** A user wants a subset of elements such as a list of coordinates for all genes on chromosome 7. The query can be filtered for only results from chromosome 7 using a JSON-formatted query that is URL-encoded.
 
 ```Shell
 curl "https://api.gdc.cancer.gov/genes?pretty=true&fields=gene_id,symbol,gene_start,gene_end&format=tsv&size=2000&filters=%7B%0D%0A%22op%22%3A%22in%22%2C%0D%0A%22content%22%3A%7B%0D%0A%22field%22%3A%22gene_chromosome%22%2C%0D%0A%22value%22%3A%5B%0D%0A%227%22%0D%0A%5D%0D%0A%7D%0D%0A%7D"
 ```
+
 ```Response
 gene_start      gene_end        symbol  id
 28995231        29195451        CPVL    ENSG00000106066
@@ -152,7 +154,7 @@ gene_start      gene_end        symbol  id
 
 ## Simple Somatic Mutation Endpoint Examples
 
-__Example 1__: Similar to the `/genes` endpoint, a user would like to retrieve information about the mutation based on its COSMIC ID. This would be accomplished by creating a JSON filter, which will then be encoded to URL for the `curl` command.
+**Example 1**: Similar to the `/genes` endpoint, a user would like to retrieve information about the mutation based on its COSMIC ID. This would be accomplished by creating a JSON filter, which will then be encoded to URL for the `curl` command.
 
 ```Filter
  {
@@ -216,7 +218,7 @@ curl 'https://api.gdc.cancer.gov/ssms?pretty=true&filters=%7B%0A%22op%22%3A%22in
 }
 ```
 
-__Example 2:__ Based on the previous example's `ssm_id` (`8b3c1a7a-e4e0-5200-9d46-5767c2982145`), a user would like to look at the consequences and the VEP impact due to this ssm.
+**Example 2:** Based on the previous example's `ssm_id` (`8b3c1a7a-e4e0-5200-9d46-5767c2982145`), a user would like to look at the consequences and the VEP impact due to this ssm.
 
 ```Shell
 curl 'https://api.gdc.cancer.gov/ssms/8b3c1a7a-e4e0-5200-9d46-5767c2982145?pretty=true&expand=consequence.transcript&fields=consequence.transcript.annotation.vep_impact'
@@ -228,113 +230,113 @@ curl 'https://api.gdc.cancer.gov/ssms/8b3c1a7a-e4e0-5200-9d46-5767c2982145?prett
     "consequence": [
       {
         "transcript": {
-          "aa_start": 127, 
-          "consequence_type": "synonymous_variant", 
-          "aa_end": 127, 
-          "transcript_id": "ENST00000466621", 
-          "is_canonical": false, 
-          "aa_change": "G127G", 
+          "aa_start": 127,
+          "consequence_type": "synonymous_variant",
+          "aa_end": 127,
+          "transcript_id": "ENST00000466621",
+          "is_canonical": false,
+          "aa_change": "G127G",
           "annotation": {
             "vep_impact": "LOW"
-          }, 
+          },
           "ref_seq_accession": ""
         }
-      }, 
+      },
       {
         "transcript": {
-          "aa_start": 95, 
-          "consequence_type": "synonymous_variant", 
-          "aa_end": 95, 
-          "transcript_id": "ENST00000613879", 
-          "is_canonical": false, 
-          "aa_change": "G95G", 
+          "aa_start": 95,
+          "consequence_type": "synonymous_variant",
+          "aa_end": 95,
+          "transcript_id": "ENST00000613879",
+          "is_canonical": false,
+          "aa_change": "G95G",
           "annotation": {
             "vep_impact": "LOW"
-          }, 
+          },
           "ref_seq_accession": ""
         }
-      }, 
+      },
       {
         "transcript": {
-          "aa_start": 218, 
-          "consequence_type": "synonymous_variant", 
-          "aa_end": 218, 
-          "transcript_id": "ENST00000473635", 
-          "is_canonical": false, 
-          "aa_change": "G218G", 
+          "aa_start": 218,
+          "consequence_type": "synonymous_variant",
+          "aa_end": 218,
+          "transcript_id": "ENST00000473635",
+          "is_canonical": false,
+          "aa_change": "G218G",
           "annotation": {
             "vep_impact": "LOW"
-          }, 
+          },
           "ref_seq_accession": ""
         }
-      }, 
+      },
       {
         "transcript": {
-          "aa_start": null, 
-          "consequence_type": "non_coding_transcript_exon_variant", 
-          "aa_end": null, 
-          "transcript_id": "ENST00000474560", 
-          "is_canonical": false, 
-          "aa_change": null, 
+          "aa_start": null,
+          "consequence_type": "non_coding_transcript_exon_variant",
+          "aa_end": null,
+          "transcript_id": "ENST00000474560",
+          "is_canonical": false,
+          "aa_change": null,
           "annotation": {
             "vep_impact": "MODIFIER"
-          }, 
+          },
           "ref_seq_accession": ""
         }
-      }, 
+      },
       {
         "transcript": {
-          "aa_start": 1226, 
-          "consequence_type": "synonymous_variant", 
-          "aa_end": 1226, 
-          "transcript_id": "ENST00000383710", 
-          "is_canonical": true, 
-          "aa_change": "G1226G", 
+          "aa_start": 1226,
+          "consequence_type": "synonymous_variant",
+          "aa_end": 1226,
+          "transcript_id": "ENST00000383710",
+          "is_canonical": true,
+          "aa_change": "G1226G",
           "annotation": {
             "vep_impact": "LOW"
-          }, 
+          },
           "ref_seq_accession": "NM_003716.3"
         }
-      }, 
+      },
       {
         "transcript": {
-          "aa_start": 1187, 
-          "consequence_type": "synonymous_variant", 
-          "aa_end": 1187, 
-          "transcript_id": "ENST00000283269", 
-          "is_canonical": false, 
-          "aa_change": "G1187G", 
+          "aa_start": 1187,
+          "consequence_type": "synonymous_variant",
+          "aa_end": 1187,
+          "transcript_id": "ENST00000283269",
+          "is_canonical": false,
+          "aa_change": "G1187G",
           "annotation": {
             "vep_impact": "LOW"
-          }, 
+          },
           "ref_seq_accession": "NM_183394.2"
         }
-      }, 
+      },
       {
         "transcript": {
-          "aa_start": 1147, 
-          "consequence_type": "synonymous_variant", 
-          "aa_end": 1147, 
-          "transcript_id": "ENST00000357948", 
-          "is_canonical": false, 
-          "aa_change": "G1147G", 
+          "aa_start": 1147,
+          "consequence_type": "synonymous_variant",
+          "aa_end": 1147,
+          "transcript_id": "ENST00000357948",
+          "is_canonical": false,
+          "aa_change": "G1147G",
           "annotation": {
             "vep_impact": "LOW"
-          }, 
+          },
           "ref_seq_accession": "NM_183393.2"
         }
-      }, 
+      },
       {
         "transcript": {
-          "aa_start": 1217, 
-          "consequence_type": "synonymous_variant", 
-          "aa_end": 1217, 
-          "transcript_id": "ENST00000612439", 
-          "is_canonical": false, 
-          "aa_change": "G1217G", 
+          "aa_start": 1217,
+          "consequence_type": "synonymous_variant",
+          "aa_end": 1217,
+          "transcript_id": "ENST00000612439",
+          "is_canonical": false,
+          "aa_change": "G1217G",
           "annotation": {
             "vep_impact": "LOW"
-          }, 
+          },
           "ref_seq_accession": ""
         }
       }
@@ -344,20 +346,22 @@ curl 'https://api.gdc.cancer.gov/ssms/8b3c1a7a-e4e0-5200-9d46-5767c2982145?prett
 
 ## Simple Somatic Mutation Occurrence Endpoint Examples
 
-__Example 1:__ A user wants to determine the chromosome in case `TCGA-DU-6407` that contains the greatest number of `ssms`. As this relates to mutations that are observed in a case, the `ssm_occurrences` endpoint is used.
+**Example 1:** A user wants to determine the chromosome in case `TCGA-DU-6407` that contains the greatest number of `ssms`. As this relates to mutations that are observed in a case, the `ssm_occurrences` endpoint is used.
 
 ```Filter
-{  
+{
    "op":"in",
-   "content":{  
+   "content":{
       "field":"case.submitter_id",
       "value":["TCGA-DU-6407"]
    }
 }
 ```
+
 ```Shell
 curl "https://api.gdc.cancer.gov/ssm_occurrences?format=tsv&fields=ssm.chromosome&size=5000&filters=%7B%0D%0A%22op%22%3A%22in%22%2C%0D%0A%22content%22%3A%7B%0D%0A%22field%22%3A%22case.submitter_id%22%2C%0D%0A%22value%22%3A%5B%0D%0A%22TCGA-DU-6407%22%0D%0A%5D%0D%0A%7D%0D%0A%7D"
 ```
+
 ```tsv
 ssm.chromosome	id
 chr3	552c09d1-69b1-5c04-b543-524a6feae3eb
@@ -391,7 +395,8 @@ chr10	727c9d57-7b74-556f-aa5b-e1ca1f76d119
 chr15	b4a86ffd-e60c-5c9c-aaa1-9e9f02d86116
 chr5	3a023e72-da92-54f7-aa18-502c1076b2b0
 ```
-__Example 2:__ A user has retrieved a `ssm_occurrence`, and would like to determine if that case also has tissue slides and transcriptome profiling data.
+
+**Example 2:** A user has retrieved a `ssm_occurrence`, and would like to determine if that case also has tissue slides and transcriptome profiling data.
 
 ```Shell
 curl 'https://api.gdc.cancer.gov/ssm_occurrences/6fd8527d-5c40-5604-8fa9-0ce798eec231?pretty=true&expand=case,case.summary.experimental_strategies'
@@ -401,57 +406,57 @@ curl 'https://api.gdc.cancer.gov/ssm_occurrences/6fd8527d-5c40-5604-8fa9-0ce798e
 {
   "data": {
     "case": {
-      "disease_type": "Nevi and Melanomas", 
-      "updated_datetime": "2018-09-06T18:42:50.098635-05:00", 
-      "created_datetime": null, 
+      "disease_type": "Nevi and Melanomas",
+      "updated_datetime": "2018-09-06T18:42:50.098635-05:00",
+      "created_datetime": null,
       "summary": {
         "experimental_strategies": [
           {
-            "file_count": 3, 
+            "file_count": 3,
             "experimental_strategy": "miRNA-Seq"
-          }, 
+          },
           {
-            "file_count": 1, 
+            "file_count": 1,
             "experimental_strategy": "Tissue Slide"
-          }, 
+          },
           {
-            "file_count": 18, 
+            "file_count": 18,
             "experimental_strategy": "WXS"
-          }, 
+          },
           {
-            "file_count": 1, 
+            "file_count": 1,
             "experimental_strategy": "Diagnostic Slide"
-          }, 
+          },
           {
-            "file_count": 4, 
+            "file_count": 4,
             "experimental_strategy": "RNA-Seq"
-          }, 
+          },
           {
-            "file_count": 4, 
+            "file_count": 4,
             "experimental_strategy": "Genotyping Array"
-          }, 
+          },
           {
-            "file_count": 1, 
+            "file_count": 1,
             "experimental_strategy": "Methylation Array"
           }
         ]
-      }, 
-      "state": "released", 
-      "case_id": "590b5e18-d837-4c0e-becf-80520db57c0f", 
-      "primary_site": "Skin", 
-      "submitter_id": "TCGA-Z2-A8RT", 
+      },
+      "state": "released",
+      "case_id": "590b5e18-d837-4c0e-becf-80520db57c0f",
+      "primary_site": "Skin",
+      "submitter_id": "TCGA-Z2-A8RT",
       "available_variation_data": [
-        "cnv", 
+        "cnv",
         "ssm"
       ]
-    }, 
+    },
     "ssm_occurrence_id": "6fd8527d-5c40-5604-8fa9-0ce798eec231"
   }
 ```
 
 ## Copy Number Variation Endpoint Examples
 
-__Example 1:__ A user is interested in finding the first 30 cnvs found on chromosome 4 that have a cnv loss. 
+**Example 1:** A user is interested in finding the first 30 cnvs found on chromosome 4 that have a cnv loss.
 
 ```Filter
 {
@@ -517,7 +522,7 @@ GRCh38	f6f660d2-5a68-5e49-92b1-a816be39e0fe	True	Loss	1745176	1721490	f6f660d2-5
 GRCh38	a0c069d1-dcb0-5833-8fff-211cd6e3719a	True	Loss	1808872	1793307	a0c069d1-dcb0-5833-8fff-211cd6e3719a	4
 ```
 
-__Example 2:__ A user wants to determine the location and identity of the gene affected by the cnv `5052be09-2bbe-5175-a0ae-fc568ea75339`, and determine whether the gene is found within the Cancer Gene Census.
+**Example 2:** A user wants to determine the location and identity of the gene affected by the cnv `5052be09-2bbe-5175-a0ae-fc568ea75339`, and determine whether the gene is found within the Cancer Gene Census.
 
 ```Shell
 curl 'https://api.gdc.cancer.gov/cnvs/5052be09-2bbe-5175-a0ae-fc568ea75339?pretty=true&expand=consequence.gene'
@@ -526,29 +531,29 @@ curl 'https://api.gdc.cancer.gov/cnvs/5052be09-2bbe-5175-a0ae-fc568ea75339?prett
 ```Json
 {
   "data": {
-    "ncbi_build": "GRCh38", 
-    "cnv_id": "5052be09-2bbe-5175-a0ae-fc568ea75339", 
-    "gene_level_cn": true, 
-    "cnv_change": "Gain", 
-    "end_position": 110346681, 
-    "start_position": 110338506, 
+    "ncbi_build": "GRCh38",
+    "cnv_id": "5052be09-2bbe-5175-a0ae-fc568ea75339",
+    "gene_level_cn": true,
+    "cnv_change": "Gain",
+    "end_position": 110346681,
+    "start_position": 110338506,
     "consequence": [
       {
         "gene": {
-          "symbol": "RBM15", 
-          "is_cancer_gene_census": "True", 
-          "biotype": "protein_coding", 
+          "symbol": "RBM15",
+          "is_cancer_gene_census": "True",
+          "biotype": "protein_coding",
           "gene_id": "ENSG00000162775"
         }
       }
-    ], 
+    ],
     "chromosome": "1"
   }
 ```
 
 ## Copy Number Variation Occurrence Enpoint Examples
 
-__Example 1:__ A user is interested in finding cases that have both cnv and ssm data for females diagnosed with Squamous Cell Neoplasms and have a cnv gain change on chromosome 9. It is important to note that for a case like this, where multiple arguments are need for one filtered field, it is easier for the API to have multiple filters for the same field, `case.available_variation_data` in this example, than having one filter with multiple arguments.
+**Example 1:** A user is interested in finding cases that have both cnv and ssm data for females diagnosed with Squamous Cell Neoplasms and have a cnv gain change on chromosome 9. It is important to note that for a case like this, where multiple arguments are need for one filtered field, it is easier for the API to have multiple filters for the same field, `case.available_variation_data` in this example, than having one filter with multiple arguments.
 
 ```Filter
 {
@@ -631,7 +636,7 @@ a6ec75d4-1c90-4527-bfae-aa91d2dae082	ssm	cnv	94b0e8be-1130-5b88-9103-6756bdabf67
 107f6b9a-2883-4499-a40a-ec25bc834a06	ssm	cnv	ad831f27-e6f5-5b78-8a15-0b652621ea4c
 ```
 
-__Example 2:__ A user is interested in the first cnv occurrence (`e76d2aaf-f951-5a51-a949-a241dba61f73`) from the previous example, and would like to know more about the case exposures and demographics.
+**Example 2:** A user is interested in the first cnv occurrence (`e76d2aaf-f951-5a51-a949-a241dba61f73`) from the previous example, and would like to know more about the case exposures and demographics.
 
 ```Shell
 curl 'https://api.gdc.cancer.gov/cnv_occurrences/e76d2aaf-f951-5a51-a949-a241dba61f73?pretty=true&expand=cnv,case,case.exposures,case.demographic'
@@ -641,74 +646,73 @@ curl 'https://api.gdc.cancer.gov/cnv_occurrences/e76d2aaf-f951-5a51-a949-a241dba
 {
   "data": {
     "cnv": {
-      "ncbi_build": "GRCh38", 
-      "cnv_id": "0d475712-c11e-51fb-b6e6-407d12978057", 
-      "gene_level_cn": true, 
-      "cnv_change": "Gain", 
-      "end_position": 133348131, 
-      "variant_status": "Tumor only", 
-      "start_position": 133338323, 
+      "ncbi_build": "GRCh38",
+      "cnv_id": "0d475712-c11e-51fb-b6e6-407d12978057",
+      "gene_level_cn": true,
+      "cnv_change": "Gain",
+      "end_position": 133348131,
+      "variant_status": "Tumor only",
+      "start_position": 133338323,
       "chromosome": "9"
-    }, 
+    },
     "case": {
-      "disease_type": "Squamous Cell Neoplasms", 
-      "updated_datetime": "2018-09-06T11:07:45.510627-05:00", 
-      "created_datetime": null, 
+      "disease_type": "Squamous Cell Neoplasms",
+      "updated_datetime": "2018-09-06T11:07:45.510627-05:00",
+      "created_datetime": null,
       "demographic": {
-        "updated_datetime": "2018-09-06T11:07:45.510627-05:00", 
-        "created_datetime": null, 
-        "gender": "female", 
-        "year_of_birth": 1954, 
-        "submitter_id": "TCGA-EA-A3HR_demographic", 
-        "state": "released", 
-        "race": "white", 
-        "demographic_id": "dd8576a8-bd62-55e7-b0df-7233ceded2fb", 
-        "ethnicity": "not hispanic or latino", 
+        "updated_datetime": "2018-09-06T11:07:45.510627-05:00",
+        "created_datetime": null,
+        "gender": "female",
+        "year_of_birth": 1954,
+        "submitter_id": "TCGA-EA-A3HR_demographic",
+        "state": "released",
+        "race": "white",
+        "demographic_id": "dd8576a8-bd62-55e7-b0df-7233ceded2fb",
+        "ethnicity": "not hispanic or latino",
         "year_of_death": null
-      }, 
-      "submitter_id": "TCGA-EA-A3HR", 
-      "state": "released", 
-      "case_id": "638035f6-2909-4a44-980f-468ac5d74e18", 
-      "primary_site": "Cervix uteri", 
+      },
+      "submitter_id": "TCGA-EA-A3HR",
+      "state": "released",
+      "case_id": "638035f6-2909-4a44-980f-468ac5d74e18",
+      "primary_site": "Cervix uteri",
       "available_variation_data": [
-        "cnv", 
+        "cnv",
         "ssm"
-      ], 
+      ],
       "exposures": [
         {
-          "cigarettes_per_day": null, 
-          "weight": 86, 
-          "updated_datetime": "2018-09-06T11:07:45.510627-05:00", 
-          "created_datetime": null, 
-          "alcohol_intensity": null, 
-          "bmi": 40, 
-          "years_smoked": null, 
-          "submitter_id": "TCGA-EA-A3HR_exposure", 
-          "alcohol_history": null, 
-          "state": "released", 
-          "tobacco_smoking_status": null, 
-          "tobacco_smoking_onset_year": null, 
-          "tobacco_smoking_quit_year": null, 
-          "exposure_id": "0e7265ab-bf65-50c7-bf33-96a7ac452d7c", 
-          "height": 146, 
+          "cigarettes_per_day": null,
+          "weight": 86,
+          "updated_datetime": "2018-09-06T11:07:45.510627-05:00",
+          "created_datetime": null,
+          "alcohol_intensity": null,
+          "bmi": 40,
+          "years_smoked": null,
+          "submitter_id": "TCGA-EA-A3HR_exposure",
+          "alcohol_history": null,
+          "state": "released",
+          "tobacco_smoking_status": null,
+          "tobacco_smoking_onset_year": null,
+          "tobacco_smoking_quit_year": null,
+          "exposure_id": "0e7265ab-bf65-50c7-bf33-96a7ac452d7c",
+          "height": 146,
           "pack_years_smoked": null
         }
       ]
-    }, 
+    },
     "cnv_occurrence_id": "e76d2aaf-f951-5a51-a949-a241dba61f73"
   }
 ```
 
 ## Analysis Endpoints
 
-In addition to the `ssms`, `ssm_occurrences`, and `genes` endpoints mentioned previously, several `/analysis` endpoints were designed to quickly retrieve specific datasets used for visualization display.  
+In addition to the `ssms`, `ssm_occurrences`, and `genes` endpoints mentioned previously, several `/analysis` endpoints were designed to quickly retrieve specific datasets used for visualization display.
 
-__Example 1:__ The `/analysis/top_cases_counts_by_genes` endpoint gives the number of cases with a mutation in each gene listed in the `gene_ids` parameter for each project. Note that this endpoint cannot be used with the `format` or `fields` parameters. In this instance, the query will produce the number of cases in each projects with mutations in the gene `ENSG00000155657`.
+**Example 1:** The `/analysis/top_cases_counts_by_genes` endpoint gives the number of cases with a mutation in each gene listed in the `gene_ids` parameter for each project. Note that this endpoint cannot be used with the `format` or `fields` parameters. In this instance, the query will produce the number of cases in each projects with mutations in the gene `ENSG00000155657`.
 
 ```Shell
 curl "https://api.gdc.cancer.gov/analysis/top_cases_counts_by_genes?gene_ids=ENSG00000155657&pretty=true"
 ```
-
 
 This JSON-formatted output is broken up by project. For an example, see the following text:
 
@@ -736,37 +740,34 @@ This JSON-formatted output is broken up by project. For an example, see the foll
 
 This portion of the output shows TCGA-GBM including 45 cases that have `ssms` in the gene `ENSG00000155657`.
 
-__Example 2:__ The following demonstrates a use of the `/analysis/top_mutated_genes_by_project` endpoint.  This will output the genes that are mutated in the most cases in "TCGA-DLBC" and will count the mutations that have a `HIGH` or `MODERATE` impact on gene function. Note that the `score` field does not represent the number of mutations in a given gene, but a calculation that is used to determine which genes have the greatest number of unique mutations.  
+**Example 2:** The following demonstrates a use of the `/analysis/top_mutated_genes_by_project` endpoint. This will output the genes that are mutated in the most cases in "TCGA-DLBC" and will count the mutations that have a `HIGH` or `MODERATE` impact on gene function. Note that the `score` field does not represent the number of mutations in a given gene, but a calculation that is used to determine which genes have the greatest number of unique mutations.
 
 ```json
-{  
-   "op":"AND",
-   "content":[  
-      {  
-         "op":"in",
-         "content":{  
-            "field":"case.project.project_id",
-            "value":[  
-               "TCGA-DLBC"
-            ]
-         }
-      },
-      {  
-         "op":"in",
-         "content":{  
-            "field":"case.ssm.consequence.transcript.annotation.impact",
-            "value":[  
-               "HIGH",
-               "MODERATE"
-            ]
-         }
+{
+  "op": "AND",
+  "content": [
+    {
+      "op": "in",
+      "content": {
+        "field": "case.project.project_id",
+        "value": ["TCGA-DLBC"]
       }
-   ]
+    },
+    {
+      "op": "in",
+      "content": {
+        "field": "case.ssm.consequence.transcript.annotation.impact",
+        "value": ["HIGH", "MODERATE"]
+      }
+    }
+  ]
 }
 ```
+
 ```Shell
 curl "https://api.gdc.cancer.gov/analysis/top_mutated_genes_by_project?fields=gene_id,symbol&filters=%7B%22op%22%3A%22AND%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22case.project.project_id%22%2C%22value%22%3A%5B%22TCGA-DLBC%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22case.ssm.consequence.transcript.annotation.impact%22%2C%22value%22%3A%5B%22HIGH%22%2C%22MODERATE%22%5D%7D%7D%5D%7D&pretty=true"
 ```
+
 ```Response
 {
   "data": {
@@ -836,11 +837,12 @@ curl "https://api.gdc.cancer.gov/analysis/top_mutated_genes_by_project?fields=ge
 }
 ```
 
-__Example 3:__ The `/analysis/top_mutated_cases_by_gene` endpoint will generate information about the cases that are most affected by mutations in a given number of genes. Below, the file count for each category is given for the cases most affected by mutations in these 50 genes.  The size of the output is limited to two cases with the `size=2` parameter, but a higher value can be set by the user.
+**Example 3:** The `/analysis/top_mutated_cases_by_gene` endpoint will generate information about the cases that are most affected by mutations in a given number of genes. Below, the file count for each category is given for the cases most affected by mutations in these 50 genes. The size of the output is limited to two cases with the `size=2` parameter, but a higher value can be set by the user.
 
 ```Shell
 curl "https://api.gdc.cancer.gov/analysis/top_mutated_cases_by_gene?fields=diagnoses.days_to_death,diagnoses.age_at_diagnosis,diagnoses.vital_status,diagnoses.primary_diagnosis,demographic.gender,demographic.race,demographic.ethnicity,case_id,summary.data_categories.file_count,summary.data_categories.data_category&filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%22TCGA-DLBC%22%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22genes.gene_id%22%2C%22value%22%3A%5B%22ENSG00000166710%22%2C%22ENSG00000005339%22%2C%22ENSG00000083857%22%2C%22ENSG00000168769%22%2C%22ENSG00000100906%22%2C%22ENSG00000184677%22%2C%22ENSG00000101680%22%2C%22ENSG00000101266%22%2C%22ENSG00000028277%22%2C%22ENSG00000140968%22%2C%22ENSG00000181827%22%2C%22ENSG00000116815%22%2C%22ENSG00000275221%22%2C%22ENSG00000139083%22%2C%22ENSG00000112851%22%2C%22ENSG00000112697%22%2C%22ENSG00000164134%22%2C%22ENSG00000009413%22%2C%22ENSG00000071626%22%2C%22ENSG00000135407%22%2C%22ENSG00000101825%22%2C%22ENSG00000104814%22%2C%22ENSG00000166415%22%2C%22ENSG00000142867%22%2C%22ENSG00000254585%22%2C%22ENSG00000139718%22%2C%22ENSG00000077721%22%2C%22ENSG00000130294%22%2C%22ENSG00000117245%22%2C%22ENSG00000117318%22%2C%22ENSG00000270550%22%2C%22ENSG00000163637%22%2C%22ENSG00000166575%22%2C%22ENSG00000065526%22%2C%22ENSG00000156453%22%2C%22ENSG00000128191%22%2C%22ENSG00000055609%22%2C%22ENSG00000204469%22%2C%22ENSG00000187605%22%2C%22ENSG00000185875%22%2C%22ENSG00000110888%22%2C%22ENSG00000007341%22%2C%22ENSG00000173198%22%2C%22ENSG00000115568%22%2C%22ENSG00000163714%22%2C%22ENSG00000125772%22%2C%22ENSG00000080815%22%2C%22ENSG00000189079%22%2C%22ENSG00000120837%22%2C%22ENSG00000143951%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22ssms.consequence.transcript.annotation.impact%22%2C%22value%22%3A%5B%22HIGH%22%5D%7D%7D%5D%7D&pretty=true&size=2"
 ```
+
 ```Response
 {
   "data": {
@@ -958,11 +960,12 @@ curl "https://api.gdc.cancer.gov/analysis/top_mutated_cases_by_gene?fields=diagn
 }
 ```
 
-__Example 4:__  The `/analysis/mutated_cases_count_by_project` endpoint produces counts for the number of cases that have associated `ssm` data in each project. The number of affected cases can be found under `"case_with_ssm": {"doc_count": $case_count}`.  
+**Example 4:** The `/analysis/mutated_cases_count_by_project` endpoint produces counts for the number of cases that have associated `ssm` data in each project. The number of affected cases can be found under `"case_with_ssm": {"doc_count": $case_count}`.
 
 ```Shell
 curl "https://api.gdc.cancer.gov/analysis/mutated_cases_count_by_project?size=0&pretty=true"
 ```
+
 ```Response
 {
   "hits": {
@@ -1377,15 +1380,17 @@ curl "https://api.gdc.cancer.gov/analysis/mutated_cases_count_by_project?size=0&
   "timed_out": false
 }
 ```
+
 ### Survival Analysis Endpoint
 
 [Survival plots](/Data_Portal/Users_Guide/Exploration/#survival-analysis) are generated for different subsets of data, based on variants or projects, in the GDC Data Portal. The `/analysis/survival` endpoint can be used to programmatically retrieve the raw data used to generate these plots and apply different filters. Note that the `fields` and `format` parameters cannot be modified.
 
- __Example 1:__ A user wants to download data to generate a survival plot for cases from the project TCGA-DLBC.
+**Example 1:** A user wants to download data to generate a survival plot for cases from the project TCGA-DLBC.
 
 ```Shell
 curl "https://api.gdc.cancer.gov/analysis/survival?filters=%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%22TCGA-DLBC%22%7D%7D%5D&pretty=true"
 ```
+
 ```Response
 {
   "overallStats": {},
@@ -1683,53 +1688,55 @@ curl "https://api.gdc.cancer.gov/analysis/survival?filters=%5B%7B%22op%22%3A%22%
 }
 ```
 
-__Example 2:__ Here the survival endpoint is used to compare two survival plots for TCGA-BRCA cases.  One plot will display survival information about cases with a particular mutation (in this instance: `chr3:g.179234297A>G`) and the other plot will display information about cases without that mutation. This type of query will also print the results of a chi-squared analysis between the two subsets of cases.  
+**Example 2:** Here the survival endpoint is used to compare two survival plots for TCGA-BRCA cases. One plot will display survival information about cases with a particular mutation (in this instance: `chr3:g.179234297A>G`) and the other plot will display information about cases without that mutation. This type of query will also print the results of a chi-squared analysis between the two subsets of cases.
 
 ```json
-[  
-  {  
-    "op":"and",
-    "content":[  
-      {  
-        "op":"=",
-        "content":{  
-          "field":"cases.project.project_id",
-          "value":"TCGA-BRCA"
+[
+  {
+    "op": "and",
+    "content": [
+      {
+        "op": "=",
+        "content": {
+          "field": "cases.project.project_id",
+          "value": "TCGA-BRCA"
         }
       },
-      {  
-        "op":"=",
-        "content":{  
-          "field":"gene.ssm.ssm_id",
-          "value":"edd1ae2c-3ca9-52bd-a124-b09ed304fcc2"
+      {
+        "op": "=",
+        "content": {
+          "field": "gene.ssm.ssm_id",
+          "value": "edd1ae2c-3ca9-52bd-a124-b09ed304fcc2"
         }
       }
     ]
   },
-  {  
-    "op":"and",
-    "content":[  
-      {  
-        "op":"=",
-        "content":{  
-          "field":"cases.project.project_id",
-          "value":"TCGA-BRCA"
+  {
+    "op": "and",
+    "content": [
+      {
+        "op": "=",
+        "content": {
+          "field": "cases.project.project_id",
+          "value": "TCGA-BRCA"
         }
       },
-      {  
-        "op":"excludeifany",
-        "content":{  
-          "field":"gene.ssm.ssm_id",
-          "value":"edd1ae2c-3ca9-52bd-a124-b09ed304fcc2"
+      {
+        "op": "excludeifany",
+        "content": {
+          "field": "gene.ssm.ssm_id",
+          "value": "edd1ae2c-3ca9-52bd-a124-b09ed304fcc2"
         }
       }
     ]
   }
 ]
 ```
+
 ```Shell
 curl "https://api.gdc.cancer.gov/analysis/survival?filters=%5B%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%22TCGA-BRCA%22%7D%7D%2C%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22gene.ssm.ssm_id%22%2C%22value%22%3A%22edd1ae2c-3ca9-52bd-a124-b09ed304fcc2%22%7D%7D%5D%7D%2C%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%22TCGA-BRCA%22%7D%7D%2C%7B%22op%22%3A%22excludeifany%22%2C%22content%22%3A%7B%22field%22%3A%22gene.ssm.ssm_id%22%2C%22value%22%3A%22edd1ae2c-3ca9-52bd-a124-b09ed304fcc2%22%7D%7D%5D%7D%5D&pretty=true"
 ```
+
 ```json2
 {
   "overallStats": {
@@ -1771,42 +1778,42 @@ curl "https://api.gdc.cancer.gov/analysis/survival?filters=%5B%7B%22op%22%3A%22a
 
 The output represents two sets of coordinates delimited as objects with the `donors` tag. One set of coordinates will generate a survival plot representing TCGA-BRCA cases that have the mutation of interest and the other will generate a survival plot for the remaining cases in TCGA-BRCA.
 
-__Example 3:__ Custom survival plots can be generated using the GDC API.  For example, a user could generate survival plot data comparing patients with a mutation in genes associated with a biological pathway with patients without mutations in that pathway. The following example compares a patient with at least one mutation in either gene `ENSG00000141510` or `ENSG00000155657` with patients that do not have mutations in these genes.
+**Example 3:** Custom survival plots can be generated using the GDC API. For example, a user could generate survival plot data comparing patients with a mutation in genes associated with a biological pathway with patients without mutations in that pathway. The following example compares a patient with at least one mutation in either gene `ENSG00000141510` or `ENSG00000155657` with patients that do not have mutations in these genes.
 
-``` Query
-[  
-   {  
+```Query
+[
+   {
       "op":"and",
-      "content":[  
-         {  
+      "content":[
+         {
             "op":"=",
-            "content":{  
+            "content":{
                "field":"cases.project.project_id",
                "value":"TCGA-BRCA"
             }
          },
-         {  
+         {
             "op":"=",
-            "content":{  
+            "content":{
                "field":"gene.gene_id",
                "value":["ENSG00000141510","ENSG00000155657"]
             }
          }
       ]
    },
-   {  
+   {
       "op":"and",
-      "content":[  
-         {  
+      "content":[
+         {
             "op":"=",
-            "content":{  
+            "content":{
                "field":"cases.project.project_id",
                "value":"TCGA-BRCA"
             }
          },
-         {  
+         {
             "op":"excludeifany",
-            "content":{  
+            "content":{
                "field":"gene.gene_id",
                "value":["ENSG00000141510","ENSG00000155657"]
             }
@@ -1815,28 +1822,30 @@ __Example 3:__ Custom survival plots can be generated using the GDC API.  For ex
    }
 ]
 ```
+
 ```Shell
 curl "https://api.gdc.cancer.gov/analysis/survival?filters=%5B%0D%0A%7B%0D%0A%22op%22%3A%22and%22%2C%0D%0A%22content%22%3A%5B%0D%0A%7B%0D%0A%22op%22%3A%22%3D%22%2C%0D%0A%22content%22%3A%7B%0D%0A%22field%22%3A%22cases.project.project_id%22%2C%0D%0A%22value%22%3A%22TCGA-BRCA%22%0D%0A%7D%0D%0A%7D%2C%0D%0A%7B%0D%0A%22op%22%3A%22%3D%22%2C%0D%0A%22content%22%3A%7B%0D%0A%22field%22%3A%22gene.gene_id%22%2C%0D%0A%22value%22%3A%5B%22ENSG00000141510%22%2C%22ENSG00000155657%22%5D%0D%0A%7D%0D%0A%7D%0D%0A%5D%0D%0A%7D%2C%0D%0A%7B%0D%0A%22op%22%3A%22and%22%2C%0D%0A%22content%22%3A%5B%0D%0A%7B%0D%0A%22op%22%3A%22%3D%22%2C%0D%0A%22content%22%3A%7B%0D%0A%22field%22%3A%22cases.project.project_id%22%2C%0D%0A%22value%22%3A%22TCGA-BRCA%22%0D%0A%7D%0D%0A%7D%2C%0D%0A%7B%0D%0A%22op%22%3A%22excludeifany%22%2C%0D%0A%22content%22%3A%7B%0D%0A%22field%22%3A%22gene.gene_id%22%2C%0D%0A%22value%22%3A%5B%22ENSG00000141510%22%2C%22ENSG00000155657%22%5D%0D%0A%7D%0D%0A%7D%0D%0A%5D%0D%0A%7D%0D%0A%5D&pretty=true"
 ```
 
-__Example 4:__ Survival plots can be even more customizable when sets of case IDs are used. Two sets of case IDs (or barcodes) can be retrieved in a separate step based on custom criteria and compared in a survival plot. See below for an example query.
+**Example 4:** Survival plots can be even more customizable when sets of case IDs are used. Two sets of case IDs (or barcodes) can be retrieved in a separate step based on custom criteria and compared in a survival plot. See below for an example query.
 
 ```Json
-[{  
+[{
    "op":"=",
-   "content":{  
+   "content":{
       "field":"cases.submitter_id",
       "value":["TCGA-HT-A74J","TCGA-43-A56U","TCGA-GM-A3XL","TCGA-A1-A0SQ","TCGA-K1-A6RV","TCGA-J2-A4AD","TCGA-XR-A8TE"]
    }
 },
-{  
+{
    "op":"=",
-   "content":{  
+   "content":{
       "field":"cases.submitter_id",
       "value":["TCGA-55-5899","TCGA-55-6642","TCGA-55-7907","TCGA-67-6216","TCGA-75-5146","TCGA-49-4510","TCGA-78-7159"]
    }
 }]
 ```
+
 ```Shell
 curl "https://api.gdc.cancer.gov/analysis/survival?filters=%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.submitter_id%22%2C%22value%22%3A%5B%22TCGA-HT-A74J%22%2C%22TCGA-43-A56U%22%2C%22TCGA-GM-A3XL%22%2C%22TCGA-A1-A0SQ%22%2C%22TCGA-K1-A6RV%22%2C%22TCGA-J2-A4AD%22%2C%22TCGA-XR-A8TE%22%5D%7D%7D%2C%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.submitter_id%22%2C%22value%22%3A%5B%22TCGA-55-5899%22%2C%22TCGA-55-6642%22%2C%22TCGA-55-7907%22%2C%22TCGA-67-6216%22%2C%22TCGA-75-5146%22%2C%22TCGA-49-4510%22%2C%22TCGA-78-7159%22%5D%7D%7D%5D"
 ```

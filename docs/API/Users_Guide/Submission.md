@@ -2,7 +2,7 @@
 
 ## Overview
 
-The GDC Submission API uses methods and endpoints that are distinct from those that drive the functionality of the GDC Data Portal. In particular, data and metadata that are in the process of being submitted can only be queried using [GraphQL](#querying-submitted-data-and-metadata-using-graphql), and not the methods described in [Search and Retrieval](Search_and_Retrieval.md).
+The GDC Submission API uses methods and endpoints that are distinct from those that drive the functionality of the GDC Data Portal. In particular, data and metadata that are in the process of being submitted can only be queried using [GraphQL](#querying-submitted-data-and-metadata-using-graphql), and not the methods described in [Search and Retrieval](../Search_and_Retrieval).
 
 This section describes the GDC API's submission functionality, including methods for submitting, deleting, updating, searching, and retrieving data and metadata.
 
@@ -12,23 +12,23 @@ This section describes the GDC API's submission functionality, including methods
 
 The endpoint for submitting data to a specific project in the GDC is constructed as follows:
 
-	https://api.gdc.cancer.gov/[API_version/]submission/Program.name/Project.code
+    https://api.gdc.cancer.gov/[API_version/]submission/Program.name/Project.code
 
-where __[API_version/]__ is the optional API version component (see [Getting Started](Getting_Started.md)).
+where **[API_version/]** is the optional API version component (see [Getting Started](../Getting_Started)).
 
 The values of `Program.name` and `Project.code` can be obtained from the project URL on the GDC Data Submission Portal:
 
-	https://portal.gdc.cancer.gov/submission/Program.name/Project.code/dashboard
+    https://portal.gdc.cancer.gov/submission/Program.name/Project.code/dashboard
 
-For more information about program name and project code see [The GDC Data Model  section](../../Data/Data_Model/GDC_Data_Model/#program-name-project-code-and-project-id).
+For more information about program name and project code see [The GDC Data Model section](../../Data/Data_Model/GDC_Data_Model/#program-name-project-code-and-project-id).
 
 #### Example
 
 The following are URL examples for a project with `Program.name` "TCGA" and `Project.code` "ALCH":
 
-* Submission Portal URL: `https://portal.gdc.cancer.gov/submission/TCGA/ALCH/dashboard`
-* API submission endpoint (versioned): `https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH`
-* API submission endpoint (unversioned): `https://api.gdc.cancer.gov/submission/TCGA/ALCH`
+- Submission Portal URL: `https://portal.gdc.cancer.gov/submission/TCGA/ALCH/dashboard`
+- API submission endpoint (versioned): `https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH`
+- API submission endpoint (unversioned): `https://api.gdc.cancer.gov/submission/TCGA/ALCH`
 
 ## Submission Formats
 
@@ -48,12 +48,12 @@ Metadata files must be uploaded in raw, unencoded form. Binary mode should be us
 
 #### BCR XML
 
-While JSON and TSV are the recommended formats for submitting metadata, the GDC API can also extract metadata elements from BCR XML files. Users wishing to submit metadata as BCR XML must contact GDC User Services and ensure that appropriate element mapping is in place before initiating XML submission.  Current mapping can be found in [GitHub](https://github.com/NCI-GDC/gdcdatamodel/tree/develop/gdcdatamodel/xml_mappings).
+While JSON and TSV are the recommended formats for submitting metadata, the GDC API can also extract metadata elements from BCR XML files. Users wishing to submit metadata as BCR XML must contact GDC User Services and ensure that appropriate element mapping is in place before initiating XML submission. Current mapping can be found in [GitHub](https://github.com/NCI-GDC/gdcdatamodel/tree/develop/gdcdatamodel/xml_mappings).
 
 To submit BCR XML, make `PUT` requests with the `Content-Type: application/xml` header to the following URLs, replacing Program.name and Project.code as desribed in [Submission Endpoint](#submission_endpoint) (above):
 
 0. For Biospecimen BCR XML: `https://api.gdc.cancer.gov/v0/submission/Program.name/Project.code/xml/biospecimen/bcr/`
-0. For Clinical BCR XML: `https://api.gdc.cancer.gov/v0/submission/Program.name/Project.code/xml/clinical/bcr/`.
+1. For Clinical BCR XML: `https://api.gdc.cancer.gov/v0/submission/Program.name/Project.code/xml/clinical/bcr/`.
 
 Biospecimen BCR XML creates Case entities in the GDC Data Model, whereas Clinical BCR XML does not. Unless the associated cases already exist in the GDC, Biospecimen BCR XML must be uploaded before Clinical BCR XML.
 
@@ -61,10 +61,9 @@ BCR XML files can be submitted in dry run mode, described [below](#dry-run-trans
 
 The following is a sample shell command for submitting an XML file:
 
-	curl --request PUT --header "X-Auth-Token: $token"  --header 'Content-Type: application/xml' --data-binary @biospecimen.xml 'https://api.gdc.cancer.gov/v0/submission/GDC/INTERNAL/xml/biospecimen/bcr/_dry_run'
+    curl --request PUT --header "X-Auth-Token: $token"  --header 'Content-Type: application/xml' --data-binary @biospecimen.xml 'https://api.gdc.cancer.gov/v0/submission/GDC/INTERNAL/xml/biospecimen/bcr/_dry_run'
 
->**NOTE:** A typical BCR XML file contains more information than what is extracted and indexed by the GDC. XML files submitted to the above endpoints are not retained or distributed to GDC data users, so the same files should also be submitted as data files (i.e. as clinical or biospecimen supplements).
-
+> **NOTE:** A typical BCR XML file contains more information than what is extracted and indexed by the GDC. XML files submitted to the above endpoints are not retained or distributed to GDC data users, so the same files should also be submitted as data files (i.e. as clinical or biospecimen supplements).
 
 ### Data File Formats
 
@@ -72,21 +71,21 @@ The GDC API accepts a variety of data files after their metadata has been regist
 
 ## GDC Data Model
 
-Submitters should review the [GDC Data Model documentation](../../Data/Data_Model/GDC_Data_Model.md) and the [GDC Data Dictionary](../../Data_Dictionary/index.md) before initiating submission.
+Submitters should review the [GDC Data Model documentation](../../Data/Data_Model/GDC_Data_Model) and the [GDC Data Dictionary](../../Data_Dictionary/viewer) before initiating submission.
 
 ### UUIDs
 
-Submitters can assign UUIDs to all submittable entities other than those that correspond to files (entities in categories `data_file` or `metadata_file`). If the submitter does not provide a UUID, it will be assigned by the GDC and returned in the API response upon successful completion of the submission transaction. See [Appendix C](Appendix_C_Format_of_Submission_Requests_and_Responses.md) for details of the API response format. To learn more about UUIDs see the [GDC Data Model documentation](../../Data/Data_Model/GDC_Data_Model.md#uuids).
+Submitters can assign UUIDs to all submittable entities other than those that correspond to files (entities in categories `data_file` or `metadata_file`). If the submitter does not provide a UUID, it will be assigned by the GDC and returned in the API response upon successful completion of the submission transaction. See [Appendix C](../Appendix_C_Format_of_Submission_Requests_and_Responses) for details of the API response format. To learn more about UUIDs see the [GDC Data Model documentation](../../Data/Data_Model..//GDC_Data_Model#uuids).
 
 ### Submitter IDs
 
 In addition to `id`, many entities also include a `submitter_id` field. This field can contain any string (e.g. a "barcode") that the submitter wishes to use to identify the entity. Typically this string identifies a corresponding entry in submitter's records. The GDC's only requirement with respect to `submitter_id` is that it be a string that is unique for all entities within a project. The GDC Submission API requires a `submitter_id` for most entities.
 
->**Note:** For `case` entities, `submitter_id` must correspond to a `submitted_subject_id` of a study participant registered with the project in dbGaP.
+> **Note:** For `case` entities, `submitter_id` must correspond to a `submitted_subject_id` of a study participant registered with the project in dbGaP.
 
 ### GDC Data Dictionary Endpoints
 
-Information in the [GDC Data Dictionary](../../Data_Dictionary/index.md) can be accessed programmatically as described below.
+Information in the [GDC Data Dictionary](../../Data_Dictionary/viewer) can be accessed programmatically as described below.
 
 #### Submission Templates
 
@@ -94,12 +93,12 @@ Submission templates are accessible programmatically at the `templates` endpoint
 
 For example, the JSON template for `case` entities can be obtained from:
 
-	https://api.gdc.cancer.gov/v0/submission/template/case?format=json
+    https://api.gdc.cancer.gov/v0/submission/template/case?format=json
 
 In addition to `case`, templates for the following entities can be downloaded
 
+**Biospecimen:**
 
-__Biospecimen:__
 ```
 sample
 portion
@@ -107,7 +106,9 @@ analyte
 aliquot
 read_group
 ```
-__Clinical:__
+
+**Clinical:**
+
 ```
 slide
 demographic
@@ -119,7 +120,8 @@ follow_up
 molecular_test
 ```
 
-__Data Files:__
+**Data Files:**
+
 ```
 analysis_metadata
 biospecimen_supplement
@@ -137,20 +139,19 @@ submitted_genomic_profile
 
 The entire collection of GDC entity schemas can be downloaded from the `dictionary` endpoint:
 
-	https://api.gdc.cancer.gov/v0/submission/_dictionary/_all
+    https://api.gdc.cancer.gov/v0/submission/_dictionary/_all
 
 Individual schemas can be downloaded by specifying entity type. For example, the JSON schema for `case` entities can be found at:
 
-	https://api.gdc.cancer.gov/v0/submission/_dictionary/case
-
+    https://api.gdc.cancer.gov/v0/submission/_dictionary/case
 
 ## Making Requests to the Submission API
 
-Requests to create or update entities in the GDC must specify the entity `type`, the entity `id` or `submitter_id`, relationships (links) that the entity has to existing entities in the [GDC Data Model](../../Data/Data_Model/GDC_Data_Model.md), and entity properties as defined by the [GDC Data Dictionary](../../Data_Dictionary/index.md). To delete entities, only the `id` property is required. The general format of GDC API submission requests and responses is provided in [Appendix C](Appendix_C_Format_of_Submission_Requests_and_Responses.md).
+Requests to create or update entities in the GDC must specify the entity `type`, the entity `id` or `submitter_id`, relationships (links) that the entity has to existing entities in the [GDC Data Model](../../Data/Data_Model/GDC_Data_Model), and entity properties as defined by the [GDC Data Dictionary](../../Data_Dictionary/viewer). To delete entities, only the `id` property is required. The general format of GDC API submission requests and responses is provided in [Appendix C](../Appendix_C_Format_of_Submission_Requests_and_Responses).
 
 ## Submission Transactions
 
-Submission of data to the GDC involves a series of transactions initiated by the submitter, that create and link entities according to the [GDC Data Model](../../Data/Data_Model/GDC_Data_Model.md). With the exception of `program`, which is an administrative entity created by the GDC, all new entities must be linked, at creation, to existing entities or to new entities being created in the same transaction. For example, a submitter cannot create a `portion` entity unless the submitter either (1) has previously created the corresponding `case` and `sample` entities, or (2) is creating those entities in the same transaction. This also means that entities cannot be deleted if they have "child" entities attached to them.
+Submission of data to the GDC involves a series of transactions initiated by the submitter, that create and link entities according to the [GDC Data Model](../../Data/Data_Model/GDC_Data_Model). With the exception of `program`, which is an administrative entity created by the GDC, all new entities must be linked, at creation, to existing entities or to new entities being created in the same transaction. For example, a submitter cannot create a `portion` entity unless the submitter either (1) has previously created the corresponding `case` and `sample` entities, or (2) is creating those entities in the same transaction. This also means that entities cannot be deleted if they have "child" entities attached to them.
 
 If multiple entities are being created and/or updated in a transaction, and an error is encountered for one of the entities, then the transaction will fail and no changes will be made to the GDC.
 
@@ -159,7 +160,6 @@ If multiple entities are being created and/or updated in a transaction, and an e
 The `submission` endpoint provides a `_dry_run` mode that simulates submission transactions without making changes to the GDC. This mode is activated by appending `/_dry_run` to the end of a submission endpoint.
 
 The following is an example of a POST request, that simulates creating an entity in dry run mode:
-
 
 ```Request
 {
@@ -171,11 +171,13 @@ The following is an example of a POST request, that simulates creating an entity
   }
 }
 ```
+
 ```Command
 token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --header 'Content-Type: application/json' https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH/_dry_run
 ```
+
 ```Response
 {
   "cases_related_to_created_entities_count": 0,
@@ -222,6 +224,7 @@ token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request POST https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH/transactions/467/commit?async=true
 ```
+
 ```Response
 {
   "code": 200,
@@ -229,8 +232,6 @@ curl --header "X-Auth-Token: $token" --request POST https://api.gdc.cancer.gov/v
   "transaction_id": 468,
 }
 ```
-
-
 
 #### Dry Run Close
 
@@ -243,6 +244,7 @@ token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request POST https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH/transactions/467/close
 ```
+
 ```Response
 {
     "code": 200,
@@ -251,10 +253,9 @@ curl --header "X-Auth-Token: $token" --request POST https://api.gdc.cancer.gov/v
 }
 ```
 
-
 ### Asynchronous Transactions
 
-The `submission` endpoint provides an asynchronous mode that provides immediate response and executes submission transactions in the background. This mode is activated by appending `?async=true` to the end of a submission endpoint.  The API will respond with the `transaction_id` which can be used to look up the result of the transaction at a later time via the [GraphQL](#querying-submitted-data-and-metadata-using-graphql) endpoint.  If the server has too many asynchronous jobs scheduled already, your request to schedule a transaction may fail.
+The `submission` endpoint provides an asynchronous mode that provides immediate response and executes submission transactions in the background. This mode is activated by appending `?async=true` to the end of a submission endpoint. The API will respond with the `transaction_id` which can be used to look up the result of the transaction at a later time via the [GraphQL](#querying-submitted-data-and-metadata-using-graphql) endpoint. If the server has too many asynchronous jobs scheduled already, your request to schedule a transaction may fail.
 
 #### Example
 
@@ -270,11 +271,13 @@ The following is an example of a PUT request, that creates a case asynchronously
   }
 }
 ```
+
 ```Command
 token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --header 'Content-Type: application/json' https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH?async=true
 ```
+
 ```Response
 {
   "code": 200,
@@ -294,6 +297,7 @@ query {
   }
 }
 ```
+
 ```GraphQL_Response
 {
   "data": {
@@ -312,38 +316,36 @@ query {
 
 The following transaction fields can be queried using [GraphQL](#querying-submitted-data-and-metadata-using-graphql) and are helpful in determining the status of a transaction:
 
-|Field|Type|Description|
-|---|---|---|
-|`id`|ID|Transaction identifier|
-|`is_dry_run`|Boolean|Indicates whether the transaction is a dry run|
-|`closed`|Boolean|For dry run transactions, indicates whether the transaction has been closed to prevent it from being committed in the future.|
-|`committable`|Boolean|Indicates whether the transaction can be committed (i.e. it is a successful dry run transaction that has not been committed previously and has not been closed)|
-|`state`|String|Indicates the state of the transaction: `PENDING`, `SUCCEEDED`, `FAILED` (due to user error), or `ERRORED` (due to system error)|
-|`committed_by`|ID|The ID of the transaction that committed this transaction|
+| Field          | Type    | Description                                                                                                                                                     |
+| -------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`           | ID      | Transaction identifier                                                                                                                                          |
+| `is_dry_run`   | Boolean | Indicates whether the transaction is a dry run                                                                                                                  |
+| `closed`       | Boolean | For dry run transactions, indicates whether the transaction has been closed to prevent it from being committed in the future.                                   |
+| `committable`  | Boolean | Indicates whether the transaction can be committed (i.e. it is a successful dry run transaction that has not been committed previously and has not been closed) |
+| `state`        | String  | Indicates the state of the transaction: `PENDING`, `SUCCEEDED`, `FAILED` (due to user error), or `ERRORED` (due to system error)                                |
+| `committed_by` | ID      | The ID of the transaction that committed this transaction                                                                                                       |
 
->**Note:** To check whether a dry run transaction was committed successfully, check the `state` of the transaction that executed the commit. The `state` of the dry run transaction itself does not represent the status of a subsequent commit.
+> **Note:** To check whether a dry run transaction was committed successfully, check the `state` of the transaction that executed the commit. The `state` of the dry run transaction itself does not represent the status of a subsequent commit.
 
 ## Creating and Updating Entities
 
 The GDC Submission API supports HTTP POST and HTTP PUT methods for creating entities:
 
-* **POST** will create entities that do not exist, and will fail if any of the entities in the transaction already exist in the GDC.
+- **POST** will create entities that do not exist, and will fail if any of the entities in the transaction already exist in the GDC.
 
-* **PUT** will create new entities and update existing entities, and identify which entities were created or updated in the API response.
+- **PUT** will create new entities and update existing entities, and identify which entities were created or updated in the API response.
 
 The GDC suggests using POST for creating new entities, and using PUT only for updating entities. This helps to avoid inadvertent entity updates that can occur when using PUT for creating entities.
 
->**Note:** Once a relationship has been created between two entities, it cannot be removed by updating an entity. To remove a relationship, the child entity must be [deleted](#deleting-entities).
-
+> **Note:** Once a relationship has been created between two entities, it cannot be removed by updating an entity. To remove a relationship, the child entity must be [deleted](#deleting-entities).
 
 ### Example: Creating and Updating Case Entities (JSON)
 
 In this example, a case entity is created using POST. Then an attempt is made to create the same entity again using POST, resulting in an error. Then the originally created entity is updated (with the same information) using PUT.
 
-The JSON in the request was generated using the `case` JSON template that can be obtained from the [GDC Data Dictionary Viewer](../../Data_Dictionary/index.md) and from `https://api.gdc.cancer.gov/v0/submission/template/case?format=json`.
+The JSON in the request was generated using the `case` JSON template that can be obtained from the [GDC Data Dictionary Viewer](../../Data_Dictionary/viewer) and from `https://api.gdc.cancer.gov/v0/submission/template/case?format=json`.
 
->**Note:** For `case` entities, `submitter_id` must correspond to a `submitted_subject_id` of a study participant registered with the project in dbGaP.
-
+> **Note:** For `case` entities, `submitter_id` must correspond to a `submitted_subject_id` of a study participant registered with the project in dbGaP.
 
 ```Request1
 {
@@ -355,11 +357,13 @@ The JSON in the request was generated using the `case` JSON template that can be
 
 }
 ```
+
 ```Command1
 token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --header 'Content-Type: application/json' https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH
 ```
+
 ```Response1
 {
   "cases_related_to_created_entities_count": 0,
@@ -392,9 +396,11 @@ curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --hea
   "updated_entity_count": 0
 }
 ```
+
 ```Command2
 curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --header 'Content-Type: application/json' https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH
 ```
+
 ```Response2
 {
   "cases_related_to_created_entities_count": 0,
@@ -435,9 +441,11 @@ curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --hea
   "updated_entity_count": 0
 }
 ```
+
 ```Command3
 curl --header "X-Auth-Token: $token" --request PUT --data-binary @Request --header 'Content-Type: application/json' https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH
 ```
+
 ```Response3
 {
   "cases_related_to_created_entities_count": 0,
@@ -471,8 +479,6 @@ curl --header "X-Auth-Token: $token" --request PUT --data-binary @Request --head
 }
 ```
 
-
-
 ### Example: Creating an Aliquot Entity (JSON)
 
 In this example, an `aliquot` entity and a `sample` entity are created in a single transaction. The `aliquot` is linked to `sample` which is linked to `case`. The first request is an example of using `submitter_id` properties to link entities together. The second request is an example of using UUIDs for creating the links.
@@ -499,11 +505,13 @@ In this example, an `aliquot` entity and a `sample` entity are created in a sing
   }
 ]
 ```
+
 ```Command
 token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --header 'Content-Type: application/json' https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH
 ```
+
 ```Response
 {
   "cases_related_to_created_entities_count": 1,
@@ -564,7 +572,6 @@ curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --hea
 
 #### Request 2: Creating Links Using UUID
 
-
 ```Request
 [
   {
@@ -586,11 +593,13 @@ curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --hea
   }
 ]
 ```
+
 ```Command
 token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request POST --data-binary @Request --header 'Content-Type: application/json' https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH
 ```
+
 ```Response
 {
   "cases_related_to_created_entities_count": 1,
@@ -658,9 +667,11 @@ type	project_id	submitter_id	cases.submitter_id	sample_type	sample_type_id	tumor
 sample	GDC-INTERNAL	GDC-INTERNAL-000022-sampleA	GDC-INTERNAL-000022	Additional Metastatic	01
 sample	GDC-INTERNAL	GDC-INTERNAL-000022-sampleB	GDC-INTERNAL-000022	Solid Tissue Normal	02
 ```
+
 ```Command
 curl --header "X-Auth-Token: $token" --header 'Content-Type: text/tsv' --request PUT --data-binary @Samples.tsv 'https://api.gdc.cancer.gov/submission/GDC/INTERNAL/_dry_run'
 ```
+
 ```Response
 {
   "cases_related_to_created_entities_count": 1,
@@ -721,26 +732,27 @@ curl --header "X-Auth-Token: $token" --header 'Content-Type: text/tsv' --request
 
 ### Example: Bulk Transaction
 
-To wrap multiple TSV or JSON files into a single transaction the bulk endpoint can be used.  In this example a TSV to create Clinical Supplement nodes is included in the same transactions as a JSON to create Demographic nodes.
-
+To wrap multiple TSV or JSON files into a single transaction the bulk endpoint can be used. In this example a TSV to create Clinical Supplement nodes is included in the same transactions as a JSON to create Demographic nodes.
 
 ```Request
-[                                                                                                                                                                                              
-  {                                                                                
-    "name":"Demographic",                                             
-    "doc_format":"Json",                                                           
+[
+  {
+    "name":"Demographic",
+    "doc_format":"Json",
     "doc":"[\n  {\n    \"submitter_id\": \"demographic1234\",\n    \"vital_status\": \"Dead\",\n    \"cases\": [\n      {\n        \"submitter_id\": \"GDC-INTERNAL-000021\"\n      }\n    ],\n    \"ethnicity\": \"not reported\",\n    \"gender\": \"male\",\n    \"race\": \"white\",\n    \"project_id\": \"GDC-INTERNAL\",\n    \"type\": \"demographic\"\n  },\n  {\n    \"submitter_id\": \"demographicABCD\",\n    \"vital_status\": \"Alive\",\n    \"cases\": [\n      {\n        \"submitter_id\": \"GDC-INTERNAL-000010\"\n      }\n    ],\n    \"ethnicity\": \"not reported\",\n    \"gender\": \"female\",\n    \"race\": \"white\",\n    \"project_id\": \"GDC-INTERNAL\",\n    \"type\": \"demographic\"\n  }\n]"
   },
-    {                                                                                
-    "name":"Clinical Supplement",                                             
-    "doc_format":"Tsv",                                                           
+    {
+    "name":"Clinical Supplement",
+    "doc_format":"Tsv",
     "doc":"cases.submitter_id\tdiagnoses.id\tdiagnoses.submitter_id\tparent_samples.id\tparent_samples.submitter_id\ttissue_source_sites.id\ttissue_source_sites.code\ttype\tproject_id\tsubmitter_id\tsample_type\ttissue_type\tbiospecimen_anatomic_site\tbiospecimen_laterality\tcatalog_reference\tcomposition\tcurrent_weight\tdays_to_collection\tdays_to_sample_procurement\tdiagnosis_pathologically_confirmed\tdistance_normal_to_tumor\tdistributor_reference\tfreezing_method\tgrowth_rate\tinitial_weight\tintermediate_dimension\tis_ffpe\tlongest_dimension\tmethod_of_sample_procurement\toct_embedded\tpassage_count\tpathology_report_uuid\tpreservation_method\tsample_type_id\tshortest_dimension\ttime_between_clamping_and_freezing\ttime_between_excision_and_freezing\ttumor_code\ttumor_code_id\ttumor_descriptor\nGDC-INTERNAL-000021\t\t\t\t\t\t\tsample\tGDC-INTERNAL\tGDC-INTERNAL-000021-Sample1\tPrimary Tumor\tTumor\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPrimary\nGDC-INTERNAL-000021\t\t\t\t\t\t\tsample\tGDC-INTERNAL\tGDC-INTERNAL-000021-Sample2\tPrimary Tumor\tTumor\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPrimary\nGDC-INTERNAL-000021\t\t\t\t\t\t\tsample\tGDC-INTERNAL\tGDC-INTERNAL-000021-Sample3\tPrimary Tumor\tTumor\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPrimary\n"
-  }                                                                              
+  }
 ]
 ```
+
 ```Command
 curl -XPOST --header "X-Auth-Token: $token"  --data-binary @Request 'https://api.gdc.cancer.gov/submission/GDC/INTERNAL/bulk/_dry_run'
 ```
+
 ```Response
 {
   "code": 200,
@@ -895,18 +907,17 @@ curl -XPOST --header "X-Auth-Token: $token"  --data-binary @Request 'https://api
 
 ### Example: Updating a Sample Entity (JSON)
 
-Entities can be updated using a very similar process to what is shown above.  
+Entities can be updated using a very similar process to what is shown above.
 
 #### Updating a sample
 
-New nodes are created in Request1.  Nodes in state `validated` are updated in Request2.
-
+New nodes are created in Request1. Nodes in state `validated` are updated in Request2.
 
 ```Request1
 [
    {
     "type": "case",
-    "submitter_id": "QA-REGRESSION-0002",  
+    "submitter_id": "QA-REGRESSION-0002",
     "projects": {
     "code": "REGRESSION"
   }
@@ -929,11 +940,13 @@ New nodes are created in Request1.  Nodes in state `validated` are updated in Re
   }
 ]
 ```
+
 ```Command1
 token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request POST --data-binary @sample.json --header 'Content-Type: application/json' https://api.gdc.cancer.gov/v0/submission/QA/REGRESSION
 ```
+
 ```Response1
 {
   "cases_related_to_created_entities_count": 1,
@@ -1006,11 +1019,12 @@ curl --header "X-Auth-Token: $token" --request POST --data-binary @sample.json -
   "updated_entity_count": 0
 }
 ```
+
 ```Request2
 [
    {
     "type": "case",
-    "submitter_id": "QA-REGRESSION-0002",  
+    "submitter_id": "QA-REGRESSION-0002",
     "projects": {
     "code": "REGRESSION"
   }
@@ -1034,11 +1048,13 @@ curl --header "X-Auth-Token: $token" --request POST --data-binary @sample.json -
   }
 ]
 ```
+
 ```Command2
 token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request PUT --data-binary @sample2.json --header 'Content-Type: application/json' https://api.gdc.cancer.gov/v0/submission/QA/REGRESSION
 ```
+
 ```Response2
 {
   "cases_related_to_created_entities_count": 0,
@@ -1112,14 +1128,14 @@ curl --header "X-Auth-Token: $token" --request PUT --data-binary @sample2.json -
 }
 ```
 
-
 #### Updating a sample using a BCR XML
 
-Entities are created in Command1.  These entities are later released.  Command2 demonstrates updating entity information via XML submission.
+Entities are created in Command1. These entities are later released. Command2 demonstrates updating entity information via XML submission.
 
 ```Command1
 curl --request PUT --header "X-Auth-Token: $token"  --header 'Content-Type: application/xml' --data-binary @BCR_biospecimen.xml 'https://api.gdc.cancer.gov/v0/submission/QA/REGRESSION/xml/biospecimen/bcr/'
 ```
+
 ```Response1
 {{
   "cases_related_to_created_entities_count": 1,
@@ -1692,10 +1708,12 @@ curl --request PUT --header "X-Auth-Token: $token"  --header 'Content-Type: appl
   "updated_entity_count": 0
 }}
 ```
+
 ```
 Command2
 curl --request PUT --header "X-Auth-Token: $token"  --header 'Content-Type: application/xml' --data-binary @BCR_biospecimen_updated.xml 'https://api.gdc.cancer.gov/v0/submission/QA/REGRESSION/xml/biospecimen/bcr'
 ```
+
 ```Response2
 {
   "cases_related_to_created_entities_count": 0,
@@ -2280,6 +2298,7 @@ token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH/entities/fbf69646-5904-4f95-92d6-692bde658f05
 ```
+
 ```Response
 {
   "entities": [
@@ -2310,13 +2329,13 @@ curl --header "X-Auth-Token: $token" https://api.gdc.cancer.gov/v0/submission/TC
 
 The `export` endpoint provides additional functionality for exporting entities from the GDC submission system. The `ids` parameter accepts a UUID or a comma-separated list of UUIDs. The `format` parameter allows the user to specify the preferred format of the API response: JSON, TSV, or CSV. When the `with_children` parameter is set to `with_children`, the response includes the metadata stored in all "child" entities of the entity being requested. The `export` endpoint accepts GET requests.
 
-
 ```Command
 token=$(<gdc-token-text-file.txt)
 
 
 curl --header "X-Auth-Token: $token" 'https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH/export?ids=11f8321-832f-4a8b-8384-a2f6256557e0&format=json&with_children=with_children'
 ```
+
 ```Response
 {
   "case": [
@@ -2484,7 +2503,6 @@ curl --header "X-Auth-Token: $token" 'https://api.gdc.cancer.gov/v0/submission/T
 
 Submitters can use the GraphQL query language for advanced search and retrieval of data from the GDC Submission Portal. See [GraphQL](#querying-submitted-data-using-graphql) for more information.
 
-
 ## Deleting Entities
 
 The `entities` endpoint can also be used to delete entities. This is accomplished using a DELETE request to the endpoint, specifying the entity's UUID. If an entity cannot be deleted because it is linked to child entities, the GDC Submission API will respond with an error providing a list of entities that must be deleted prior to deleting the subject entity.
@@ -2498,6 +2516,7 @@ token=$(<gdc-token-text-file.txt)
 
 curl --header "X-Auth-Token: $token" --request DELETE https://api.gdc.cancer.gov/v0/submission/TCGA/ALCH/entities/67782964-0065-491d-b051-2ae404bb734d
 ```
+
 ```Response
 {
   "code": 200,
@@ -2527,7 +2546,7 @@ curl --header "X-Auth-Token: $token" --request DELETE https://api.gdc.cancer.gov
 
 ### Uploading Data Files
 
-Experimental data files like BAM and FASTQ can be uploaded directly to the API using the `files` endpoint, by specifying the UUID of the corresponding `data_file` entity. Binary upload mode must be used if available. Uploading large files may be more efficiently performed using the [GDC Data Transfer Tool](/Data_Transfer_Tool/Users_Guide/Getting_Started.md).
+Experimental data files like BAM and FASTQ can be uploaded directly to the API using the `files` endpoint, by specifying the UUID of the corresponding `data_file` entity. Binary upload mode must be used if available. Uploading large files may be more efficiently performed using the [GDC Data Transfer Tool](/Data_Transfer_Tool/Users_Guide/Getting_Started).
 
 ```
 token=$(<gdc-token-text-file.txt)
@@ -2547,11 +2566,12 @@ The `manifest` endpoint generates a manifest for uploading files using the GDC D
 ```
 https://api.gdc.cancer.gov/v0/submission/PROGRAM/PROJECT/manifest?ids=bf0751ca-fc3b-4760-b876-0fefce040be5,90163202-cfd7-4f6a-8214-e7e4e924d3a6
 ```
+
 ### Uploading New Versions of Data Files
 
-The GDC Submission system supports submitting updated versions of files.  For example, you may want to submit an updated version of a clinical supplement file that contains new clinical information about a patient.  If a file is in file_state `validated` then you would simply delete and upload a new copy of this file.  No additional version of the file will be created in this case.  The UUID of the node stays the same.
+The GDC Submission system supports submitting updated versions of files. For example, you may want to submit an updated version of a clinical supplement file that contains new clinical information about a patient. If a file is in file_state `validated` then you would simply delete and upload a new copy of this file. No additional version of the file will be created in this case. The UUID of the node stays the same.
 
-However, if a file is in file_state `submitted` or `validated` and state `released` then a different process is required.  In this situation simply upload a new template containing updated metadata (e.g. md5sum or file_size).  A new node (with a new UUID) will automatically be created that is linked to the previous version.  Once this new file is indexed and released to users they will be able to query the new UUID in the /files endpoint and both versions' UUID in the files/versions or /history endpoint.  In the example below we register a file, upload the file, and register a new version of this file.
+However, if a file is in file_state `submitted` or `validated` and state `released` then a different process is required. In this situation simply upload a new template containing updated metadata (e.g. md5sum or file_size). A new node (with a new UUID) will automatically be created that is linked to the previous version. Once this new file is indexed and released to users they will be able to query the new UUID in the /files endpoint and both versions' UUID in the files/versions or /history endpoint. In the example below we register a file, upload the file, and register a new version of this file.
 
 ```Request
 [
@@ -2575,9 +2595,11 @@ However, if a file is in file_state `submitted` or `validated` and state `releas
   }
 ]
 ```
+
 ```Command
 curl --header "X-Auth-Token: $token" --header 'Content-Type: json' --request PUT --data-binary @clin.json 'https://api.gdc.cancer.gov/submission/TCGA/CHOL'
 ```
+
 ```Response
 {
   "cases_related_to_created_entities_count": 1,
@@ -2615,6 +2637,7 @@ curl --header "X-Auth-Token: $token" --header 'Content-Type: json' --request PUT
   "updated_entity_count": 0
 }
 ```
+
 ```Request2
 [
   {
@@ -2637,9 +2660,11 @@ curl --header "X-Auth-Token: $token" --header 'Content-Type: json' --request PUT
   }
 ]
 ```
+
 ```Command2
 curl --header "X-Auth-Token: $token" --header 'Content-Type: json' --request PUT --data-binary @clin_v2.json 'https://api.gdc.cancer.gov/submission/TCGA/CHOL'
 ```
+
 ```Response2
 {
   "cases_related_to_created_entities_count": 0,
@@ -2680,11 +2705,11 @@ curl --header "X-Auth-Token: $token" --header 'Content-Type: json' --request PUT
 
 ### Downloading Files
 
-Files in `file_state = validated` can be downloaded by the submitter using the API or the Data Transfer Tool. This is done in a similar manner as files available in the Data Portal, but will require submission access to the particular project in dbGaP as opposed to downloader access.  File UUIDs can be found in the original upload manifest file, the submission portal, or by API calls.  See [Downloading Files](Downloading_Files.md) for details.
+Files in `file_state = validated` can be downloaded by the submitter using the API or the Data Transfer Tool. This is done in a similar manner as files available in the Data Portal, but will require submission access to the particular project in dbGaP as opposed to downloader access. File UUIDs can be found in the original upload manifest file, the submission portal, or by API calls. See [Downloading Files](../Downloading_Files) for details.
 
 ### Deleting Files
 
-Uploaded files must be deleted using a two step process.  First, the file is deleted using the Data Transfer Tool.  See [Deleting Previously Uploaded Data](../../Data_Transfer_Tool/Users_Guide/Data_Download_and_Upload/#deleting-previously-uploaded-data) for details.
+Uploaded files must be deleted using a two step process. First, the file is deleted using the Data Transfer Tool. See [Deleting Previously Uploaded Data](../../Data_Transfer_Tool/Users_Guide/Data_Download_and_Upload/#deleting-previously-uploaded-data) for details.
 
 Second, the file node can be deleted or modified. See [Deleting Entities](#deleting-entities) for details.
 
@@ -2694,10 +2719,9 @@ Second, the file node can be deleted or modified. See [Deleting Entities](#delet
 
 [GraphQL](https://facebook.github.io/graphql/) is a query language that makes it easy to search and retrieve data from graph data structures such as the GDC Data Model.
 
-Unlike the methods outlined in [Search and Retrieval](Search_and_Retrieval.md), which provide access to public releases (or snapshots) of GDC data, the `/graphql` endpoint of GDC Submission API makes it possible for submitters to access "live" data, which provides a real-time view of the state of entities in a project.
+Unlike the methods outlined in [Search and Retrieval](../Search_and_Retrieval), which provide access to public releases (or snapshots) of GDC data, the `/graphql` endpoint of GDC Submission API makes it possible for submitters to access "live" data, which provides a real-time view of the state of entities in a project.
 
->**NOTE:** Access to GDC Submission API GraphQL service is limited to authorized and authenticated submitters. Submitters may only access data in their own project using GraphQL.
-
+> **NOTE:** Access to GDC Submission API GraphQL service is limited to authorized and authenticated submitters. Submitters may only access data in their own project using GraphQL.
 
 ### GraphQL IDE
 
@@ -2709,12 +2733,11 @@ Before interacting directly with the GDC Submission API's GraphQL endpoint, user
 
 GDC data submitters can access the GDC Submission API GraphQL endpoint at:
 
-	https://api.gdc.cancer.gov/[API_version/]submission/graphql
+    https://api.gdc.cancer.gov/[API_version/]submission/graphql
 
-where __[API_version/]__ is the optional API version component (see [Getting Started](Getting_Started.md)).
+where **[API_version/]** is the optional API version component (see [Getting Started](../Getting_Started)).
 
->**NOTE:** An authentication token is required for all requests to the `graphql` endpoint. Queries are restricted to those projects for which the submitter has obtained authorization.
-
+> **NOTE:** An authentication token is required for all requests to the `graphql` endpoint. Queries are restricted to those projects for which the submitter has obtained authorization.
 
 ### Constructing a Query
 
@@ -2739,17 +2762,16 @@ The "Docs" panel on the right-hand side of the GDC GraphQL IDE allows users to d
 
 A simple GraphQL query looks like this:
 
-	{
-	  case (project_id: "TCGA-ALCH", first: 0) {
-	    id
-	    submitter_id
+    {
+      case (project_id: "TCGA-ALCH", first: 0) {
+        id
+        submitter_id
 
-	  }
-	  _case_count (project_id: "TCGA-ALCH")
-	}
+      }
+      _case_count (project_id: "TCGA-ALCH")
+    }
 
-[//]: # (this is just a comment ignore me I beg of you_)
-
+[//]: # "this is just a comment ignore me I beg of you_"
 
 The query above has two root fields: `case` and `_case_count`. The `case` field corresponds to the `case` entity in the GDC Data Model. The query supplies two arguments to the field:
 
@@ -2780,20 +2802,24 @@ Using the `case` and `_case_count` example above as the starting point, the resu
 	_case_count (project_id: "TCGA-ALCH")
 }
 ```
+
 ```escaped_GraphQL
 {\n\tcase (project_id: \"TCGA-ALCH\", first: 0) {\n\t\tid\n\t\tsubmitter_id\n\n\t}\n\t_case_count (project_id: \"TCGA-ALCH\")\n}
 ```
+
 ```Query_json
 {
 	"query": "{\n\tcase (project_id: \"TCGA-ALCH\", first: 0) {\n\t\tid\n\t\tsubmitter_id\n\n\t}\n\t_case_count (project_id: \"TCGA-ALCH\")\n}",
 	"variables": null
 }
 ```
+
 ```Shell_command
 token=$(<gdc-token-text-file.txt)
 
 curl --request POST --header "X-Auth-Token: $token" 'https://api.gdc.cancer.gov/v0/submission/graphql' --data-binary @Query_json
 ```
+
 ```API_Response
 {
   "data": {
@@ -2901,15 +2927,18 @@ GraphQL query to find the file UUID based on file `submitter_id`:
 }
 }
 ```
+
 ```escaped_GraphQL
 {
     "query": "{\n \n  submitted_unaligned_reads (project_id: \"GDC-INTERNAL\", submitter_id: \"Blood-00001-aliquot_lane1_barcode23.fastq\") {\n    id\n    submitter_id\n    file_name\n    project_id\n}\n}",
     "variables": null
 }
 ```
+
 ```Shell
 curl --request POST --header "X-Auth-Token: $token" 'https://api.gdc.cancer.gov/v0/submission/graphql' --data-binary @escaped_GraphQL
 ```
+
 ```Response
 {
   "data": {
@@ -2925,8 +2954,6 @@ curl --request POST --header "X-Auth-Token: $token" 'https://api.gdc.cancer.gov/
 }
 ```
 
-
-
 #### Example: Case Without Diagnosis
 
 GraphQL query for any one case in 'TCGA-LUAD' without Diagnosis information:
@@ -2938,6 +2965,7 @@ GraphQL query for any one case in 'TCGA-LUAD' without Diagnosis information:
   }
 }
 ```
+
 ```Response
 {
   "data": {
@@ -2959,6 +2987,7 @@ GraphQL query for the number of cases in 'TCGA-LUAD' without Diagnosis informati
   _case_count (project_id: "TCGA-LUAD", without_links: ["diagnoses"])
 }
 ```
+
 ```Response
 {
   "data": {
@@ -2978,6 +3007,7 @@ Query for the `state` of aliquots belonging to case with `submitter_id: "TCGA-AL
   }
 }
 ```
+
 ```Response
 {
   "data": {
@@ -3010,6 +3040,7 @@ fragment portionProperties on portion {
   is_ffpe
 }
 ```
+
 ```Response
 {
   "data": {
@@ -3052,6 +3083,7 @@ GraphQL Query for a case in "TCGA-LUAD" and return a biospecimen tree:
   }
 }
 ```
+
 ```Response
 {
   "data": {

@@ -4,15 +4,16 @@ Python can be a versatile tool for retrieving information from the GDC API and p
 
 ## Querying Metadata
 
-Python can be used with the GDC API to retrieve metadata that is indexed in the GDC Database. See the [Search and Retrieval](Search_and_Retrieval.md) section of the API documentation for specific details about parameters and usage.
+Python can be used with the GDC API to retrieve metadata that is indexed in the GDC Database. See the [Search and Retrieval](Search_and_Retrieval) section of the API documentation for specific details about parameters and usage.
 
 ### A Basic Query
 
-This example passes some basic parameters (fields, format, size) to the `cases` endpoint and prints the results in a tab-delimited format. Note that the `fields` parameter needs to be a string comprising comma-delimited field names.  
+This example passes some basic parameters (fields, format, size) to the `cases` endpoint and prints the results in a tab-delimited format. Note that the `fields` parameter needs to be a string comprising comma-delimited field names.
 
 ```TXT
 Choose the Python tab to view script.
 ```
+
 ```Python
 import requests
 import json
@@ -40,7 +41,8 @@ response = requests.get(cases_endpt, params = params)
 
 print(response.content)
 ```
-[Download Script](scripts/Basic_Query.py)
+
+[Download Script](../scripts/Basic_Query.py)
 
 ### A Filtered Query
 
@@ -49,6 +51,7 @@ In the next example, a `filters` parameter is added to the script. This paramete
 ```TXT
 Choose the Python tab to view script.
 ```
+
 ```Python
 import requests
 import json
@@ -87,15 +90,17 @@ response = requests.get(cases_endpt, params = params)
 
 print(response.content)
 ```
-[Download Script](scripts/Filter_Query.py)
+
+[Download Script](../scripts/Filter_Query.py)
 
 ### Complex Filters
 
-The following example uses the `and` operator in the filter to returns information about files that 1) were produced using RNA-Seq, 2) are downloadable in BAM format, and 3) originate from lung cancer patients. Note that these three filters are nested within a list in the highest level `content` key.  
+The following example uses the `and` operator in the filter to returns information about files that 1) were produced using RNA-Seq, 2) are downloadable in BAM format, and 3) originate from lung cancer patients. Note that these three filters are nested within a list in the highest level `content` key.
 
 ```TXT
 Choose the Python tab to view script.
 ```
+
 ```Python
 import requests
 import json
@@ -153,20 +158,21 @@ response = requests.post(files_endpt, headers = {"Content-Type": "application/js
 
 print(response.content.decode("utf-8"))
 ```
-[Download Script](scripts/Complex_Query.py)
 
+[Download Script](../scripts/Complex_Query.py)
 
 ## Downloading Files
 
-GDC files can also be downloaded from the API and saved locally using Python scripts. See the [File Download](Downloading_Files.md) section of the API documentation for more information.  
+GDC files can also be downloaded from the API and saved locally using Python scripts. See the [File Download](Downloading_Files) section of the API documentation for more information.
 
 ### A Simple Download Request
 
-An open-access GDC file can be downloaded by appending the file UUID to the `data` endpoint URL.  
+An open-access GDC file can be downloaded by appending the file UUID to the `data` endpoint URL.
 
 ```TXT
 Choose the Python tab to view script.
 ```
+
 ```Python
 import requests
 import json
@@ -186,15 +192,17 @@ file_name = re.findall("filename=(.+)", response_head_cd)[0]
 with open(file_name, "wb") as output_file:
     output_file.write(response.content)
 ```
-[Download Script](scripts/Download_Files.py)
+
+[Download Script](../scripts/Download_Files.py)
 
 ### Passing a Token to Download a Controlled-Access File
 
-A token can be passed to the script by specifying a plain text file that contains only the GDC token. A token can be downloaded by logging into the GDC Data Portal. See the [Data Security](../../../Data/Data_Security/Data_Security) documentation for more details.  
+A token can be passed to the script by specifying a plain text file that contains only the GDC token. A token can be downloaded by logging into the GDC Data Portal. See the [Data Security](../../../Data/Data_Security/Data_Security) documentation for more details.
 
 ```TXT
 Choose the Python tab to view script.
 ```
+
 ```Python
 import requests
 import json
@@ -226,15 +234,17 @@ file_name = "brca_slices.bam"
 with open(file_name, "wb") as output_file:
     output_file.write(response.content)
 ```
-[Download Script](scripts/Download_Files_Token.py)
 
-### Post Request to Download Multiple Files  
+[Download Script](../scripts/Download_Files_Token.py)
 
-This example uses a Python list to specify a set of file UUIDs. The list in the example was populated manually but could potentially be populated programmatically from an external list or API call.  
+### Post Request to Download Multiple Files
+
+This example uses a Python list to specify a set of file UUIDs. The list in the example was populated manually but could potentially be populated programmatically from an external list or API call.
 
 ```TXT
 Choose the Python tab to view script.
 ```
+
 ```Python
 import requests
 import json
@@ -262,15 +272,17 @@ file_name = re.findall("filename=(.+)", response_head_cd)[0]
 with open(file_name, "wb") as output_file:
     output_file.write(response.content)
 ```
-[Download Script](scripts/Download_Files_Post.py)
+
+[Download Script](../scripts/Download_Files_Post.py)
 
 ### Downloading a Set of Files Based on a Filter
 
-Here a list of files based on a set of filters are downloaded.  File UUIDs are retrieved based on the filters. These UUIDs are then passed to the `data` endpoint to download the correct files.   
+Here a list of files based on a set of filters are downloaded. File UUIDs are retrieved based on the filters. These UUIDs are then passed to the `data` endpoint to download the correct files.
 
 ```TXT
 Choose the Python tab to view script.
 ```
+
 ```Python
 import requests
 import json
@@ -342,15 +354,17 @@ file_name = re.findall("filename=(.+)", response_head_cd)[0]
 with open(file_name, "wb") as output_file:
     output_file.write(response.content)
 ```
-[Download Script](scripts/Download_Files_Filter.py)
+
+[Download Script](../scripts/Download_Files_Filter.py)
 
 ### BAM Slicing
 
-The GDC [BAM Slicing](BAM_Slicing.md) feature can also be accessed through Python. Below is an example of a basic BAM slicing command.  
+The GDC [BAM Slicing](BAM_Slicing) feature can also be accessed through Python. Below is an example of a basic BAM slicing command.
 
 ```TXT
 Choose the Python tab to view script.
 ```
+
 ```Python
 import requests
 import json
@@ -382,13 +396,15 @@ file_name = "brca_slices.bam"
 with open(file_name, "wb") as output_file:
     output_file.write(response.content)
 ```
-[Download Script](scripts/BAM_Slice.py)
+
+[Download Script](../scripts/BAM_Slice.py)
 
 The same region(s) across multiple BAM files can be retrieved using a for-loop within a Python script.
 
 ```TXT
 Choose the Python tab to view script.
 ```
+
 ```Python
 import requests
 import json
@@ -428,11 +444,12 @@ for file_id in file_ids:
     with open(file_name, "wb") as output_file:
         output_file.write(response.content)
 ```
-[Download Script](scripts/BAM_Slice_Multiple.py)
+
+[Download Script](../scripts/BAM_Slice_Multiple.py)
 
 ## Basic Troubleshooting
 
-The following script should produce an unformatted JSON string with information about the API status. Run this script to verify that a valid connection is being made to the GDC API.  
+The following script should produce an unformatted JSON string with information about the API status. Run this script to verify that a valid connection is being made to the GDC API.
 
 ```Python
 import requests
@@ -447,4 +464,5 @@ file.close()
 # OUTPUT METHOD 2: View on screen.
 print(response.content)
 ```
-[Download Script](scripts/Basic_Troubleshooting.py)
+
+[Download Script](../scripts/Basic_Troubleshooting.py)

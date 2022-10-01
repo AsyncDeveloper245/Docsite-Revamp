@@ -30,129 +30,123 @@
     {% for file in css %}
     <link rel="stylesheet" type="text/css" href="{{ file }}" />
     {% endfor %}
+
+    <style>
+      #load {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: url("/img/loading.gif") no-repeat center center
+          rgba(0, 0, 1, 0.25);
+      }
+    </style>
   </head>
+
   <body>
-    <script defer src="/js/viewer.js"></script>
-    <!---->
-    {% include 'navbar.html' %}
+    <div id="load"></div>
+    <div id="contents">
+      <!---->
+      {% include 'navbar.html' %}
 
-    <div class="row">
-      <div class="col-md-3">
-        <div class="container-fluid sidebar-container">
-          <div class="sidebar">
-            {{ sidebar}}
-            <ul class="main">
-              <li class="inactive">
-                <a href="/output/dist/Data_Dictionary/About">About</a>
-              </li>
-              <li class="main">
-                <a href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
-              </li>
-              <ul></ul>
-              <li class="inactive">
-                <a href="/output/dist/Data_Dictionary/Search">Search</a>
-              </li>
-              <li class="inactive">
-                <a href="/output/dist/Data_Dictionary/Release_Notes"
-                  >Release Notes</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-9">
-        <div class="container-fluid doc-container" id="doc-container">
-          <h1><i class="fas fa-book"></i> Data Dictionary Viewer</h1>
-          <hr />
-          <p
-            id="dictionary-preamble"
-            style="margin: 2rem auto 4rem auto; width: 95%"
-          >
-            The GDC data dictionary viewer is a user-friendly interface for
-            accessing the <a href="../">GDC Data Dictionary</a>.
-          </p>
-          <div class="loadingContainer" id="dictionary-loading-icon">
-            <div class="spinParticleContainer">
-              <div class="particle red"></div>
-              <div class="particle grey other-particle"></div>
-              <div class="particle blue other-other-particle"></div>
+      <div class="row">
+        <div class="col-md-9">
+          <div class="container-fluid doc-container" id="doc-container">
+            <h1><i class="fas fa-book"></i> Data Dictionary Viewer</h1>
+            <hr />
+            <p
+              id="dictionary-preamble"
+              style="margin: 2rem auto 4rem auto; width: 95%"
+            >
+              The GDC data dictionary viewer is a user-friendly interface for
+              accessing the <a href="../">GDC Data Dictionary</a>.
+            </p>
+            <div class="loadingContainer" id="dictionary-loading-icon">
+              <div class="spinParticleContainer">
+                <div class="particle red"></div>
+                <div class="particle grey other-particle"></div>
+                <div class="particle blue other-other-particle"></div>
+              </div>
             </div>
+            <div id="dictionary-app-container"></div>
           </div>
-          <div id="dictionary-app-container"></div>
         </div>
       </div>
-    </div>
 
-    <footer id="docs-footer">
-      <div class="container-fluid footer-container">
-        <div>
-          <a href="https://portal.gdc.cancer.gov" target="_blank">Site Home</a>
-          |
-          <a href="http://www.cancer.gov/global/web/policies" target="_blank"
-            >Policies</a
-          >
-          |
-          <a
-            href="http://www.cancer.gov/global/web/policies/accessibility"
-            target="_blank"
-            >Accessibility</a
-          >
-          |
-          <a
-            href="http://www.cancer.gov/global/web/policies/foia"
-            target="_blank"
-            >FOIA</a
-          >
+      <footer id="docs-footer">
+        <div class="container-fluid footer-container">
+          <div>
+            <a href="https://portal.gdc.cancer.gov" target="_blank"
+              >Site Home</a
+            >
+            |
+            <a href="http://www.cancer.gov/global/web/policies" target="_blank"
+              >Policies</a
+            >
+            |
+            <a
+              href="http://www.cancer.gov/global/web/policies/accessibility"
+              target="_blank"
+              >Accessibility</a
+            >
+            |
+            <a
+              href="http://www.cancer.gov/global/web/policies/foia"
+              target="_blank"
+              >FOIA</a
+            >
+          </div>
+          <div>
+            <a href="http://www.hhs.gov" target="_blank"
+              >U.S. Department of Health and Human Services</a
+            >
+            |
+            <a href="http://www.nih.gov" target="_blank"
+              >National Institutes of Health</a
+            >
+            |
+            <a href="http://www.cancer.gov" target="_blank"
+              >National Cancer Institute</a
+            >
+            | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
+          </div>
+          <div>NIH... Turning Discovery Into Health ®</div>
+
+          <div class="version-caption">GDC Docs Version 2.0</div>
         </div>
-        <div>
-          <a href="http://www.hhs.gov" target="_blank"
-            >U.S. Department of Health and Human Services</a
-          >
-          |
-          <a href="http://www.nih.gov" target="_blank"
-            >National Institutes of Health</a
-          >
-          |
-          <a href="http://www.cancer.gov" target="_blank"
-            >National Cancer Institute</a
-          >
-          | <a href="http://www.usa.gov" target="_blank">USA.gov</a>
-        </div>
-        <div>NIH... Turning Discovery Into Health ®</div>
-
-        <div class="version-caption">GDC Docs Version 2.0</div>
-      </div>
-    </footer>
-
-    <script>
-      /* When the user clicks on the button, 
+      </footer>
+      {% for f in js %}
+      <script type="text/javascript" src="{{ f }}"></script>
+      {% endfor %}
+      <script>
+        /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 
-      // Close the dropdown if the user clicks outside of it
+        // Close the dropdown if the user clicks outside of it
 
-      var toggler = document.getElementById("myToggle");
-      toggler.onclick = function () {
-        var myDropdown = document.getElementById("myDropdown");
-        myDropdown.classList.toggle("show");
-      };
-      window.onclick = function (e) {
-        if (!e.target.matches(".dropbtn")) {
+        var toggler = document.getElementById("myToggle");
+        toggler.onclick = function () {
           var myDropdown = document.getElementById("myDropdown");
-          if (myDropdown.classList.contains("show")) {
-            myDropdown.classList.remove("show");
+          myDropdown.classList.toggle("show");
+        };
+        window.onclick = function (e) {
+          if (!e.target.matches(".dropbtn")) {
+            var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains("show")) {
+              myDropdown.classList.remove("show");
+            }
           }
-        }
-      };
-    </script>
+        };
+      </script>
 
-    <!-- Dictionary Builder -->
+      <!-- Dictionary Builder -->
 
-    <!-- JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+      <!-- JavaScript Bundle with Popper -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+    </div>
   </body>
 </html>

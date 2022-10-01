@@ -6,7 +6,7 @@ The GDC Data Submission Portal provides access to the different reports listed b
 
 The reports are available from the [Homepage](Homepage.md) and the [Project Dashboard](Dashboard.md).
 
-[![GDC Submission Reports](images/GDC_Submission_Reports.png)](images/GDC_Submission_Reports.png "Click to see the full image.")
+[![GDC Submission Reports](../images/GDC_Submission_Reports.png)](../images/GDC_Submission_Reports.png "Click to see the full image.")
 
 ## Case Overview Report
 

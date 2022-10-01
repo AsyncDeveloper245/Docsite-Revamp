@@ -4,7 +4,7 @@
 
 The GDC API provides endpoints that search and retrieve information stored in the GDC according to the [GDC Data Model](../../Data/Data_Model/GDC_Data_Model.md). The general format of requests to search & retrieval endpoints is described below.
 
->**Note:** Queries described in this section work for datasets that have been released to the GDC Data Portal. Unreleased data that is in the process of being submitted to GDC cannot be queried using these methods. See [Submission](Submission.md) to learn how to query unreleased data using GraphQL.
+> **Note:** Queries described in this section work for datasets that have been released to the GDC Data Portal. Unreleased data that is in the process of being submitted to GDC cannot be queried using these methods. See [Submission](Submission.md) to learn how to query unreleased data using GraphQL.
 
 ### Components of a Request
 
@@ -12,14 +12,14 @@ A typical search and retrieval API request specifies the following parameters:
 
 - a `filters` parameter, that specifies the search terms for the query
 - several parameters that specify the API response, such as:
-	- `format` &mdash; specifies response format (JSON, TSV, XML)
-	- `fields` &mdash; specifies the which data elements should be returned in the response, if available
-	- `size` &mdash; specifies the the maximum number of results to include in the response
-	- other parameters are described below.
+  - `format` &mdash; specifies response format (JSON, TSV, XML)
+  - `fields` &mdash; specifies the which data elements should be returned in the response, if available
+  - `size` &mdash; specifies the the maximum number of results to include in the response
+  - other parameters are described below.
 
 Requests can be executed using HTTP GET or HTTP POST. GET requests are limited by maximum URL length, so the POST method is recommended for large queries.
 
->**Note:** Requests for information stored in the GDC Legacy Archive must be directed to `legacy/` endpoints. See [Getting Started](Getting_Started.md#gdc-legacy-archive) for details.
+> **Note:** Requests for information stored in the GDC Legacy Archive must be directed to `legacy/` endpoints. See [Getting Started](Getting_Started#gdc-legacy-archive) for details.
 
 ### POST Example
 
@@ -27,39 +27,39 @@ The following is an example of an HTTP POST request to the `files` endpoint of t
 
 #### Request
 
-	curl --request POST --header "Content-Type: application/json" --data @Payload 'https://api.gdc.cancer.gov/files' > response.tsv
+    curl --request POST --header "Content-Type: application/json" --data @Payload 'https://api.gdc.cancer.gov/files' > response.tsv
 
 #### Payload
 
-	{
-	    "filters":{
-	        "op":"and",
-	        "content":[
-	            {
-	                "op":"in",
-	                "content":{
-	                    "field":"cases.submitter_id",
-	                    "value":[
-	                        "TCGA-CK-4948",
-	                        "TCGA-D1-A17N",
-	                        "TCGA-4V-A9QX",
-	                        "TCGA-4V-A9QM"
-	                    ]
-	                }
-	            },
-	            {
-	                "op":"=",
-	                "content":{
-	                    "field":"files.data_type",
-	                    "value":"Gene Expression Quantification"
-	                }
-	            }
-	        ]
-	    },
-	    "format":"tsv",
-	    "fields":"file_id,file_name,cases.submitter_id,cases.case_id,data_category,data_type,cases.samples.tumor_descriptor,cases.samples.tissue_type,cases.samples.sample_type,cases.samples.submitter_id,cases.samples.sample_id,analysis.workflow_type,cases.project.project_id,cases.samples.portions.analytes.aliquots.aliquot_id,cases.samples.portions.analytes.aliquots.submitter_id",
-	    "size":"1000"
-	}
+    {
+        "filters":{
+            "op":"and",
+            "content":[
+                {
+                    "op":"in",
+                    "content":{
+                        "field":"cases.submitter_id",
+                        "value":[
+                            "TCGA-CK-4948",
+                            "TCGA-D1-A17N",
+                            "TCGA-4V-A9QX",
+                            "TCGA-4V-A9QM"
+                        ]
+                    }
+                },
+                {
+                    "op":"=",
+                    "content":{
+                        "field":"files.data_type",
+                        "value":"Gene Expression Quantification"
+                    }
+                }
+            ]
+        },
+        "format":"tsv",
+        "fields":"file_id,file_name,cases.submitter_id,cases.case_id,data_category,data_type,cases.samples.tumor_descriptor,cases.samples.tissue_type,cases.samples.sample_type,cases.samples.submitter_id,cases.samples.sample_id,analysis.workflow_type,cases.project.project_id,cases.samples.portions.analytes.aliquots.aliquot_id,cases.samples.portions.analytes.aliquots.submitter_id",
+        "size":"1000"
+    }
 
 Each component of the request is explained below.
 
@@ -67,36 +67,38 @@ Each component of the request is explained below.
 
 The above request can be executed as an HTTP GET:
 
-	https://api.gdc.cancer.gov/files?filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22cases.submitter_id%22%2C%22value%22%3A%5B%22TCGA-CK-4948%22%2C%22TCGA-D1-A17N%22%2C%22TCGA-4V-A9QX%22%2C%22TCGA-4V-A9QM%22%5D%7D%7D%2C%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_type%22%2C%22value%22%3A%22Gene%20Expression%20Quantification%22%7D%7D%5D%7D&format=tsv&fields=file_id,file_name,cases.submitter_id,cases.case_id,data_category,data_type,cases.samples.tumor_descriptor,cases.samples.tissue_type,cases.samples.sample_type,cases.samples.submitter_id,cases.samples.sample_id,analysis.workflow_type,cases.project.project_id,cases.samples.portions.analytes.aliquots.aliquot_id,cases.samples.portions.analytes.aliquots.submitter_id&size=1000
+    https://api.gdc.cancer.gov/files?filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22cases.submitter_id%22%2C%22value%22%3A%5B%22TCGA-CK-4948%22%2C%22TCGA-D1-A17N%22%2C%22TCGA-4V-A9QX%22%2C%22TCGA-4V-A9QM%22%5D%7D%7D%2C%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_type%22%2C%22value%22%3A%22Gene%20Expression%20Quantification%22%7D%7D%5D%7D&format=tsv&fields=file_id,file_name,cases.submitter_id,cases.case_id,data_category,data_type,cases.samples.tumor_descriptor,cases.samples.tissue_type,cases.samples.sample_type,cases.samples.submitter_id,cases.samples.sample_id,analysis.workflow_type,cases.project.project_id,cases.samples.portions.analytes.aliquots.aliquot_id,cases.samples.portions.analytes.aliquots.submitter_id&size=1000
 
 Each component of the request is explained below.
-
 
 ## Endpoints
 
 The following search and retrieval endpoints are available in the GDC API:
 
-| Endpoints | Description |
-| --- | --- |
-| [files](/API/Users_Guide/Search_and_Retrieval/#files-endpoint) | Information about files stored in the GDC |
-| [cases](/API/Users_Guide/Search_and_Retrieval/#cases-endpoint) | Information related to cases, or sample donors |
-| [history](/API/Users_Guide/Search_and_Retrieval/#history-endpoint) | Information related to file version history |
-| [projects](/API/Users_Guide/Search_and_Retrieval/#project-endpoint) | Information about projects |
-| [annotations](/API/Users_Guide/Search_and_Retrieval/#annotations-endpoint) | Information about annotations to GDC data |
-| \_mapping | Information about elements that can be used to query other endpoints |
+| Endpoints                                                                  | Description                                                          |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [files](/API/Users_Guide/Search_and_Retrieval/#files-endpoint)             | Information about files stored in the GDC                            |
+| [cases](/API/Users_Guide/Search_and_Retrieval/#cases-endpoint)             | Information related to cases, or sample donors                       |
+| [history](/API/Users_Guide/Search_and_Retrieval/#history-endpoint)         | Information related to file version history                          |
+| [projects](/API/Users_Guide/Search_and_Retrieval/#project-endpoint)        | Information about projects                                           |
+| [annotations](/API/Users_Guide/Search_and_Retrieval/#annotations-endpoint) | Information about annotations to GDC data                            |
+| \_mapping                                                                  | Information about elements that can be used to query other endpoints |
 
-The choice of endpoint determines what is listed in the search results. The `files` endpoint will generate a list of files, whereas the `cases` endpoint will generate a list of cases. Each of the above endpoints, other than `_mapping`, can query and return any of the related fields in the [GDC Data Model](../../Data/Data_Model/GDC_Data_Model.md). So the `cases` endpoint can be queried for file fields (e.g. to look for cases that have certain types of experimental data), and the `files` endpoint can be queried for clinical metadata associated with a case (e.g. to look for files from cases diagnosed with a specific cancer type).
+The choice of endpoint determines what is listed in the search results. The `files` endpoint will generate a list of files, whereas the `cases` endpoint will generate a list of cases. Each of the above endpoints, other than `_mapping`, can query and return any of the related fields in the [GDC Data Model](../../Data/Data_Model/GDC_Data_Model). So the `cases` endpoint can be queried for file fields (e.g. to look for cases that have certain types of experimental data), and the `files` endpoint can be queried for clinical metadata associated with a case (e.g. to look for files from cases diagnosed with a specific cancer type).
 
 ### `Project` Endpoint
+
 The `projects` endpoint provides access to project records, the highest level of data organization in the GDC.
 
 #### Example
+
 This example is a query for projects contained in the GDC. It uses the [from](#from), [size](#size), [sort](#sort), and [pretty](#pretty) parameters, and returns the first two projects sorted by project id.
 
 ```shell
 curl 'https://api.gdc.cancer.gov/projects?from=0&size=2&sort=project_id:asc&pretty=true'
 ```
-``` Output
+
+```Output
 {
   "data": {
     "hits": [
@@ -157,6 +159,7 @@ The `project` endpoint supports a simple query format that retrieves the metadat
 ```shell
 curl 'https://api.gdc.cancer.gov/projects/TARGET-NBL?expand=summary,summary.experimental_strategies,summary.data_categories&pretty=true'
 ```
+
 ```Response
 {
   "data": {
@@ -263,7 +266,8 @@ This example is a query for files contained in the GDC. It uses the [from](#from
 ```shell
 curl 'https://api.gdc.cancer.gov/files?from=0&size=2&sort=file_size:asc&pretty=true'
 ```
-``` Output
+
+```Output
 {
   "data": {
     "hits": [
@@ -330,12 +334,13 @@ curl 'https://api.gdc.cancer.gov/files?from=0&size=2&sort=file_size:asc&pretty=t
 
 #### Retrieval of file metadata using individual UUIDs:
 
-The `/files` endpoint supports a simple query format that retrieves the metadata of a single file using its UUID.  Note that the `/files` endpoint is inactive when querying for earlier file versions.  In that case, the `/history` or `/files/versions` endpoints should be used instead.
+The `/files` endpoint supports a simple query format that retrieves the metadata of a single file using its UUID. Note that the `/files` endpoint is inactive when querying for earlier file versions. In that case, the `/history` or `/files/versions` endpoints should be used instead.
 
 ```Shell
 curl 'https://api.gdc.cancer.gov/files/874e71e0-83dd-4d3e-8014-10141b49f12c?pretty=true'
 ```
-``` Output
+
+```Output
 {
   "data": {
     "data_format": "VCF",
@@ -362,18 +367,17 @@ curl 'https://api.gdc.cancer.gov/files/874e71e0-83dd-4d3e-8014-10141b49f12c?pret
 }
 ```
 
->__Note:__ The `file_size` field associated with each file is reported in bytes.  
-
+> **Note:** The `file_size` field associated with each file is reported in bytes.
 
 #### Example of retrieving file version information:
 
-The `https://api.gdc.cancer.gov/files/versions` endpoint enables search and retrieval of version information about a file.  A file may be versioned if a file is updated by the GDC (e.g. using a new alignment algorithm or fixing a file that contained an error). `Version` refers to the instance of a particular file.  Inputs can either be a list of UUIDs as shown in example 1 or a download manifest as shown in example 2.  Output includes information about the current and latest version for any given file.  While `/files` also returns information about a file version this endpoint will only work for the most recent version of a file whereas `/files/versions` will work for all previous and current versions of a file.  In both examples below the output format can be modified by adding the `format=tsv` parameter.
+The `https://api.gdc.cancer.gov/files/versions` endpoint enables search and retrieval of version information about a file. A file may be versioned if a file is updated by the GDC (e.g. using a new alignment algorithm or fixing a file that contained an error). `Version` refers to the instance of a particular file. Inputs can either be a list of UUIDs as shown in example 1 or a download manifest as shown in example 2. Output includes information about the current and latest version for any given file. While `/files` also returns information about a file version this endpoint will only work for the most recent version of a file whereas `/files/versions` will work for all previous and current versions of a file. In both examples below the output format can be modified by adding the `format=tsv` parameter.
 
 ```Shell1
 curl 'https://api.gdc.cancer.gov/files/versions/1dd28069-5777-4ff9-bd2b-d1ba68e88b06,2a03abac-f1a2-49a9-a57c-7543739dd862?pretty=true'
 ```
 
-``` Output1
+```Output1
 [
   {
     "id": "1dd28069-5777-4ff9-bd2b-d1ba68e88b06",
@@ -443,11 +447,12 @@ curl 'https://api.gdc.cancer.gov/files/versions/1dd28069-5777-4ff9-bd2b-d1ba68e8
   }
 ]
 ```
+
 ```Shell2
 curl --request POST --header "Content-Type: text/tsv"  https://api.gdc.cancer.gov/files/versions/manifest?pretty=true --data-binary @gdc_manifest_20180809_154816.txt
 ```
 
-``` Output2
+```Output2
 [{
   "latest_size": 44857,
   "state": "validated",
@@ -525,19 +530,19 @@ The GDC Cases Endpoint `https://api.gdc.cancer.gov/cases` enables search and ret
 
 The `cases` endpoint is designed to retrieve the metadata associated with one or more cases, including all nested biospecimen entities. Filters can be applied to retrieve information for entire cases, but not for lower-level biospecimen entities. For example, a sample within a case cannot be used to query for aliquots that are associated only with that sample. All aliquots associated with the case would be retrieved.
 
-
 #### Example
 
 This example is a query for files contained in GDC. It returns case where submitter id is `TCGA-BH-A0EA`, using the [pretty](#pretty) and [filters](#filters) parameters and the following [filtering operators](#filtering-operators):
 
-	{"op":"and","content":[{"op":"in","content":{"field":"submitter_id","value":["TCGA-BH-A0EA"]}}]}
+    {"op":"and","content":[{"op":"in","content":{"field":"submitter_id","value":["TCGA-BH-A0EA"]}}]}
 
 Command:
 
 ```shell
 curl 'https://api.gdc.cancer.gov/cases?filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22submitter_id%22%2C%22value%22%3A%5B%22TCGA-BH-A0EA%22%5D%7D%7D%5D%7D%0A%0A&pretty=true'
 ```
-``` Output
+
+```Output
 {
   "data": {
     "hits": [
@@ -651,6 +656,7 @@ The `cases` endpoint supports a simple query format that retrieves the metadata 
 ```shell
 curl 'https://api.gdc.cancer.gov/cases/1f601832-eee3-48fb-acf5-80c4a454f26e?pretty=true&expand=diagnoses'
 ```
+
 ```Response
 {
   "data": {
@@ -781,14 +787,13 @@ curl 'https://api.gdc.cancer.gov/cases/1f601832-eee3-48fb-acf5-80c4a454f26e?pret
 
 The GDC Annotation Endpoint `https://api.gdc.cancer.gov/annotations` enables search and retrieval of annotations stored in the GDC.
 
-
 #### Example
 
 This example is a query for any annotations **directly** associated with the following GDC entities:
 
-* the case with UUID e0d36cc0-652c-4224-bb10-09d15c7bd8f1
-* the sample with UUID 25ebc29a-7598-4ae4-ba7f-618d448882cc
-* the aliquot with UUID fe660d7c-2746-4b50-ab93-b2ed99960553
+- the case with UUID e0d36cc0-652c-4224-bb10-09d15c7bd8f1
+- the sample with UUID 25ebc29a-7598-4ae4-ba7f-618d448882cc
+- the aliquot with UUID fe660d7c-2746-4b50-ab93-b2ed99960553
 
 The query uses the [filters](#filters) parameter to specify entity UUIDs. Code samples below include the bare and percent-encoded filter JSON.
 
@@ -805,13 +810,16 @@ The query uses the [filters](#filters) parameter to specify entity UUIDs. Code s
    }
 }
 ```
+
 ```Filter-JSON-percent-encoded
 %7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22entity_id%22%2C%22value%22%3A%5B%22e0d36cc0-652c-4224-bb10-09d15c7bd8f1%22%2C%2225ebc29a-7598-4ae4-ba7f-618d448882cc%22%2C%22fe660d7c-2746-4b50-ab93-b2ed99960553%22%5D%7D%7D
 ```
+
 ```shell
 curl 'https://api.gdc.cancer.gov/annotations?filters=%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22entity_id%22%2C%22value%22%3A%5B%22e0d36cc0-652c-4224-bb10-09d15c7bd8f1%22%2C%2225ebc29a-7598-4ae4-ba7f-618d448882cc%22%2C%22fe660d7c-2746-4b50-ab93-b2ed99960553%22%5D%7D%7D&pretty=true'
 ```
-``` Output
+
+```Output
 {
   "data": {
     "hits": [
@@ -880,55 +888,55 @@ curl 'https://api.gdc.cancer.gov/annotations?filters=%7B%22op%22%3A%22in%22%2C%2
   "warnings": {}
 }
 ```
+
 ### `History` Endpoint
 
-The GDC History Endpoint `https://api.gdc.cancer.gov/history` enables search and retrieval of version and release information about a file.  This endpoint will return the entire provenance of all versions of a file.  A file may be versioned if a file is updated by the GDC (e.g. using a new alignment algorithm or fixing a file that contained an error). `Version` refers to the instance of a particular file. `Release` refers to which data release a file was part of.  A file may be a part of many different data releases with no change in version number or content.  
+The GDC History Endpoint `https://api.gdc.cancer.gov/history` enables search and retrieval of version and release information about a file. This endpoint will return the entire provenance of all versions of a file. A file may be versioned if a file is updated by the GDC (e.g. using a new alignment algorithm or fixing a file that contained an error). `Version` refers to the instance of a particular file. `Release` refers to which data release a file was part of. A file may be a part of many different data releases with no change in version number or content.
 
 #### Example
 
 This example is a query for versioning information associated with the follow with file `1dd28069-5777-4ff9-bd2b-d1ba68e88b06`.
 
-
 ```shell
 curl 'https://api.gdc.cancer.gov/history/1dd28069-5777-4ff9-bd2b-d1ba68e88b06'
 ```
-``` Output
+
+```Output
 [{"uuid": "1dd28069-5777-4ff9-bd2b-d1ba68e88b06", "version": "1", "file_change": "released", "release_date": "2018-08-23", "data_release": "12.0"}]
 ```
 
-
 ### `_mapping` Endpoint
 
-Each search and retrieval endpoint is equipped with a ```_mapping``` endpoint that provides information about available fields. For example, `files/_mapping` endpoint provides information about fields and field groups available at the `files` endpoint: `https://api.gdc.cancer.gov/files/_mapping`.
+Each search and retrieval endpoint is equipped with a `_mapping` endpoint that provides information about available fields. For example, `files/_mapping` endpoint provides information about fields and field groups available at the `files` endpoint: `https://api.gdc.cancer.gov/files/_mapping`.
 
 The high-level structure of a response to a `_mapping` query is as follows:
 
-	"_mapping": {}
-	, "defaults": []
-	, "expand": []
-	, "fields": []
-	, "multi": []
-	, "nested": []
+    "_mapping": {}
+    , "defaults": []
+    , "expand": []
+    , "fields": []
+    , "multi": []
+    , "nested": []
 
-[//]: # (_)
+[//]: # "_"
 
 Each part of the response is described below:
 
-| Part | Description |
-|------|-------------|
+| Part       | Description                                                                                                                                                                                        |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `_mapping` | All available fields and their descriptions. The endpoint-agnostic field names provided here are compatible with the `filters` parameter but are not always compatible with the `fields` parameter |
-| `defaults` | The default set of fields included in the API response when the `fields` parameter is not used in the request |
-| `expand` | Field group names for use with the `expand` parameter |
-| `fields` | All available fields in an endpoint-specific format that is compatible with both the `filters` and `fields` parameters |
-| `multi` | GDC internal use |
-| `nested` | Nested fields |
-
+| `defaults` | The default set of fields included in the API response when the `fields` parameter is not used in the request                                                                                      |
+| `expand`   | Field group names for use with the `expand` parameter                                                                                                                                              |
+| `fields`   | All available fields in an endpoint-specific format that is compatible with both the `filters` and `fields` parameters                                                                             |
+| `multi`    | GDC internal use                                                                                                                                                                                   |
+| `nested`   | Nested fields                                                                                                                                                                                      |
 
 #### Example
 
 ```shell
 curl 'https://api.gdc.cancer.gov/projects/_mapping'
 ```
+
 ```output
 This output was put thought a json format application for easier viewability.
 {
@@ -954,23 +962,21 @@ This output was put thought a json format application for easier viewability.
 
 Similar information can be obtained using the `fields` parameter; `fields` queries provide additional information in the response, such as the name of the Elastic Search document (`doc_type`), the field name and the type of value. A list of supported types (such as `string`, `long`, `float`, ...) can be obtained from [Elastic Search Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html).
 
-
 ## Request Parameters
 
 The GDC API supports the following search & retrieval request parameters:
 
-Parameter | Default | Description
---------- | ------- | -----------
-filters| null | Specifies search parameters
-format | JSON | Specifies the API response format: JSON, XML, or TSV
-pretty | false | Returns response with indentations and line breaks in a human-readable format
-fields | null | Specifies which fields to include in the response
-expand | null | Returns multiple related fields
-size | 10 | Specifies the number of results to return
-from   | 0 | Specifies the first record to return from a set of search results
-sort | null | Specifies sorting for the search results
-facets | null | Provides all existing values for a given field and the number of records having this value.
-
+| Parameter | Default | Description                                                                                 |
+| --------- | ------- | ------------------------------------------------------------------------------------------- |
+| filters   | null    | Specifies search parameters                                                                 |
+| format    | JSON    | Specifies the API response format: JSON, XML, or TSV                                        |
+| pretty    | false   | Returns response with indentations and line breaks in a human-readable format               |
+| fields    | null    | Specifies which fields to include in the response                                           |
+| expand    | null    | Returns multiple related fields                                                             |
+| size      | 10      | Specifies the number of results to return                                                   |
+| from      | 0       | Specifies the first record to return from a set of search results                           |
+| sort      | null    | Specifies sorting for the search results                                                    |
+| facets    | null    | Provides all existing values for a given field and the number of records having this value. |
 
 ### Filters: Specifying the Query
 
@@ -983,7 +989,7 @@ A `filters` query consists of an operator (or a nested set of operators) with a 
 The following `filters` query operators are supported by the GDC API:
 
 | Operator | Description                                      | Number of Operands | Logic example                                                |
-|----------|--------------------------------------------------|--------------------|--------------------------------------------------------------|
+| -------- | ------------------------------------------------ | ------------------ | ------------------------------------------------------------ |
 | =        | equals (string or number)                        | one                | gender = "female"                                            |
 | !=       | does not equal (string or number)                | one                | project_id != "TARGET-AML"                                   |
 | <        | less than (number)                               | one                | age at diagnosis < 90y                                       |
@@ -997,49 +1003,48 @@ The following `filters` query operators are supported by the GDC API:
 | and      | (operation1) and (operation2)                    | multiple           | {primary_site in [Brain, Lung]} and {gender = "female"}      |
 | or       | (operation1) or (operation2)                     | multiple           | {project_id != "TARGET-AML"} or {age at diagnosis < 90y}     |
 
-The `field` operand specifies a field that corresponds to a property defined in the [GDC Data Dictionary](../../Data_Dictionary/viewer.md). A list of supported fields is provided in [Appendix A](Appendix_A_Available_Fields.md); the list can also be accessed programmatically at the [_mapping endpoint](#95mapping-endpoint).
+The `field` operand specifies a field that corresponds to a property defined in the [GDC Data Dictionary](../../Data_Dictionary/viewer). A list of supported fields is provided in [Appendix A](Appendix_A_Available_Fields); the list can also be accessed programmatically at the [\_mapping endpoint](#95mapping-endpoint).
 
 The `value` operand specifies the search terms. Users can get a list of available values for a specific property by making a call to the appropriate API endpoint using the `facets` parameter, e.g. `https://api.gdc.cancer.gov/v0/cases?facets=demographic.gender&size=0&pretty=true`. See [Facets](#facets) for details.
 
 A simple query with a single operator looks like this:
 
-	{
-	    "op":"=",
-	    "content":{
-	        "field":"cases.demographic.gender",
-	        "value":[
-	            "male"
-	        ]
-	    }
-	}
+    {
+        "op":"=",
+        "content":{
+            "field":"cases.demographic.gender",
+            "value":[
+                "male"
+            ]
+        }
+    }
 
 A more complex query with multiple operators looks like this:
 
-	{
-	    "op":"and",
-	    "content":[
-	        {
-	            "op":"in",
-	            "content":{
-	                "field":"cases.submitter_id",
-	                "value":[
-	                    "TCGA-CK-4948",
-	                    "TCGA-D1-A17N",
-	                    "TCGA-4V-A9QX",
-	                    "TCGA-4V-A9QM"
-	                ]
-	            }
-	        },
-	        {
-	            "op":"=",
-	            "content":{
-	                "field":"files.data_type",
-	                "value":"Gene Expression Quantification"
-	            }
-	        }
-	    ]
-	}
-
+    {
+        "op":"and",
+        "content":[
+            {
+                "op":"in",
+                "content":{
+                    "field":"cases.submitter_id",
+                    "value":[
+                        "TCGA-CK-4948",
+                        "TCGA-D1-A17N",
+                        "TCGA-4V-A9QX",
+                        "TCGA-4V-A9QM"
+                    ]
+                }
+            },
+            {
+                "op":"=",
+                "content":{
+                    "field":"files.data_type",
+                    "value":"Gene Expression Quantification"
+                }
+            }
+        ]
+    }
 
 #### Example: HTTP GET Request
 
@@ -1066,6 +1071,7 @@ The above string can now be passed to the GDC API using the `filters` parameter:
 ```shell
  curl  'https://api.gdc.cancer.gov/cases?filters=%7b%22op%22%3a+%22%3d%22%2c%0d%0a++++++%22content%22%3a+%7b%0d%0a++++++++++%22field%22%3a+%22cases.demographic.gender%22%2c%0d%0a++++++++++%22value%22%3a+%5b%22male%22%5d%0d%0a++++++%7d%0d%0a%7d&pretty=true'
 ```
+
 ```python
 import requests
 import json
@@ -1081,7 +1087,8 @@ params = {'filters':json.dumps(filt), 'sort':'demographic.gender:asc'}
 response = requests.get(cases_endpt, params = params)
 print json.dumps(response.json(), indent=2)
 ```
-``` Output
+
+```Output
 {
   "data": {
     "hits": [
@@ -1949,8 +1956,6 @@ print json.dumps(response.json(), indent=2)
 }
 ```
 
-
-
 #### Example: HTTP POST Request
 
 This example demonstrates how to obtain metadata in TSV format for a set of files using their UUIDs (e.g. UUIDs obtained from a [download manifest file generated by the GDC Data Portal](/Data_Portal/Users_Guide/Cart/#gdc-data-transfer-tool)).
@@ -1987,9 +1992,11 @@ The first step is to construct a JSON query object, including `filters`, `fields
     "size":"100"
 }
 ```
+
 ```Shell
 curl --request POST --header "Content-Type: application/json" --data @Payload.txt 'https://api.gdc.cancer.gov/files' > File_metadata.txt
 ```
+
 ```File_metadata_txt
 cases_0_submitter_id	cases_0_case_id	data_type	cases_0_samples_0_sample_type	cases_0_samples_0_tissue_type	file_name	cases_0_samples_0_submitter_id	cases_0_samples_0_portions_0_analytes_0_aliquots_0_aliquot_id	cases_0_samples_0_sample_id	file_id	data_category	cases_0_samples_0_tumor_descriptor	cases_0_samples_0_portions_0_analytes_0_aliquots_0_submitter_id
 TCGA-B0-5094	8aaa4e25-5c12-4ace-96dc-91aaa0c4457c	Aligned Reads	Solid Tissue Normal		C345.TCGA-B0-5094-11A-01D-1421-08.5_gdc_realn.bam	TCGA-B0-5094-11A	b4e4630a-b38c-4b62-b0e8-d73f0e3b4e47	7519d7a8-c3ee-417b-9cfc-111bc5ad0637	0001801b-54b0-4551-8d7a-d66fb59429bf	Raw Sequencing Data		TCGA-B0-5094-11A-01D-1421-08
@@ -2009,7 +2016,6 @@ TCGA-A2-A3XX	53886143-c1c6-40e9-88e6-e4e5e0271fc8	Aligned Reads	Blood Derived No
 TCGA-EB-A3XB	a9255dcb-b236-4777-ac43-555e3a5386c3	Aligned Reads	Blood Derived Normal		C828.TCGA-EB-A3XB-10B-01D-A23B-08.1_gdc_realn.bam	TCGA-EB-A3XB-10B	9f4ffc2f-d006-4d86-b3b1-b25020481893	0e1d4c7c-204d-4765-b090-68ed4cd83835	005239a8-2e63-4ff1-9cd4-714f81837a61	Raw Sequencing Data		TCGA-EB-A3XB-10B-01D-A23B-08
 ```
 
-
 ### Format
 
 Specifies the format of the API response: JSON (default), `TSV` or `XML`.
@@ -2019,6 +2025,7 @@ Specifies the format of the API response: JSON (default), `TSV` or `XML`.
 ```shell1
 curl  'https://api.gdc.cancer.gov/cases?fields=submitter_id&size=5&format=TSV'
 ```
+
 ```python1
 import requests
 
@@ -2028,6 +2035,7 @@ params = {'fields':'submitter_id',
 response = requests.get(cases_endpt, params = params)
 print response.content
 ```
+
 ```response1
 id	submitter_id
 375436b3-66ac-4d5e-b495-18a96d812a69	TCGA-F5-6810
@@ -2037,9 +2045,11 @@ c739fd61-22b2-412d-bcf3-89bda45a2c0f	TCGA-3H-AB3X
 340fef21-55d8-433f-b00a-51276b849356	TCGA-MQ-A4LI
 
 ```
+
 ```shell2
 curl  'https://api.gdc.cancer.gov/cases?fields=submitter_id&size=5&format=XML&pretty=true'
 ```
+
 ```python2
 import requests
 
@@ -2050,6 +2060,7 @@ params = {'fields':'submitter_id',
 response = requests.get(cases_endpt, params = params)
 print response.content
 ```
+
 ```Output2
 <?xml version="1.0" ?>
 <response>
@@ -2099,12 +2110,15 @@ Returns when the `pretty` parameter is set to `true`, the API response is format
 ```Request1
 curl  'https://api.gdc.cancer.gov/cases?fields=submitter_id&sort=submitter_id:asc&size=5'
 ```
+
 ```Response1
 {"data": {"hits": [{"id": "be37f1f7-2f98-4f74-bc04-6dd2ae2afcad", "submitter_id": "01BR001"}, {"id": "e6915db0-7c89-484d-8f9f-15cca68b82fc", "submitter_id": "01BR008"}, {"id": "16614d46-172b-479c-992b-e80a8e9a2c59", "submitter_id": "01BR009"}, {"id": "567fc9e3-17a6-42b1-a896-5e9a9507d1d8", "submitter_id": "01BR010"}, {"id": "54e89878-a1bc-4f5a-9d68-4842a469586e", "submitter_id": "01BR015"}], "pagination": {"count": 5, "total": 84392, "size": 5, "from": 0, "sort": "submitter_id:asc", "page": 1, "pages": 16879}}, "warnings": {}}
 ```
+
 ```Request2
 curl  'https://api.gdc.cancer.gov/cases?fields=submitter_id&sort=submitter_id:asc&size=5&pretty=true'
 ```
+
 ```Response2
 {
   "data": {
@@ -2146,7 +2160,7 @@ curl  'https://api.gdc.cancer.gov/cases?fields=submitter_id&sort=submitter_id:as
 
 ### Fields
 
-This query parameter specifies which fields are to be included in the API response. The fields in the API response will be unordered. A listing of available fields for each endpoint is provided in [Appendix A](Appendix_A_Available_Fields.md).
+This query parameter specifies which fields are to be included in the API response. The fields in the API response will be unordered. A listing of available fields for each endpoint is provided in [Appendix A](Appendix_A_Available_Fields).
 
 #### Example
 
@@ -2155,6 +2169,7 @@ The following example requests case submitter ID, file UUID, file name and file 
 ```shell
 curl 'https://api.gdc.cancer.gov/files?fields=cases.submitter_id,file_id,file_name,file_size&pretty=true'
 ```
+
 ```python
 import requests
 import json
@@ -2164,6 +2179,7 @@ params = {'fields':'cases.submitter_id,file_id,file_name,file_size'}
 response = requests.get(files_endpt, params = params)
 print json.dumps(response.json(), indent=2)
 ```
+
 ```Response
 {
   "data": {
@@ -2295,13 +2311,14 @@ print json.dumps(response.json(), indent=2)
 
 ### Expand
 
-The `expand` parameter provides a shortcut to request multiple related fields (field groups) in the response. Instead of specifying each field using the `fields` parameter, users can specify a field group name using the `expand` parameter to request all fields in the group. Available field groups are listed in [Appendix A](Appendix_A_Available_Fields.md#field-group-listing-by-endpoint); the list can also be accessed programmatically at the [_mapping endpoint](#95mapping-endpoint). The `fields` and `expand` parameters can be used together to request custom combinations of field groups and individual fields.
+The `expand` parameter provides a shortcut to request multiple related fields (field groups) in the response. Instead of specifying each field using the `fields` parameter, users can specify a field group name using the `expand` parameter to request all fields in the group. Available field groups are listed in [Appendix A](Appendix_A_Available_Fields#field-group-listing-by-endpoint); the list can also be accessed programmatically at the [\_mapping endpoint](#95mapping-endpoint). The `fields` and `expand` parameters can be used together to request custom combinations of field groups and individual fields.
 
 #### Example
 
 ```Shell
 curl 'https://api.gdc.cancer.gov/files/ac2ddebd-5e5e-4aea-a430-5a87c6d9c878?expand=cases.samples&pretty=true'
 ```
+
 ```Response
 {
   "data": {
@@ -2372,14 +2389,13 @@ The `size` query parameter specifies the maximum number of results to return. De
 
 The `from` query parameter specifies the first record to return out of the set of results. For example, if there are 20 cases returned from the `cases` endpoint, then setting `from` to `11` will return results 12 to 20. The `from` parameter can be used in conjunction with the `size` parameter to return a specific subset of results.
 
-
 #### Example
 
-
-``` Shell1
+```Shell1
 curl 'https://api.gdc.cancer.gov/files?fields=file_name&from=0&size=2&pretty=true'
 ```
-``` Python1
+
+```Python1
 import requests
 import json
 
@@ -2390,6 +2406,7 @@ response = requests.get(files_endpt, params = params)
 print json.dumps(response.json(), indent=2)
 
 ```
+
 ```Response1
 {
   "data": {
@@ -2416,10 +2433,12 @@ print json.dumps(response.json(), indent=2)
   "warnings": {}
 }
 ```
-``` Shell2
+
+```Shell2
 curl 'https://api.gdc.cancer.gov/files?fields=file_name&from=101&size=5&pretty=true'
 ```
-``` Python2
+
+```Python2
 import requests
 import json
 
@@ -2429,7 +2448,8 @@ params = {'fields':'file_name',
 response = requests.get(files_endpt, params = params)
 print json.dumps(response.json(), indent=2)
 ```
-``` Output2
+
+```Output2
 {
   "data": {
     "hits": [
@@ -2470,16 +2490,17 @@ print json.dumps(response.json(), indent=2)
 
 ### Sort
 
-The `sort` query parameter sorts the results by a specific field, and with the sort direction specified using the `:asc` (ascending) or `:desc` (descending) prefix, e.g. `sort=field:desc`. A list of all valid _field_ names is available in [Appendix A](Appendix_A_Available_Fields.md); the list can also be accessed programmatically at the [_mapping endpoint](#95mapping-endpoint).
+The `sort` query parameter sorts the results by a specific field, and with the sort direction specified using the `:asc` (ascending) or `:desc` (descending) prefix, e.g. `sort=field:desc`. A list of all valid _field_ names is available in [Appendix A](../Appendix_A_Available_Fields); the list can also be accessed programmatically at the [\_mapping endpoint](#95mapping-endpoint).
 
 #### Example
 
 Sort cases by `submitter_id` in ascending order:
 
-``` shell
+```shell
 curl  'https://api.gdc.cancer.gov/cases?fields=submitter_id&sort=submitter_id:asc&pretty=true'
 ```
-``` python
+
+```python
 import requests
 import json
 
@@ -2490,7 +2511,8 @@ response = requests.get(cases_endpt, params = params)
 print json.dumps(response.json(), indent=2)
 
 ```
-``` Output
+
+```Output
 {
   "data": {
     "hits": [
@@ -2550,6 +2572,7 @@ print json.dumps(response.json(), indent=2)
 ```
 
 ### Facets
+
 The `facets` parameter provides aggregate information for a specified field. It provides all values that exist for that field, and the number of entities (cases, projects, files, or annotations) that this value. The primary intended use of this parameter is for displaying aggregate information in the GDC Data Portal.
 
 The `facets` parameter can be used in conjunction with the `filters` parameter to get aggregate information for a set of search results. The following limitations apply when using `facets` and `filters` together:
@@ -2564,6 +2587,7 @@ This is an example of a request for a count of projects in each program.
 ```shell
 curl  'https://api.gdc.cancer.gov/projects?facets=program.name&from=0&size=0&sort=program.name:asc&pretty=true'
 ```
+
 ```python
 import requests
 import json
@@ -2575,6 +2599,7 @@ params = {'facets':'program.name',
 response = requests.get(projects_endpt, params = params)
 print json.dumps(response.json(), indent=2)
 ```
+
 ```Response
 {
   "data": {
@@ -2693,10 +2718,12 @@ In this sample POST request, both `filters` and `facets` parameters are used. No
     "pretty":"true"
 }
 ```
+
 ```Shell
 curl --request POST --header "Content-Type: application/json" --data @Payload 'https://api.gdc.cancer.gov/v0/cases'
 ```
-``` Response
+
+```Response
 {
   "data": {
     "pagination": {
@@ -2824,26 +2851,27 @@ curl --request POST --header "Content-Type: application/json" --data @Payload 'h
 }
 ```
 
-
 ## Alternative Request Format
 
 The GDC API also supports POST requests with `Content-Type: application/x-www-form-urlencoded` (curl default), which require payloads in the following format:
+
 ```
 	filters=%7B%0A%20%20%20%20%22op%22%3A%22in%22%2C%0A%20%20%20%20%22content%22%3A%7B%0A%20%20%20%20%20%20%20%20%22field%22%3A%22files.file_id%22%2C%0A%20%20%20%20%20%20%20%20%22value%22%3A%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%220001801b-54b0-4551-8d7a-d66fb59429bf%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22002c67f2-ff52-4246-9d65-a3f69df6789e%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22003143c8-bbbf-46b9-a96f-f58530f4bb82%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%220043d981-3c6b-463f-b512-ab1d076d3e62%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22004e2a2c-1acc-4873-9379-ef1aa12283b6%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22005239a8-2e63-4ff1-9cd4-714f81837a61%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22006b8839-31e5-4697-b912-8e3f4124dd15%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22006ce9a8-cf38-462e-bb99-7f08499244ab%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22007ce9b5-3268-441e-9ffd-b40d1127a319%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%220084a614-780b-42ec-b85f-7a1b83128cd3%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%2200a5e471-a79f-4d56-8a4c-4847ac037400%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%2200ab2b5a-b59e-4ec9-b297-76f74ff1d3fb%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%2200c5f14e-a398-4076-95d1-25f320ee3a37%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%2200c74a8b-10aa-40cc-991e-3365ea1f3fce%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%2200df5a50-bce3-4edf-a078-641e54800dcb%22%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%7D%0A%7D&fields=file_id,file_name,cases.submitter_id,cases.case_id,data_category,data_type,cases.samples.tumor_descriptor,cases.samples.tissue_type,cases.samples.sample_type,cases.samples.submitter_id,cases.samples.sample_id&format=tsv&size=100
 ```
+
 ## Using Wildcards
 
-The GDC API supports the use of the wildcard character, an asterisk (\*), in the `value` fields of a JSON query.  For example, if a user wanted to retrieve information about projects with a disease type that ended in "Adenocarcinoma" a query for `"disease_type": "*Adenocarcinoma"` would be appropriate. See below:
+The GDC API supports the use of the wildcard character, an asterisk (\*), in the `value` fields of a JSON query. For example, if a user wanted to retrieve information about projects with a disease type that ended in "Adenocarcinoma" a query for `"disease_type": "*Adenocarcinoma"` would be appropriate. See below:
 
 ```
-{  
+{
    "size":"20000",
    "pretty":"TRUE",
    "fields":"submitter_id,disease_type",
    "format":"TSV",
-   "filters":{  
+   "filters":{
       "op":"=",
-      "content":{  
+      "content":{
          "field":"disease_type",
          "value":"*Adenocarcinoma"
       }
@@ -2853,24 +2881,26 @@ The GDC API supports the use of the wildcard character, an asterisk (\*), in the
 
 ## Quicksearch Endpoint
 
-The GDC Portal has a quicksearch functionality that allows for a project, case, or file to be queried from a search box. This function calls the `/v0/all` endpoint, which retrieves the top cases, files, and projects that match to the query. The quicksearch can also be used programmatically through the API.  For example, a search term of 'TCGA' would produce the following query:  
+The GDC Portal has a quicksearch functionality that allows for a project, case, or file to be queried from a search box. This function calls the `/v0/all` endpoint, which retrieves the top cases, files, and projects that match to the query. The quicksearch can also be used programmatically through the API. For example, a search term of 'TCGA' would produce the following query:
 
 ```Shell
 curl "https://api.gdc.cancer.gov/v0/all?query=TCGA&size=5"
 ```
+
 ```Response
 {"data":{"query":{"hits":[{"disease_type":["Gliomas"],"id":"UHJvamVjdDpUQ0dBLUxHRw==","name":"Brain Lower Grade Glioma","primary_site":["Brain"],"project_id":"TCGA-LGG","project_quicksearch":"Brain Lower Grade Glioma"},{"disease_type":["Myeloid Leukemias"],"id":"UHJvamVjdDpUQ0dBLUxBTUw=","name":"Acute Myeloid Leukemia","primary_site":["Hematopoietic and reticuloendothelial systems"],"project_id":"TCGA-LAML","project_quicksearch":"Acute Myeloid Leukemia"},{"disease_type":["Adenomas and Adenocarcinomas"],"id":"UHJvamVjdDpUQ0dBLUtJUkM=","name":"Kidney Renal Clear Cell Carcinoma","primary_site":["Kidney"],"project_id":"TCGA-KIRC","project_quicksearch":"Kidney Renal Clear Cell Carcinoma"},{"disease_type":["Complex Mixed and Stromal Neoplasms"],"id":"UHJvamVjdDpUQ0dBLVVDUw==","name":"Uterine Carcinosarcoma","primary_site":["Uterus, NOS"],"project_id":"TCGA-UCS","project_quicksearch":"Uterine Carcinosarcoma"},{"disease_type":["Germ Cell Neoplasms"],"id":"UHJvamVjdDpUQ0dBLVRHQ1Q=","name":"Testicular Germ Cell Tumors","primary_site":["Testis"],"project_id":"TCGA-TGCT","project_quicksearch":"Testicular Germ Cell Tumors"}],"total":195221}}}
 ```
 
-This endpoint can be used to quickly retrieve information about a file.  For example, if a user wanted to know the UUID for `nationwidechildrens.org_biospecimen.TCGA-EL-A4K1.xml`, the following query could be used to quickly retrieve it programmatically:
+This endpoint can be used to quickly retrieve information about a file. For example, if a user wanted to know the UUID for `nationwidechildrens.org_biospecimen.TCGA-EL-A4K1.xml`, the following query could be used to quickly retrieve it programmatically:
 
 ```Shell
 curl "https://api.gdc.cancer.gov/v0/all?query=nationwidechildrens.org_biospecimen.TCGA-EL-A4K1.xml&size=5"
 ```
+
 ```Response
 {"data":{"query":{"hits":[{"file_id":"a74abfec-db78-4ed4-9e4b-604b66e30e30","file_name":"nationwidechildrens.org_biospecimen.TCGA-EL-A4K1.xml","id":"RmlsZTphNzRhYmZlYy1kYjc4LTRlZDQtOWU0Yi02MDRiNjZlMzBlMzA=","submitter_id":"nationwidechildrens.org_biospecimen.TCGA-EL-A4K1.xml"}],"total":1}}}
 ```
 
 ## Additional Examples
 
-More examples of API functionality described in this section are provided in [Additional Examples](Additional_Examples.md).
+More examples of API functionality described in this section are provided in [Additional Examples](../Additional_Examples).

@@ -598,3 +598,7 @@ tbody tr:hover td:last-child {
     #ffffff 100%
   );
 }
+
+img {
+  width: 100%;
+}

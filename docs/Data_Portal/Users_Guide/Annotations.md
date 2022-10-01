@@ -10,21 +10,21 @@ The view presents a list of annotations in tabular format on the right, and a fa
 
 Clicking on an annotation ID in the annotations list will take the user to the [Annotation Detail Page](#annotation-detail-page).
 
-[![Annotations View](images/gdc-data-portal-annotations.png)](images/gdc-data-portal-annotations.png "Click to see the full image.")
+[![Annotations View](images/gdc-data-portal-annotations.png)](../images/gdc-data-portal-annotations.png "Click to see the full image.")
 
 ### Facets Panel
 
 The following facets are available to search for annotations:
 
-* __Annotation ID__: Seach using annotation ID
-* __Entity ID__: Seach using entity ID
-* __Case UUID__: Seach using case UUID
-* __Primary Site__: Anatomical site of the cancer
-* __Project__: A cancer research project, typically part of a larger cancer research program
-* __Entity Type__: The type of entity the annotation is associated with: Patient, Sample, Portion, Slide, Analyte, Aliquot
-* __Annotation Category__: Search by annotation category.
-* __Annotation Created__: Search for annotations by date of creation.
-* __Annotation Classification__: Search by annotation classification.
+- **Annotation ID**: Seach using annotation ID
+- **Entity ID**: Seach using entity ID
+- **Case UUID**: Seach using case UUID
+- **Primary Site**: Anatomical site of the cancer
+- **Project**: A cancer research project, typically part of a larger cancer research program
+- **Entity Type**: The type of entity the annotation is associated with: Patient, Sample, Portion, Slide, Analyte, Aliquot
+- **Annotation Category**: Search by annotation category.
+- **Annotation Created**: Search for annotations by date of creation.
+- **Annotation Classification**: Search by annotation classification.
 
 #### Annotation Categories and Classification
 
@@ -34,4 +34,4 @@ For more details about categories and classifications please refer to the [TCGA 
 
 The annotation entity page provides more details about a specific annotation. It is available by clicking on an annotation ID in Annotations View.
 
-[![Annotation Entity Page](images/annotations-entity-page.png)](images/annotations-entity-page.png "Click to see the full image.")
+[![Annotation Entity Page](../images/annotations-entity-page.png)](../images/annotations-entity-page.png "Click to see the full image.")

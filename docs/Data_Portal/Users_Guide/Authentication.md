@@ -8,9 +8,9 @@ The GDC Data Portal provides granular metadata for all datasets available in the
 
 To login to the GDC, users must click on the `Login` button on the top right of the GDC website.
 
-![Login](images/gdc-login.png)
+![Login](../images/gdc-login.png)
 
-After clicking Login, users authenticate themselves using their eRA Commons login and password.  If authentication is successful, the eRA Commons username will be displayed in the upper right corner of the screen, in place of the "Login" button.
+After clicking Login, users authenticate themselves using their eRA Commons login and password. If authentication is successful, the eRA Commons username will be displayed in the upper right corner of the screen, in place of the "Login" button.
 
 Upon successful authentication, GDC Data Portal users can:
 
@@ -20,7 +20,7 @@ Upon successful authentication, GDC Data Portal users can:
 
 Controlled-access files are identified using a "lock" icon:
 
-[![GDC Data Portal Main Page](images/gdc-data-portal-controlled-files.png)](images/gdc-data-portal-controlled-files.png "Click to see the full image.")
+[![GDC Data Portal Main Page](../images/gdc-data-portal-controlled-files.png)](../images/gdc-data-portal-controlled-files.png "Click to see the full image.")
 
 The rest of this section describes controlled data access features of the GDC Data Portal available to authorized users. For more information about open and controlled-access data, and about obtaining access to controlled data, see [Data Access Processes and Tools](https://gdc.cancer.gov/access-data/data-access-processes-and-tools).
 
@@ -28,11 +28,11 @@ The rest of this section describes controlled data access features of the GDC Da
 
 After logging into the GDC Portal, users can view which projects they have access to by clicking the `User Profile` section in the dropdown menu in the top corner of the screen.
 
-[![User Profile Drop Down](images/gdc-user-profile-dropdown.png)](images/gdc-user-profile-dropdown.png "Click to see the full image.")
+[![User Profile Drop Down](../images/gdc-user-profile-dropdown.png)](../images/gdc-user-profile-dropdown.png "Click to see the full image.")
 
 Clicking this button shows the list of projects.
 
-[![User Profile](images/gdc-user-profile.png)](images/gdc-user-profile.png "Click to see the full image.")
+[![User Profile](../images/gdc-user-profile.png)](../images/gdc-user-profile.png "Click to see the full image.")
 
 ## GDC Authentication Tokens
 
@@ -42,7 +42,7 @@ The GDC Data Portal provides authentication tokens for use with the GDC Data Tra
 2. Click the username in the top right corner of the screen
 3. Select the "Download token" option
 
-![Token Download Button](images/gdc-data-portal-token-download.png)
+![Token Download Button](../images/gdc-data-portal-token-download.png)
 
 A new token is generated each time the `Download Token` button is clicked.
 
@@ -54,4 +54,4 @@ For more information about authentication tokens, see [Data Security](../../Data
 
 To log out of the GDC, click the username in the top right corner of the screen, and select the Logout option.
 
-![Logout link](images/gdc-data-portal-token-download.png)
+![Logout link](../images/gdc-data-portal-token-download.png)

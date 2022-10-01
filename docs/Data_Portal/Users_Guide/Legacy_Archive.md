@@ -4,25 +4,24 @@ The GDC Legacy Archive hosts unharmonized legacy data from repositories that pre
 
 The GDC Legacy Archive can be accessed from the GDC Data Portal front page as well as from the "GDC Apps" menu.
 
-[![GDC apps archive](images/gdc-data-portal-gdc-apps-archive.png)](images/gdc-data-portal-gdc-apps-archive.png "Click to see the full image.")
-
+[![GDC apps archive](../images/gdc-data-portal-gdc-apps-archive.png)](../images/gdc-data-portal-gdc-apps-archive.png "Click to see the full image.")
 
 ## Overview
 
 The GDC Legacy Archive contains a limited set of features of the GDC Data Portal:
 
-* __Facet search__: Ability to look for legacy files or legacy annotations based on case, file and annotation facets.
-* __File and Annotation tables__: List of all the legacy files and list of all the legacy annotations.
-* __File and Annotation detail pages__: Information page for each legacy file and annotation.
-* __Cart__:  The GDC Legacy Archive and the GDC Data Portal are separate systems with separate download carts.
+- **Facet search**: Ability to look for legacy files or legacy annotations based on case, file and annotation facets.
+- **File and Annotation tables**: List of all the legacy files and list of all the legacy annotations.
+- **File and Annotation detail pages**: Information page for each legacy file and annotation.
+- **Cart**: The GDC Legacy Archive and the GDC Data Portal are separate systems with separate download carts.
 
-[![Legacy Archive Portal](images/gdc-legacy-portal-home.png)](images/gdc-legacy-portal-home.png "Click to see the full image.")
+[![Legacy Archive Portal](../images/gdc-legacy-portal-home.png)](../images/gdc-legacy-portal-home.png "Click to see the full image.")
 
 ### File Page
 
 The file page of the GDC Legacy Archive is similar to the [File Summary Page of the GDC Data Portal](Repository.md#file-summary-page). It does not include the Workflow, Reference Genome, and Read Groups sections as these are only applicable to harmonized data available in the GDC Data Portal. The Legacy Archive includes additional archive information as described below.
 
-[![Files Entity Page](images/gdc-data-portal-files-entity-page-Archive-MagTab.png)](images/gdc-data-portal-files-entity-page-Archive-MagTab.png "Click to see the full image.")
+[![Files Entity Page](../images/gdc-data-portal-files-entity-page-Archive-MagTab.png)](../images/gdc-data-portal-files-entity-page-Archive-MagTab.png "Click to see the full image.")
 
 #### Archive
 

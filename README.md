@@ -64,7 +64,7 @@ Currently, the GDC Site Generator can do the following:
 
 1. Convert Markdown files to HTML files.
 2. Read the YAML configuration file and create the documentation site directory.
-3. Use the Jinja templating engine to pass context varies between different templates.
+3. Use the Jinja templating engine to pass context variables between different templates.
 4. Use the BeautifulSoup to Create a navigation bar and sidebar.
 5. Integrate a third party API to create the GDC dictionary viewer.
 
@@ -76,6 +76,7 @@ The site generator appears to have a promising future. There are still a few par
 - Make code chunks available for testing by users on documentation pages.
 - Alter script to properly parse static (image) files
 - Instead of relying on the pre-existing files in the templates directory, let users use their own basic templates.
+- Work on timproving the User interface of the dictionary viewer.
 
 ## My Experience
 

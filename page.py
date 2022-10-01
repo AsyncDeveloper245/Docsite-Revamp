@@ -78,8 +78,17 @@ def parse_pdf_links(pdf_link):
     download_link = link_array[3]
     return (download_name, download_link)
 
+#Copy image dir from docs to the output dir
+def copy_image_directory(src):
+    for (root,dirs,files) in os.walk(src, topdown=True):
+        for dir in dirs:
+            if str(dir) == 'images' or 'scripts':
+                output_root = '/'.join(root.split('/')[1:])
+                os.makedirs('output/dist/{output_root}/'.format(dir=dir,output_root=output_root),exist_ok=True)
+                os.system('cp -r {root}/{dir} output/dist/{output_root}/'.format(root=root, dir=dir,output_root=output_root))
 
 def make_filepath(subdir, group, pagename):
+    
     if subdir.endswith(".md"):
         filepath = "/".join([group, pagename]).replace("-", "").replace(" ", "_")
         filepath = filepath.replace("__", "_")
@@ -242,6 +251,7 @@ class Pages:
                 # print(group,pageloc.split('/')[1],pagename)
                 subdir = page[pagename].split("/")[1]
                 # parse md files that are in the group folder
+                print(subdir)
                 filepath = make_filepath(subdir, group, pagename)
 
                 # Write to template and remove markdown file
@@ -307,6 +317,8 @@ class Pages:
             f.write(f"const searchData = {self.search_obj};")
         os.remove(os.path.join("output", pageloc))
 
+        #Copy Image directories from the docs directory into the output directory
+        copy_image_directory('docs')
         return
 
     # Build page Siblings
@@ -471,3 +483,4 @@ class Pages:
             f.write(output)
 
         return
+

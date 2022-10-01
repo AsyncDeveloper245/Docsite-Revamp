@@ -1,11 +1,13 @@
 # mRNA Analysis Pipeline
 
 ## Introduction
+
 The GDC mRNA quantification analysis pipeline measures gene level expression with [STAR](https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf) as raw read counts. Subsequently the counts are augmented with several transformations including Fragments per Kilobase of transcript per Million mapped reads (FPKM), upper quartile normalized FPKM (FPKM-UQ), and Transcripts per Million (TPM). These values are additionally annotated with the gene symbol and gene bio-type. These data are generated through this pipeline by first aligning reads to the GRCh38 [reference genome](https://gdc.cancer.gov/download-gdc-reference-files) and then by quantifying the mapped reads. To facilitate harmonization across samples, all RNA-Seq reads are treated as unstranded during analyses.
 
 ## Data Processing Steps
 
 ### RNA-Seq Alignment Workflow
+
 The mRNA Analysis pipeline begins with the [Alignment Workflow](/Data_Dictionary/viewer/#?view=table-definition-view&id=alignment_workflow), which is performed using a two-pass method with [STAR](https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf). STAR aligns each [read group](/Data_Dictionary/viewer/#?view=table-definition-view&id=read_group) separately and then merges the resulting alignments into one. Following the methods used by the International Cancer Genome Consortium [ICGC](https://icgc.org/) ([github](https://github.com/akahles/icgc_rnaseq_align)), the two-pass method includes a splice junction detection step, which is used to generate the final alignment. This workflow outputs a genomic BAM file, which contains both aligned and unaligned reads. Quality assessment is performed pre-alignment with [FASTQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and post-alignment with [Picard Tools](http://broadinstitute.github.io/picard/).
 
 Files that were processed after Data Release 14 have associated transcriptomic and chimeric alignments in addition to the genomic alignment detailed above. This only applies to aliquots with at least one set of paired-end reads. The chimeric BAM file contains reads that were mapped to different chromosomes or strands (fusion alignments). The genomic alignment files contain chimeric and unaligned reads to facilitate the retrieval of all original reads. The transcriptomic alignment reports aligned reads with transcript coordinates rather than genomic coordinates. The transcriptomic alignment is also sorted differently to facilitate downstream analyses. BAM index file pairing is not supported by this method of sorting, which does not allow for BAM slicing on these alignments. The splice-junction file for these alignments are also available.
@@ -14,16 +16,16 @@ Files that were processed after Data Release 25 will have associated [gene fusio
 
 As of Data Release 32 the reference annotation will be updated to GENCODE v36 and HT-Seq will no longer be used.
 
-[![RNA Alignment Pipeline](images/RNA-Seq-DR32_Image.png)](images/RNA-Seq-DR32_Image.png "Click to see the full image.")
+[![RNA Alignment Pipeline](images/RNA-Seq-DR32_Image.png)](../images/RNA-Seq-DR32_Image.png "Click to see the full image.")
 
-| I/O | Entity | Format |
-|---|---|---|
-| Input | [Submitted Unaligned Reads](/Data_Dictionary/viewer/#?view=table-definition-view&id=submitted_unaligned_reads) or [Submitted Aligned Reads](/Data_Dictionary/viewer/#?view=table-definition-view&id=submitted_aligned_reads) |  FASTQ or BAM |
-| Output | [Aligned Reads](/Data_Dictionary/viewer/#?view=table-definition-view&id=aligned_reads) | BAM  |
+| I/O    | Entity                                                                                                                                                                                                                       | Format       |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| Input  | [Submitted Unaligned Reads](/Data_Dictionary/viewer/#?view=table-definition-view&id=submitted_unaligned_reads) or [Submitted Aligned Reads](/Data_Dictionary/viewer/#?view=table-definition-view&id=submitted_aligned_reads) | FASTQ or BAM |
+| Output | [Aligned Reads](/Data_Dictionary/viewer/#?view=table-definition-view&id=aligned_reads)                                                                                                                                       | BAM          |
 
 ### RNA-Seq Alignment Command Line Parameters
 
-__Note that version numbers may vary in files downloaded from the GDC Data Portal due to ongoing pipeline development and improvement.__
+**Note that version numbers may vary in files downloaded from the GDC Data Portal due to ongoing pipeline development and improvement.**
 
 ```Original
 # STAR-2
@@ -123,6 +125,7 @@ STAR
 --outSAMheaderHD @HD VN:1.4
 --outSAMattrRGline <formatted RG line provided by wrapper>
 ```
+
 ```DR15Plus
 # STAR-2
 
@@ -159,6 +162,7 @@ STAR \
 --runThreadN <threads> \
 --twopassMode Basic
 ```
+
 ```DR32
 # STAR Genome Index
 STAR
@@ -214,13 +218,13 @@ The primary counting data is generated by STAR and includes a gene ID, unstrande
 
 Note that the STAR counting results will not count reads that are mapped to more than one different gene. Below are two files that list genes that are completely encompassed by other genes and will likely display a value of zero.
 
-* [Overlapped Genes (stranded)](/Data/Bioinformatics_Pipelines/overlap.gene.stranded.tsv)
-* [Overlapped Genes (unstranded)](/Data/Bioinformatics_Pipelines/overlap.gene.strandless.tsv)
+- [Overlapped Genes (stranded)](/Data/Bioinformatics_Pipelines/overlap.gene.stranded.tsv)
+- [Overlapped Genes (unstranded)](/Data/Bioinformatics_Pipelines/overlap.gene.strandless.tsv)
 
-| I/O | Entity | Format |
-|---|---|---|
-| Input | [Aligned Reads](/Data_Dictionary/viewer/#?view=table-definition-view&id=aligned_reads) |  BAM |
-| Output | [Gene Expression](/Data_Dictionary/viewer/#?view=table-definition-view&id=gene_expression) | TXT  |
+| I/O    | Entity                                                                                     | Format |
+| ------ | ------------------------------------------------------------------------------------------ | ------ |
+| Input  | [Aligned Reads](/Data_Dictionary/viewer/#?view=table-definition-view&id=aligned_reads)     | BAM    |
+| Output | [Gene Expression](/Data_Dictionary/viewer/#?view=table-definition-view&id=gene_expression) | TXT    |
 
 ### mRNA Quantification Command Line Parameters
 
@@ -229,6 +233,7 @@ HTSeq
 ```Current
 Counts are produced by STAR concurrent with alignment.
 ```
+
 ```Original
 htseq-count \
 -m intersection-nonempty \
@@ -237,6 +242,7 @@ htseq-count \
 -s no \
 - gencode.v22.annotation.gtf
 ```
+
 ```DR15-31
 htseq-count \
 -f bam \
@@ -268,32 +274,33 @@ The transcripts per million calculation is similar to FPKM, but the difference i
 
 ### Calculations
 
-[![FPKM Calculations](images/normalizations_calc.png)](images/normalizations_calc.png "Click to see the full image.")
+[![FPKM Calculations](images/normalizations_calc.png)](../images/normalizations_calc.png "Click to see the full image.")
 
-__Note:__ The read count is multiplied by a scalar (10<sup>9</sup>) during normalization to account for the kilobase and 'million mapped reads' units.
+**Note:** The read count is multiplied by a scalar (10<sup>9</sup>) during normalization to account for the kilobase and 'million mapped reads' units.
 
 ### Examples
 
-__Sample 1: Gene A__
+**Sample 1: Gene A**
 
-* Gene length: 3,000 bp
-* 1,000 reads mapped to Gene A
-* 1,000,000 reads mapped to all protein-coding regions
-* Read count in Sample 1 for 75th percentile gene: 2,000
-* Number of protein coding genes on autosomes: 19,029
-* Sum of length-normalized transcript counts: 9,000,000
+- Gene length: 3,000 bp
+- 1,000 reads mapped to Gene A
+- 1,000,000 reads mapped to all protein-coding regions
+- Read count in Sample 1 for 75th percentile gene: 2,000
+- Number of protein coding genes on autosomes: 19,029
+- Sum of length-normalized transcript counts: 9,000,000
 
-__FPKM for Gene A__ = 1,000 \* 10^9 / (3,000 \* 50,000,000) = __6.67__
+**FPKM for Gene A** = 1,000 \* 10^9 / (3,000 \* 50,000,000) = **6.67**
 
-__FPKM-UQ for Gene A__ = 1,000) \* 10^9 / (3,000 \* 2,000 \* 19,029) = __8.76__
+**FPKM-UQ for Gene A** = 1,000) \* 10^9 / (3,000 \* 2,000 \* 19,029) = **8.76**
 
-__TPM for Gene A__ = (1,000 * 1,000 / 3,000) * 1,000,000 / (9,000,000) = __37.04__
+**TPM for Gene A** = (1,000 _ 1,000 / 3,000) _ 1,000,000 / (9,000,000) = **37.04**
 
 ## Fusion Pipelines
 
 The GDC uses two pipelines for the detection of gene fusions.
 
 ### STAR-Fusion Pipeline
+
 The GDC gene fusion pipeline uses the STAR-Fusion v1.6 algorithm to generate gene fusion data.
 STAR-Fusion pipeline processes the output generated by STAR aligner to map junction reads
 and spanning reads to a junction annotation set. It utilizes a chimeric junction file from
@@ -304,7 +311,6 @@ The prediction file provides fused gene names, junction read count and breakpoin
 
 The [Arriba gene fusion pipeline](https://github.com/suhrig/arriba) uses Arriba v1.1.0 to detect gene fusions from the RNA-Seq data of tumor samples.
 
-
 ## scRNA-Seq Pipeline (single-nuclei)
 
 The GDC processes single-cell RNA-Seq (scRNA-Seq) data using the [Cell Ranger pipeline](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger) to calculate gene expression followed by [Seurat](https://satijalab.org/seurat/) for secondary expression analysis.
@@ -313,17 +319,17 @@ The GDC processes single-cell RNA-Seq (scRNA-Seq) data using the [Cell Ranger pi
 
 The gene expression pipeline, which uses Cell Ranger, generates three files:
 
-* Aligned reads file (BAM)
-* Raw counts matrix - contains all barcodes in [Market Exchange Format](https://math.nist.gov/MatrixMarket/formats.html) (MEX)
-* Filtered counts matrix - contains only detected cellular barcodes  (MEX)
+- Aligned reads file (BAM)
+- Raw counts matrix - contains all barcodes in [Market Exchange Format](https://math.nist.gov/MatrixMarket/formats.html) (MEX)
+- Filtered counts matrix - contains only detected cellular barcodes (MEX)
 
 ### scRNA Analysis Pipeline
 
 The analysis pipeline, which uses the Seurat software, generates three files from an input of Filtered counts matrix:
 
-* Analysis - PCA, UMAP, tSNE values, and graph-based clustering results with associated metadata (TSV).
-* Differential gene expression - DEG information comparing cells from one cluster to the rest of the cells (TSV).
-* Full Seurat analysis log as a loom object in [HDF5](https://portal.hdfgroup.org/display/knowledge/HDF+Knowledge+Base) format.
+- Analysis - PCA, UMAP, tSNE values, and graph-based clustering results with associated metadata (TSV).
+- Differential gene expression - DEG information comparing cells from one cluster to the rest of the cells (TSV).
+- Full Seurat analysis log as a loom object in [HDF5](https://portal.hdfgroup.org/display/knowledge/HDF+Knowledge+Base) format.
 
 When the input RNA was extracted from nuclei instead of cytoplasm, a slightly modified quantification method is implemented to include introns. Currently, these single-nuclei RNA-Seq (snRNA-Seq) analyses share the same experimental strategy (scRNA-Seq) in the Data Portal, and can be filtered by querying for aliquot.analyte_type = "Nuclei RNA".
 
@@ -331,7 +337,7 @@ When the input RNA was extracted from nuclei instead of cytoplasm, a slightly mo
 
 To facilitate the use of harmonized data in user-created pipelines, RNA-Seq gene expression is accessible in the GDC Data Portal at several intermediate steps in the pipeline. Below is a description of each type of file available for download in the GDC Data Portal.
 
-| Type | Description | Format |
-|---|---|---|
-| RNA-Seq Alignment | RNA-Seq reads that have been aligned to the GRCh38 build. Reads that were not aligned are included to facilitate the availability of raw read sets.  |  BAM |
-| STAR Read Counts | The number of reads aligned to each gene, calculated by STAR, along with values using common normalization methods. |  TSV |
+| Type              | Description                                                                                                                                         | Format |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| RNA-Seq Alignment | RNA-Seq reads that have been aligned to the GRCh38 build. Reads that were not aligned are included to facilitate the availability of raw read sets. | BAM    |
+| STAR Read Counts  | The number of reads aligned to each gene, calculated by STAR, along with values using common normalization methods.                                 | TSV    |
