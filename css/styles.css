@@ -450,12 +450,11 @@ footer a:visited {
 
 .navbar-nav li a:hover {
   text-decoration: #c2cfd5;
-  background-color: rgb(41, 38, 38);
+  background-color: rgb(206, 202, 202);
 }
 
 .navbar-nav li a:hover {
   color: white;
-  margin-left: 5%;
 }
 
 #navbarDropdownMenuLink:hover {

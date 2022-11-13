@@ -1,2 +1,0 @@
-% GDC Data User's Guide
-% NCI Genomic Data Commons (GDC)

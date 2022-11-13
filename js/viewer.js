@@ -243,3 +243,31 @@ var data, table, tbody, tr, td1, td2, td3, td4, thead, th, h2;
     }
   }
 })();
+
+
+/*
+Write a Class that gets data from api endpoint and builds a table with the data from the endpoint
+*/ 
+
+class Viewer {
+   constructor(this,url, data){
+      this.data = data;
+}
+  getData(){
+
+  }
+
+  getNodes(){
+
+  }
+
+  buildTables(){
+
+  }
+
+  initialize(){
+    this.getData()
+    this.getNodes()
+    this.buildTables()
+  }
+}

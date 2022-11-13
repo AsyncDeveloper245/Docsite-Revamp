@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from jinja2 import Environment, PackageLoader
 from pathlib import Path
 import yaml
-
+import subprocess
 
 # from playground import add_playground
 
@@ -25,6 +25,13 @@ def rmdir(dir):
     os.rmdir(dir)
     return
 
+def clean_output_dir(base):
+        dirs =  os.listdir(base)
+        for dir in dirs:
+            if str(dir) == "dist":
+                pass
+            else:
+                rmdir(os.path.join('output',dir))
 
 os.makedirs(os.path.join(ROOT_DIR, "Encyclopedia/"), exist_ok=True)
 
@@ -80,12 +87,15 @@ def parse_pdf_links(pdf_link):
 
 #Copy image dir from docs to the output dir
 def copy_image_directory(src):
+    dir_to_copy = ['images','scripts']
     for (root,dirs,files) in os.walk(src, topdown=True):
         for dir in dirs:
-            if str(dir) == 'images' or 'scripts':
+            if dir in dir_to_copy:
                 output_root = '/'.join(root.split('/')[1:])
-                os.makedirs('output/dist/{output_root}/'.format(dir=dir,output_root=output_root),exist_ok=True)
-                os.system('cp -r {root}/{dir} output/dist/{output_root}/'.format(root=root, dir=dir,output_root=output_root))
+                os.makedirs('{ROOT_DIR}/{output_root}/'.format(dir=dir,output_root=output_root,ROOT_DIR=ROOT_DIR),exist_ok=True)
+                os.system('cp -r {root}/{dir} {ROOT_DIR}/{output_root}/'.format(root=root, dir=dir,output_root=output_root,ROOT_DIR=ROOT_DIR))
+            else:
+                pass
 
 def make_filepath(subdir, group, pagename):
     
@@ -251,7 +261,7 @@ class Pages:
                 # print(group,pageloc.split('/')[1],pagename)
                 subdir = page[pagename].split("/")[1]
                 # parse md files that are in the group folder
-                print(subdir)
+                #print(subdir)
                 filepath = make_filepath(subdir, group, pagename)
 
                 # Write to template and remove markdown file
@@ -316,10 +326,11 @@ class Pages:
         with open("js/search.js", "w+") as f:
             f.write(f"const searchData = {self.search_obj};")
         os.remove(os.path.join("output", pageloc))
+        print('output' + " " + pageloc)
 
         #Copy Image directories from the docs directory into the output directory
         copy_image_directory('docs')
-        return
+        clean_output_dir("output/")
 
     # Build page Siblings
     def set_page_siblings(self):

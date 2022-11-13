@@ -3,6 +3,10 @@ body {
   padding-right: 0px !important;
 }
 
+h1.heading-doc-title {
+  color: white;
+}
+
 h1[id]:before,
 h2[id]:before,
 h3[id]:before,

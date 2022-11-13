@@ -1,2 +1,0 @@
-% GDC Data Transfer Tool User's Guide
-% NCI Genomic Data Commons (GDC)
