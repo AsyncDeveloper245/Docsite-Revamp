@@ -117,6 +117,7 @@ h5 {
 }
 h1.hero-heading {
   font-size: 40px;
+  color: #fff;
 }
 .hero-search-container {
   display: flex;
@@ -223,7 +224,7 @@ h1.hero-heading {
 }
 
 .my-container {
-  width: 80%;
+  width: 92%;
   display: block;
 }
 
@@ -453,9 +454,6 @@ footer a:visited {
   background-color: rgb(206, 202, 202);
 }
 
-.navbar-nav li a:hover {
-  color: white;
-}
 
 #navbarDropdownMenuLink:hover {
   color: white;
