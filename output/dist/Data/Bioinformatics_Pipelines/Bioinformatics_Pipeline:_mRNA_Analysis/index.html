@@ -27,623 +27,1041 @@
     />
 
     <!-- Get locas CSS files -->
-    
+
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-    
+
     <link rel="stylesheet" type="text/css" href="/css/docs.css" />
-    
+
     <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
-    
   </head>
   <body>
     <!---->
     <html>
-  <head> </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Collapsed navigation -->
-        <div class="my-container">
-          <!-- Main title -->
-          <a class="navbar-brand float-start" href="/.">
-            <img
-              class="brand-image"
-              src="/img/nih-header-logo-color.png"
-              alt="NIH National Cancer
-          Institute GDC Documentation"
-            />
-            <span class="hidden"
-              >NIH National Cancer Institute GDC Documentation</span
+      <head> </head>
+      <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-          </a>
-          <!-- Expander button -->
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-collapse"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <!-- GDC Apps -->
-          <div class="pull-right">
-            <div class="gdc-app-list dropbtn">
-              <div class="dropbtn">
-                <a id="myToggle" class="dropbtn dropdown-toggle">
-                  <span class="dropbtn"
-                    ><i class="fas fa-th"></i> GDC Apps</span
-                  >
-                </a>
-                <div id="myDropdown" class="dropdown-content container">
-                  <div class="row gdc-app-row">
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                  </div>
-                  <div class="row gdc-app-row">
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                  </div>
-                  <div class="row gdc-app-row">
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-dropdown-menu=""
-                class="dropdown-menu gdc-apps-menu-container"
-                role="menu"
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapsed navigation -->
+            <div class="my-container">
+              <!-- Main title -->
+              <a class="navbar-brand float-start" href="/.">
+                <img
+                  class="brand-image"
+                  src="/img/nih-header-logo-color.png"
+                  alt="NIH National Cancer
+          Institute GDC Documentation"
+                />
+                <span class="hidden"
+                  >NIH National Cancer Institute GDC Documentation</span
+                >
+              </a>
+              <!-- Expander button -->
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target=".navbar-collapse"
               >
-                <div class="gdc-apps-menu-grid">
-                  <div class="menu-column">
-                    <a
-                      href="https://portal.gdc.cancer.gov/"
-                      title="Data Portal"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <img
-                        width="21px"
-                        src="/img/GDC-App-data-portal-blue.svg"
-                        class="icon icon-gdc-portal home"
-                        alt="GDC Data Portal"
-                      />
-                      <div>Data Portal</div>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <!-- GDC Apps -->
+              <div class="pull-right">
+                <div class="gdc-app-list dropbtn">
+                  <div class="dropbtn">
+                    <a id="myToggle" class="dropbtn dropdown-toggle">
+                      <span class="dropbtn"
+                        ><i class="fas fa-th"></i> GDC Apps</span
+                      >
                     </a>
-                    <a
-                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
-                      title="GDC API"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <span class="icon icon-gdc-portal-api">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span
-                        ><span class="path9"></span><span class="path10"></span>
-                      </span>
-                      <div>API</div>
-                    </a>
-                    <a
-                      href="https://docs.gdc.cancer.gov/"
-                      title="GDC Docs"
-                      target="_blank"
-                      class="active menu-item"
-                    >
-                      <span class="icon icon-gdc-docs">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span
-                        ><span class="path9"></span><span class="path10"></span
-                        ><span class="path11"></span><span class="path12"></span
-                        ><span class="path13"></span
-                        ><span class="path14"></span>
-                      </span>
-                      <div>Documentation</div>
-                    </a>
-                    <a
-                      href="https://portal.gdc.cancer.gov/legacy-archive"
-                      title="GDC Legacy Archive"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <span class="icon icon-gdc-legacy-archive">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span
-                        ><span class="path9"></span><span class="path10"></span>
-                      </span>
-                      <div>Legacy Archive</div>
-                    </a>
+                    <div id="myDropdown" class="dropdown-content container">
+                      <div class="row gdc-app-row">
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                      </div>
+                      <div class="row gdc-app-row">
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                      </div>
+                      <div class="row gdc-app-row">
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="menu-column">
-                    <a
-                      href="https://gdc.cancer.gov/"
-                      title="GDC Website"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <img
-                        width="21px"
-                        src="/img/GDC-App-website-blue.svg"
-                        class="icon icon-gdc-portal home"
-                        alt="GDC Website"
-                      />
-                      <div>Website</div>
-                    </a>
-                    <a
-                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
-                      class="menu-item"
-                      title="GDC Data Transfer Tool"
-                      target="_blank"
-                    >
-                      <span class="icon icon-gdc-data-transer-tool">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span>
-                      </span>
-                      <div>Data Transfer Tool</div>
-                    </a>
-                    <a
-                      href="https://portal.gdc.cancer.gov/submission/"
-                      title="GDC Submission Portal"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <span class="icon icon-gdc-submission-portal">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span
-                        ><span class="path9"></span><span class="path10"></span>
-                      </span>
-                      <div>Data Submission Portal</div>
-                    </a>
+                  <div
+                    data-dropdown-menu=""
+                    class="dropdown-menu gdc-apps-menu-container"
+                    role="menu"
+                  >
+                    <div class="gdc-apps-menu-grid">
+                      <div class="menu-column">
+                        <a
+                          href="https://portal.gdc.cancer.gov/"
+                          title="Data Portal"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <img
+                            width="21px"
+                            src="/img/GDC-App-data-portal-blue.svg"
+                            class="icon icon-gdc-portal home"
+                            alt="GDC Data Portal"
+                          />
+                          <div>Data Portal</div>
+                        </a>
+                        <a
+                          href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                          title="GDC API"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <span class="icon icon-gdc-portal-api">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span
+                            ><span class="path9"></span
+                            ><span class="path10"></span>
+                          </span>
+                          <div>API</div>
+                        </a>
+                        <a
+                          href="https://docs.gdc.cancer.gov/"
+                          title="GDC Docs"
+                          target="_blank"
+                          class="active menu-item"
+                        >
+                          <span class="icon icon-gdc-docs">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span
+                            ><span class="path9"></span
+                            ><span class="path10"></span
+                            ><span class="path11"></span
+                            ><span class="path12"></span
+                            ><span class="path13"></span
+                            ><span class="path14"></span>
+                          </span>
+                          <div>Documentation</div>
+                        </a>
+                        <a
+                          href="https://portal.gdc.cancer.gov/legacy-archive"
+                          title="GDC Legacy Archive"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <span class="icon icon-gdc-legacy-archive">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span
+                            ><span class="path9"></span
+                            ><span class="path10"></span>
+                          </span>
+                          <div>Legacy Archive</div>
+                        </a>
+                      </div>
+                      <div class="menu-column">
+                        <a
+                          href="https://gdc.cancer.gov/"
+                          title="GDC Website"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <img
+                            width="21px"
+                            src="/img/GDC-App-website-blue.svg"
+                            class="icon icon-gdc-portal home"
+                            alt="GDC Website"
+                          />
+                          <div>Website</div>
+                        </a>
+                        <a
+                          href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                          class="menu-item"
+                          title="GDC Data Transfer Tool"
+                          target="_blank"
+                        >
+                          <span class="icon icon-gdc-data-transer-tool">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span>
+                          </span>
+                          <div>Data Transfer Tool</div>
+                        </a>
+                        <a
+                          href="https://portal.gdc.cancer.gov/submission/"
+                          title="GDC Submission Portal"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <span class="icon icon-gdc-submission-portal">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span
+                            ><span class="path9"></span
+                            ><span class="path10"></span>
+                          </span>
+                          <div>Data Submission Portal</div>
+                        </a>
+                      </div>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <div class="container-fluid container-fluid-nav">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav navbar-center me-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        aria-current="page"
+                        href="/output/dist/api-getting-started/"
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        >API
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Search_and_Retrieval"
+                            >Search and Retrieval</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Downloading_Files"
+                            >Downloading Files</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Data_Analysis"
+                            >Data Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/BAM_Slicing"
+                            >BAM Slicing</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Submission"
+                            >Submission</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Python_Examples"
+                            >Python Examples</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/GraphQL_Examples"
+                            >GraphQL Examples</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/System_Information"
+                            >System Information</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Additional_Examples"
+                            >Additional Examples</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields"
+                            >Appendix A: Available Fields</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms"
+                            >Appendix B: Key Terms</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses"
+                            >Appendix C: Format of Submission Queries and
+                            Responses</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a class="dropdown-item" href="/API/PDF/API_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        href="/output/dist/data-submission-portal-data-submission-process/"
+                      >
+                        Data Portal
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Projects"
+                            >Projects</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Exploration"
+                            >Exploration</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Analysis"
+                            >Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Repository"
+                            >Repository</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Advanced_Search"
+                            >Advanced Search</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download"
+                            >Cart and File Download</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive"
+                            >Legacy Archive</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/Data_Portal/PDF/Data_Portal_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        href="/output/dist/data-submission-portal-data-submission-process/"
+                      >
+                        Data Submission
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview"
+                            >Data Submission Overview</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal"
+                            >Data Submission Portal</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough"
+                            >Data Upload Walkthrough</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal"
+                            >Pre-Release Data Portal</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices"
+                            >Submission Best Practices</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="/output/dist/data-transfer-tool-index/"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Data Transfer Tool
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview"
+                            >Data Submission Overview</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal"
+                            >Data Submission Portal</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough"
+                            >Data Upload Walkthrough</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal"
+                            >Pre-Release Data Portal</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices"
+                            >Submission Best Practices</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        href="/output/dist/data-dictionary-index/"
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Data Dictionary
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Dictionary/Viewer"
+                            >Viewer</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Dictionary/Search"
+                            >Search</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        href="/output/dist/data-getting-started/"
+                        >Data</a
+                      >
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Data_Model/GDC_Data_Model"
+                            >GDC Data Model</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Data_Security/Data_Security"
+                            >Data Security</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/File_Formats/File_Format:_MAF"
+                            >File Format: MAF</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/File_Formats/File_Format:_VCF"
+                            >File Format: VCF</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis"
+                            >Bioinformatics Pipeline: DNA-Seq Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis"
+                            >Bioinformatics Pipeline: mRNA Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis"
+                            >Bioinformatics Pipeline: miRNA Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis"
+                            >Bioinformatics Pipeline: Copy Number Variation
+                            Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline"
+                            >Bioinformatics Pipeline: Methylation Liftover
+                            Pipeline</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression"
+                            >Bioinformatics Pipeline: Protein Expression</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics"
+                            >Aligned Reads Summary Metrics</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link"
+                        role="button"
+                        id="navbarDropdownMenuLink"
+                        aria-expanded="false"
+                        href="/output/dist/encyclopedia"
+                      >
+                        Encyclopedia
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><i class="fas fa-search"></i
+                      ></a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container-fluid container-fluid-nav">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav navbar-center me-auto">
-                <li class="nav-item">
-                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    aria-current="page"
-                    href="/output/dist/api-getting-started/"
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    >API
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    href="/output/dist/data-submission-portal-data-submission-process/"
-                  >
-                    Data Portal
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    href="/output/dist/data-submission-portal-data-submission-process/"
-                  >
-                    Data Submission
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="/output/dist/data-transfer-tool-index/"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Data Transfer Tool
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    href="/output/dist/data-dictionary-index/"
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Data Dictionary
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    href="/output/dist/data-getting-started/"
-                    >Data</a
-                  >
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link"
-                    role="button"
-                    id="navbarDropdownMenuLink"
-                    aria-expanded="false"
-                    href="/output/dist/encyclopedia"
-                  >
-                    Encyclopedia
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </body>
-</html>
+        </nav>
+      </body>
+    </html>
     <div class="row">
       <div class="col-md-3">
         <div class="container-fluid sidebar-container">
           <div class="sidebar">
             <ul class="main">
-              <li class="inactive"><a href="/output/dist/Data/Introduction">Introduction</a></li><li class="inactive"><a href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a></li><li class="inactive"><a href="/output/dist/Data/Data_Security/Data_Security">Data Security</a></li><li class="inactive"><a href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a></li><li class="inactive"><a href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a></li><li class="main"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a></li><ul><li><a href='#Introduction'>Introduction</a></li><li><a href='#Data Processing Steps'>Data Processing Steps</a></li><li><a href='#mRNA Expression Transformation'>mRNA Expression Transformation</a></li><li><a href='#Fusion Pipelines'>Fusion Pipelines</a></li><li><a href='#scRNA-Seq Pipeline (single-nuclei)'>scRNA-Seq Pipeline (single-nuclei)</a></li><li><a href='#File Access and Availability'>File Access and Availability</a></li></ul><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a></li><li class="inactive"><a href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a></li><li class="inactive"><a href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a></li><li class="inactive"><a href="/Data/PDF/Data_UG.pdf">Download PDF</a></li>
+              <li class="inactive">
+                <a href="/output/dist/Data/Introduction">Introduction</a>
+              </li>
+              <li class="inactive">
+                <a href="/output/dist/Data/Data_Model/GDC_Data_Model"
+                  >GDC Data Model</a
+                >
+              </li>
+              <li class="inactive">
+                <a href="/output/dist/Data/Data_Security/Data_Security"
+                  >Data Security</a
+                >
+              </li>
+              <li class="inactive">
+                <a href="/output/dist/Data/File_Formats/File_Format:_MAF"
+                  >File Format: MAF</a
+                >
+              </li>
+              <li class="inactive">
+                <a href="/output/dist/Data/File_Formats/File_Format:_VCF"
+                  >File Format: VCF</a
+                >
+              </li>
+              <li class="inactive">
+                <a
+                  href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis"
+                  >Bioinformatics Pipeline: DNA-Seq Analysis</a
+                >
+              </li>
+              <li class="main">
+                <a
+                  href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis"
+                  >Bioinformatics Pipeline: mRNA Analysis</a
+                >
+              </li>
+              <ul>
+                <li><a href="#Introduction">Introduction</a></li>
+                <li>
+                  <a href="#Data Processing Steps">Data Processing Steps</a>
+                </li>
+                <li>
+                  <a href="#mRNA Expression Transformation"
+                    >mRNA Expression Transformation</a
+                  >
+                </li>
+                <li><a href="#Fusion Pipelines">Fusion Pipelines</a></li>
+                <li>
+                  <a href="#scRNA-Seq Pipeline (single-nuclei)"
+                    >scRNA-Seq Pipeline (single-nuclei)</a
+                  >
+                </li>
+                <li>
+                  <a href="#File Access and Availability"
+                    >File Access and Availability</a
+                  >
+                </li>
+              </ul>
+              <li class="inactive">
+                <a
+                  href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis"
+                  >Bioinformatics Pipeline: miRNA Analysis</a
+                >
+              </li>
+              <li class="inactive">
+                <a
+                  href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis"
+                  >Bioinformatics Pipeline: Copy Number Variation Analysis</a
+                >
+              </li>
+              <li class="inactive">
+                <a
+                  href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline"
+                  >Bioinformatics Pipeline: Methylation Liftover Pipeline</a
+                >
+              </li>
+              <li class="inactive">
+                <a
+                  href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression"
+                  >Bioinformatics Pipeline: Protein Expression</a
+                >
+              </li>
+              <li class="inactive">
+                <a
+                  href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics"
+                  >Aligned Reads Summary Metrics</a
+                >
+              </li>
+              <li class="inactive">
+                <a href="/output/dist/Data/Release_Notes/Release_Notes"
+                  >Release Notes</a
+                >
+              </li>
+              <li class="inactive">
+                <a href="/Data/PDF/Data_UG.pdf">Download PDF</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="col-md-9">
-        <div class="container-fluid doc-container"><h1><i class="fas fa-book"></i>   mRNA Analysis Pipeline</h1><hr/>
-<h2 id="Introduction">Introduction</h2>
-<p>The GDC mRNA quantification analysis pipeline measures gene level expression with <a href="https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf">STAR</a> as raw read counts. Subsequently the counts are augmented with several transformations including Fragments per Kilobase of transcript per Million mapped reads (FPKM), upper quartile normalized FPKM (FPKM-UQ), and Transcripts per Million (TPM). These values are additionally annotated with the gene symbol and gene bio-type. These data are generated through this pipeline by first aligning reads to the GRCh38 <a href="https://gdc.cancer.gov/download-gdc-reference-files">reference genome</a> and then by quantifying the mapped reads. To facilitate harmonization across samples, all RNA-Seq reads are treated as unstranded during analyses.</p>
-<h2 id="Data Processing Steps">Data Processing Steps</h2>
-<h3>RNA-Seq Alignment Workflow</h3>
-<p>The mRNA Analysis pipeline begins with the <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=alignment_workflow">Alignment Workflow</a>, which is performed using a two-pass method with <a href="https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf">STAR</a>. STAR aligns each <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=read_group">read group</a> separately and then merges the resulting alignments into one. Following the methods used by the International Cancer Genome Consortium <a href="https://icgc.org/">ICGC</a> (<a href="https://github.com/akahles/icgc_rnaseq_align">github</a>), the two-pass method includes a splice junction detection step, which is used to generate the final alignment. This workflow outputs a genomic BAM file, which contains both aligned and unaligned reads. Quality assessment is performed pre-alignment with <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FASTQC</a> and post-alignment with <a href="http://broadinstitute.github.io/picard/">Picard Tools</a>.</p>
-<p>Files that were processed after Data Release 14 have associated transcriptomic and chimeric alignments in addition to the genomic alignment detailed above. This only applies to aliquots with at least one set of paired-end reads. The chimeric BAM file contains reads that were mapped to different chromosomes or strands (fusion alignments). The genomic alignment files contain chimeric and unaligned reads to facilitate the retrieval of all original reads. The transcriptomic alignment reports aligned reads with transcript coordinates rather than genomic coordinates. The transcriptomic alignment is also sorted differently to facilitate downstream analyses. BAM index file pairing is not supported by this method of sorting, which does not allow for BAM slicing on these alignments. The splice-junction file for these alignments are also available.</p>
-<p>Files that were processed after Data Release 25 will have associated <a href="#fusion-pipelines">gene fusion files</a>.</p>
-<p>As of Data Release 32 the reference annotation will be updated to GENCODE v36 and HT-Seq will no longer be used.</p>
-<p><a href="../images/RNA-Seq-DR32_Image.png" title="Click to see the full image."><img alt="RNA Alignment Pipeline" src="images/RNA-Seq-DR32_Image.png"/></a></p>
-<table class="table">
-<thead>
-<tr>
-<th>I/O</th>
-<th>Entity</th>
-<th>Format</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Input</td>
-<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=submitted_unaligned_reads">Submitted Unaligned Reads</a> or <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=submitted_aligned_reads">Submitted Aligned Reads</a></td>
-<td>FASTQ or BAM</td>
-</tr>
-<tr>
-<td>Output</td>
-<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aligned_reads">Aligned Reads</a></td>
-<td>BAM</td>
-</tr>
-</tbody>
-</table>
-<h3>RNA-Seq Alignment Command Line Parameters</h3>
-<p><strong>Note that version numbers may vary in files downloaded from the GDC Data Portal due to ongoing pipeline development and improvement.</strong></p>
-<pre><code class="language-Original"># STAR-2
+        <div class="container-fluid doc-container">
+          <h1><i class="fas fa-book"></i> mRNA Analysis Pipeline</h1>
+          <hr />
+          <h2 id="Introduction">Introduction</h2>
+          <p>
+            The GDC mRNA quantification analysis pipeline measures gene level
+            expression with
+            <a
+              href="https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf"
+              >STAR</a
+            >
+            as raw read counts. Subsequently the counts are augmented with
+            several transformations including Fragments per Kilobase of
+            transcript per Million mapped reads (FPKM), upper quartile
+            normalized FPKM (FPKM-UQ), and Transcripts per Million (TPM). These
+            values are additionally annotated with the gene symbol and gene
+            bio-type. These data are generated through this pipeline by first
+            aligning reads to the GRCh38
+            <a href="https://gdc.cancer.gov/download-gdc-reference-files"
+              >reference genome</a
+            >
+            and then by quantifying the mapped reads. To facilitate
+            harmonization across samples, all RNA-Seq reads are treated as
+            unstranded during analyses.
+          </p>
+          <h2 id="Data Processing Steps">Data Processing Steps</h2>
+          <h3>RNA-Seq Alignment Workflow</h3>
+          <p>
+            The mRNA Analysis pipeline begins with the
+            <a
+              href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=alignment_workflow"
+              >Alignment Workflow</a
+            >, which is performed using a two-pass method with
+            <a
+              href="https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf"
+              >STAR</a
+            >. STAR aligns each
+            <a
+              href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=read_group"
+              >read group</a
+            >
+            separately and then merges the resulting alignments into one.
+            Following the methods used by the International Cancer Genome
+            Consortium <a href="https://icgc.org/">ICGC</a> (<a
+              href="https://github.com/akahles/icgc_rnaseq_align"
+              >github</a
+            >), the two-pass method includes a splice junction detection step,
+            which is used to generate the final alignment. This workflow outputs
+            a genomic BAM file, which contains both aligned and unaligned reads.
+            Quality assessment is performed pre-alignment with
+            <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/"
+              >FASTQC</a
+            >
+            and post-alignment with
+            <a href="http://broadinstitute.github.io/picard/">Picard Tools</a>.
+          </p>
+          <p>
+            Files that were processed after Data Release 14 have associated
+            transcriptomic and chimeric alignments in addition to the genomic
+            alignment detailed above. This only applies to aliquots with at
+            least one set of paired-end reads. The chimeric BAM file contains
+            reads that were mapped to different chromosomes or strands (fusion
+            alignments). The genomic alignment files contain chimeric and
+            unaligned reads to facilitate the retrieval of all original reads.
+            The transcriptomic alignment reports aligned reads with transcript
+            coordinates rather than genomic coordinates. The transcriptomic
+            alignment is also sorted differently to facilitate downstream
+            analyses. BAM index file pairing is not supported by this method of
+            sorting, which does not allow for BAM slicing on these alignments.
+            The splice-junction file for these alignments are also available.
+          </p>
+          <p>
+            Files that were processed after Data Release 25 will have associated
+            <a href="#fusion-pipelines">gene fusion files</a>.
+          </p>
+          <p>
+            As of Data Release 32 the reference annotation will be updated to
+            GENCODE v36 and HT-Seq will no longer be used.
+          </p>
+          <p>
+            <a
+              href="../images/RNA-Seq-DR32_Image.png"
+              title="Click to see the full image."
+              ><img
+                alt="RNA Alignment Pipeline"
+                src="../images/RNA-Seq-DR32_Image.png"
+            /></a>
+          </p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>I/O</th>
+                <th>Entity</th>
+                <th>Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Input</td>
+                <td>
+                  <a
+                    href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=submitted_unaligned_reads"
+                    >Submitted Unaligned Reads</a
+                  >
+                  or
+                  <a
+                    href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=submitted_aligned_reads"
+                    >Submitted Aligned Reads</a
+                  >
+                </td>
+                <td>FASTQ or BAM</td>
+              </tr>
+              <tr>
+                <td>Output</td>
+                <td>
+                  <a
+                    href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aligned_reads"
+                    >Aligned Reads</a
+                  >
+                </td>
+                <td>BAM</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>RNA-Seq Alignment Command Line Parameters</h3>
+          <p>
+            <strong
+              >Note that version numbers may vary in files downloaded from the
+              GDC Data Portal due to ongoing pipeline development and
+              improvement.</strong
+            >
+          </p>
+          <pre><code class="language-Original"># STAR-2
 
 ### For users with access to the ICGC pipeline:
 
@@ -740,7 +1158,7 @@ STAR
 --outSAMheaderHD @HD VN:1.4
 --outSAMattrRGline &lt;formatted RG line provided by wrapper&gt;
 </code></pre>
-<pre><code class="language-DR15Plus"># STAR-2
+          <pre><code class="language-DR15Plus"># STAR-2
 
 STAR \
 --readFilesIn &lt;fastq_files&gt; \
@@ -775,7 +1193,7 @@ STAR \
 --runThreadN &lt;threads&gt; \
 --twopassMode Basic
 </code></pre>
-<pre><code class="language-DR32"># STAR Genome Index
+          <pre><code class="language-DR32"># STAR Genome Index
 STAR
 --runMode genomeGenerate
 --genomeDir &lt;star_index_path&gt;
@@ -820,47 +1238,92 @@ STAR
 --chimMainSegmentMultNmax 1 \
 --outSAMattributes NH HI AS nM NM ch
 </code></pre>
-<p>*These indices are available for download at the <a href="https://gdc.cancer.gov/about-data/data-harmonization-and-generation/gdc-reference-files">GDC Website</a> and do not need to be built again.</p>
-<h3>mRNA Expression Workflow</h3>
-<p>The primary counting data is generated by STAR and includes a gene ID, unstranded, and stranded counts data. Following alignment, the raw counts files produced by STAR are augmented with commonly used counts transformations (FPKM, FPKM-UQ, and TPM) along with basic annotations as part of the <a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=rna_expression_workflow">RNA Expression Workflow</a>. These data are provided in a tab-delimited format. <a href="https://www.gencodegenes.org/human/release_36.html">GENCODE v36</a> was used for gene annotation.</p>
-<p>Note that the STAR counting results will not count reads that are mapped to more than one different gene. Below are two files that list genes that are completely encompassed by other genes and will likely display a value of zero.</p>
-<ul>
-<li><a href="/Data/Bioinformatics_Pipelines/overlap.gene.stranded.tsv">Overlapped Genes (stranded)</a></li>
-<li><a href="/Data/Bioinformatics_Pipelines/overlap.gene.strandless.tsv">Overlapped Genes (unstranded)</a></li>
-</ul>
-<table class="table">
-<thead>
-<tr>
-<th>I/O</th>
-<th>Entity</th>
-<th>Format</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Input</td>
-<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aligned_reads">Aligned Reads</a></td>
-<td>BAM</td>
-</tr>
-<tr>
-<td>Output</td>
-<td><a href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=gene_expression">Gene Expression</a></td>
-<td>TXT</td>
-</tr>
-</tbody>
-</table>
-<h3>mRNA Quantification Command Line Parameters</h3>
-<p>HTSeq</p>
-<pre><code class="language-Current">Counts are produced by STAR concurrent with alignment.
+          <p>
+            *These indices are available for download at the
+            <a
+              href="https://gdc.cancer.gov/about-data/data-harmonization-and-generation/gdc-reference-files"
+              >GDC Website</a
+            >
+            and do not need to be built again.
+          </p>
+          <h3>mRNA Expression Workflow</h3>
+          <p>
+            The primary counting data is generated by STAR and includes a gene
+            ID, unstranded, and stranded counts data. Following alignment, the
+            raw counts files produced by STAR are augmented with commonly used
+            counts transformations (FPKM, FPKM-UQ, and TPM) along with basic
+            annotations as part of the
+            <a
+              href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=rna_expression_workflow"
+              >RNA Expression Workflow</a
+            >. These data are provided in a tab-delimited format.
+            <a href="https://www.gencodegenes.org/human/release_36.html"
+              >GENCODE v36</a
+            >
+            was used for gene annotation.
+          </p>
+          <p>
+            Note that the STAR counting results will not count reads that are
+            mapped to more than one different gene. Below are two files that
+            list genes that are completely encompassed by other genes and will
+            likely display a value of zero.
+          </p>
+          <ul>
+            <li>
+              <a href="/Data/Bioinformatics_Pipelines/overlap.gene.stranded.tsv"
+                >Overlapped Genes (stranded)</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Data/Bioinformatics_Pipelines/overlap.gene.strandless.tsv"
+                >Overlapped Genes (unstranded)</a
+              >
+            </li>
+          </ul>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>I/O</th>
+                <th>Entity</th>
+                <th>Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Input</td>
+                <td>
+                  <a
+                    href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=aligned_reads"
+                    >Aligned Reads</a
+                  >
+                </td>
+                <td>BAM</td>
+              </tr>
+              <tr>
+                <td>Output</td>
+                <td>
+                  <a
+                    href="/Data_Dictionary/viewer/#?view=table-definition-view&amp;id=gene_expression"
+                    >Gene Expression</a
+                  >
+                </td>
+                <td>TXT</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>mRNA Quantification Command Line Parameters</h3>
+          <p>HTSeq</p>
+          <pre><code class="language-Current">Counts are produced by STAR concurrent with alignment.
 </code></pre>
-<pre><code class="language-Original">htseq-count \
+          <pre><code class="language-Original">htseq-count \
 -m intersection-nonempty \
 -i gene_id \
 -r pos \
 -s no \
 - gencode.v22.annotation.gtf
 </code></pre>
-<pre><code class="language-DR15-31">htseq-count \
+          <pre><code class="language-DR15-31">htseq-count \
 -f bam \
 -r name \
 -s no \
@@ -871,80 +1334,197 @@ STAR
 &lt;input_bam&gt; \
 &lt;gtf_file&gt; &gt; &lt;counts_file&gt;
 </code></pre>
-<h2 id="mRNA Expression Transformation">mRNA Expression Transformation</h2>
-<p>RNA-Seq expression level read counts produced by the workflow are normalized using three commonly used methods: FPKM, FPKM-UQ, and TPM. Normalized values should be used only within the context of the entire gene set. Users are encouraged to normalize raw read count values if a subset of genes is investigated.</p>
-<h3>FPKM</h3>
-<p>The fragments per kilobase of transcript per million mapped reads (FPKM) calculation aims to control for transcript length and overall sequencing quantity.</p>
-<h3>Upper Quartile FPKM</h3>
-<p>The upper quartile FPKM (FPKM-UQ) is a modified FPKM calculation in which the protein coding gene in the 75th percentile position is substituted for the sequencing quantity. This is thought to provide a more stable value than including the noisier genes at the extremes.</p>
-<h3>TPM</h3>
-<p>The transcripts per million calculation is similar to FPKM, but the difference is that all transcripts are normalized for length first. Then, instead of using the total overall read count as a normalization for size, the sum of the length-normalized transcript values are used as an indicator of size.</p>
-<h3>Calculations</h3>
-<p><a href="../images/normalizations_calc.png" title="Click to see the full image."><img alt="FPKM Calculations" src="images/normalizations_calc.png"/></a></p>
-<p><strong>Note:</strong> The read count is multiplied by a scalar (10<sup>9</sup>) during normalization to account for the kilobase and 'million mapped reads' units.</p>
-<h3>Examples</h3>
-<p><strong>Sample 1: Gene A</strong></p>
-<ul>
-<li>Gene length: 3,000 bp</li>
-<li>1,000 reads mapped to Gene A</li>
-<li>1,000,000 reads mapped to all protein-coding regions</li>
-<li>Read count in Sample 1 for 75th percentile gene: 2,000</li>
-<li>Number of protein coding genes on autosomes: 19,029</li>
-<li>Sum of length-normalized transcript counts: 9,000,000</li>
-</ul>
-<p><strong>FPKM for Gene A</strong> = 1,000 * 10^9 / (3,000 * 50,000,000) = <strong>6.67</strong></p>
-<p><strong>FPKM-UQ for Gene A</strong> = 1,000) * 10^9 / (3,000 * 2,000 * 19,029) = <strong>8.76</strong></p>
-<p><strong>TPM for Gene A</strong> = (1,000 _ 1,000 / 3,000) _ 1,000,000 / (9,000,000) = <strong>37.04</strong></p>
-<h2 id="Fusion Pipelines">Fusion Pipelines</h2>
-<p>The GDC uses two pipelines for the detection of gene fusions.</p>
-<h3>STAR-Fusion Pipeline</h3>
-<p>The GDC gene fusion pipeline uses the STAR-Fusion v1.6 algorithm to generate gene fusion data.
-STAR-Fusion pipeline processes the output generated by STAR aligner to map junction reads
-and spanning reads to a junction annotation set. It utilizes a chimeric junction file from
-running the STAR aligner and produces a tab-limited gene fusion prediction file.
-The prediction file provides fused gene names, junction read count and breakpoint information.</p>
-<h3>Arriba Fusion Pipeline</h3>
-<p>The <a href="https://github.com/suhrig/arriba">Arriba gene fusion pipeline</a> uses Arriba v1.1.0 to detect gene fusions from the RNA-Seq data of tumor samples.</p>
-<h2 id="scRNA-Seq Pipeline (single-nuclei)">scRNA-Seq Pipeline (single-nuclei)</h2>
-<p>The GDC processes single-cell RNA-Seq (scRNA-Seq) data using the <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">Cell Ranger pipeline</a> to calculate gene expression followed by <a href="https://satijalab.org/seurat/">Seurat</a> for secondary expression analysis.</p>
-<h3>scRNA Gene Expression Pipeline</h3>
-<p>The gene expression pipeline, which uses Cell Ranger, generates three files:</p>
-<ul>
-<li>Aligned reads file (BAM)</li>
-<li>Raw counts matrix - contains all barcodes in <a href="https://math.nist.gov/MatrixMarket/formats.html">Market Exchange Format</a> (MEX)</li>
-<li>Filtered counts matrix - contains only detected cellular barcodes (MEX)</li>
-</ul>
-<h3>scRNA Analysis Pipeline</h3>
-<p>The analysis pipeline, which uses the Seurat software, generates three files from an input of Filtered counts matrix:</p>
-<ul>
-<li>Analysis - PCA, UMAP, tSNE values, and graph-based clustering results with associated metadata (TSV).</li>
-<li>Differential gene expression - DEG information comparing cells from one cluster to the rest of the cells (TSV).</li>
-<li>Full Seurat analysis log as a loom object in <a href="https://portal.hdfgroup.org/display/knowledge/HDF+Knowledge+Base">HDF5</a> format.</li>
-</ul>
-<p>When the input RNA was extracted from nuclei instead of cytoplasm, a slightly modified quantification method is implemented to include introns. Currently, these single-nuclei RNA-Seq (snRNA-Seq) analyses share the same experimental strategy (scRNA-Seq) in the Data Portal, and can be filtered by querying for aliquot.analyte_type = "Nuclei RNA".</p>
-<h2 id="File Access and Availability">File Access and Availability</h2>
-<p>To facilitate the use of harmonized data in user-created pipelines, RNA-Seq gene expression is accessible in the GDC Data Portal at several intermediate steps in the pipeline. Below is a description of each type of file available for download in the GDC Data Portal.</p>
-<table class="table">
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-<th>Format</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RNA-Seq Alignment</td>
-<td>RNA-Seq reads that have been aligned to the GRCh38 build. Reads that were not aligned are included to facilitate the availability of raw read sets.</td>
-<td>BAM</td>
-</tr>
-<tr>
-<td>STAR Read Counts</td>
-<td>The number of reads aligned to each gene, calculated by STAR, along with values using common normalization methods.</td>
-<td>TSV</td>
-</tr>
-</tbody>
-</table></div>
+          <h2 id="mRNA Expression Transformation">
+            mRNA Expression Transformation
+          </h2>
+          <p>
+            RNA-Seq expression level read counts produced by the workflow are
+            normalized using three commonly used methods: FPKM, FPKM-UQ, and
+            TPM. Normalized values should be used only within the context of the
+            entire gene set. Users are encouraged to normalize raw read count
+            values if a subset of genes is investigated.
+          </p>
+          <h3>FPKM</h3>
+          <p>
+            The fragments per kilobase of transcript per million mapped reads
+            (FPKM) calculation aims to control for transcript length and overall
+            sequencing quantity.
+          </p>
+          <h3>Upper Quartile FPKM</h3>
+          <p>
+            The upper quartile FPKM (FPKM-UQ) is a modified FPKM calculation in
+            which the protein coding gene in the 75th percentile position is
+            substituted for the sequencing quantity. This is thought to provide
+            a more stable value than including the noisier genes at the
+            extremes.
+          </p>
+          <h3>TPM</h3>
+          <p>
+            The transcripts per million calculation is similar to FPKM, but the
+            difference is that all transcripts are normalized for length first.
+            Then, instead of using the total overall read count as a
+            normalization for size, the sum of the length-normalized transcript
+            values are used as an indicator of size.
+          </p>
+          <h3>Calculations</h3>
+          <p>
+            <a
+              href="../images/normalizations_calc.png"
+              title="Click to see the full image."
+              ><img
+                alt="FPKM Calculations"
+                src="../images/normalizations_calc.png"
+            /></a>
+          </p>
+          <p>
+            <strong>Note:</strong> The read count is multiplied by a scalar
+            (10<sup>9</sup>) during normalization to account for the kilobase
+            and 'million mapped reads' units.
+          </p>
+          <h3>Examples</h3>
+          <p><strong>Sample 1: Gene A</strong></p>
+          <ul>
+            <li>Gene length: 3,000 bp</li>
+            <li>1,000 reads mapped to Gene A</li>
+            <li>1,000,000 reads mapped to all protein-coding regions</li>
+            <li>Read count in Sample 1 for 75th percentile gene: 2,000</li>
+            <li>Number of protein coding genes on autosomes: 19,029</li>
+            <li>Sum of length-normalized transcript counts: 9,000,000</li>
+          </ul>
+          <p>
+            <strong>FPKM for Gene A</strong> = 1,000 * 10^9 / (3,000 *
+            50,000,000) = <strong>6.67</strong>
+          </p>
+          <p>
+            <strong>FPKM-UQ for Gene A</strong> = 1,000) * 10^9 / (3,000 * 2,000
+            * 19,029) = <strong>8.76</strong>
+          </p>
+          <p>
+            <strong>TPM for Gene A</strong> = (1,000 _ 1,000 / 3,000) _
+            1,000,000 / (9,000,000) = <strong>37.04</strong>
+          </p>
+          <h2 id="Fusion Pipelines">Fusion Pipelines</h2>
+          <p>The GDC uses two pipelines for the detection of gene fusions.</p>
+          <h3>STAR-Fusion Pipeline</h3>
+          <p>
+            The GDC gene fusion pipeline uses the STAR-Fusion v1.6 algorithm to
+            generate gene fusion data. STAR-Fusion pipeline processes the output
+            generated by STAR aligner to map junction reads and spanning reads
+            to a junction annotation set. It utilizes a chimeric junction file
+            from running the STAR aligner and produces a tab-limited gene fusion
+            prediction file. The prediction file provides fused gene names,
+            junction read count and breakpoint information.
+          </p>
+          <h3>Arriba Fusion Pipeline</h3>
+          <p>
+            The
+            <a href="https://github.com/suhrig/arriba"
+              >Arriba gene fusion pipeline</a
+            >
+            uses Arriba v1.1.0 to detect gene fusions from the RNA-Seq data of
+            tumor samples.
+          </p>
+          <h2 id="scRNA-Seq Pipeline (single-nuclei)">
+            scRNA-Seq Pipeline (single-nuclei)
+          </h2>
+          <p>
+            The GDC processes single-cell RNA-Seq (scRNA-Seq) data using the
+            <a
+              href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger"
+              >Cell Ranger pipeline</a
+            >
+            to calculate gene expression followed by
+            <a href="https://satijalab.org/seurat/">Seurat</a> for secondary
+            expression analysis.
+          </p>
+          <h3>scRNA Gene Expression Pipeline</h3>
+          <p>
+            The gene expression pipeline, which uses Cell Ranger, generates
+            three files:
+          </p>
+          <ul>
+            <li>Aligned reads file (BAM)</li>
+            <li>
+              Raw counts matrix - contains all barcodes in
+              <a href="https://math.nist.gov/MatrixMarket/formats.html"
+                >Market Exchange Format</a
+              >
+              (MEX)
+            </li>
+            <li>
+              Filtered counts matrix - contains only detected cellular barcodes
+              (MEX)
+            </li>
+          </ul>
+          <h3>scRNA Analysis Pipeline</h3>
+          <p>
+            The analysis pipeline, which uses the Seurat software, generates
+            three files from an input of Filtered counts matrix:
+          </p>
+          <ul>
+            <li>
+              Analysis - PCA, UMAP, tSNE values, and graph-based clustering
+              results with associated metadata (TSV).
+            </li>
+            <li>
+              Differential gene expression - DEG information comparing cells
+              from one cluster to the rest of the cells (TSV).
+            </li>
+            <li>
+              Full Seurat analysis log as a loom object in
+              <a
+                href="https://portal.hdfgroup.org/display/knowledge/HDF+Knowledge+Base"
+                >HDF5</a
+              >
+              format.
+            </li>
+          </ul>
+          <p>
+            When the input RNA was extracted from nuclei instead of cytoplasm, a
+            slightly modified quantification method is implemented to include
+            introns. Currently, these single-nuclei RNA-Seq (snRNA-Seq) analyses
+            share the same experimental strategy (scRNA-Seq) in the Data Portal,
+            and can be filtered by querying for aliquot.analyte_type = "Nuclei
+            RNA".
+          </p>
+          <h2 id="File Access and Availability">
+            File Access and Availability
+          </h2>
+          <p>
+            To facilitate the use of harmonized data in user-created pipelines,
+            RNA-Seq gene expression is accessible in the GDC Data Portal at
+            several intermediate steps in the pipeline. Below is a description
+            of each type of file available for download in the GDC Data Portal.
+          </p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RNA-Seq Alignment</td>
+                <td>
+                  RNA-Seq reads that have been aligned to the GRCh38 build.
+                  Reads that were not aligned are included to facilitate the
+                  availability of raw read sets.
+                </td>
+                <td>BAM</td>
+              </tr>
+              <tr>
+                <td>STAR Read Counts</td>
+                <td>
+                  The number of reads aligned to each gene, calculated by STAR,
+                  along with values using common normalization methods.
+                </td>
+                <td>TSV</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
