@@ -14,7 +14,7 @@ pages:
       - "Appendix B: Key Terms": API/Users_Guide/Appendix_B_Key_Terms.md
       - "Appendix C: Format of Submission Queries and Responses": API/Users_Guide/Appendix_C_Format_of_Submission_Requests_and_Responses.md
       - Release Notes: API/Release_Notes/API_Release_Notes.md
-      - fa-file-text Download PDF /API/PDF/API_UG.pdf: API/PDF/index.md
+      - fa-file-text Download PDF /output/dist/API/PDF/fafiletext_Download_PDF_/API/PDF/API_UG.pdf: API/PDF/index.md
   - Data Portal:
       - Getting Started: Data_Portal/Users_Guide/Getting_Started.md
       - Projects: Data_Portal/Users_Guide/Projects.md
@@ -25,7 +25,7 @@ pages:
       - Cart and File Download: Data_Portal/Users_Guide/Cart.md
       - Legacy Archive: Data_Portal/Users_Guide/Legacy_Archive.md
       - Release Notes: Data_Portal/Release_Notes/Data_Portal_Release_Notes.md
-      - fa-file-text Download PDF /Data_Portal/PDF/Data_Portal_UG.pdf: Data_Portal/PDF/index.md
+      - fa-file-text Download PDF /output/dist/Data_Portal/PDF/fafiletext_Download_PDF_/Data_Portal/PDF/Data_Portal_UG.pdf: Data_Portal/PDF/index.md
   - Data Submission:
       - Before Submitting Data to the GDC Portal: Data_Submission_Portal/Users_Guide/Checklist.md
       - Data Submission Overview: Data_Submission_Portal/Users_Guide/Data_Submission_Overview.md
@@ -34,7 +34,7 @@ pages:
       - Pre-Release Data Portal: Data_Submission_Portal/Users_Guide/Pre_Release_QC.md
       - Submission Best Practices: Data_Submission_Portal/Users_Guide/Best_Practices.md
       - Release Notes: Data_Submission_Portal/Release_Notes/Data_Submission_Portal_Release_Notes.md
-      - fa-file-text Download PDF /Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf: Data_Submission_Portal/PDF/index.md
+      - fa-file-text Download PDF /output/dist/Data_Submission/PDF/fafiletext_Download_PDF_/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf: Data_Submission_Portal/PDF/index.md
   - Data Transfer Tool:
       - Getting Started: Data_Transfer_Tool/Users_Guide/Getting_Started.md
       - Preparing for Data Download and Upload: Data_Transfer_Tool/Users_Guide/Preparing_for_Data_Download_and_Upload.md
