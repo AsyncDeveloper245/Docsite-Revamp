@@ -27,578 +27,807 @@
     />
 
     <!-- Get locas CSS files -->
-    
+
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-    
+
     <link rel="stylesheet" type="text/css" href="/css/docs.css" />
-    
+
     <link rel="stylesheet" type="text/css" href="/css/encyclopedia.css" />
-    
   </head>
   <body>
     <!---->
     <html>
-  <head> </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Collapsed navigation -->
-        <div class="my-container">
-          <!-- Main title -->
-          <a class="navbar-brand float-start" href="/.">
-            <img
-              class="brand-image"
-              src="/img/nih-header-logo-color.png"
-              alt="NIH National Cancer
-          Institute GDC Documentation"
-            />
-            <span class="hidden"
-              >NIH National Cancer Institute GDC Documentation</span
+      <head> </head>
+      <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-          </a>
-          <!-- Expander button -->
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-collapse"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <!-- GDC Apps -->
-          <div class="pull-right">
-            <div class="gdc-app-list dropbtn">
-              <div class="dropbtn">
-                <a id="myToggle" class="dropbtn dropdown-toggle">
-                  <span class="dropbtn"
-                    ><i class="fas fa-th"></i> GDC Apps</span
-                  >
-                </a>
-                <div id="myDropdown" class="dropdown-content container">
-                  <div class="row gdc-app-row">
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                  </div>
-                  <div class="row gdc-app-row">
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                  </div>
-                  <div class="row gdc-app-row">
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                    <div class="col-sm gdc-app-list">
-                      <i class="fas fa-lg fa-heartbeat"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-dropdown-menu=""
-                class="dropdown-menu gdc-apps-menu-container"
-                role="menu"
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapsed navigation -->
+            <div class="my-container">
+              <!-- Main title -->
+              <a class="navbar-brand float-start" href="/.">
+                <img
+                  class="brand-image"
+                  src="/img/nih-header-logo-color.png"
+                  alt="NIH National Cancer
+          Institute GDC Documentation"
+                />
+                <span class="hidden"
+                  >NIH National Cancer Institute GDC Documentation</span
+                >
+              </a>
+              <!-- Expander button -->
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target=".navbar-collapse"
               >
-                <div class="gdc-apps-menu-grid">
-                  <div class="menu-column">
-                    <a
-                      href="https://portal.gdc.cancer.gov/"
-                      title="Data Portal"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <img
-                        width="21px"
-                        src="/img/GDC-App-data-portal-blue.svg"
-                        class="icon icon-gdc-portal home"
-                        alt="GDC Data Portal"
-                      />
-                      <div>Data Portal</div>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <!-- GDC Apps -->
+              <div class="pull-right">
+                <div class="gdc-app-list dropbtn">
+                  <div class="dropbtn">
+                    <a id="myToggle" class="dropbtn dropdown-toggle">
+                      <span class="dropbtn"
+                        ><i class="fas fa-th"></i> GDC Apps</span
+                      >
                     </a>
-                    <a
-                      href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
-                      title="GDC API"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <span class="icon icon-gdc-portal-api">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span
-                        ><span class="path9"></span><span class="path10"></span>
-                      </span>
-                      <div>API</div>
-                    </a>
-                    <a
-                      href="https://docs.gdc.cancer.gov/"
-                      title="GDC Docs"
-                      target="_blank"
-                      class="active menu-item"
-                    >
-                      <span class="icon icon-gdc-docs">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span
-                        ><span class="path9"></span><span class="path10"></span
-                        ><span class="path11"></span><span class="path12"></span
-                        ><span class="path13"></span
-                        ><span class="path14"></span>
-                      </span>
-                      <div>Documentation</div>
-                    </a>
-                    <a
-                      href="https://portal.gdc.cancer.gov/legacy-archive"
-                      title="GDC Legacy Archive"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <span class="icon icon-gdc-legacy-archive">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span
-                        ><span class="path9"></span><span class="path10"></span>
-                      </span>
-                      <div>Legacy Archive</div>
-                    </a>
+                    <div id="myDropdown" class="dropdown-content container">
+                      <div class="row gdc-app-row">
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                      </div>
+                      <div class="row gdc-app-row">
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                      </div>
+                      <div class="row gdc-app-row">
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                        <div class="col-sm gdc-app-list">
+                          <i class="fas fa-lg fa-heartbeat"></i>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="menu-column">
-                    <a
-                      href="https://gdc.cancer.gov/"
-                      title="GDC Website"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <img
-                        width="21px"
-                        src="/img/GDC-App-website-blue.svg"
-                        class="icon icon-gdc-portal home"
-                        alt="GDC Website"
-                      />
-                      <div>Website</div>
-                    </a>
-                    <a
-                      href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
-                      class="menu-item"
-                      title="GDC Data Transfer Tool"
-                      target="_blank"
-                    >
-                      <span class="icon icon-gdc-data-transer-tool">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span>
-                      </span>
-                      <div>Data Transfer Tool</div>
-                    </a>
-                    <a
-                      href="https://portal.gdc.cancer.gov/submission/"
-                      title="GDC Submission Portal"
-                      target="_blank"
-                      class="menu-item"
-                    >
-                      <span class="icon icon-gdc-submission-portal">
-                        <span class="path1"></span><span class="path2"></span
-                        ><span class="path3"></span><span class="path4"></span
-                        ><span class="path5"></span><span class="path6"></span
-                        ><span class="path7"></span><span class="path8"></span
-                        ><span class="path9"></span><span class="path10"></span>
-                      </span>
-                      <div>Data Submission Portal</div>
-                    </a>
+                  <div
+                    data-dropdown-menu=""
+                    class="dropdown-menu gdc-apps-menu-container"
+                    role="menu"
+                  >
+                    <div class="gdc-apps-menu-grid">
+                      <div class="menu-column">
+                        <a
+                          href="https://portal.gdc.cancer.gov/"
+                          title="Data Portal"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <img
+                            width="21px"
+                            src="/img/GDC-App-data-portal-blue.svg"
+                            class="icon icon-gdc-portal home"
+                            alt="GDC Data Portal"
+                          />
+                          <div>Data Portal</div>
+                        </a>
+                        <a
+                          href="https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+                          title="GDC API"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <span class="icon icon-gdc-portal-api">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span
+                            ><span class="path9"></span
+                            ><span class="path10"></span>
+                          </span>
+                          <div>API</div>
+                        </a>
+                        <a
+                          href="https://docs.gdc.cancer.gov/"
+                          title="GDC Docs"
+                          target="_blank"
+                          class="active menu-item"
+                        >
+                          <span class="icon icon-gdc-docs">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span
+                            ><span class="path9"></span
+                            ><span class="path10"></span
+                            ><span class="path11"></span
+                            ><span class="path12"></span
+                            ><span class="path13"></span
+                            ><span class="path14"></span>
+                          </span>
+                          <div>Documentation</div>
+                        </a>
+                        <a
+                          href="https://portal.gdc.cancer.gov/legacy-archive"
+                          title="GDC Legacy Archive"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <span class="icon icon-gdc-legacy-archive">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span
+                            ><span class="path9"></span
+                            ><span class="path10"></span>
+                          </span>
+                          <div>Legacy Archive</div>
+                        </a>
+                      </div>
+                      <div class="menu-column">
+                        <a
+                          href="https://gdc.cancer.gov/"
+                          title="GDC Website"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <img
+                            width="21px"
+                            src="/img/GDC-App-website-blue.svg"
+                            class="icon icon-gdc-portal home"
+                            alt="GDC Website"
+                          />
+                          <div>Website</div>
+                        </a>
+                        <a
+                          href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+                          class="menu-item"
+                          title="GDC Data Transfer Tool"
+                          target="_blank"
+                        >
+                          <span class="icon icon-gdc-data-transer-tool">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span>
+                          </span>
+                          <div>Data Transfer Tool</div>
+                        </a>
+                        <a
+                          href="https://portal.gdc.cancer.gov/submission/"
+                          title="GDC Submission Portal"
+                          target="_blank"
+                          class="menu-item"
+                        >
+                          <span class="icon icon-gdc-submission-portal">
+                            <span class="path1"></span
+                            ><span class="path2"></span
+                            ><span class="path3"></span
+                            ><span class="path4"></span
+                            ><span class="path5"></span
+                            ><span class="path6"></span
+                            ><span class="path7"></span
+                            ><span class="path8"></span
+                            ><span class="path9"></span
+                            ><span class="path10"></span>
+                          </span>
+                          <div>Data Submission Portal</div>
+                        </a>
+                      </div>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <div class="container-fluid container-fluid-nav">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav navbar-center me-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" id="navbarDropdownMenuLink" href="/"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        aria-current="page"
+                        href="/output/dist/api-getting-started/"
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        >API
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Search_and_Retrieval"
+                            >Search and Retrieval</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Downloading_Files"
+                            >Downloading Files</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Data_Analysis"
+                            >Data Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/BAM_Slicing"
+                            >BAM Slicing</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Submission"
+                            >Submission</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Python_Examples"
+                            >Python Examples</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/GraphQL_Examples"
+                            >GraphQL Examples</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/System_Information"
+                            >System Information</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Additional_Examples"
+                            >Additional Examples</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields"
+                            >Appendix A: Available Fields</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms"
+                            >Appendix B: Key Terms</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses"
+                            >Appendix C: Format of Submission Queries and
+                            Responses</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/API/PDF/fafiletext_Download_PDF_/API/PDF/API_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        href="/output/dist/data-submission-portal-data-submission-process/"
+                      >
+                        Data Portal
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Projects"
+                            >Projects</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Exploration"
+                            >Exploration</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Analysis"
+                            >Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Repository"
+                            >Repository</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Advanced_Search"
+                            >Advanced Search</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download"
+                            >Cart and File Download</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive"
+                            >Legacy Archive</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Portal/PDF/fafiletext_Download_PDF_/Data_Portal/PDF/Data_Portal_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        href="/output/dist/data-submission-portal-data-submission-process/"
+                      >
+                        Data Submission
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview"
+                            >Data Submission Overview</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal"
+                            >Data Submission Portal</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough"
+                            >Data Upload Walkthrough</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal"
+                            >Pre-Release Data Portal</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices"
+                            >Submission Best Practices</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/PDF/fafiletext_Download_PDF_/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="/output/dist/data-transfer-tool-index/"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Data Transfer Tool
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview"
+                            >Data Submission Overview</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal"
+                            >Data Submission Portal</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough"
+                            >Data Upload Walkthrough</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal"
+                            >Pre-Release Data Portal</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices"
+                            >Submission Best Practices</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Submission/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Transfer_Tool/PDF/fafiletext_Download_PDF_/Data_Transfer_Tool/PDF/Data_Transfer_Tool_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        href="/output/dist/data-dictionary-index/"
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Data Dictionary
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Dictionary/Viewer"
+                            >Viewer</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Dictionary/Search"
+                            >Search</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        href="/output/dist/data-getting-started/"
+                        >Data</a
+                      >
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Data_Model/GDC_Data_Model"
+                            >GDC Data Model</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Data_Security/Data_Security"
+                            >Data Security</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/File_Formats/File_Format:_MAF"
+                            >File Format: MAF</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/File_Formats/File_Format:_VCF"
+                            >File Format: VCF</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis"
+                            >Bioinformatics Pipeline: DNA-Seq Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis"
+                            >Bioinformatics Pipeline: mRNA Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis"
+                            >Bioinformatics Pipeline: miRNA Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis"
+                            >Bioinformatics Pipeline: Copy Number Variation
+                            Analysis</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline"
+                            >Bioinformatics Pipeline: Methylation Liftover
+                            Pipeline</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression"
+                            >Bioinformatics Pipeline: Protein Expression</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics"
+                            >Aligned Reads Summary Metrics</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/Release_Notes/Release_Notes"
+                            >Release Notes</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/output/dist/Data/PDF/fafiletext_Download_PDF_/Data/PDF/Data_UG.pdf"
+                            >Download PDF</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link"
+                        role="button"
+                        id="navbarDropdownMenuLink"
+                        aria-expanded="false"
+                        href="/output/dist/encyclopedia"
+                      >
+                        Encyclopedia
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><i class="fas fa-search"></i
+                      ></a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container-fluid container-fluid-nav">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav navbar-center me-auto">
-                <li class="nav-item">
-                  <a class="nav-link" id="navbarDropdownMenuLink" href="/"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    aria-current="page"
-                    href="/output/dist/api-getting-started/"
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    >API
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Search_and_Retrieval">Search and Retrieval</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Downloading_Files">Downloading Files</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Data_Analysis">Data Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/BAM_Slicing">BAM Slicing</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Submission">Submission</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Python_Examples">Python Examples</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/GraphQL_Examples">GraphQL Examples</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/System_Information">System Information</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Additional_Examples">Additional Examples</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_A:_Available_Fields">Appendix A: Available Fields</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_B:_Key_Terms">Appendix B: Key Terms</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Users_Guide/Appendix_C:_Format_of_Submission_Queries_and_Responses">Appendix C: Format of Submission Queries and Responses</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/API/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/API/PDF/API_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    href="/output/dist/data-submission-portal-data-submission-process/"
-                  >
-                    Data Portal
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Projects">Projects</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Exploration">Exploration</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Analysis">Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Repository">Repository</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Advanced_Search">Advanced Search</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Cart_and_File_Download">Cart and File Download</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Users_Guide/Legacy_Archive">Legacy Archive</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Portal/PDF/Data_Portal_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    href="/output/dist/data-submission-portal-data-submission-process/"
-                  >
-                    Data Submission
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="/output/dist/data-transfer-tool-index/"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Data Transfer Tool
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Overview">Data Submission Overview</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Submission_Portal">Data Submission Portal</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Data_Upload_Walkthrough">Data Upload Walkthrough</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/PreRelease_Data_Portal">Pre-Release Data Portal</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Users_Guide/Submission_Best_Practices">Submission Best Practices</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Submission/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/Data_Submission_Portal/PDF/Data_Submission_Portal_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    href="/output/dist/data-dictionary-index/"
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Data Dictionary
-                  </a>
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Viewer">Viewer</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Search">Search</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data_Dictionary/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    href="/output/dist/data-getting-started/"
-                    >Data</a
-                  >
-
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                     
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Data_Model/GDC_Data_Model">GDC Data Model</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Data_Security/Data_Security">Data Security</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_MAF">File Format: MAF</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/File_Formats/File_Format:_VCF">File Format: VCF</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_DNASeq_Analysis">Bioinformatics Pipeline: DNA-Seq Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_mRNA_Analysis">Bioinformatics Pipeline: mRNA Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_miRNA_Analysis">Bioinformatics Pipeline: miRNA Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Copy_Number_Variation_Analysis">Bioinformatics Pipeline: Copy Number Variation Analysis</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Methylation_Liftover_Pipeline">Bioinformatics Pipeline: Methylation Liftover Pipeline</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Bioinformatics_Pipeline:_Protein_Expression">Bioinformatics Pipeline: Protein Expression</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Bioinformatics_Pipelines/Aligned_Reads_Summary_Metrics">Aligned Reads Summary Metrics</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/output/dist/Data/Release_Notes/Release_Notes">Release Notes</a>
-                    </li>
-                      
-                    <li>
-                      <a class="dropdown-item" href="/Data/PDF/Data_UG.pdf">Download PDF</a>
-                    </li>
-                     
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link"
-                    role="button"
-                    id="navbarDropdownMenuLink"
-                    aria-expanded="false"
-                    href="/output/dist/encyclopedia"
-                  >
-                    Encyclopedia
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </body>
-</html>
+        </nav>
+      </body>
+    </html>
 
     <section class="blue-section" id="hero">
       <div class="container-fluid hero-container">
@@ -775,15 +1004,13 @@
       </div>
     </footer>
 
-    
     <script type="text/javascript" src="/js/encyclopedia.js"></script>
-    
+
     <script type="text/javascript" src="/js/search.js"></script>
-    
+
     <script type="text/javascript" src="/js/loader.js"></script>
-    
+
     <script type="text/javascript" src="/js/viewer.js"></script>
-    
 
     <script>
       /* When the user clicks on the button, 
