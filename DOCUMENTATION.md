@@ -70,7 +70,7 @@ The convention for this, when updating docs.yml is the following:
 
 - <font-awesome-icon> <content> <url ending in .pdf>: 'index.md'
   example:
-- fa-file-pdf-o Download PDF /API/PDF/API_UG.pdf: 'index.md'
+- fa-file-pdf-o Download PDF /output/dist/API/PDF/fafiletext_Download_PDF_/API/PDF/API_UG.pdf: 'index.md'
 
 ### Documentation Conventions
 
